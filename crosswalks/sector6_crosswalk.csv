@@ -1,0 +1,1155 @@
+source_program,source_code,source_label,source_level,naics_reference,sector6_code,sector6_label,mapping_rule,is_in_scope
+BTOS,11,,naics2,11,,,out_of_scope_six_sector,0
+BTOS,21,,naics2,21,,,out_of_scope_six_sector,0
+BTOS,22,,naics2,22,,,out_of_scope_six_sector,0
+BTOS,23,,naics2,23,,,out_of_scope_six_sector,0
+BTOS,31,,naics2,31,MFG,Manufacturing,naics2_manufacturing,1
+BTOS,42,,naics2,42,,,out_of_scope_six_sector,0
+BTOS,44,,naics2,44,RET,Retail trade,naics2_retail,1
+BTOS,48,,naics2,48,,,out_of_scope_six_sector,0
+BTOS,51,,naics2,51,INF,Information,naics2_information,1
+BTOS,52,,naics2,52,FAS,Financial activities,naics2_finance_or_real_estate,1
+BTOS,53,,naics2,53,FAS,Financial activities,naics2_finance_or_real_estate,1
+BTOS,54,,naics2,54,PBS,Professional and business services,naics2_professional_management_admin,1
+BTOS,55,,naics2,55,PBS,Professional and business services,naics2_professional_management_admin,1
+BTOS,56,,naics2,56,PBS,Professional and business services,naics2_professional_management_admin,1
+BTOS,61,,naics2,61,PBS,Professional and business services,naics2_educational_services_maps_to_PBS,1
+BTOS,62,,naics2,62,HCS,Health care and social assistance,naics2_health_social_assistance,1
+BTOS,71,,naics2,71,,,out_of_scope_six_sector,0
+BTOS,72,,naics2,72,,,out_of_scope_six_sector,0
+BTOS,81,,naics2,81,,,out_of_scope_six_sector,0
+BTOS,XX,,naics2,XX,,,btos_suppressed_or_invalid_sector,0
+BTOS,112,,naics3,112,,,out_of_scope_six_sector_from_naics3,0
+BTOS,113,,naics3,113,,,out_of_scope_six_sector_from_naics3,0
+BTOS,114,,naics3,114,,,out_of_scope_six_sector_from_naics3,0
+BTOS,115,,naics3,115,,,out_of_scope_six_sector_from_naics3,0
+BTOS,210,,naics3,210,,,out_of_scope_six_sector_from_naics3,0
+BTOS,211,,naics3,211,,,out_of_scope_six_sector_from_naics3,0
+BTOS,212,,naics3,212,,,out_of_scope_six_sector_from_naics3,0
+BTOS,213,,naics3,213,,,out_of_scope_six_sector_from_naics3,0
+BTOS,21X,,naics3,21X,,,out_of_scope_six_sector_from_naics3,0
+BTOS,220,,naics3,220,,,out_of_scope_six_sector_from_naics3,0
+BTOS,221,,naics3,221,,,out_of_scope_six_sector_from_naics3,0
+BTOS,230,,naics3,230,,,out_of_scope_six_sector_from_naics3,0
+BTOS,236,,naics3,236,,,out_of_scope_six_sector_from_naics3,0
+BTOS,237,,naics3,237,,,out_of_scope_six_sector_from_naics3,0
+BTOS,238,,naics3,238,,,out_of_scope_six_sector_from_naics3,0
+BTOS,23X,,naics3,23X,,,out_of_scope_six_sector_from_naics3,0
+BTOS,310,,naics3,310,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,311,,naics3,311,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,312,,naics3,312,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,313,,naics3,313,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,314,,naics3,314,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,315,,naics3,315,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,316,,naics3,316,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,31X,,naics3,31X,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,320,,naics3,320,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,321,,naics3,321,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,322,,naics3,322,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,323,,naics3,323,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,324,,naics3,324,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,325,,naics3,325,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,326,,naics3,326,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,327,,naics3,327,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,330,,naics3,330,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,331,,naics3,331,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,332,,naics3,332,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,333,,naics3,333,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,334,,naics3,334,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,335,,naics3,335,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,336,,naics3,336,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,337,,naics3,337,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,339,,naics3,339,MFG,Manufacturing,naics2_manufacturing_from_naics3,1
+BTOS,420,,naics3,420,,,out_of_scope_six_sector_from_naics3,0
+BTOS,423,,naics3,423,,,out_of_scope_six_sector_from_naics3,0
+BTOS,424,,naics3,424,,,out_of_scope_six_sector_from_naics3,0
+BTOS,425,,naics3,425,,,out_of_scope_six_sector_from_naics3,0
+BTOS,42X,,naics3,42X,,,out_of_scope_six_sector_from_naics3,0
+BTOS,440,,naics3,440,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,441,,naics3,441,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,442,,naics3,442,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,443,,naics3,443,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,444,,naics3,444,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,445,,naics3,445,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,446,,naics3,446,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,447,,naics3,447,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,448,,naics3,448,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,44X,,naics3,44X,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,450,,naics3,450,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,451,,naics3,451,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,452,,naics3,452,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,453,,naics3,453,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,454,,naics3,454,RET,Retail trade,naics2_retail_from_naics3,1
+BTOS,480,,naics3,480,,,out_of_scope_six_sector_from_naics3,0
+BTOS,481,,naics3,481,,,out_of_scope_six_sector_from_naics3,0
+BTOS,483,,naics3,483,,,out_of_scope_six_sector_from_naics3,0
+BTOS,484,,naics3,484,,,out_of_scope_six_sector_from_naics3,0
+BTOS,485,,naics3,485,,,out_of_scope_six_sector_from_naics3,0
+BTOS,486,,naics3,486,,,out_of_scope_six_sector_from_naics3,0
+BTOS,487,,naics3,487,,,out_of_scope_six_sector_from_naics3,0
+BTOS,488,,naics3,488,,,out_of_scope_six_sector_from_naics3,0
+BTOS,48X,,naics3,48X,,,out_of_scope_six_sector_from_naics3,0
+BTOS,492,,naics3,492,,,out_of_scope_six_sector_from_naics3,0
+BTOS,493,,naics3,493,,,out_of_scope_six_sector_from_naics3,0
+BTOS,510,,naics3,510,INF,Information,naics2_information_from_naics3,1
+BTOS,511,,naics3,511,INF,Information,naics2_information_from_naics3,1
+BTOS,512,,naics3,512,INF,Information,naics2_information_from_naics3,1
+BTOS,515,,naics3,515,INF,Information,naics2_information_from_naics3,1
+BTOS,517,,naics3,517,INF,Information,naics2_information_from_naics3,1
+BTOS,518,,naics3,518,INF,Information,naics2_information_from_naics3,1
+BTOS,519,,naics3,519,INF,Information,naics2_information_from_naics3,1
+BTOS,51X,,naics3,51X,INF,Information,naics2_information_from_naics3,1
+BTOS,520,,naics3,520,FAS,Financial activities,naics2_finance_or_real_estate_from_naics3,1
+BTOS,522,,naics3,522,FAS,Financial activities,naics2_finance_or_real_estate_from_naics3,1
+BTOS,523,,naics3,523,FAS,Financial activities,naics2_finance_or_real_estate_from_naics3,1
+BTOS,524,,naics3,524,FAS,Financial activities,naics2_finance_or_real_estate_from_naics3,1
+BTOS,52X,,naics3,52X,FAS,Financial activities,naics2_finance_or_real_estate_from_naics3,1
+BTOS,530,,naics3,530,FAS,Financial activities,naics2_finance_or_real_estate_from_naics3,1
+BTOS,531,,naics3,531,FAS,Financial activities,naics2_finance_or_real_estate_from_naics3,1
+BTOS,532,,naics3,532,FAS,Financial activities,naics2_finance_or_real_estate_from_naics3,1
+BTOS,533,,naics3,533,FAS,Financial activities,naics2_finance_or_real_estate_from_naics3,1
+BTOS,53X,,naics3,53X,FAS,Financial activities,naics2_finance_or_real_estate_from_naics3,1
+BTOS,540,,naics3,540,PBS,Professional and business services,naics2_professional_management_admin_from_naics3,1
+BTOS,541,,naics3,541,PBS,Professional and business services,naics2_professional_management_admin_from_naics3,1
+BTOS,550,,naics3,550,PBS,Professional and business services,naics2_professional_management_admin_from_naics3,1
+BTOS,551,,naics3,551,PBS,Professional and business services,naics2_professional_management_admin_from_naics3,1
+BTOS,560,,naics3,560,PBS,Professional and business services,naics2_professional_management_admin_from_naics3,1
+BTOS,561,,naics3,561,PBS,Professional and business services,naics2_professional_management_admin_from_naics3,1
+BTOS,562,,naics3,562,PBS,Professional and business services,naics2_professional_management_admin_from_naics3,1
+BTOS,56X,,naics3,56X,PBS,Professional and business services,naics2_professional_management_admin_from_naics3,1
+BTOS,610,,naics3,610,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_naics3,1
+BTOS,611,,naics3,611,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_naics3,1
+BTOS,620,,naics3,620,HCS,Health care and social assistance,naics2_health_social_assistance_from_naics3,1
+BTOS,621,,naics3,621,HCS,Health care and social assistance,naics2_health_social_assistance_from_naics3,1
+BTOS,622,,naics3,622,HCS,Health care and social assistance,naics2_health_social_assistance_from_naics3,1
+BTOS,623,,naics3,623,HCS,Health care and social assistance,naics2_health_social_assistance_from_naics3,1
+BTOS,624,,naics3,624,HCS,Health care and social assistance,naics2_health_social_assistance_from_naics3,1
+BTOS,62X,,naics3,62X,HCS,Health care and social assistance,naics2_health_social_assistance_from_naics3,1
+BTOS,710,,naics3,710,,,out_of_scope_six_sector_from_naics3,0
+BTOS,711,,naics3,711,,,out_of_scope_six_sector_from_naics3,0
+BTOS,712,,naics3,712,,,out_of_scope_six_sector_from_naics3,0
+BTOS,713,,naics3,713,,,out_of_scope_six_sector_from_naics3,0
+BTOS,71X,,naics3,71X,,,out_of_scope_six_sector_from_naics3,0
+BTOS,720,,naics3,720,,,out_of_scope_six_sector_from_naics3,0
+BTOS,721,,naics3,721,,,out_of_scope_six_sector_from_naics3,0
+BTOS,722,,naics3,722,,,out_of_scope_six_sector_from_naics3,0
+BTOS,72X,,naics3,72X,,,out_of_scope_six_sector_from_naics3,0
+BTOS,810,,naics3,810,,,out_of_scope_six_sector_from_naics3,0
+BTOS,811,,naics3,811,,,out_of_scope_six_sector_from_naics3,0
+BTOS,812,,naics3,812,,,out_of_scope_six_sector_from_naics3,0
+BTOS,81X,,naics3,81X,,,out_of_scope_six_sector_from_naics3,0
+BTOS,XXX,,naics3,XXX,,,out_of_scope_six_sector_from_naics3,0
+JOLTS,000000,Total nonfarm,jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,100000,Total private,jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,110099,Mining and logging,jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,230000,Construction,jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,300000,Manufacturing,jolts_industry,,MFG,Manufacturing,jolts_manufacturing_family,1
+JOLTS,320000,Durable goods manufacturing,jolts_industry,,MFG,Manufacturing,jolts_manufacturing_family,1
+JOLTS,340000,Nondurable goods manufacturing,jolts_industry,,MFG,Manufacturing,jolts_manufacturing_family,1
+JOLTS,400000,"Trade, transportation, and utilities",jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,420000,Wholesale trade,jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,440000,Retail trade,jolts_industry,,RET,Retail trade,jolts_retail_trade,1
+JOLTS,480099,"Transportation, warehousing, and utilities",jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,510000,Information,jolts_industry,,INF,Information,jolts_information,1
+JOLTS,510099,Financial activities,jolts_industry,,FAS,Financial activities,jolts_financial_activities,1
+JOLTS,520000,Finance and insurance,jolts_industry,,FAS,Financial activities,jolts_finance_or_real_estate,1
+JOLTS,530000,Real estate and rental and leasing,jolts_industry,,FAS,Financial activities,jolts_finance_or_real_estate,1
+JOLTS,540099,Professional and business services,jolts_industry,,PBS,Professional and business services,jolts_professional_business_services,1
+JOLTS,600000,Private education and health services,jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,610000,Private educational services,jolts_industry,,PBS,Professional and business services,jolts_private_educational_services,1
+JOLTS,620000,Health care and social assistance,jolts_industry,,HCS,Health care and social assistance,jolts_health_care_social_assistance,1
+JOLTS,700000,Leisure and hospitality,jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,710000,"Arts, entertainment, and recreation",jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,720000,Accommodation and food services,jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,810000,Other services,jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,900000,Government,jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,910000,Federal,jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,920000,State and local,jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,923000,State and local government education,jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+JOLTS,929000,"State and local government, excluding education",jolts_industry,,,,jolts_aggregate_outside_frozen_six,0
+CES,00,Total nonfarm,ces_supersector,,,,ces_supersector_aggregate_outside_frozen_six,0
+CES,05,Total private,ces_supersector,,,,ces_supersector_aggregate_outside_frozen_six,0
+CES,06,Goods-producing,ces_supersector,,,,ces_supersector_aggregate_outside_frozen_six,0
+CES,07,Service-providing,ces_supersector,,,,ces_supersector_aggregate_outside_frozen_six,0
+CES,08,Private service-providing,ces_supersector,,,,ces_supersector_aggregate_outside_frozen_six,0
+CES,10,Mining and logging,ces_supersector,,,,ces_supersector_aggregate_outside_frozen_six,0
+CES,20,Construction,ces_supersector,,,,ces_supersector_aggregate_outside_frozen_six,0
+CES,30,Manufacturing,ces_supersector,,MFG,Manufacturing,ces_supersector_manufacturing,1
+CES,31,Durable Goods,ces_supersector,,MFG,Manufacturing,ces_supersector_durable_mfg,1
+CES,32,Nondurable Goods,ces_supersector,,MFG,Manufacturing,ces_supersector_nondurable_mfg,1
+CES,40,"Trade, transportation, and utilities",ces_supersector,,,,ces_supersector_aggregate_outside_frozen_six,0
+CES,41,Wholesale trade,ces_supersector,,,,ces_supersector_aggregate_outside_frozen_six,0
+CES,42,Retail trade,ces_supersector,,RET,Retail trade,ces_supersector_retail_trade,1
+CES,43,Transportation and warehousing,ces_supersector,,,,ces_supersector_aggregate_outside_frozen_six,0
+CES,44,Utilities,ces_supersector,,,,ces_supersector_aggregate_outside_frozen_six,0
+CES,50,Information,ces_supersector,,INF,Information,ces_supersector_information,1
+CES,55,Financial activities,ces_supersector,,FAS,Financial activities,ces_supersector_financial_activities,1
+CES,60,Professional and business services,ces_supersector,,PBS,Professional and business services,ces_supersector_professional_business_services,1
+CES,65,Private education and health services,ces_supersector,,HCS,Health care and social assistance,ces_supersector_private_education_health,1
+CES,70,Leisure and hospitality,ces_supersector,,,,ces_supersector_aggregate_outside_frozen_six,0
+CES,80,Other services,ces_supersector,,,,ces_supersector_aggregate_outside_frozen_six,0
+CES,90,Government,ces_supersector,,,,ces_supersector_aggregate_outside_frozen_six,0
+CES,00000000,Total nonfarm,ces_industry,-,,,ces_no_naics_or_total,0
+CES,05000000,Total private,ces_industry,-,,,ces_no_naics_or_total,0
+CES,06000000,Goods-producing,ces_industry,-,,,ces_no_naics_or_total,0
+CES,07000000,Service-providing,ces_industry,-,,,ces_no_naics_or_total,0
+CES,08000000,Private service-providing,ces_industry,-,,,ces_no_naics_or_total,0
+CES,10000000,Mining and logging,ces_industry,-,,,ces_no_naics_or_total,0
+CES,10113300,Logging,ces_industry,1133,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10210000,"Mining, quarrying, and oil and gas extraction",ces_industry,21,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10211000,Oil and gas extraction,ces_industry,211,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10212000,Mining (except oil and gas),ces_industry,212,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10212100,Coal mining,ces_industry,2121,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10212114,Surface coal mining,ces_industry,212114,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10212115,Underground coal mining,ces_industry,212115,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10212200,Metal ore mining,ces_industry,2122,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10212220,Gold ore and silver ore mining,ces_industry,21222,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10212290,"Iron ore, copper, nickel, lead, zinc, and other metal ore mining",ces_industry,"21221,3,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,10212300,Nonmetallic mineral mining and quarrying,ces_industry,2123,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10212310,Stone mining and quarrying,ces_industry,21231,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10212312,Crushed and broken limestone mining and quarrying,ces_industry,212312,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10212319,"Dimension stone, crushed and broken granite, and other crushed and broken stone mining and quarrying",ces_industry,"212311,3,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,10212320,"Sand, gravel, clay, and ceramic and refractory minerals mining and quarrying",ces_industry,21232,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10212321,Construction sand and gravel mining,ces_industry,212321,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10212390,Other nonmetallic mineral mining and quarrying,ces_industry,21239,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10213000,Support activities for mining,ces_industry,213,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10213111,Drilling oil and gas wells,ces_industry,213111,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10213112,Support activities for oil and gas operations,ces_industry,213112,,,out_of_scope_six_sector_from_ces_naics,0
+CES,10213115,"Support activities for coal, metal, and nonmetallic minerals mining",ces_industry,"213113,4,5",,,out_of_scope_six_sector_from_ces_naics,0
+CES,20000000,Construction,ces_industry,23,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20236000,Construction of buildings,ces_industry,236,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20236100,Residential building construction,ces_industry,2361,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20236115,New single-family housing construction (except for-sale builders),ces_industry,236115,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20236116,New multifamily housing construction (except for-sale builders),ces_industry,236116,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20236117,New housing for-sale builders,ces_industry,236117,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20236118,Residential remodelers,ces_industry,236118,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20236200,Nonresidential building construction,ces_industry,2362,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20236210,Industrial building construction,ces_industry,23621,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20236220,Commercial and institutional building construction,ces_industry,23622,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20237000,Heavy and civil engineering construction,ces_industry,237,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20237100,Utility system construction,ces_industry,2371,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20237110,Water and sewer line and related structures construction,ces_industry,23711,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20237120,Oil and gas pipeline and related structures construction,ces_industry,23712,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20237130,Power and communication line and related structures construction,ces_industry,23713,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20237200,Land subdivision,ces_industry,2372,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20237300,"Highway, street, and bridge construction",ces_industry,2373,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20237900,Other heavy and civil engineering construction,ces_industry,2379,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238000,Specialty trade contractors,ces_industry,238,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238001,Residential specialty trade contractors,ces_industry,part 238,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238002,Nonresidential specialty trade contractors,ces_industry,part 238,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238100,"Foundation, structure, and building exterior contractors",ces_industry,2381,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238101,Residential building foundation and exterior contractors,ces_industry,part 2381,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238102,Nonresidential building foundation and exterior contractors,ces_industry,part 2381,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238110,Poured concrete foundation and structure contractors,ces_industry,23811,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238120,Structural steel and precast concrete contractors,ces_industry,23812,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238130,Framing contractors,ces_industry,23813,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238140,Masonry contractors,ces_industry,23814,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238150,Glass and glazing contractors,ces_industry,23815,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238160,Roofing contractors,ces_industry,23816,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238170,Siding contractors,ces_industry,23817,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238190,"Other foundation, structure, and building exterior contractors",ces_industry,23819,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238200,Building equipment contractors,ces_industry,2382,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238201,Residential building equipment contractors,ces_industry,part 2382,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238202,Nonresidential building equipment contractors,ces_industry,part 2382,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238210,Electrical contractors and other wiring installation contractors,ces_industry,23821,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238220,"Plumbing, heating, and air-conditioning contractors",ces_industry,23822,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238290,Other building equipment contractors,ces_industry,23829,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238300,Building finishing contractors,ces_industry,2383,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238301,Residential building finishing contractors,ces_industry,part 2383,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238302,Nonresidential building finishing contractors,ces_industry,part 2383,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238310,Drywall and insulation contractors,ces_industry,23831,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238320,Painting and wall covering contractors,ces_industry,23832,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238330,Flooring contractors,ces_industry,23833,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238340,Tile and terrazzo contractors,ces_industry,23834,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238350,Finish carpentry contractors,ces_industry,23835,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238390,Other building finishing contractors,ces_industry,23839,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238900,Other specialty trade contractors,ces_industry,2389,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238901,Other residential trade contractors,ces_industry,part 2389,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238902,Other nonresidential trade contractors,ces_industry,part 2389,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238910,Site preparation contractors,ces_industry,23891,,,out_of_scope_six_sector_from_ces_naics,0
+CES,20238990,All other specialty trade contractors,ces_industry,23899,,,out_of_scope_six_sector_from_ces_naics,0
+CES,30000000,Manufacturing,ces_industry,-,,,ces_no_naics_or_total,0
+CES,31000000,Durable goods,ces_industry,-,,,ces_no_naics_or_total,0
+CES,31321000,Wood product manufacturing,ces_industry,321,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31321100,Sawmills and wood preservation,ces_industry,3211,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31321200,"Veneer, plywood, and engineered wood product manufacturing",ces_industry,3212,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31321900,Other wood product manufacturing,ces_industry,3219,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31321910,Millwork,ces_industry,32191,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31321911,Wood window and door manufacturing,ces_industry,321911,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31321918,"Cut stock, resawing lumber, planing, and other millwork (including flooring)",ces_industry,"321912,8",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31321920,Wood container and pallet manufacturing,ces_industry,32192,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31321990,All other wood product manufacturing,ces_industry,32199,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31327000,Nonmetallic mineral product manufacturing,ces_industry,327,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31327100,Clay product and refractory manufacturing,ces_industry,3271,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31327200,Glass and glass product manufacturing,ces_industry,3272,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31327300,Cement and concrete product manufacturing,ces_industry,3273,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31327320,Ready-mix concrete manufacturing,ces_industry,32732,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31327390,"Cement and concrete pipe, brick, block, and other concrete product manufacturing",ces_industry,"32731,3,9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31327900,"Lime, gypsum, and other nonmetallic mineral product manufacturing",ces_industry,"3274,9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31331000,Primary metal manufacturing,ces_industry,331,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31331100,Iron and steel mills and ferroalloy manufacturing,ces_industry,3311,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31331200,Steel product manufacturing from purchased steel,ces_industry,3312,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31331400,"Alumina, aluminum, and other nonferrous metal production and processing",ces_industry,"3313,4",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31331500,Foundries,ces_industry,3315,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31331510,Ferrous metal foundries,ces_industry,33151,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31331520,Nonferrous metal foundries,ces_industry,33152,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332000,Fabricated metal product manufacturing,ces_industry,332,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332100,Forging and stamping,ces_industry,3321,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332300,Architectural and structural metals manufacturing,ces_industry,3323,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332310,Plate work and fabricated structural product manufacturing,ces_industry,33231,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332312,Fabricated structural metal manufacturing,ces_industry,332312,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332313,Plate work and prefabricated metal building and component manufacturing,ces_industry,"332311,3",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332320,Ornamental and architectural metal products manufacturing,ces_industry,33232,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332321,Metal window and door manufacturing,ces_industry,332321,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332322,Sheet metal work manufacturing,ces_industry,332322,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332323,Ornamental and architectural metal work manufacturing,ces_industry,332323,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332400,"Boiler, tank, and shipping container manufacturing",ces_industry,3324,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332600,"Hardware, spring, and wire product manufacturing",ces_industry,"3325,6",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332700,"Machine shops; turned product; and screw, nut, and bolt manufacturing",ces_industry,3327,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332710,Machine shops,ces_industry,33271,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332720,"Turned product and screw, nut, and bolt manufacturing",ces_industry,33272,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332800,"Coating, engraving, heat treating, and allied activities",ces_industry,3328,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332812,"Metal heat treating, coating, engraving (except jewelry and silverware), and allied services to manufacturers",ces_industry,"332811,2",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332813,"Electroplating, plating, polishing, anodizing, and coloring",ces_industry,332813,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332900,"Cutlery, handtool, and other fabricated metal product manufacturing",ces_industry,3329,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332910,Metal valve manufacturing,ces_industry,33291,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332990,"Cutlery, handtool, and all other fabricated metal product manufacturing",ces_industry,33299,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332994,"Small arms, ammunition, and other ordnance and ordnance accessories manufacturing",ces_industry,"332992,3,4",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31332999,"Cutlery, handtool, ball and roller bearing, fabricated pipe, pipe fitting, and all other fabricated metal product manufacturing",ces_industry,"332200;991,9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333000,Machinery manufacturing,ces_industry,333,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333100,"Agriculture, construction, and mining machinery manufacturing",ces_industry,3331,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333110,Agricultural implement manufacturing,ces_industry,33311,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333120,Construction machinery manufacturing,ces_industry,33312,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333130,Mining and oil and gas field machinery manufacturing,ces_industry,33313,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333200,Industrial machinery manufacturing,ces_industry,3332,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333248,All other industrial machinery manufacturing,ces_industry,333248,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333300,Commercial and service industry machinery manufacturing,ces_industry,3333,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333400,"Ventilation, heating, air-conditioning, and commercial refrigeration equipment manufacturing",ces_industry,3334,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333415,Air-conditioning and warm air heating equipment and commercial and industrial refrigeration equipment manufacturing,ces_industry,333415,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333500,Metalworking machinery manufacturing,ces_industry,3335,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333514,"Special die and tool, die set, jig, and fixture manufacturing",ces_industry,333514,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333517,Machine tool manufacturing,ces_industry,333517,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333519,"Industrial mold, cutting tool and machine tool accessory, rolling mill, and other metalworking machinery manufacturing",ces_industry,"333511,5,9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333600,"Engine, turbine, and power transmission equipment manufacturing",ces_industry,3336,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333900,Other general purpose machinery manufacturing,ces_industry,3339,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333910,Pump and compressor manufacturing,ces_industry,33391,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333920,Material handling equipment manufacturing,ces_industry,33392,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31333990,All other general purpose machinery manufacturing,ces_industry,33399,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334000,Computer and electronic product manufacturing,ces_industry,334,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334100,Computer and peripheral equipment manufacturing,ces_industry,3341,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334111,Electronic computer manufacturing,ces_industry,334111,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334118,"Computer storage device, terminal, and other peripheral equipment manufacturing",ces_industry,"334112,8",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334200,Communications equipment manufacturing,ces_industry,3342,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334220,Radio and television broadcasting and wireless communications equipment manufacturing,ces_industry,33422,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334400,Semiconductor and other electronic component manufacturing,ces_industry,3344,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334413,Semiconductor and related device manufacturing,ces_industry,334413,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334418,Bare printed circuit board and printed electronic circuit assembly manufacturing,ces_industry,"334412,8",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334419,"Capacitor, resistor, coil, transformer, other inductor, electronic connector, and other electronic component manufacturing",ces_industry,"334416,7,9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334500,"Navigational, measuring, electromedical, and control instruments manufacturing",ces_industry,3345,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334510,Electromedical and electrotherapeutic apparatus manufacturing,ces_industry,334510,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334511,"Search, detection, navigation, guidance, aeronautical, and nautical system and instrument manufacturing",ces_industry,334511,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334513,"Instruments and related products manufacturing for measuring, displaying, and controlling industrial process variables",ces_industry,334513,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334515,Instrument manufacturing for measuring and testing electricity and electrical signals,ces_industry,334515,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334519,Miscellaneous electronic instruments manufacturing,ces_industry,"334512,4,6-9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31334600,Manufacturing and reproducing magnetic and optical media and audio and video equipment manufacturing,ces_industry,"3343,6",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31335000,"Electrical equipment, appliance, and component manufacturing",ces_industry,335,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31335100,Electric lighting equipment manufacturing,ces_industry,3351,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31335200,Household appliance manufacturing,ces_industry,3352,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31335300,Electrical equipment manufacturing,ces_industry,3353,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31335311,"Power, distribution, and specialty transformer manufacturing",ces_industry,335311,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31335314,"Motor, generator, switchgear and switchboard apparatus, and relay and industrial control manufacturing",ces_industry,"335312,3,4",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31335900,Other electrical equipment and component manufacturing,ces_industry,3359,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31335910,Battery manufacturing,ces_industry,33591,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31335990,"Wiring device, communication and energy wire and cable, and all other electrical equipment and component manufacturing",ces_industry,"33592,3,9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336000,Transportation equipment manufacturing,ces_industry,336,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336001,Motor vehicles and parts,ces_industry,"3361,2,3",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336100,Motor vehicle manufacturing,ces_industry,3361,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336200,Motor vehicle body and trailer manufacturing,ces_industry,3362,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336300,Motor vehicle parts manufacturing,ces_industry,3363,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336310,Motor vehicle gasoline engine and engine parts manufacturing,ces_industry,33631,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336320,Motor vehicle electrical and electronic equipment manufacturing,ces_industry,33632,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336350,Motor vehicle transmission and power train parts manufacturing,ces_industry,33635,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336370,Motor vehicle metal stamping,ces_industry,33637,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336390,"Motor vehicle steering and suspension components, except spring; brake system, seating, interior trim, and other motor vehicle parts manufacturing",ces_industry,"33633,4,6,9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336400,Aerospace product and parts manufacturing,ces_industry,3364,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336411,Aircraft manufacturing,ces_industry,336411,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336412,Aircraft engine and engine parts manufacturing,ces_industry,336412,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336413,Other aircraft parts and auxiliary equipment manufacturing,ces_industry,336413,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336419,"Guided missile; space vehicle; and guided missile and space vehicle propulsion unit, parts, and auxiliary equipment manufacturing",ces_industry,"336414,5,9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336600,Ship and boat building,ces_industry,3366,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336611,Ship building and repairing,ces_industry,336611,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336612,Boat building,ces_industry,336612,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31336900,Railroad rolling stock and other transportation equipment manufacturing,ces_industry,"3365,9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31337000,Furniture and related product manufacturing,ces_industry,337,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31337100,Household and institutional furniture and kitchen cabinet manufacturing,ces_industry,3371,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31337110,Wood kitchen cabinet and countertop manufacturing,ces_industry,33711,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31337120,Household and institutional furniture manufacturing,ces_industry,33712,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31337121,Upholstered household furniture manufacturing,ces_industry,337121,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31337127,Nonupholstered household furniture and institutional furniture manufacturing,ces_industry,"337122,6,7",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31337200,Office furniture (including fixtures) and other furniture related product manufacturing,ces_industry,3372,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31337214,Office furniture and custom architectural woodwork and millwork manufacturing,ces_industry,"337211,2,4",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31337215,"Showcase, partition, shelving, locker, and other furniture related product manufacturing",ces_industry,337215,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31339000,Miscellaneous manufacturing,ces_industry,339,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31339100,Medical equipment and supplies manufacturing,ces_industry,3391,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31339112,Surgical and medical instrument manufacturing,ces_industry,339112,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31339113,Surgical appliance and supplies manufacturing,ces_industry,339113,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31339116,Dental laboratories,ces_industry,339116,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31339900,Other miscellaneous manufacturing,ces_industry,3399,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31339920,"Jewelry, silverware, and sporting and athletic goods manufacturing",ces_industry,"33991,2",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31339950,Sign manufacturing,ces_industry,33995,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,31339990,"Doll, toy, game, office supplies (except paper), and all other miscellaneous manufacturing",ces_industry,"33993,4,9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32000000,Nondurable goods,ces_industry,-,,,ces_no_naics_or_total,0
+CES,32311000,Food manufacturing,ces_industry,311,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311100,Animal food manufacturing,ces_industry,3111,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311200,Grain and oilseed milling,ces_industry,3112,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311300,Sugar and confectionery product manufacturing,ces_industry,3113,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311350,Chocolate and confectionery manufacturing,ces_industry,31135,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311400,Fruit and vegetable preserving and specialty food manufacturing,ces_industry,3114,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311410,Frozen food manufacturing,ces_industry,31141,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311411,"Frozen fruit, juice, and vegetable manufacturing",ces_industry,311411,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311412,Frozen specialty food manufacturing,ces_industry,311412,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311420,"Fruit and vegetable canning, pickling, and drying",ces_industry,31142,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311500,Dairy product manufacturing,ces_industry,3115,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311511,Fluid milk manufacturing,ces_industry,311511,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311600,Animal slaughtering and processing,ces_industry,3116,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311611,"Animal, except poultry, slaughtering",ces_industry,311611,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311613,"Meat processed from carcasses, rendering, and meat byproduct processing",ces_industry,"311612,3",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311615,Poultry processing,ces_industry,311615,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311700,Seafood product preparation and packaging,ces_industry,3117,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311800,Bakeries and tortilla manufacturing,ces_industry,3118,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311810,Bread and bakery product manufacturing,ces_industry,31181,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311811,Retail bakeries,ces_industry,311811,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311813,"Commercial bakeries and frozen cakes, pies, and other pastries manufacturing",ces_industry,"311812,3",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311830,"Cookie, cracker, pasta, and tortilla manufacturing",ces_industry,"31182,3",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311900,Other food manufacturing,ces_industry,3119,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311910,Snack food manufacturing,ces_industry,31191,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32311990,"Coffee, tea, flavoring syrup and concentrate, seasoning, dressing, and other food manufacturing",ces_industry,"31192,3,4,9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32313000,Textile mills,ces_industry,313,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32313200,Fabric mills,ces_industry,3132,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32314000,Textile product mills,ces_industry,314,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32314100,Textile furnishings mills,ces_industry,3141,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32314900,Other textile product mills,ces_industry,3149,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32315000,Apparel manufacturing,ces_industry,315,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32315250,Cut and sew apparel manufacturing (except contractors),ces_industry,31525,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32322000,Paper manufacturing,ces_industry,322,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32322100,"Pulp, paper, and paperboard mills",ces_industry,3221,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32322200,Converted paper product manufacturing,ces_industry,3222,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32322210,Paperboard container manufacturing,ces_industry,32221,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32322220,Paper bag and coated and treated paper manufacturing,ces_industry,32222,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32322290,Stationery and other converted paper products,ces_industry,"32223,9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32323000,Printing and related support activities,ces_industry,323,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32323113,Commercial screen printing,ces_industry,323113,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32323117,Commercial and book printing (except screen) and support activities for printing,ces_industry,"323111,17,20",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32324000,Petroleum and coal products manufacturing,ces_industry,324,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32324110,Petroleum refineries,ces_industry,32411,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32324190,"Asphalt paving, roofing, saturated materials, and other petroleum and coal products manufacturing",ces_industry,"32412,9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325000,Chemical manufacturing,ces_industry,325,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325100,Basic chemical manufacturing,ces_industry,3251,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325180,"Petrochemical, industrial gas, synthetic dye, pigment, and other basic inorganic chemical manufacturing",ces_industry,"32511,2,3,8",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325190,Other basic organic chemical manufacturing,ces_industry,32519,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325200,"Resin, synthetic rubber, and artificial and synthetic fibers and filaments manufacturing",ces_industry,3252,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325211,Plastics material and resin manufacturing,ces_industry,325211,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325300,"Pesticide, fertilizer, and other agricultural chemical manufacturing",ces_industry,3253,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325400,Pharmaceutical and medicine manufacturing,ces_industry,3254,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325412,Pharmaceutical preparation manufacturing,ces_industry,325412,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325414,"Medicinal, botanical, in-vitro diagnostic substance, and biological product manufacturing",ces_industry,"325411,3,4",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325500,"Paint, coating, and adhesive manufacturing",ces_industry,3255,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325600,"Soap, cleaning compound, and toilet preparation manufacturing",ces_industry,3256,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325610,Soap and cleaning compound manufacturing,ces_industry,32561,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325620,Toilet preparation manufacturing,ces_industry,32562,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32325900,Other chemical product and preparation manufacturing,ces_industry,3259,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32326000,Plastics and rubber products manufacturing,ces_industry,326,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32326100,Plastics product manufacturing,ces_industry,3261,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32326110,Plastics packaging materials and unlaminated film and sheet manufacturing,ces_industry,32611,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32326120,"Plastics pipe, pipe fitting, and unlaminated profile shape manufacturing",ces_industry,32612,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32326150,"Polystyrene, urethane, and other foam product manufacturing",ces_industry,"32614,5",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32326160,"Laminated plastics plate, sheet (except packaging), shape, and plastics bottle manufacturing",ces_industry,"32613,6",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32326190,Other plastics product manufacturing,ces_industry,32619,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32326200,Rubber product manufacturing,ces_industry,3262,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32326210,Tire manufacturing,ces_industry,32621,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32326290,"Rubber and plastics hoses, belting, and other rubber product manufacturing",ces_industry,"32622,9",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32329000,"Beverage, tobacco, and leather and allied product manufacturing",ces_industry,"312,6",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32329100,Beverage manufacturing,ces_industry,3121,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32329110,Soft drinks and ice,ces_industry,31211,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32329111,Soft drinks,ces_industry,312111,MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32329140,"Breweries, wineries, and distilleries",ces_industry,"31212,3,4",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,32329900,Other miscellaneous nondurable goods manufacturing,ces_industry,"3122,60",MFG,Manufacturing,naics2_manufacturing_from_ces_naics,1
+CES,40000000,"Trade, transportation, and utilities",ces_industry,-,,,ces_no_naics_or_total,0
+CES,41420000,Wholesale trade,ces_industry,42,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423000,"Merchant wholesalers, durable goods",ces_industry,423,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423100,Motor vehicle and motor vehicle parts and supplies merchant wholesalers,ces_industry,4231,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423110,Automobile and other motor vehicle merchant wholesalers,ces_industry,42311,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423120,Motor vehicle supplies and new parts merchant wholesalers,ces_industry,42312,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423200,Furniture and home furnishing merchant wholesalers,ces_industry,4232,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423210,Furniture merchant wholesalers,ces_industry,42321,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423220,Home furnishing merchant wholesalers,ces_industry,42322,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423300,Lumber and other construction materials merchant wholesalers,ces_industry,4233,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423310,"Lumber, plywood, millwork, and wood panel merchant wholesalers",ces_industry,42331,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423320,"Brick, stone, and related construction material merchant wholesalers",ces_industry,42332,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423390,"Roofing, siding, insulation, and other construction material merchant wholesalers",ces_industry,"42333,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423400,Professional and commercial equipment and supplies merchant wholesalers,ces_industry,4234,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423420,Office equipment merchant wholesalers,ces_industry,42342,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423430,Computer and computer peripheral equipment and software merchant wholesalers,ces_industry,42343,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423450,"Medical, dental, and hospital equipment and supplies merchant wholesalers",ces_industry,42345,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423490,"Ophthalmic goods and photographic, commercial, and professional equipment and supplies merchant wholesalers",ces_industry,"42341,4,6,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423500,Metal and mineral (except petroleum) merchant wholesalers,ces_industry,4235,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423600,Household appliances and electrical and electronic goods merchant wholesalers,ces_industry,4236,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423610,"Electrical apparatus and equipment, wiring supplies, and related equipment merchant wholesalers",ces_industry,42361,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423690,"Household appliances, electric housewares, consumer electronics, and other electronic parts and equipment merchant wholesalers",ces_industry,"42362,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423700,"Hardware, and plumbing and heating equipment and supplies merchant wholesalers",ces_industry,4237,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423710,Hardware merchant wholesalers,ces_industry,42371,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423720,"Plumbing, heating, and hydronics equipment and supplies merchant wholesalers",ces_industry,42372,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423740,"Warm air heating, air-conditioning, and refrigeration equipment and supplies merchant wholesalers",ces_industry,"42373,4",,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423800,"Machinery, equipment, and supplies merchant wholesalers",ces_industry,4238,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423810,Construction and mining (except oil well) machinery and equipment merchant wholesalers,ces_industry,42381,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423820,Farm and garden machinery and equipment merchant wholesalers,ces_industry,42382,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423830,Industrial machinery and equipment merchant wholesalers,ces_industry,42383,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423840,Industrial supplies merchant wholesalers,ces_industry,42384,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423850,Service establishment equipment and supplies merchant wholesalers,ces_industry,42385,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423860,Transportation equipment and supplies (except motor vehicle) merchant wholesalers,ces_industry,42386,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423900,Miscellaneous durable goods merchant wholesalers,ces_industry,4239,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423910,Sporting and recreational goods and supplies merchant wholesalers,ces_industry,42391,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423930,Recyclable material merchant wholesalers,ces_industry,42393,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423940,"Jewelry, watch, precious stone, and precious metal merchant wholesalers",ces_industry,42394,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41423990,Toy and hobby goods and supplies and other miscellaneous durable goods merchant wholesalers,ces_industry,"42392,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424000,"Merchant wholesalers, nondurable goods",ces_industry,424,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424100,Paper and paper product merchant wholesalers,ces_industry,4241,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424120,"Printing and writing paper, stationery, and office supplies merchant wholesalers",ces_industry,"42411,2",,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424130,Industrial and personal service paper merchant wholesalers,ces_industry,42413,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424200,Drugs and druggists' sundries merchant wholesalers,ces_industry,4242,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424300,"Apparel, piece goods, and notions merchant wholesalers",ces_industry,4243,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424340,"Footwear, piece goods, notions, and other dry goods merchant wholesalers",ces_industry,"42431,4",,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424350,Clothing and clothing accessories merchant wholesalers,ces_industry,42435,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424400,Grocery and related product merchant wholesalers,ces_industry,4244,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424410,General line grocery merchant wholesalers,ces_industry,42441,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424420,Packaged frozen food merchant wholesalers,ces_industry,42442,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424450,Confectionery merchant wholesalers,ces_industry,42445,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424470,"Dairy product (except dried or canned), poultry product, fish, seafood, meat, and meat product merchant wholesalers",ces_industry,"42443,4,6,7",,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424480,Fresh fruit and vegetable merchant wholesalers,ces_industry,42448,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424490,Other grocery and related products merchant wholesalers,ces_industry,42449,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424500,Farm product raw material merchant wholesalers,ces_industry,4245,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424510,Grain and field bean merchant wholesalers,ces_industry,42451,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424600,Chemical and allied products merchant wholesalers,ces_industry,4246,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424700,Petroleum and petroleum products merchant wholesalers,ces_industry,4247,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424800,"Beer, wine, and distilled alcoholic beverage merchant wholesalers",ces_industry,4248,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424810,Beer and ale merchant wholesalers,ces_industry,42481,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424820,Wine and distilled alcoholic beverage merchant wholesalers,ces_industry,42482,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424900,Miscellaneous nondurable goods merchant wholesalers,ces_industry,4249,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424910,Farm supplies merchant wholesalers,ces_industry,42491,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424930,"Flower, nursery stock, and florists' supplies merchant wholesalers",ces_industry,42493,,,out_of_scope_six_sector_from_ces_naics,0
+CES,41424990,All other nondurable goods merchant wholesalers,ces_industry,"42492,4,5,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,41425000,Wholesale trade agents and brokers,ces_industry,425,,,out_of_scope_six_sector_from_ces_naics,0
+CES,42000000,Retail trade,ces_industry,-,,,ces_no_naics_or_total,0
+CES,42441000,Motor vehicle and parts dealers,ces_industry,441,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42441100,Automobile dealers,ces_industry,4411,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42441110,New car dealers,ces_industry,44111,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42441120,Used car dealers,ces_industry,44112,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42441200,Other motor vehicle dealers,ces_industry,4412,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42441210,Recreational vehicle dealers,ces_industry,44121,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42441220,"Motorcycle, boat, and other motor vehicle dealers",ces_industry,44122,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42441300,"Automotive parts, accessories, and tire retailers",ces_industry,4413,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42441330,Automotive parts and accessories retailers,ces_industry,44133,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42441340,Tire dealers,ces_industry,44134,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42444000,Building material and garden equipment and supplies dealers,ces_industry,444,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42444100,Building material and supplies dealers,ces_industry,4441,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42444140,Hardware retailers,ces_industry,44414,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42444180,"Home centers, paint, wallpaper, and other building material dealers",ces_industry,"44411,2,8",RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42444200,Lawn and garden equipment and supplies retailers,ces_industry,4442,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42444230,Outdoor power equipment retailers,ces_industry,44423,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42444240,"Nursery, garden center, and farm supply retailers",ces_industry,44424,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42445000,Food and beverage retailers,ces_industry,445,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42445100,Grocery and convenience retailers,ces_industry,4451,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42445110,Supermarkets and other grocery retailers (except convenience retailers),ces_industry,44511,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42445130,Convenience retailers and vending machine operators,ces_industry,44513,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42445131,Convenience retailers,ces_industry,445131,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42445132,Vending machine operators,ces_industry,445132,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42445200,Specialty food retailers,ces_industry,4452,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42445230,Fruit and vegetable retailers,ces_industry,44523,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42445250,"Meat, fish, and seafood retailers",ces_industry,"44524,5",RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42445290,Other specialty food retailers,ces_industry,44529,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42445292,"Baked goods, confectionery, and nut retailers",ces_industry,"445291,2",RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42445298,All other specialty food retailers,ces_industry,445298,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42445300,"Beer, wine, and liquor retailers",ces_industry,4453,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42449000,"Furniture, home furnishings, electronics, and appliance retailers",ces_industry,449,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42449100,Furniture and home furnishings retailers,ces_industry,4491,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42449110,Furniture retailers,ces_industry,44911,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42449120,Home furnishings retailers,ces_industry,44912,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42449121,Floor covering retailers,ces_industry,449121,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42449129,Window treatment and all other home furnishings retailers,ces_industry,"449122,9",RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42449200,Electronics and appliance retailers,ces_industry,4492,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42455000,General merchandise retailers,ces_industry,455,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42455100,Department stores,ces_industry,4551,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42455200,"Warehouse clubs, supercenters, and other general merchandise retailers",ces_industry,4552,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42456000,Health and personal care retailers,ces_industry,456,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42456110,Pharmacies and drug retailers,ces_industry,45611,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42456120,"Cosmetics, beauty supplies, and perfume retailers",ces_industry,45612,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42456130,Optical goods retailers,ces_industry,45613,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42456190,Other health and personal care retailers,ces_industry,45619,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42456191,Food (health) supplement retailers,ces_industry,456191,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42456199,All other health and personal care retailers,ces_industry,456199,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42457000,Gasoline stations and fuel dealers,ces_industry,457,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42457100,Gasoline stations,ces_industry,4571,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42457110,Gasoline stations with convenience stores,ces_industry,45711,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42457120,Other gasoline stations,ces_industry,45712,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42457200,Fuel dealers,ces_industry,4572,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42458000,"Clothing, clothing accessories, shoe, and jewelry retailers",ces_industry,458,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42458100,Clothing and clothing accessories retailers,ces_industry,4581,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42458200,Shoe retailers,ces_industry,4582,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42458300,"Jewelry, luggage, and leather goods retailers",ces_industry,4583,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459000,"Sporting goods, hobby, musical instrument, book, and miscellaneous retailers",ces_industry,459,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459100,"Sporting goods, hobby, and musical instrument retailers",ces_industry,4591,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459110,Sporting goods retailers,ces_industry,45911,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459120,"Hobby, toy, and game retailers",ces_industry,45912,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459130,"Sewing, needlework, and piece goods retailers",ces_industry,45913,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459140,Musical instrument and supplies retailers,ces_industry,45914,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459200,Book retailers and news dealers,ces_industry,4592,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459300,Florists,ces_industry,4593,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459400,"Office supplies, stationery, and gift retailers",ces_industry,4594,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459410,Office supplies and stationery retailers,ces_industry,45941,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459420,"Gift, novelty, and souvenir retailers",ces_industry,45942,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459500,Used merchandise retailers,ces_industry,4595,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459900,Other miscellaneous retailers,ces_industry,4599,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459910,Pet and pet supplies retailers,ces_industry,45991,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459920,Art dealers,ces_industry,45992,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459990,Manufactured (mobile) home dealers and all other miscellaneous retailers,ces_industry,"45993,9",RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,42459991,"Tobacco, electronic cigarette, and other smoking supplies retailers",ces_industry,459991,RET,Retail trade,naics2_retail_from_ces_naics,1
+CES,43000000,Transportation and warehousing,ces_industry,-,,,ces_no_naics_or_total,0
+CES,43481000,Air transportation,ces_industry,481,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43481100,Scheduled air transportation,ces_industry,4811,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43481200,Nonscheduled air transportation,ces_industry,4812,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43482000,Rail transportation,ces_industry,482,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43483000,Water transportation,ces_industry,483,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43484000,Truck transportation,ces_industry,484,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43484100,General freight trucking,ces_industry,4841,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43484110,"General freight trucking, local",ces_industry,48411,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43484120,"General freight trucking, long-distance",ces_industry,48412,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43484121,"General freight trucking, long-distance, truckload",ces_industry,484121,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43484122,"General freight trucking, long-distance, less than truckload",ces_industry,484122,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43484200,Specialized freight trucking,ces_industry,4842,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43484210,Used household and office goods moving,ces_industry,48421,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43484220,"Specialized freight (except used goods) trucking, local",ces_industry,48422,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43484230,"Specialized freight (except used goods) trucking, long-distance",ces_industry,48423,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43485000,Transit and ground passenger transportation,ces_industry,485,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43485300,Taxi and limousine service,ces_industry,4853,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43485400,School and employee bus transportation,ces_industry,4854,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43485500,"Urban transit systems and interurban, rural, and charter bus transportation",ces_industry,"4851,2,5",,,out_of_scope_six_sector_from_ces_naics,0
+CES,43485900,Other transit and ground passenger transportation,ces_industry,4859,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43486000,Pipeline transportation,ces_industry,486,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43487000,Scenic and sightseeing transportation,ces_industry,487,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43488000,Support activities for transportation,ces_industry,488,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43488100,Support activities for air transportation,ces_industry,4881,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43488300,Support activities for water transportation,ces_industry,4883,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43488320,Marine cargo handling,ces_industry,48832,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43488400,Support activities for road transportation,ces_industry,4884,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43488500,Freight transportation arrangement,ces_industry,4885,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43488900,"Other support activities for transportation, including rail",ces_industry,"4882,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,43492000,Couriers and messengers,ces_industry,492,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43492100,Couriers and express delivery services,ces_industry,4921,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43492200,Local messengers and delivery and private postal service,ces_industry,"49111,221",,,out_of_scope_six_sector_from_ces_naics,0
+CES,43493000,Warehousing and storage,ces_industry,493,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43493110,General warehousing and storage,ces_industry,49311,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43493120,Refrigerated warehousing and storage,ces_industry,49312,,,out_of_scope_six_sector_from_ces_naics,0
+CES,43493190,"Other warehousing and storage, including farm product",ces_industry,"49313,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,44220000,Utilities,ces_industry,22,,,out_of_scope_six_sector_from_ces_naics,0
+CES,44221100,"Electric power generation, transmission and distribution",ces_industry,2211,,,out_of_scope_six_sector_from_ces_naics,0
+CES,44221110,Electric power generation,ces_industry,22111,,,out_of_scope_six_sector_from_ces_naics,0
+CES,44221112,Fossil fuel electric power generation,ces_industry,221112,,,out_of_scope_six_sector_from_ces_naics,0
+CES,44221118,"Hydroelectric and nuclear, solar, wind, geothermal, biomass, and other electric power generation",ces_industry,"221111,3-8",,,out_of_scope_six_sector_from_ces_naics,0
+CES,44221120,"Electric power transmission, control, and distribution",ces_industry,22112,,,out_of_scope_six_sector_from_ces_naics,0
+CES,44221121,Electric bulk power transmission and control,ces_industry,221121,,,out_of_scope_six_sector_from_ces_naics,0
+CES,44221122,Electric power distribution,ces_industry,221122,,,out_of_scope_six_sector_from_ces_naics,0
+CES,44221200,Natural gas distribution,ces_industry,2212,,,out_of_scope_six_sector_from_ces_naics,0
+CES,44221300,"Water, sewage, and other systems",ces_industry,2213,,,out_of_scope_six_sector_from_ces_naics,0
+CES,50000000,Information,ces_industry,51,INF,Information,naics2_information_from_ces_naics,1
+CES,50512000,Motion picture and sound recording industries,ces_industry,512,INF,Information,naics2_information_from_ces_naics,1
+CES,50512110,Motion picture and video production,ces_industry,51211,INF,Information,naics2_information_from_ces_naics,1
+CES,50512130,Motion picture and video exhibition,ces_industry,51213,INF,Information,naics2_information_from_ces_naics,1
+CES,50513000,Publishing industries,ces_industry,513,INF,Information,naics2_information_from_ces_naics,1
+CES,50513100,"Newspaper, periodical, book, and directory publishers",ces_industry,5131,INF,Information,naics2_information_from_ces_naics,1
+CES,50513110,Newspaper publishers,ces_industry,51311,INF,Information,naics2_information_from_ces_naics,1
+CES,50513120,Periodical publishers,ces_industry,51312,INF,Information,naics2_information_from_ces_naics,1
+CES,50513130,Book publishers,ces_industry,51313,INF,Information,naics2_information_from_ces_naics,1
+CES,50513190,"Directory, mailing list, and other publishers",ces_industry,"51314,9",INF,Information,naics2_information_from_ces_naics,1
+CES,50513200,Software publishers,ces_industry,5132,INF,Information,naics2_information_from_ces_naics,1
+CES,50516000,Broadcasting and content providers,ces_industry,516,INF,Information,naics2_information_from_ces_naics,1
+CES,50516100,Radio and television broadcasting stations,ces_industry,5161,INF,Information,naics2_information_from_ces_naics,1
+CES,50516110,Radio broadcasting stations,ces_industry,51611,INF,Information,naics2_information_from_ces_naics,1
+CES,50516120,Television broadcasting stations,ces_industry,51612,INF,Information,naics2_information_from_ces_naics,1
+CES,50516200,"Media streaming distribution services, social networks, and other media networks and content providers",ces_industry,5162,INF,Information,naics2_information_from_ces_naics,1
+CES,50517000,Telecommunications,ces_industry,517,INF,Information,naics2_information_from_ces_naics,1
+CES,50517100,Wired and wireless telecommunications (except satellite),ces_industry,5171,INF,Information,naics2_information_from_ces_naics,1
+CES,50517110,Wired and wireless telecommunications carriers (except satellite),ces_industry,51711,INF,Information,naics2_information_from_ces_naics,1
+CES,50517111,Wired telecommunications carriers,ces_industry,517111,INF,Information,naics2_information_from_ces_naics,1
+CES,50517112,Wireless telecommunications carriers (except satellite),ces_industry,517112,INF,Information,naics2_information_from_ces_naics,1
+CES,50517120,Telecommunications resellers,ces_industry,51712,INF,Information,naics2_information_from_ces_naics,1
+CES,50517800,All other telecommunications,ces_industry,"5174,8",INF,Information,naics2_information_from_ces_naics,1
+CES,50518000,"Computing infrastructure providers, data processing, web hosting, and related services",ces_industry,518,INF,Information,naics2_information_from_ces_naics,1
+CES,50519000,"Web search portals, libraries, archives, and other information services",ces_industry,519,INF,Information,naics2_information_from_ces_naics,1
+CES,50519210,Libraries and archives,ces_industry,51921,INF,Information,naics2_information_from_ces_naics,1
+CES,50519290,Web search portals and all other information services,ces_industry,51929,INF,Information,naics2_information_from_ces_naics,1
+CES,55000000,Financial activities,ces_industry,-,,,ces_no_naics_or_total,0
+CES,55520000,Finance and insurance,ces_industry,52,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55521000,Monetary authorities-central bank,ces_industry,521,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522000,Credit intermediation and related activities,ces_industry,522,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522100,Depository credit intermediation,ces_industry,5221,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522110,Commercial banking,ces_industry,52211,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522130,Credit unions,ces_industry,52213,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522180,Savings institutions and other depository credit intermediation,ces_industry,52218,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522200,Nondepository credit intermediation,ces_industry,5222,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522210,Credit card issuing,ces_industry,52221,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522220,Sales financing,ces_industry,52222,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522290,Other nondepository credit intermediation,ces_industry,52229,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522291,Consumer lending,ces_industry,522291,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522292,Real estate credit,ces_industry,522292,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522299,"International, secondary market, and all other nondepository credit intermediation",ces_industry,522299,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522300,Activities related to credit intermediation,ces_industry,5223,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522310,Mortgage and nonmortgage loan brokers,ces_industry,52231,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522320,"Financial transactions processing, reserve, and clearinghouse activities",ces_industry,52232,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55522390,Other activities related to credit intermediation,ces_industry,52239,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55523000,"Securities, commodity contracts, funds, trusts, and other financial vehicles, investments, and related activities",ces_industry,"523,5",FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55523150,Investment banking and securities intermediation,ces_industry,52315,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55523200,"Securities and commodity contracts brokerage, intermediation, and exchanges",ces_industry,"5231,2",FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55523900,"Funds, trusts, and other financial vehicles and investment activities",ces_industry,"5239,50",FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55523910,Miscellaneous intermediation,ces_industry,52391,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55523940,Portfolio management and investment advice,ces_industry,52394,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55523990,All other financial investment activities,ces_industry,"52399,500",FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55524000,Insurance carriers and related activities,ces_industry,524,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55524100,Insurance carriers,ces_industry,5241,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55524110,"Direct life, health, and medical insurance carriers",ces_industry,52411,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55524120,"Direct insurance (except life, health, and medical) carriers",ces_industry,52412,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55524126,Direct property and casualty insurance carriers,ces_industry,524126,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55524128,"Direct title insurance and other direct insurance (except life, health, and medical) carriers",ces_industry,"524127,8",FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55524130,Reinsurance carriers,ces_industry,52413,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55524200,"Agencies, brokerages, and other insurance related activities",ces_industry,5242,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55524210,Insurance agencies and brokerages,ces_industry,52421,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55524290,Other insurance related activities,ces_industry,52429,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55524291,Claims adjusting,ces_industry,524291,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55524292,Pharmacy benefit management and other third party administration of insurance and pension funds,ces_industry,524292,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55524298,All other insurance related activities,ces_industry,524298,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55530000,Real estate and rental and leasing,ces_industry,53,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55531000,Real estate,ces_industry,531,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55531100,Lessors of real estate,ces_industry,5311,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55531110,Lessors of residential buildings and dwellings,ces_industry,53111,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55531120,Lessors of nonresidential buildings (except miniwarehouses),ces_industry,53112,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55531130,Lessors of miniwarehouses and self-storage units,ces_industry,53113,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55531190,Lessors of other real estate property,ces_industry,53119,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55531200,Offices of real estate agents and brokers,ces_industry,5312,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55531300,Activities related to real estate,ces_industry,5313,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55531310,Real estate property managers,ces_industry,53131,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55531311,Residential property managers,ces_industry,531311,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55531312,Nonresidential property managers,ces_industry,531312,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55531320,Offices of real estate appraisers,ces_industry,53132,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55531390,Other activities related to real estate,ces_industry,53139,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55532000,Rental and leasing services,ces_industry,532,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55532100,Automotive equipment rental and leasing,ces_industry,5321,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55532110,Passenger car rental and leasing,ces_industry,53211,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55532120,"Truck, utility trailer, and recreational vehicle (RV) rental and leasing",ces_industry,53212,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55532200,Consumer goods rental,ces_industry,5322,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55532283,Home health equipment rental,ces_industry,532283,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55532300,General rental centers,ces_industry,5323,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55532400,Commercial and industrial machinery and equipment rental and leasing,ces_industry,5324,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55532410,"Construction, transportation, mining, and forestry machinery and equipment rental and leasing",ces_industry,53241,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55532490,"Office, commercial, and industrial machinery and equipment rental and leasing",ces_industry,"53242,9",FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,55533000,Lessors of nonfinancial intangible assets (except copyrighted works),ces_industry,533,FAS,Financial activities,naics2_finance_or_real_estate_from_ces_naics,1
+CES,60000000,Professional and business services,ces_industry,-,,,ces_no_naics_or_total,0
+CES,60540000,"Professional, scientific, and technical services",ces_industry,54,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541100,Legal services,ces_industry,5411,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541110,Offices of lawyers,ces_industry,54111,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541190,Other legal services,ces_industry,54119,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541200,"Accounting, tax preparation, bookkeeping, and payroll services",ces_industry,5412,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541211,Offices of certified public accountants,ces_industry,541211,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541213,Tax preparation services,ces_industry,541213,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541214,Payroll services,ces_industry,541214,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541219,Other accounting services,ces_industry,541219,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541300,"Architectural, engineering, and related services",ces_industry,5413,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541310,Architectural services,ces_industry,54131,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541320,Landscape architectural services,ces_industry,54132,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541340,Engineering and drafting services,ces_industry,"54133,4",PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541370,"Building inspection, surveying, and mapping services",ces_industry,"54135,6,7",PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541380,Testing laboratories and services,ces_industry,54138,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541400,Specialized design services,ces_industry,5414,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541410,Interior design services,ces_industry,54141,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541430,Graphic design services,ces_industry,54143,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541500,Computer systems design and related services,ces_industry,5415,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541511,Custom computer programming services,ces_industry,541511,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541512,Computer systems design services,ces_industry,541512,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541513,Computer facilities management services,ces_industry,541513,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541519,Other computer related services,ces_industry,541519,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541600,"Management, scientific, and technical consulting services",ces_industry,5416,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541610,Management consulting services,ces_industry,54161,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541611,Administrative management and general management consulting services,ces_industry,541611,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541612,Human resources consulting services,ces_industry,541612,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541613,Marketing consulting services,ces_industry,541613,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541614,"Process, physical distribution, and logistics consulting services",ces_industry,541614,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541618,Other management consulting services,ces_industry,541618,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541620,Environmental consulting services,ces_industry,54162,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541690,Other scientific and technical consulting services,ces_industry,54169,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541700,Scientific research and development services,ces_industry,5417,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541710,"Research and development in the physical, engineering, and life sciences",ces_industry,54171,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541713,Research and development in nanotechnology,ces_industry,541713,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541714,"Research and development in biotechnology, except nanobiotechnology",ces_industry,541714,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541715,"Research and development in the physical, engineering, and life sciences, except nanotechnology and biotechnology",ces_industry,541715,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541720,Research and development in the social sciences and humanities,ces_industry,54172,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541800,"Advertising, public relations, and related services",ces_industry,5418,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541810,Advertising agencies,ces_industry,54181,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541820,Public relations agencies,ces_industry,54182,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541840,Media buying agencies and media representatives,ces_industry,"54183,4",PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541850,Indoor and outdoor display advertising,ces_industry,54185,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541860,Direct mail advertising,ces_industry,54186,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541890,Advertising material distribution and other services related to advertising,ces_industry,"54187,9",PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541900,"Other professional, scientific, and technical services",ces_industry,5419,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541910,Marketing research and public opinion polling,ces_industry,54191,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541920,Photographic services,ces_industry,54192,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541940,Veterinary services,ces_industry,54194,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60541990,"Translation, interpretation, and all other professional, scientific, and technical services",ces_industry,"54193,9",PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60550000,Management of companies and enterprises,ces_industry,55,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60551112,Offices of bank and other holding companies,ces_industry,"551111,2",PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60551114,"Corporate, subsidiary, and regional managing offices",ces_industry,551114,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60560000,Administrative and support and waste management and remediation services,ces_industry,56,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561000,Administrative and support services,ces_industry,561,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561100,Office administrative services,ces_industry,5611,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561200,Facilities support services,ces_industry,5612,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561300,Employment services,ces_industry,5613,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561310,Employment placement agencies and executive search services,ces_industry,56131,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561311,Employment placement agencies,ces_industry,561311,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561312,Executive search services,ces_industry,561312,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561320,Temporary help services,ces_industry,56132,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561330,Professional employer organizations,ces_industry,56133,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561400,Business support services,ces_industry,5614,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561410,Document preparation services,ces_industry,56141,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561420,Telephone call centers,ces_industry,56142,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561421,Telephone answering services,ces_industry,561421,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561422,Telemarketing bureaus and other contact centers,ces_industry,561422,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561430,Business service centers,ces_industry,56143,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561440,Collection agencies,ces_industry,56144,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561490,"Repossession, court reporting, stenotype, and other business support services and credit bureaus",ces_industry,"56145,9",PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561499,All other business support services,ces_industry,561499,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561500,Travel arrangement and reservation services,ces_industry,5615,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561510,Travel agencies,ces_industry,56151,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561520,Tour operators,ces_industry,56152,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561590,Other travel arrangement and reservation services,ces_industry,56159,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561600,Investigation and security services,ces_industry,5616,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561610,"Investigation, guard, and armored car services",ces_industry,56161,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561611,Investigation and personal background check services,ces_industry,561611,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561613,"Security guards, patrol services, and armored car services",ces_industry,"561612,3",PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561620,Security systems services,ces_industry,56162,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561700,Services to buildings and dwellings,ces_industry,5617,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561710,Exterminating and pest control services,ces_industry,56171,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561720,Janitorial services,ces_industry,56172,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561730,Landscaping services,ces_industry,56173,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561740,Carpet and upholstery cleaning services,ces_industry,56174,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561790,Other services to buildings and dwellings,ces_industry,56179,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561900,Other support services,ces_industry,5619,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561910,Packaging and labeling services,ces_industry,56191,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561920,Convention and trade show organizers,ces_industry,56192,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60561990,All other support services,ces_industry,56199,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60562000,Waste management and remediation services,ces_industry,562,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60562100,Waste collection,ces_industry,5621,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60562111,Solid waste collection,ces_industry,562111,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60562119,Hazardous and other waste collection,ces_industry,"562112,9",PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60562200,Waste treatment and disposal,ces_industry,5622,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60562211,Hazardous waste treatment and disposal,ces_industry,562211,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60562219,"Solid waste landfill, combustors, and incinerators and other nonhazardous waste treatment and disposal",ces_industry,"562212,3,9",PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60562900,Remediation and other waste management services,ces_industry,5629,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60562910,Remediation services,ces_industry,56291,PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,60562990,Materials recovery facilities and other waste management services,ces_industry,"56292,9",PBS,Professional and business services,naics2_professional_management_admin_from_ces_naics,1
+CES,65000000,Private education and health services,ces_industry,-,,,ces_no_naics_or_total,0
+CES,65610000,Private educational services,ces_industry,61,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611100,Private elementary and secondary schools,ces_industry,6111,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611300,"Private junior colleges, colleges, universities, and professional schools",ces_industry,"6112,3",PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611400,Private business schools and computer and management training,ces_industry,6114,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611420,Private business and secretarial schools and private computer training,ces_industry,"61141,2",PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611430,Private professional and management development training,ces_industry,61143,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611500,Private technical and trade schools,ces_industry,6115,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611512,Private flight training,ces_industry,611512,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611513,Private cosmetology and barber schools and apprenticeship training,ces_industry,"611511,3",PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611519,Other private technical and trade schools,ces_industry,611519,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611600,Other private schools and instruction,ces_industry,6116,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611610,Private fine arts schools,ces_industry,61161,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611620,Private sports and recreation instruction,ces_industry,61162,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611690,Private language schools and all other private schools and instruction,ces_industry,"61163,9",PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611691,Private exam preparation and tutoring,ces_industry,611691,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611699,Private miscellaneous schools and instruction,ces_industry,611699,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65611700,Private educational support services,ces_industry,6117,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_from_ces_naics,1
+CES,65620000,Health care and social assistance,ces_industry,62,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65620001,Health care,ces_industry,"621,2,3",HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621000,Ambulatory health care services,ces_industry,621,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621100,Offices of physicians,ces_industry,6211,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621111,Offices of physicians (except mental health specialists),ces_industry,621111,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621112,"Offices of physicians, mental health specialists",ces_industry,621112,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621200,Offices of dentists,ces_industry,6212,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621300,Offices of other health practitioners,ces_industry,6213,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621310,Offices of chiropractors,ces_industry,62131,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621320,Offices of optometrists,ces_industry,62132,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621330,Offices of mental health practitioners (except physicians),ces_industry,62133,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621340,"Offices of physical, occupational and speech therapists, and audiologists",ces_industry,62134,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621390,Offices of all other health practitioners,ces_industry,62139,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621391,Offices of podiatrists,ces_industry,621391,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621399,Offices of all other miscellaneous health practitioners,ces_industry,621399,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621400,Outpatient care centers,ces_industry,6214,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621420,Outpatient mental health and substance abuse centers,ces_industry,62142,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621490,Other outpatient care centers,ces_industry,"62141,9",HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621491,HMO medical centers,ces_industry,621491,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621492,Kidney dialysis centers,ces_industry,621492,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621493,Freestanding ambulatory surgical and emergency centers,ces_industry,621493,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621498,Family planning and all other outpatient care centers,ces_industry,"621410,98",HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621500,Medical and diagnostic laboratories,ces_industry,6215,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621511,Medical laboratories,ces_industry,621511,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621512,Diagnostic imaging centers,ces_industry,621512,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621600,Home health care services,ces_industry,6216,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621900,Other ambulatory health care services,ces_industry,6219,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621910,Ambulance services,ces_industry,62191,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621990,All other ambulatory health care services,ces_industry,62199,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621991,Blood and organ banks,ces_industry,621991,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65621999,All other miscellaneous ambulatory health care services,ces_industry,621999,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65622000,Hospitals,ces_industry,622,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65622100,General medical and surgical hospitals,ces_industry,6221,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65622200,Psychiatric and substance abuse hospitals,ces_industry,6222,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65622300,"Specialty, except psychiatric and substance abuse, hospitals",ces_industry,6223,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65623000,Nursing and residential care facilities,ces_industry,623,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65623100,Skilled nursing care facilities,ces_industry,6231,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65623200,"Residential intellectual and developmental disability, mental health, and substance abuse facilities",ces_industry,6232,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65623210,Residential intellectual and developmental disability facilities,ces_industry,62321,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65623220,Residential mental health and substance abuse facilities,ces_industry,62322,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65623300,Continuing care retirement communities and assisted living facilities for the elderly,ces_industry,6233,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65623311,Continuing care retirement communities,ces_industry,623311,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65623312,Assisted living facilities for the elderly,ces_industry,623312,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65623900,Other residential care facilities,ces_industry,6239,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65624000,Social assistance,ces_industry,624,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65624100,Individual and family services,ces_industry,6241,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65624110,Child and youth services,ces_industry,62411,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65624120,Services for the elderly and persons with disabilities,ces_industry,62412,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65624190,Other individual and family services,ces_industry,62419,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65624200,"Community food and housing, and emergency and other relief services",ces_industry,6242,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65624210,Community food services,ces_industry,62421,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65624230,"Community housing, emergency, and relief services",ces_industry,"62422,3",HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65624300,Vocational rehabilitation services,ces_industry,6243,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,65624400,Child care services,ces_industry,6244,HCS,Health care and social assistance,naics2_health_social_assistance_from_ces_naics,1
+CES,70000000,Leisure and hospitality,ces_industry,-,,,ces_no_naics_or_total,0
+CES,70710000,"Arts, entertainment, and recreation",ces_industry,71,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70711000,"Performing arts, spectator sports, and related industries",ces_industry,711,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70711100,Performing arts companies,ces_industry,7111,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70711130,Musical groups and artists,ces_industry,71113,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70711190,"Theater, dance, and other performing arts companies and dinner theaters",ces_industry,"71111,2,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,70711200,Spectator sports,ces_industry,7112,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70711211,Sports teams and clubs,ces_industry,711211,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70711219,Racetracks and other spectator sports,ces_industry,"711212,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,70711300,Arts and sports promoters and agents and managers for public figures,ces_industry,"7113,4",,,out_of_scope_six_sector_from_ces_naics,0
+CES,70711500,"Independent artists, writers, and performers",ces_industry,7115,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70712000,"Museums, historical sites, and similar institutions",ces_industry,712,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70712110,Museums,ces_industry,71211,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70712190,"Historical sites, zoos, botanical gardens, nature parks, and other similar institutions",ces_industry,"71212,3,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,70713000,"Amusement, gambling, and recreation industries",ces_industry,713,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70713100,Amusement parks and arcades,ces_industry,7131,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70713200,Gambling industries,ces_industry,7132,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70713210,"Casinos, except casino hotels",ces_industry,71321,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70713290,Other gambling industries,ces_industry,71329,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70713900,Other amusement and recreation industries,ces_industry,7139,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70713910,Golf courses and country clubs,ces_industry,71391,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70713920,Skiing facilities,ces_industry,71392,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70713930,Marinas,ces_industry,71393,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70713940,Fitness and recreational sports centers,ces_industry,71394,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70713950,Bowling centers,ces_industry,71395,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70713990,All other amusement and recreation industries,ces_industry,71399,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70720000,Accommodation and food services,ces_industry,72,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70721000,Accommodation,ces_industry,721,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70721100,Traveler accommodation,ces_industry,7211,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70721110,Hotels (except casino hotels) and motels,ces_industry,72111,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70721120,Casino hotels,ces_industry,72112,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70721190,Other traveler accommodation,ces_industry,72119,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70721191,Bed-and-breakfast inns,ces_industry,721191,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70721199,"All other traveler accommodation and rooming and boarding houses, dormitories, and workers' camps",ces_industry,"721310,199",,,out_of_scope_six_sector_from_ces_naics,0
+CES,70721200,Recreational vehicle (RV) parks and recreational camps,ces_industry,7212,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70722000,Food services and drinking places,ces_industry,722,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70722300,Special food services,ces_industry,7223,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70722310,Food service contractors,ces_industry,72231,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70722330,Caterers and mobile food services,ces_industry,"72232,3",,,out_of_scope_six_sector_from_ces_naics,0
+CES,70722400,"Drinking places, alcoholic beverages",ces_industry,7224,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70722500,Restaurants and other eating places,ces_industry,7225,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70722511,Full-service restaurants,ces_industry,722511,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70722513,Limited-service restaurants,ces_industry,722513,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70722514,"Cafeterias, grill buffets, and buffets",ces_industry,722514,,,out_of_scope_six_sector_from_ces_naics,0
+CES,70722515,Snack and nonalcoholic beverage bars,ces_industry,722515,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80000000,Other services,ces_industry,81,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80811000,Repair and maintenance,ces_industry,811,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80811100,Automotive repair and maintenance,ces_industry,8111,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80811110,Automotive mechanical and electrical repair and maintenance,ces_industry,81111,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80811111,General automotive repair,ces_industry,811111,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80811114,Specialized automotive repair,ces_industry,811114,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80811120,"Automotive body, paint, interior, and glass repair",ces_industry,81112,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80811121,"Automotive body, paint, and interior repair and maintenance",ces_industry,811121,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80811122,Automotive glass replacement shops,ces_industry,811122,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80811190,Other automotive repair and maintenance,ces_industry,81119,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80811192,Car washes,ces_industry,811192,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80811198,Automotive oil change and lubrication shops and all other automotive repair and maintenance,ces_industry,"811191,8",,,out_of_scope_six_sector_from_ces_naics,0
+CES,80811200,Electronic and precision equipment repair and maintenance,ces_industry,8112,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80811300,Commercial and industrial machinery and equipment (except automotive and electronic) repair and maintenance,ces_industry,8113,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80811400,Personal and household goods repair and maintenance,ces_industry,8114,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812000,Personal and laundry services,ces_industry,812,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812100,Personal care services,ces_industry,8121,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812110,"Hair, nail, and skin care services",ces_industry,81211,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812112,Barber shops and beauty salons,ces_industry,"812111,2",,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812113,Nail salons,ces_industry,812113,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812190,Other personal care services,ces_industry,81219,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812200,Death care services,ces_industry,8122,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812210,Funeral homes and funeral services,ces_industry,81221,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812220,Cemeteries and crematories,ces_industry,81222,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812300,Drycleaning and laundry services,ces_industry,8123,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812310,Coin-operated laundries and drycleaners,ces_industry,81231,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812320,"Drycleaning and laundry services, except coin-operated",ces_industry,81232,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812330,Linen and uniform supply,ces_industry,81233,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812331,Linen supply,ces_industry,812331,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812332,Industrial launderers,ces_industry,812332,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812900,Other personal services,ces_industry,8129,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812910,Pet care (except veterinary) services,ces_industry,81291,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812930,Parking lots and garages,ces_industry,81293,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80812990,Photofinishing and all other personal services,ces_industry,"81292,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,80813000,"Religious, grantmaking, civic, professional, and similar organizations",ces_industry,813,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80813200,Grantmaking and giving services,ces_industry,8132,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80813211,Grantmaking foundations,ces_industry,813211,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80813212,Voluntary health organizations,ces_industry,813212,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80813219,Other grantmaking and giving services,ces_industry,813219,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80813300,Social advocacy organizations,ces_industry,8133,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80813311,Human rights organizations,ces_industry,813311,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80813319,"Environment, conservation, wildlife, and other social advocacy organizations",ces_industry,"813312,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,80813400,Civic and social organizations,ces_industry,8134,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80813900,"Business, professional, labor, political, and similar organizations",ces_industry,8139,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80813910,Business associations,ces_industry,81391,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80813920,Professional organizations,ces_industry,81392,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80813930,Labor unions and similar labor organizations,ces_industry,81393,,,out_of_scope_six_sector_from_ces_naics,0
+CES,80813990,"Political and other similar organizations (except business, professional, and labor organizations)",ces_industry,"81394,9",,,out_of_scope_six_sector_from_ces_naics,0
+CES,90000000,Government,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90910000,Federal,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90911000,"Federal, except U.S. Postal Service",ces_industry,-,,,ces_no_naics_or_total,0
+CES,90916220,Federal hospitals,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90919110,Department of Defense,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90919120,U.S. Postal Service,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90919999,Other Federal government,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90920000,State government,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90921611,State government education,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90922000,"State government, excluding education",ces_industry,-,,,ces_no_naics_or_total,0
+CES,90922622,State hospitals,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90922920,State government general administration,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90922999,Other State government,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90930000,Local government,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90931611,Local government education,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90932000,"Local government, excluding education",ces_industry,-,,,ces_no_naics_or_total,0
+CES,90932221,Local government utilities,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90932480,Local government transportation,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90932622,Local hospitals,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90932920,Local government general administration,ces_industry,-,,,ces_no_naics_or_total,0
+CES,90932999,Other local government,ces_industry,-,,,ces_no_naics_or_total,0
+QCEW,NAICS2_11,NAICS sector 11 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,11,,,out_of_scope_six_sector_qcew_naics_equivalence,0
+QCEW,NAICS2_21,NAICS sector 21 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,21,,,out_of_scope_six_sector_qcew_naics_equivalence,0
+QCEW,NAICS2_23,NAICS sector 23 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,23,,,out_of_scope_six_sector_qcew_naics_equivalence,0
+QCEW,NAICS2_32,NAICS sector 32 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,32,MFG,Manufacturing,naics2_manufacturing_qcew_naics_equivalence,1
+QCEW,NAICS2_33,NAICS sector 33 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,33,MFG,Manufacturing,naics2_manufacturing_qcew_naics_equivalence,1
+QCEW,NAICS2_31,NAICS sector 31 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,31,MFG,Manufacturing,naics2_manufacturing_qcew_naics_equivalence,1
+QCEW,NAICS2_42,NAICS sector 42 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,42,,,out_of_scope_six_sector_qcew_naics_equivalence,0
+QCEW,NAICS2_44,NAICS sector 44 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,44,RET,Retail trade,naics2_retail_qcew_naics_equivalence,1
+QCEW,NAICS2_45,NAICS sector 45 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,45,RET,Retail trade,naics2_retail_qcew_naics_equivalence,1
+QCEW,NAICS2_48,NAICS sector 48 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,48,,,out_of_scope_six_sector_qcew_naics_equivalence,0
+QCEW,NAICS2_49,NAICS sector 49 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,49,,,out_of_scope_six_sector_qcew_naics_equivalence,0
+QCEW,NAICS2_22,NAICS sector 22 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,22,,,out_of_scope_six_sector_qcew_naics_equivalence,0
+QCEW,NAICS2_51,NAICS sector 51 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,51,INF,Information,naics2_information_qcew_naics_equivalence,1
+QCEW,NAICS2_52,NAICS sector 52 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,52,FAS,Financial activities,naics2_finance_or_real_estate_qcew_naics_equivalence,1
+QCEW,NAICS2_53,NAICS sector 53 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,53,FAS,Financial activities,naics2_finance_or_real_estate_qcew_naics_equivalence,1
+QCEW,NAICS2_54,NAICS sector 54 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,54,PBS,Professional and business services,naics2_professional_management_admin_qcew_naics_equivalence,1
+QCEW,NAICS2_55,NAICS sector 55 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,55,PBS,Professional and business services,naics2_professional_management_admin_qcew_naics_equivalence,1
+QCEW,NAICS2_56,NAICS sector 56 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,56,PBS,Professional and business services,naics2_professional_management_admin_qcew_naics_equivalence,1
+QCEW,NAICS2_61,NAICS sector 61 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,61,PBS,Professional and business services,naics2_educational_services_maps_to_PBS_qcew_naics_equivalence,1
+QCEW,NAICS2_62,NAICS sector 62 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,62,HCS,Health care and social assistance,naics2_health_social_assistance_qcew_naics_equivalence,1
+QCEW,NAICS2_71,NAICS sector 71 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,71,,,out_of_scope_six_sector_qcew_naics_equivalence,0
+QCEW,NAICS2_72,NAICS sector 72 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,72,,,out_of_scope_six_sector_qcew_naics_equivalence,0
+QCEW,NAICS2_81,NAICS sector 81 (via CES naics_code prefix; QCEW uses NAICS),qcew_naics2_via_ces,81,,,out_of_scope_six_sector_qcew_naics_equivalence,0
+BED,000000,Total private,bed_industry,,,,bed_top_level_aggregate,0
+BED,100000,Goods-producing,bed_industry,,,,bed_top_level_aggregate,0
+BED,100010,Natural resources and mining,bed_industry,,,,bed_unmapped,0
+BED,100020,Construction,bed_industry,,,,bed_unmapped,0
+BED,100030,Manufacturing,bed_industry,,MFG,Manufacturing,bed_goods_producing_manufacturing,1
+BED,200000,Service-providing,bed_industry,,,,bed_top_level_aggregate,0
+BED,200010,Wholesale trade,bed_industry,,,,bed_unmapped,0
+BED,200020,Retail trade,bed_industry,,RET,Retail trade,bed_service_retail_trade,1
+BED,200030,Transportation and warehousing,bed_industry,,,,bed_unmapped,0
+BED,200040,Utilities,bed_industry,,,,bed_unmapped,0
+BED,200050,Information,bed_industry,,INF,Information,bed_service_information,1
+BED,200060,Financial activities,bed_industry,,FAS,Financial activities,bed_service_financial_activities,1
+BED,200070,Professional and business services,bed_industry,,PBS,Professional and business services,bed_service_professional_business,1
+BED,200080,Education and health services,bed_industry,,HCS,Health care and social assistance,bed_service_education_health_combined_nearest_hcs,1
+BED,200090,Leisure and hospitality,bed_industry,,,,bed_unmapped,0
+BED,200100,Other services (except public administration),bed_industry,,,,bed_unmapped,0
+BED,300111,Crop production,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300112,Animal production and aquaculture,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300113,Forestry and logging,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300114,"Hunting, fishing, and trapping",bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300115,Support activities for agriculture and forestry,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300211,Oil and gas extraction,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300212,Mining (except oil and gas),bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300213,Support activities for mining,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300236,Construction of buildings,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300237,Heavy and civil engineering construction,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300238,Specialty trade contractors,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300311,Food manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300312,Beverage and tobacco product manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300313,Textile mills,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300314,Textile product mills,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300315,Apparel manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300316,Leather and allied product manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300321,Wood product manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300322,Paper Manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300323,Printing and related support activities,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300324,Petroleum and coal products manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300325,Chemical manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300326,Plastics and rubber products manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300327,Nonmetallic mineral product manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300331,Primary metal manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300332,Fabricated metal product manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300333,Machinery manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300334,Computer and electronic product manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300335,"Electrical equipment, appliance, and component manufacturing",bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300336,Transportation equipment manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300337,Furniture and related product manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300339,Miscellaneous manufacturing,bed_industry,,MFG,Manufacturing,bed_naics_derived_naics2_manufacturing,1
+BED,300423,"Merchant wholesalers, durable goods",bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300424,"Merchant wholesalers, nondurable goods",bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300425,Wholesale trade agents and brokers,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300441,Motor vehicle and parts dealers,bed_industry,,RET,Retail trade,bed_naics_derived_naics2_retail,1
+BED,300444,Building material and garden equipment and supplies dealers,bed_industry,,RET,Retail trade,bed_naics_derived_naics2_retail,1
+BED,300445,Food and beverage stores,bed_industry,,RET,Retail trade,bed_naics_derived_naics2_retail,1
+BED,300481,Air transportation,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300483,Water transportation,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300484,Truck transportation,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300485,Transit and ground passenger transportation,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300486,Pipeline transportation,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300487,Scenic and sightseeing transportation,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300488,Support activities for transportation,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300492,Couriers and messengers,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300493,Warehousing and storage,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300512,Motion picture and sound recording industries,bed_industry,,INF,Information,bed_naics_derived_naics2_information,1
+BED,300517,Telecommunications,bed_industry,,INF,Information,bed_naics_derived_naics2_information,1
+BED,300518,"Computing infracstructure providers, data processing, web hosting, and related services",bed_industry,,INF,Information,bed_naics_derived_naics2_information,1
+BED,300519,"Web search portals, libraries, archives, and other information services",bed_industry,,INF,Information,bed_naics_derived_naics2_information,1
+BED,300522,Credit intermediation and related activities,bed_industry,,FAS,Financial activities,bed_naics_derived_naics2_finance_or_real_estate,1
+BED,300523,"Securities, commodity contracts, and other financial investments and related activities",bed_industry,,FAS,Financial activities,bed_naics_derived_naics2_finance_or_real_estate,1
+BED,300524,Insurance carriers and related activities,bed_industry,,FAS,Financial activities,bed_naics_derived_naics2_finance_or_real_estate,1
+BED,300525,"Funds, trusts, and other financial vehicles",bed_industry,,FAS,Financial activities,bed_naics_derived_naics2_finance_or_real_estate,1
+BED,300531,Real estate,bed_industry,,FAS,Financial activities,bed_naics_derived_naics2_finance_or_real_estate,1
+BED,300532,Rental and leasing services,bed_industry,,FAS,Financial activities,bed_naics_derived_naics2_finance_or_real_estate,1
+BED,300533,Lessors of nonfinancial intangible assets (except copyrighted works),bed_industry,,FAS,Financial activities,bed_naics_derived_naics2_finance_or_real_estate,1
+BED,300541,"Professional, scientific, and technical services",bed_industry,,PBS,Professional and business services,bed_naics_derived_naics2_professional_management_admin,1
+BED,300551,Management of companies and enterprises,bed_industry,,PBS,Professional and business services,bed_naics_derived_naics2_professional_management_admin,1
+BED,300561,Administrative and support services,bed_industry,,PBS,Professional and business services,bed_naics_derived_naics2_professional_management_admin,1
+BED,300562,Waste management and remediation services,bed_industry,,PBS,Professional and business services,bed_naics_derived_naics2_professional_management_admin,1
+BED,300611,Educational services,bed_industry,,PBS,Professional and business services,bed_naics_derived_naics2_educational_services_maps_to_PBS,1
+BED,300621,Ambulatory health care services,bed_industry,,HCS,Health care and social assistance,bed_naics_derived_naics2_health_social_assistance,1
+BED,300622,Hospitals,bed_industry,,HCS,Health care and social assistance,bed_naics_derived_naics2_health_social_assistance,1
+BED,300623,Nursing and residential care facilities,bed_industry,,HCS,Health care and social assistance,bed_naics_derived_naics2_health_social_assistance,1
+BED,300624,Social assistance,bed_industry,,HCS,Health care and social assistance,bed_naics_derived_naics2_health_social_assistance,1
+BED,300711,"Performing arts, spectator sports, and related industries",bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300712,"Museums, historical sites, and similar institutions",bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300713,"Amusement, gambling, and recreation industries",bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300721,Accommodation,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300722,Food services and drinking places,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300811,Repair and maintenance,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300812,Personal and laundry services,bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
+BED,300813,"Religious, grantmaking, civic, professional, and similar organizations",bed_industry,,,,bed_naics_out_of_scope_out_of_scope_six_sector,0
