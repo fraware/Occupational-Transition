@@ -65,12 +65,34 @@ def main() -> int:
     r = pd.read_csv(reg_path)
     required_cols = [
         "dataset_id",
+        "program",
         "source_url",
+        "download_url",
+        "file_format",
+        "release_date_reported",
+        "source_last_modified_observed",
         "snapshot_download_date",
     ]
     for c in required_cols:
         if c not in r.columns:
             errors.append(f"data_registry: missing column {c}")
+
+    if not r.empty:
+        if r["dataset_id"].astype(str).str.strip().eq("").any():
+            errors.append("data_registry: blank dataset_id values")
+        if r["dataset_id"].duplicated().any():
+            errors.append("data_registry: duplicate dataset_id values")
+        if r["source_url"].astype(str).str.startswith("http://").any():
+            errors.append("data_registry: source_url contains non-HTTPS links")
+        if r["download_url"].astype(str).str.startswith("http://").any():
+            errors.append(
+                "data_registry: download_url contains non-HTTPS links"
+            )
+        # Normalized registry policy: no blank release/last-modified fields.
+        for c in ["release_date_reported", "source_last_modified_observed"]:
+            blank = r[c].astype(str).str.strip().eq("")
+            if blank.any():
+                errors.append(f"data_registry: blank values in {c}")
 
     if errors:
         for e in errors:

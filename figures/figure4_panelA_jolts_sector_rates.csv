@@ -1,0 +1,2041 @@
+month,sector6_code,sector6_label,rate_name,rate_value,series_id
+2019-01,MFG,Manufacturing,job_openings_rate,3.2,JTS300000000000000JOR
+2019-01,MFG,Manufacturing,hires_rate,2.7,JTS300000000000000HIR
+2019-01,MFG,Manufacturing,quits_rate,1.7,JTS300000000000000QUR
+2019-01,MFG,Manufacturing,layoffs_discharges_rate,0.7,JTS300000000000000LDR
+2019-01,INF,Information,job_openings_rate,4.8,JTS510000000000000JOR
+2019-01,INF,Information,hires_rate,3.2,JTS510000000000000HIR
+2019-01,INF,Information,quits_rate,2.1,JTS510000000000000QUR
+2019-01,INF,Information,layoffs_discharges_rate,1.4,JTS510000000000000LDR
+2019-01,FAS,Financial activities,job_openings_rate,4.4,JTS510099000000000JOR
+2019-01,FAS,Financial activities,hires_rate,2.2,JTS510099000000000HIR
+2019-01,FAS,Financial activities,quits_rate,1.2,JTS510099000000000QUR
+2019-01,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2019-01,PBS,Professional and business services,job_openings_rate,6.2,JTS540099000000000JOR
+2019-01,PBS,Professional and business services,hires_rate,5.0,JTS540099000000000HIR
+2019-01,PBS,Professional and business services,quits_rate,3.0,JTS540099000000000QUR
+2019-01,PBS,Professional and business services,layoffs_discharges_rate,1.7,JTS540099000000000LDR
+2019-01,HCS,Health care and social assistance,job_openings_rate,5.8,JTS620000000000000JOR
+2019-01,HCS,Health care and social assistance,hires_rate,3.1,JTS620000000000000HIR
+2019-01,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2019-01,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2019-01,RET,Retail trade,job_openings_rate,5.0,JTS440000000000000JOR
+2019-01,RET,Retail trade,hires_rate,4.6,JTS440000000000000HIR
+2019-01,RET,Retail trade,quits_rate,3.2,JTS440000000000000QUR
+2019-01,RET,Retail trade,layoffs_discharges_rate,1.2,JTS440000000000000LDR
+2019-02,MFG,Manufacturing,job_openings_rate,3.4,JTS300000000000000JOR
+2019-02,MFG,Manufacturing,hires_rate,2.6,JTS300000000000000HIR
+2019-02,MFG,Manufacturing,quits_rate,1.7,JTS300000000000000QUR
+2019-02,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2019-02,INF,Information,job_openings_rate,4.6,JTS510000000000000JOR
+2019-02,INF,Information,hires_rate,3.2,JTS510000000000000HIR
+2019-02,INF,Information,quits_rate,1.5,JTS510000000000000QUR
+2019-02,INF,Information,layoffs_discharges_rate,1.3,JTS510000000000000LDR
+2019-02,FAS,Financial activities,job_openings_rate,3.9,JTS510099000000000JOR
+2019-02,FAS,Financial activities,hires_rate,2.3,JTS510099000000000HIR
+2019-02,FAS,Financial activities,quits_rate,1.2,JTS510099000000000QUR
+2019-02,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2019-02,PBS,Professional and business services,job_openings_rate,6.1,JTS540099000000000JOR
+2019-02,PBS,Professional and business services,hires_rate,5.6,JTS540099000000000HIR
+2019-02,PBS,Professional and business services,quits_rate,3.1,JTS540099000000000QUR
+2019-02,PBS,Professional and business services,layoffs_discharges_rate,1.9,JTS540099000000000LDR
+2019-02,HCS,Health care and social assistance,job_openings_rate,5.2,JTS620000000000000JOR
+2019-02,HCS,Health care and social assistance,hires_rate,3.1,JTS620000000000000HIR
+2019-02,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2019-02,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2019-02,RET,Retail trade,job_openings_rate,4.9,JTS440000000000000JOR
+2019-02,RET,Retail trade,hires_rate,4.6,JTS440000000000000HIR
+2019-02,RET,Retail trade,quits_rate,3.3,JTS440000000000000QUR
+2019-02,RET,Retail trade,layoffs_discharges_rate,1.2,JTS440000000000000LDR
+2019-03,MFG,Manufacturing,job_openings_rate,3.3,JTS300000000000000JOR
+2019-03,MFG,Manufacturing,hires_rate,2.7,JTS300000000000000HIR
+2019-03,MFG,Manufacturing,quits_rate,1.7,JTS300000000000000QUR
+2019-03,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2019-03,INF,Information,job_openings_rate,5.1,JTS510000000000000JOR
+2019-03,INF,Information,hires_rate,3.4,JTS510000000000000HIR
+2019-03,INF,Information,quits_rate,1.6,JTS510000000000000QUR
+2019-03,INF,Information,layoffs_discharges_rate,1.3,JTS510000000000000LDR
+2019-03,FAS,Financial activities,job_openings_rate,4.0,JTS510099000000000JOR
+2019-03,FAS,Financial activities,hires_rate,2.2,JTS510099000000000HIR
+2019-03,FAS,Financial activities,quits_rate,1.3,JTS510099000000000QUR
+2019-03,FAS,Financial activities,layoffs_discharges_rate,0.4,JTS510099000000000LDR
+2019-03,PBS,Professional and business services,job_openings_rate,6.0,JTS540099000000000JOR
+2019-03,PBS,Professional and business services,hires_rate,5.6,JTS540099000000000HIR
+2019-03,PBS,Professional and business services,quits_rate,3.2,JTS540099000000000QUR
+2019-03,PBS,Professional and business services,layoffs_discharges_rate,1.9,JTS540099000000000LDR
+2019-03,HCS,Health care and social assistance,job_openings_rate,5.8,JTS620000000000000JOR
+2019-03,HCS,Health care and social assistance,hires_rate,3.2,JTS620000000000000HIR
+2019-03,HCS,Health care and social assistance,quits_rate,2.2,JTS620000000000000QUR
+2019-03,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2019-03,RET,Retail trade,job_openings_rate,4.7,JTS440000000000000JOR
+2019-03,RET,Retail trade,hires_rate,4.6,JTS440000000000000HIR
+2019-03,RET,Retail trade,quits_rate,3.3,JTS440000000000000QUR
+2019-03,RET,Retail trade,layoffs_discharges_rate,1.2,JTS440000000000000LDR
+2019-04,MFG,Manufacturing,job_openings_rate,3.4,JTS300000000000000JOR
+2019-04,MFG,Manufacturing,hires_rate,2.7,JTS300000000000000HIR
+2019-04,MFG,Manufacturing,quits_rate,1.8,JTS300000000000000QUR
+2019-04,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2019-04,INF,Information,job_openings_rate,3.8,JTS510000000000000JOR
+2019-04,INF,Information,hires_rate,3.3,JTS510000000000000HIR
+2019-04,INF,Information,quits_rate,1.8,JTS510000000000000QUR
+2019-04,INF,Information,layoffs_discharges_rate,1.3,JTS510000000000000LDR
+2019-04,FAS,Financial activities,job_openings_rate,3.9,JTS510099000000000JOR
+2019-04,FAS,Financial activities,hires_rate,2.6,JTS510099000000000HIR
+2019-04,FAS,Financial activities,quits_rate,1.6,JTS510099000000000QUR
+2019-04,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2019-04,PBS,Professional and business services,job_openings_rate,5.2,JTS540099000000000JOR
+2019-04,PBS,Professional and business services,hires_rate,5.9,JTS540099000000000HIR
+2019-04,PBS,Professional and business services,quits_rate,3.1,JTS540099000000000QUR
+2019-04,PBS,Professional and business services,layoffs_discharges_rate,2.3,JTS540099000000000LDR
+2019-04,HCS,Health care and social assistance,job_openings_rate,5.9,JTS620000000000000JOR
+2019-04,HCS,Health care and social assistance,hires_rate,3.1,JTS620000000000000HIR
+2019-04,HCS,Health care and social assistance,quits_rate,2.0,JTS620000000000000QUR
+2019-04,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2019-04,RET,Retail trade,job_openings_rate,4.6,JTS440000000000000JOR
+2019-04,RET,Retail trade,hires_rate,4.8,JTS440000000000000HIR
+2019-04,RET,Retail trade,quits_rate,3.2,JTS440000000000000QUR
+2019-04,RET,Retail trade,layoffs_discharges_rate,1.4,JTS440000000000000LDR
+2019-05,MFG,Manufacturing,job_openings_rate,3.5,JTS300000000000000JOR
+2019-05,MFG,Manufacturing,hires_rate,2.6,JTS300000000000000HIR
+2019-05,MFG,Manufacturing,quits_rate,1.6,JTS300000000000000QUR
+2019-05,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2019-05,INF,Information,job_openings_rate,4.3,JTS510000000000000JOR
+2019-05,INF,Information,hires_rate,3.5,JTS510000000000000HIR
+2019-05,INF,Information,quits_rate,1.8,JTS510000000000000QUR
+2019-05,INF,Information,layoffs_discharges_rate,1.3,JTS510000000000000LDR
+2019-05,FAS,Financial activities,job_openings_rate,4.2,JTS510099000000000JOR
+2019-05,FAS,Financial activities,hires_rate,2.6,JTS510099000000000HIR
+2019-05,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2019-05,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2019-05,PBS,Professional and business services,job_openings_rate,5.6,JTS540099000000000JOR
+2019-05,PBS,Professional and business services,hires_rate,5.3,JTS540099000000000HIR
+2019-05,PBS,Professional and business services,quits_rate,2.9,JTS540099000000000QUR
+2019-05,PBS,Professional and business services,layoffs_discharges_rate,2.1,JTS540099000000000LDR
+2019-05,HCS,Health care and social assistance,job_openings_rate,5.7,JTS620000000000000JOR
+2019-05,HCS,Health care and social assistance,hires_rate,3.0,JTS620000000000000HIR
+2019-05,HCS,Health care and social assistance,quits_rate,1.7,JTS620000000000000QUR
+2019-05,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2019-05,RET,Retail trade,job_openings_rate,4.6,JTS440000000000000JOR
+2019-05,RET,Retail trade,hires_rate,4.9,JTS440000000000000HIR
+2019-05,RET,Retail trade,quits_rate,3.4,JTS440000000000000QUR
+2019-05,RET,Retail trade,layoffs_discharges_rate,1.3,JTS440000000000000LDR
+2019-06,MFG,Manufacturing,job_openings_rate,3.5,JTS300000000000000JOR
+2019-06,MFG,Manufacturing,hires_rate,2.5,JTS300000000000000HIR
+2019-06,MFG,Manufacturing,quits_rate,1.6,JTS300000000000000QUR
+2019-06,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2019-06,INF,Information,job_openings_rate,4.3,JTS510000000000000JOR
+2019-06,INF,Information,hires_rate,3.3,JTS510000000000000HIR
+2019-06,INF,Information,quits_rate,1.5,JTS510000000000000QUR
+2019-06,INF,Information,layoffs_discharges_rate,1.1,JTS510000000000000LDR
+2019-06,FAS,Financial activities,job_openings_rate,4.2,JTS510099000000000JOR
+2019-06,FAS,Financial activities,hires_rate,2.5,JTS510099000000000HIR
+2019-06,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2019-06,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2019-06,PBS,Professional and business services,job_openings_rate,5.6,JTS540099000000000JOR
+2019-06,PBS,Professional and business services,hires_rate,5.2,JTS540099000000000HIR
+2019-06,PBS,Professional and business services,quits_rate,3.0,JTS540099000000000QUR
+2019-06,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2019-06,HCS,Health care and social assistance,job_openings_rate,5.5,JTS620000000000000JOR
+2019-06,HCS,Health care and social assistance,hires_rate,2.9,JTS620000000000000HIR
+2019-06,HCS,Health care and social assistance,quits_rate,1.8,JTS620000000000000QUR
+2019-06,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2019-06,RET,Retail trade,job_openings_rate,5.0,JTS440000000000000JOR
+2019-06,RET,Retail trade,hires_rate,5.1,JTS440000000000000HIR
+2019-06,RET,Retail trade,quits_rate,3.4,JTS440000000000000QUR
+2019-06,RET,Retail trade,layoffs_discharges_rate,1.2,JTS440000000000000LDR
+2019-07,MFG,Manufacturing,job_openings_rate,3.4,JTS300000000000000JOR
+2019-07,MFG,Manufacturing,hires_rate,2.6,JTS300000000000000HIR
+2019-07,MFG,Manufacturing,quits_rate,1.5,JTS300000000000000QUR
+2019-07,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2019-07,INF,Information,job_openings_rate,5.0,JTS510000000000000JOR
+2019-07,INF,Information,hires_rate,3.4,JTS510000000000000HIR
+2019-07,INF,Information,quits_rate,1.5,JTS510000000000000QUR
+2019-07,INF,Information,layoffs_discharges_rate,2.0,JTS510000000000000LDR
+2019-07,FAS,Financial activities,job_openings_rate,4.2,JTS510099000000000JOR
+2019-07,FAS,Financial activities,hires_rate,2.8,JTS510099000000000HIR
+2019-07,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2019-07,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2019-07,PBS,Professional and business services,job_openings_rate,5.5,JTS540099000000000JOR
+2019-07,PBS,Professional and business services,hires_rate,5.4,JTS540099000000000HIR
+2019-07,PBS,Professional and business services,quits_rate,3.3,JTS540099000000000QUR
+2019-07,PBS,Professional and business services,layoffs_discharges_rate,1.9,JTS540099000000000LDR
+2019-07,HCS,Health care and social assistance,job_openings_rate,5.5,JTS620000000000000JOR
+2019-07,HCS,Health care and social assistance,hires_rate,3.1,JTS620000000000000HIR
+2019-07,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2019-07,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2019-07,RET,Retail trade,job_openings_rate,5.1,JTS440000000000000JOR
+2019-07,RET,Retail trade,hires_rate,5.1,JTS440000000000000HIR
+2019-07,RET,Retail trade,quits_rate,3.4,JTS440000000000000QUR
+2019-07,RET,Retail trade,layoffs_discharges_rate,1.4,JTS440000000000000LDR
+2019-08,MFG,Manufacturing,job_openings_rate,3.3,JTS300000000000000JOR
+2019-08,MFG,Manufacturing,hires_rate,2.6,JTS300000000000000HIR
+2019-08,MFG,Manufacturing,quits_rate,1.6,JTS300000000000000QUR
+2019-08,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2019-08,INF,Information,job_openings_rate,4.3,JTS510000000000000JOR
+2019-08,INF,Information,hires_rate,3.2,JTS510000000000000HIR
+2019-08,INF,Information,quits_rate,1.7,JTS510000000000000QUR
+2019-08,INF,Information,layoffs_discharges_rate,1.3,JTS510000000000000LDR
+2019-08,FAS,Financial activities,job_openings_rate,4.2,JTS510099000000000JOR
+2019-08,FAS,Financial activities,hires_rate,2.7,JTS510099000000000HIR
+2019-08,FAS,Financial activities,quits_rate,1.6,JTS510099000000000QUR
+2019-08,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2019-08,PBS,Professional and business services,job_openings_rate,5.6,JTS540099000000000JOR
+2019-08,PBS,Professional and business services,hires_rate,5.4,JTS540099000000000HIR
+2019-08,PBS,Professional and business services,quits_rate,3.0,JTS540099000000000QUR
+2019-08,PBS,Professional and business services,layoffs_discharges_rate,1.9,JTS540099000000000LDR
+2019-08,HCS,Health care and social assistance,job_openings_rate,5.6,JTS620000000000000JOR
+2019-08,HCS,Health care and social assistance,hires_rate,3.0,JTS620000000000000HIR
+2019-08,HCS,Health care and social assistance,quits_rate,2.0,JTS620000000000000QUR
+2019-08,HCS,Health care and social assistance,layoffs_discharges_rate,0.5,JTS620000000000000LDR
+2019-08,RET,Retail trade,job_openings_rate,4.9,JTS440000000000000JOR
+2019-08,RET,Retail trade,hires_rate,5.0,JTS440000000000000HIR
+2019-08,RET,Retail trade,quits_rate,3.5,JTS440000000000000QUR
+2019-08,RET,Retail trade,layoffs_discharges_rate,1.4,JTS440000000000000LDR
+2019-09,MFG,Manufacturing,job_openings_rate,3.3,JTS300000000000000JOR
+2019-09,MFG,Manufacturing,hires_rate,2.7,JTS300000000000000HIR
+2019-09,MFG,Manufacturing,quits_rate,1.7,JTS300000000000000QUR
+2019-09,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2019-09,INF,Information,job_openings_rate,5.8,JTS510000000000000JOR
+2019-09,INF,Information,hires_rate,3.3,JTS510000000000000HIR
+2019-09,INF,Information,quits_rate,1.4,JTS510000000000000QUR
+2019-09,INF,Information,layoffs_discharges_rate,1.2,JTS510000000000000LDR
+2019-09,FAS,Financial activities,job_openings_rate,4.1,JTS510099000000000JOR
+2019-09,FAS,Financial activities,hires_rate,2.6,JTS510099000000000HIR
+2019-09,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2019-09,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2019-09,PBS,Professional and business services,job_openings_rate,5.5,JTS540099000000000JOR
+2019-09,PBS,Professional and business services,hires_rate,5.4,JTS540099000000000HIR
+2019-09,PBS,Professional and business services,quits_rate,3.0,JTS540099000000000QUR
+2019-09,PBS,Professional and business services,layoffs_discharges_rate,2.1,JTS540099000000000LDR
+2019-09,HCS,Health care and social assistance,job_openings_rate,5.1,JTS620000000000000JOR
+2019-09,HCS,Health care and social assistance,hires_rate,3.1,JTS620000000000000HIR
+2019-09,HCS,Health care and social assistance,quits_rate,2.0,JTS620000000000000QUR
+2019-09,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2019-09,RET,Retail trade,job_openings_rate,4.5,JTS440000000000000JOR
+2019-09,RET,Retail trade,hires_rate,5.0,JTS440000000000000HIR
+2019-09,RET,Retail trade,quits_rate,3.3,JTS440000000000000QUR
+2019-09,RET,Retail trade,layoffs_discharges_rate,1.4,JTS440000000000000LDR
+2019-10,MFG,Manufacturing,job_openings_rate,3.0,JTS300000000000000JOR
+2019-10,MFG,Manufacturing,hires_rate,2.4,JTS300000000000000HIR
+2019-10,MFG,Manufacturing,quits_rate,1.5,JTS300000000000000QUR
+2019-10,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2019-10,INF,Information,job_openings_rate,4.9,JTS510000000000000JOR
+2019-10,INF,Information,hires_rate,3.4,JTS510000000000000HIR
+2019-10,INF,Information,quits_rate,1.5,JTS510000000000000QUR
+2019-10,INF,Information,layoffs_discharges_rate,1.2,JTS510000000000000LDR
+2019-10,FAS,Financial activities,job_openings_rate,4.6,JTS510099000000000JOR
+2019-10,FAS,Financial activities,hires_rate,2.5,JTS510099000000000HIR
+2019-10,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2019-10,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2019-10,PBS,Professional and business services,job_openings_rate,5.3,JTS540099000000000JOR
+2019-10,PBS,Professional and business services,hires_rate,5.2,JTS540099000000000HIR
+2019-10,PBS,Professional and business services,quits_rate,2.9,JTS540099000000000QUR
+2019-10,PBS,Professional and business services,layoffs_discharges_rate,1.9,JTS540099000000000LDR
+2019-10,HCS,Health care and social assistance,job_openings_rate,5.4,JTS620000000000000JOR
+2019-10,HCS,Health care and social assistance,hires_rate,3.0,JTS620000000000000HIR
+2019-10,HCS,Health care and social assistance,quits_rate,2.0,JTS620000000000000QUR
+2019-10,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2019-10,RET,Retail trade,job_openings_rate,5.0,JTS440000000000000JOR
+2019-10,RET,Retail trade,hires_rate,4.4,JTS440000000000000HIR
+2019-10,RET,Retail trade,quits_rate,3.0,JTS440000000000000QUR
+2019-10,RET,Retail trade,layoffs_discharges_rate,1.4,JTS440000000000000LDR
+2019-11,MFG,Manufacturing,job_openings_rate,3.1,JTS300000000000000JOR
+2019-11,MFG,Manufacturing,hires_rate,2.8,JTS300000000000000HIR
+2019-11,MFG,Manufacturing,quits_rate,1.6,JTS300000000000000QUR
+2019-11,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2019-11,INF,Information,job_openings_rate,4.7,JTS510000000000000JOR
+2019-11,INF,Information,hires_rate,3.2,JTS510000000000000HIR
+2019-11,INF,Information,quits_rate,1.4,JTS510000000000000QUR
+2019-11,INF,Information,layoffs_discharges_rate,1.1,JTS510000000000000LDR
+2019-11,FAS,Financial activities,job_openings_rate,3.9,JTS510099000000000JOR
+2019-11,FAS,Financial activities,hires_rate,2.8,JTS510099000000000HIR
+2019-11,FAS,Financial activities,quits_rate,1.8,JTS510099000000000QUR
+2019-11,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2019-11,PBS,Professional and business services,job_openings_rate,5.3,JTS540099000000000JOR
+2019-11,PBS,Professional and business services,hires_rate,5.3,JTS540099000000000HIR
+2019-11,PBS,Professional and business services,quits_rate,2.9,JTS540099000000000QUR
+2019-11,PBS,Professional and business services,layoffs_discharges_rate,2.0,JTS540099000000000LDR
+2019-11,HCS,Health care and social assistance,job_openings_rate,5.3,JTS620000000000000JOR
+2019-11,HCS,Health care and social assistance,hires_rate,3.0,JTS620000000000000HIR
+2019-11,HCS,Health care and social assistance,quits_rate,1.9,JTS620000000000000QUR
+2019-11,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2019-11,RET,Retail trade,job_openings_rate,4.6,JTS440000000000000JOR
+2019-11,RET,Retail trade,hires_rate,4.9,JTS440000000000000HIR
+2019-11,RET,Retail trade,quits_rate,3.9,JTS440000000000000QUR
+2019-11,RET,Retail trade,layoffs_discharges_rate,1.2,JTS440000000000000LDR
+2019-12,MFG,Manufacturing,job_openings_rate,2.9,JTS300000000000000JOR
+2019-12,MFG,Manufacturing,hires_rate,2.6,JTS300000000000000HIR
+2019-12,MFG,Manufacturing,quits_rate,1.6,JTS300000000000000QUR
+2019-12,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2019-12,INF,Information,job_openings_rate,4.6,JTS510000000000000JOR
+2019-12,INF,Information,hires_rate,3.3,JTS510000000000000HIR
+2019-12,INF,Information,quits_rate,1.4,JTS510000000000000QUR
+2019-12,INF,Information,layoffs_discharges_rate,1.7,JTS510000000000000LDR
+2019-12,FAS,Financial activities,job_openings_rate,3.4,JTS510099000000000JOR
+2019-12,FAS,Financial activities,hires_rate,2.5,JTS510099000000000HIR
+2019-12,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2019-12,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2019-12,PBS,Professional and business services,job_openings_rate,5.5,JTS540099000000000JOR
+2019-12,PBS,Professional and business services,hires_rate,5.4,JTS540099000000000HIR
+2019-12,PBS,Professional and business services,quits_rate,3.0,JTS540099000000000QUR
+2019-12,PBS,Professional and business services,layoffs_discharges_rate,2.2,JTS540099000000000LDR
+2019-12,HCS,Health care and social assistance,job_openings_rate,5.2,JTS620000000000000JOR
+2019-12,HCS,Health care and social assistance,hires_rate,3.1,JTS620000000000000HIR
+2019-12,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2019-12,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2019-12,RET,Retail trade,job_openings_rate,4.5,JTS440000000000000JOR
+2019-12,RET,Retail trade,hires_rate,4.9,JTS440000000000000HIR
+2019-12,RET,Retail trade,quits_rate,3.1,JTS440000000000000QUR
+2019-12,RET,Retail trade,layoffs_discharges_rate,1.3,JTS440000000000000LDR
+2020-01,MFG,Manufacturing,job_openings_rate,3.1,JTS300000000000000JOR
+2020-01,MFG,Manufacturing,hires_rate,2.5,JTS300000000000000HIR
+2020-01,MFG,Manufacturing,quits_rate,1.5,JTS300000000000000QUR
+2020-01,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2020-01,INF,Information,job_openings_rate,4.3,JTS510000000000000JOR
+2020-01,INF,Information,hires_rate,2.9,JTS510000000000000HIR
+2020-01,INF,Information,quits_rate,1.4,JTS510000000000000QUR
+2020-01,INF,Information,layoffs_discharges_rate,1.0,JTS510000000000000LDR
+2020-01,FAS,Financial activities,job_openings_rate,4.4,JTS510099000000000JOR
+2020-01,FAS,Financial activities,hires_rate,2.5,JTS510099000000000HIR
+2020-01,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2020-01,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2020-01,PBS,Professional and business services,job_openings_rate,5.7,JTS540099000000000JOR
+2020-01,PBS,Professional and business services,hires_rate,5.4,JTS540099000000000HIR
+2020-01,PBS,Professional and business services,quits_rate,3.2,JTS540099000000000QUR
+2020-01,PBS,Professional and business services,layoffs_discharges_rate,1.9,JTS540099000000000LDR
+2020-01,HCS,Health care and social assistance,job_openings_rate,5.5,JTS620000000000000JOR
+2020-01,HCS,Health care and social assistance,hires_rate,3.2,JTS620000000000000HIR
+2020-01,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2020-01,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2020-01,RET,Retail trade,job_openings_rate,4.7,JTS440000000000000JOR
+2020-01,RET,Retail trade,hires_rate,5.3,JTS440000000000000HIR
+2020-01,RET,Retail trade,quits_rate,3.8,JTS440000000000000QUR
+2020-01,RET,Retail trade,layoffs_discharges_rate,1.3,JTS440000000000000LDR
+2020-02,MFG,Manufacturing,job_openings_rate,3.0,JTS300000000000000JOR
+2020-02,MFG,Manufacturing,hires_rate,2.8,JTS300000000000000HIR
+2020-02,MFG,Manufacturing,quits_rate,1.5,JTS300000000000000QUR
+2020-02,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2020-02,INF,Information,job_openings_rate,4.5,JTS510000000000000JOR
+2020-02,INF,Information,hires_rate,3.3,JTS510000000000000HIR
+2020-02,INF,Information,quits_rate,1.6,JTS510000000000000QUR
+2020-02,INF,Information,layoffs_discharges_rate,1.1,JTS510000000000000LDR
+2020-02,FAS,Financial activities,job_openings_rate,4.4,JTS510099000000000JOR
+2020-02,FAS,Financial activities,hires_rate,2.7,JTS510099000000000HIR
+2020-02,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2020-02,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2020-02,PBS,Professional and business services,job_openings_rate,5.7,JTS540099000000000JOR
+2020-02,PBS,Professional and business services,hires_rate,5.2,JTS540099000000000HIR
+2020-02,PBS,Professional and business services,quits_rate,3.0,JTS540099000000000QUR
+2020-02,PBS,Professional and business services,layoffs_discharges_rate,1.9,JTS540099000000000LDR
+2020-02,HCS,Health care and social assistance,job_openings_rate,5.3,JTS620000000000000JOR
+2020-02,HCS,Health care and social assistance,hires_rate,3.2,JTS620000000000000HIR
+2020-02,HCS,Health care and social assistance,quits_rate,2.2,JTS620000000000000QUR
+2020-02,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2020-02,RET,Retail trade,job_openings_rate,4.6,JTS440000000000000JOR
+2020-02,RET,Retail trade,hires_rate,5.5,JTS440000000000000HIR
+2020-02,RET,Retail trade,quits_rate,3.4,JTS440000000000000QUR
+2020-02,RET,Retail trade,layoffs_discharges_rate,1.8,JTS440000000000000LDR
+2020-03,MFG,Manufacturing,job_openings_rate,2.3,JTS300000000000000JOR
+2020-03,MFG,Manufacturing,hires_rate,2.4,JTS300000000000000HIR
+2020-03,MFG,Manufacturing,quits_rate,1.2,JTS300000000000000QUR
+2020-03,MFG,Manufacturing,layoffs_discharges_rate,5.5,JTS300000000000000LDR
+2020-03,INF,Information,job_openings_rate,4.0,JTS510000000000000JOR
+2020-03,INF,Information,hires_rate,2.5,JTS510000000000000HIR
+2020-03,INF,Information,quits_rate,1.4,JTS510000000000000QUR
+2020-03,INF,Information,layoffs_discharges_rate,6.6,JTS510000000000000LDR
+2020-03,FAS,Financial activities,job_openings_rate,3.9,JTS510099000000000JOR
+2020-03,FAS,Financial activities,hires_rate,2.7,JTS510099000000000HIR
+2020-03,FAS,Financial activities,quits_rate,1.3,JTS510099000000000QUR
+2020-03,FAS,Financial activities,layoffs_discharges_rate,2.7,JTS510099000000000LDR
+2020-03,PBS,Professional and business services,job_openings_rate,4.9,JTS540099000000000JOR
+2020-03,PBS,Professional and business services,hires_rate,5.2,JTS540099000000000HIR
+2020-03,PBS,Professional and business services,quits_rate,2.9,JTS540099000000000QUR
+2020-03,PBS,Professional and business services,layoffs_discharges_rate,5.9,JTS540099000000000LDR
+2020-03,HCS,Health care and social assistance,job_openings_rate,4.8,JTS620000000000000JOR
+2020-03,HCS,Health care and social assistance,hires_rate,2.8,JTS620000000000000HIR
+2020-03,HCS,Health care and social assistance,quits_rate,2.0,JTS620000000000000QUR
+2020-03,HCS,Health care and social assistance,layoffs_discharges_rate,6.0,JTS620000000000000LDR
+2020-03,RET,Retail trade,job_openings_rate,3.7,JTS440000000000000JOR
+2020-03,RET,Retail trade,hires_rate,4.9,JTS440000000000000HIR
+2020-03,RET,Retail trade,quits_rate,2.6,JTS440000000000000QUR
+2020-03,RET,Retail trade,layoffs_discharges_rate,9.1,JTS440000000000000LDR
+2020-04,MFG,Manufacturing,job_openings_rate,2.6,JTS300000000000000JOR
+2020-04,MFG,Manufacturing,hires_rate,3.2,JTS300000000000000HIR
+2020-04,MFG,Manufacturing,quits_rate,0.8,JTS300000000000000QUR
+2020-04,MFG,Manufacturing,layoffs_discharges_rate,6.3,JTS300000000000000LDR
+2020-04,INF,Information,job_openings_rate,4.3,JTS510000000000000JOR
+2020-04,INF,Information,hires_rate,1.5,JTS510000000000000HIR
+2020-04,INF,Information,quits_rate,1.3,JTS510000000000000QUR
+2020-04,INF,Information,layoffs_discharges_rate,6.4,JTS510000000000000LDR
+2020-04,FAS,Financial activities,job_openings_rate,2.9,JTS510099000000000JOR
+2020-04,FAS,Financial activities,hires_rate,1.7,JTS510099000000000HIR
+2020-04,FAS,Financial activities,quits_rate,0.7,JTS510099000000000QUR
+2020-04,FAS,Financial activities,layoffs_discharges_rate,2.8,JTS510099000000000LDR
+2020-04,PBS,Professional and business services,job_openings_rate,4.1,JTS540099000000000JOR
+2020-04,PBS,Professional and business services,hires_rate,4.3,JTS540099000000000HIR
+2020-04,PBS,Professional and business services,quits_rate,1.9,JTS540099000000000QUR
+2020-04,PBS,Professional and business services,layoffs_discharges_rate,6.4,JTS540099000000000LDR
+2020-04,HCS,Health care and social assistance,job_openings_rate,4.4,JTS620000000000000JOR
+2020-04,HCS,Health care and social assistance,hires_rate,2.4,JTS620000000000000HIR
+2020-04,HCS,Health care and social assistance,quits_rate,1.8,JTS620000000000000QUR
+2020-04,HCS,Health care and social assistance,layoffs_discharges_rate,4.4,JTS620000000000000LDR
+2020-04,RET,Retail trade,job_openings_rate,3.3,JTS440000000000000JOR
+2020-04,RET,Retail trade,hires_rate,5.6,JTS440000000000000HIR
+2020-04,RET,Retail trade,quits_rate,2.1,JTS440000000000000QUR
+2020-04,RET,Retail trade,layoffs_discharges_rate,7.8,JTS440000000000000LDR
+2020-05,MFG,Manufacturing,job_openings_rate,2.6,JTS300000000000000JOR
+2020-05,MFG,Manufacturing,hires_rate,5.4,JTS300000000000000HIR
+2020-05,MFG,Manufacturing,quits_rate,1.3,JTS300000000000000QUR
+2020-05,MFG,Manufacturing,layoffs_discharges_rate,1.3,JTS300000000000000LDR
+2020-05,INF,Information,job_openings_rate,3.4,JTS510000000000000JOR
+2020-05,INF,Information,hires_rate,2.6,JTS510000000000000HIR
+2020-05,INF,Information,quits_rate,1.0,JTS510000000000000QUR
+2020-05,INF,Information,layoffs_discharges_rate,1.3,JTS510000000000000LDR
+2020-05,FAS,Financial activities,job_openings_rate,3.5,JTS510099000000000JOR
+2020-05,FAS,Financial activities,hires_rate,2.4,JTS510099000000000HIR
+2020-05,FAS,Financial activities,quits_rate,1.2,JTS510099000000000QUR
+2020-05,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2020-05,PBS,Professional and business services,job_openings_rate,4.9,JTS540099000000000JOR
+2020-05,PBS,Professional and business services,hires_rate,5.2,JTS540099000000000HIR
+2020-05,PBS,Professional and business services,quits_rate,2.2,JTS540099000000000QUR
+2020-05,PBS,Professional and business services,layoffs_discharges_rate,2.4,JTS540099000000000LDR
+2020-05,HCS,Health care and social assistance,job_openings_rate,4.7,JTS620000000000000JOR
+2020-05,HCS,Health care and social assistance,hires_rate,5.6,JTS620000000000000HIR
+2020-05,HCS,Health care and social assistance,quits_rate,1.7,JTS620000000000000QUR
+2020-05,HCS,Health care and social assistance,layoffs_discharges_rate,1.1,JTS620000000000000LDR
+2020-05,RET,Retail trade,job_openings_rate,4.5,JTS440000000000000JOR
+2020-05,RET,Retail trade,hires_rate,7.4,JTS440000000000000HIR
+2020-05,RET,Retail trade,quits_rate,2.5,JTS440000000000000QUR
+2020-05,RET,Retail trade,layoffs_discharges_rate,1.5,JTS440000000000000LDR
+2020-06,MFG,Manufacturing,job_openings_rate,2.7,JTS300000000000000JOR
+2020-06,MFG,Manufacturing,hires_rate,4.0,JTS300000000000000HIR
+2020-06,MFG,Manufacturing,quits_rate,1.5,JTS300000000000000QUR
+2020-06,MFG,Manufacturing,layoffs_discharges_rate,1.8,JTS300000000000000LDR
+2020-06,INF,Information,job_openings_rate,3.9,JTS510000000000000JOR
+2020-06,INF,Information,hires_rate,2.1,JTS510000000000000HIR
+2020-06,INF,Information,quits_rate,1.1,JTS510000000000000QUR
+2020-06,INF,Information,layoffs_discharges_rate,1.4,JTS510000000000000LDR
+2020-06,FAS,Financial activities,job_openings_rate,3.7,JTS510099000000000JOR
+2020-06,FAS,Financial activities,hires_rate,2.4,JTS510099000000000HIR
+2020-06,FAS,Financial activities,quits_rate,1.1,JTS510099000000000QUR
+2020-06,FAS,Financial activities,layoffs_discharges_rate,1.3,JTS510099000000000LDR
+2020-06,PBS,Professional and business services,job_openings_rate,5.2,JTS540099000000000JOR
+2020-06,PBS,Professional and business services,hires_rate,6.0,JTS540099000000000HIR
+2020-06,PBS,Professional and business services,quits_rate,2.0,JTS540099000000000QUR
+2020-06,PBS,Professional and business services,layoffs_discharges_rate,2.2,JTS540099000000000LDR
+2020-06,HCS,Health care and social assistance,job_openings_rate,5.1,JTS620000000000000JOR
+2020-06,HCS,Health care and social assistance,hires_rate,4.1,JTS620000000000000HIR
+2020-06,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2020-06,HCS,Health care and social assistance,layoffs_discharges_rate,0.9,JTS620000000000000LDR
+2020-06,RET,Retail trade,job_openings_rate,4.1,JTS440000000000000JOR
+2020-06,RET,Retail trade,hires_rate,6.6,JTS440000000000000HIR
+2020-06,RET,Retail trade,quits_rate,2.9,JTS440000000000000QUR
+2020-06,RET,Retail trade,layoffs_discharges_rate,1.3,JTS440000000000000LDR
+2020-07,MFG,Manufacturing,job_openings_rate,3.2,JTS300000000000000JOR
+2020-07,MFG,Manufacturing,hires_rate,2.9,JTS300000000000000HIR
+2020-07,MFG,Manufacturing,quits_rate,1.6,JTS300000000000000QUR
+2020-07,MFG,Manufacturing,layoffs_discharges_rate,1.3,JTS300000000000000LDR
+2020-07,INF,Information,job_openings_rate,2.9,JTS510000000000000JOR
+2020-07,INF,Information,hires_rate,3.2,JTS510000000000000HIR
+2020-07,INF,Information,quits_rate,1.3,JTS510000000000000QUR
+2020-07,INF,Information,layoffs_discharges_rate,0.9,JTS510000000000000LDR
+2020-07,FAS,Financial activities,job_openings_rate,3.3,JTS510099000000000JOR
+2020-07,FAS,Financial activities,hires_rate,2.9,JTS510099000000000HIR
+2020-07,FAS,Financial activities,quits_rate,1.1,JTS510099000000000QUR
+2020-07,FAS,Financial activities,layoffs_discharges_rate,0.9,JTS510099000000000LDR
+2020-07,PBS,Professional and business services,job_openings_rate,5.4,JTS540099000000000JOR
+2020-07,PBS,Professional and business services,hires_rate,5.7,JTS540099000000000HIR
+2020-07,PBS,Professional and business services,quits_rate,2.6,JTS540099000000000QUR
+2020-07,PBS,Professional and business services,layoffs_discharges_rate,2.1,JTS540099000000000LDR
+2020-07,HCS,Health care and social assistance,job_openings_rate,5.3,JTS620000000000000JOR
+2020-07,HCS,Health care and social assistance,hires_rate,3.8,JTS620000000000000HIR
+2020-07,HCS,Health care and social assistance,quits_rate,2.2,JTS620000000000000QUR
+2020-07,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2020-07,RET,Retail trade,job_openings_rate,5.0,JTS440000000000000JOR
+2020-07,RET,Retail trade,hires_rate,5.7,JTS440000000000000HIR
+2020-07,RET,Retail trade,quits_rate,3.4,JTS440000000000000QUR
+2020-07,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2020-08,MFG,Manufacturing,job_openings_rate,3.7,JTS300000000000000JOR
+2020-08,MFG,Manufacturing,hires_rate,3.3,JTS300000000000000HIR
+2020-08,MFG,Manufacturing,quits_rate,1.8,JTS300000000000000QUR
+2020-08,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2020-08,INF,Information,job_openings_rate,3.2,JTS510000000000000JOR
+2020-08,INF,Information,hires_rate,3.4,JTS510000000000000HIR
+2020-08,INF,Information,quits_rate,1.3,JTS510000000000000QUR
+2020-08,INF,Information,layoffs_discharges_rate,1.1,JTS510000000000000LDR
+2020-08,FAS,Financial activities,job_openings_rate,3.3,JTS510099000000000JOR
+2020-08,FAS,Financial activities,hires_rate,2.6,JTS510099000000000HIR
+2020-08,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2020-08,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2020-08,PBS,Professional and business services,job_openings_rate,5.4,JTS540099000000000JOR
+2020-08,PBS,Professional and business services,hires_rate,5.8,JTS540099000000000HIR
+2020-08,PBS,Professional and business services,quits_rate,2.7,JTS540099000000000QUR
+2020-08,PBS,Professional and business services,layoffs_discharges_rate,1.9,JTS540099000000000LDR
+2020-08,HCS,Health care and social assistance,job_openings_rate,5.4,JTS620000000000000JOR
+2020-08,HCS,Health care and social assistance,hires_rate,3.1,JTS620000000000000HIR
+2020-08,HCS,Health care and social assistance,quits_rate,2.0,JTS620000000000000QUR
+2020-08,HCS,Health care and social assistance,layoffs_discharges_rate,0.8,JTS620000000000000LDR
+2020-08,RET,Retail trade,job_openings_rate,4.7,JTS440000000000000JOR
+2020-08,RET,Retail trade,hires_rate,5.9,JTS440000000000000HIR
+2020-08,RET,Retail trade,quits_rate,3.3,JTS440000000000000QUR
+2020-08,RET,Retail trade,layoffs_discharges_rate,1.1,JTS440000000000000LDR
+2020-09,MFG,Manufacturing,job_openings_rate,3.7,JTS300000000000000JOR
+2020-09,MFG,Manufacturing,hires_rate,3.2,JTS300000000000000HIR
+2020-09,MFG,Manufacturing,quits_rate,2.0,JTS300000000000000QUR
+2020-09,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2020-09,INF,Information,job_openings_rate,3.9,JTS510000000000000JOR
+2020-09,INF,Information,hires_rate,3.6,JTS510000000000000HIR
+2020-09,INF,Information,quits_rate,1.3,JTS510000000000000QUR
+2020-09,INF,Information,layoffs_discharges_rate,0.8,JTS510000000000000LDR
+2020-09,FAS,Financial activities,job_openings_rate,3.4,JTS510099000000000JOR
+2020-09,FAS,Financial activities,hires_rate,2.9,JTS510099000000000HIR
+2020-09,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2020-09,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2020-09,PBS,Professional and business services,job_openings_rate,5.9,JTS540099000000000JOR
+2020-09,PBS,Professional and business services,hires_rate,5.7,JTS540099000000000HIR
+2020-09,PBS,Professional and business services,quits_rate,3.2,JTS540099000000000QUR
+2020-09,PBS,Professional and business services,layoffs_discharges_rate,1.7,JTS540099000000000LDR
+2020-09,HCS,Health care and social assistance,job_openings_rate,5.3,JTS620000000000000JOR
+2020-09,HCS,Health care and social assistance,hires_rate,3.3,JTS620000000000000HIR
+2020-09,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2020-09,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2020-09,RET,Retail trade,job_openings_rate,4.4,JTS440000000000000JOR
+2020-09,RET,Retail trade,hires_rate,5.1,JTS440000000000000HIR
+2020-09,RET,Retail trade,quits_rate,3.2,JTS440000000000000QUR
+2020-09,RET,Retail trade,layoffs_discharges_rate,1.3,JTS440000000000000LDR
+2020-10,MFG,Manufacturing,job_openings_rate,4.1,JTS300000000000000JOR
+2020-10,MFG,Manufacturing,hires_rate,3.3,JTS300000000000000HIR
+2020-10,MFG,Manufacturing,quits_rate,2.0,JTS300000000000000QUR
+2020-10,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2020-10,INF,Information,job_openings_rate,4.5,JTS510000000000000JOR
+2020-10,INF,Information,hires_rate,4.6,JTS510000000000000HIR
+2020-10,INF,Information,quits_rate,1.4,JTS510000000000000QUR
+2020-10,INF,Information,layoffs_discharges_rate,1.3,JTS510000000000000LDR
+2020-10,FAS,Financial activities,job_openings_rate,3.5,JTS510099000000000JOR
+2020-10,FAS,Financial activities,hires_rate,2.9,JTS510099000000000HIR
+2020-10,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2020-10,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2020-10,PBS,Professional and business services,job_openings_rate,5.8,JTS540099000000000JOR
+2020-10,PBS,Professional and business services,hires_rate,5.5,JTS540099000000000HIR
+2020-10,PBS,Professional and business services,quits_rate,3.0,JTS540099000000000QUR
+2020-10,PBS,Professional and business services,layoffs_discharges_rate,1.7,JTS540099000000000LDR
+2020-10,HCS,Health care and social assistance,job_openings_rate,5.7,JTS620000000000000JOR
+2020-10,HCS,Health care and social assistance,hires_rate,3.3,JTS620000000000000HIR
+2020-10,HCS,Health care and social assistance,quits_rate,2.3,JTS620000000000000QUR
+2020-10,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2020-10,RET,Retail trade,job_openings_rate,4.5,JTS440000000000000JOR
+2020-10,RET,Retail trade,hires_rate,5.2,JTS440000000000000HIR
+2020-10,RET,Retail trade,quits_rate,3.4,JTS440000000000000QUR
+2020-10,RET,Retail trade,layoffs_discharges_rate,1.3,JTS440000000000000LDR
+2020-11,MFG,Manufacturing,job_openings_rate,3.9,JTS300000000000000JOR
+2020-11,MFG,Manufacturing,hires_rate,3.4,JTS300000000000000HIR
+2020-11,MFG,Manufacturing,quits_rate,2.1,JTS300000000000000QUR
+2020-11,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2020-11,INF,Information,job_openings_rate,3.9,JTS510000000000000JOR
+2020-11,INF,Information,hires_rate,3.3,JTS510000000000000HIR
+2020-11,INF,Information,quits_rate,1.4,JTS510000000000000QUR
+2020-11,INF,Information,layoffs_discharges_rate,1.2,JTS510000000000000LDR
+2020-11,FAS,Financial activities,job_openings_rate,3.1,JTS510099000000000JOR
+2020-11,FAS,Financial activities,hires_rate,2.4,JTS510099000000000HIR
+2020-11,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2020-11,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2020-11,PBS,Professional and business services,job_openings_rate,6.1,JTS540099000000000JOR
+2020-11,PBS,Professional and business services,hires_rate,6.0,JTS540099000000000HIR
+2020-11,PBS,Professional and business services,quits_rate,2.7,JTS540099000000000QUR
+2020-11,PBS,Professional and business services,layoffs_discharges_rate,2.2,JTS540099000000000LDR
+2020-11,HCS,Health care and social assistance,job_openings_rate,5.7,JTS620000000000000JOR
+2020-11,HCS,Health care and social assistance,hires_rate,3.2,JTS620000000000000HIR
+2020-11,HCS,Health care and social assistance,quits_rate,1.9,JTS620000000000000QUR
+2020-11,HCS,Health care and social assistance,layoffs_discharges_rate,0.8,JTS620000000000000LDR
+2020-11,RET,Retail trade,job_openings_rate,4.8,JTS440000000000000JOR
+2020-11,RET,Retail trade,hires_rate,5.0,JTS440000000000000HIR
+2020-11,RET,Retail trade,quits_rate,3.6,JTS440000000000000QUR
+2020-11,RET,Retail trade,layoffs_discharges_rate,1.1,JTS440000000000000LDR
+2020-12,MFG,Manufacturing,job_openings_rate,4.0,JTS300000000000000JOR
+2020-12,MFG,Manufacturing,hires_rate,3.7,JTS300000000000000HIR
+2020-12,MFG,Manufacturing,quits_rate,2.1,JTS300000000000000QUR
+2020-12,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2020-12,INF,Information,job_openings_rate,4.3,JTS510000000000000JOR
+2020-12,INF,Information,hires_rate,3.1,JTS510000000000000HIR
+2020-12,INF,Information,quits_rate,1.2,JTS510000000000000QUR
+2020-12,INF,Information,layoffs_discharges_rate,1.1,JTS510000000000000LDR
+2020-12,FAS,Financial activities,job_openings_rate,3.1,JTS510099000000000JOR
+2020-12,FAS,Financial activities,hires_rate,2.3,JTS510099000000000HIR
+2020-12,FAS,Financial activities,quits_rate,1.3,JTS510099000000000QUR
+2020-12,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2020-12,PBS,Professional and business services,job_openings_rate,6.5,JTS540099000000000JOR
+2020-12,PBS,Professional and business services,hires_rate,5.7,JTS540099000000000HIR
+2020-12,PBS,Professional and business services,quits_rate,2.8,JTS540099000000000QUR
+2020-12,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2020-12,HCS,Health care and social assistance,job_openings_rate,5.5,JTS620000000000000JOR
+2020-12,HCS,Health care and social assistance,hires_rate,3.2,JTS620000000000000HIR
+2020-12,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2020-12,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2020-12,RET,Retail trade,job_openings_rate,4.7,JTS440000000000000JOR
+2020-12,RET,Retail trade,hires_rate,5.1,JTS440000000000000HIR
+2020-12,RET,Retail trade,quits_rate,3.6,JTS440000000000000QUR
+2020-12,RET,Retail trade,layoffs_discharges_rate,1.2,JTS440000000000000LDR
+2021-01,MFG,Manufacturing,job_openings_rate,4.1,JTS300000000000000JOR
+2021-01,MFG,Manufacturing,hires_rate,2.9,JTS300000000000000HIR
+2021-01,MFG,Manufacturing,quits_rate,2.1,JTS300000000000000QUR
+2021-01,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2021-01,INF,Information,job_openings_rate,5.8,JTS510000000000000JOR
+2021-01,INF,Information,hires_rate,3.6,JTS510000000000000HIR
+2021-01,INF,Information,quits_rate,1.3,JTS510000000000000QUR
+2021-01,INF,Information,layoffs_discharges_rate,0.9,JTS510000000000000LDR
+2021-01,FAS,Financial activities,job_openings_rate,3.4,JTS510099000000000JOR
+2021-01,FAS,Financial activities,hires_rate,2.4,JTS510099000000000HIR
+2021-01,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2021-01,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2021-01,PBS,Professional and business services,job_openings_rate,6.4,JTS540099000000000JOR
+2021-01,PBS,Professional and business services,hires_rate,5.7,JTS540099000000000HIR
+2021-01,PBS,Professional and business services,quits_rate,2.9,JTS540099000000000QUR
+2021-01,PBS,Professional and business services,layoffs_discharges_rate,1.7,JTS540099000000000LDR
+2021-01,HCS,Health care and social assistance,job_openings_rate,5.7,JTS620000000000000JOR
+2021-01,HCS,Health care and social assistance,hires_rate,2.8,JTS620000000000000HIR
+2021-01,HCS,Health care and social assistance,quits_rate,2.2,JTS620000000000000QUR
+2021-01,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2021-01,RET,Retail trade,job_openings_rate,4.9,JTS440000000000000JOR
+2021-01,RET,Retail trade,hires_rate,5.0,JTS440000000000000HIR
+2021-01,RET,Retail trade,quits_rate,3.6,JTS440000000000000QUR
+2021-01,RET,Retail trade,layoffs_discharges_rate,1.1,JTS440000000000000LDR
+2021-02,MFG,Manufacturing,job_openings_rate,4.7,JTS300000000000000JOR
+2021-02,MFG,Manufacturing,hires_rate,3.3,JTS300000000000000HIR
+2021-02,MFG,Manufacturing,quits_rate,2.2,JTS300000000000000QUR
+2021-02,MFG,Manufacturing,layoffs_discharges_rate,0.6,JTS300000000000000LDR
+2021-02,INF,Information,job_openings_rate,3.8,JTS510000000000000JOR
+2021-02,INF,Information,hires_rate,3.3,JTS510000000000000HIR
+2021-02,INF,Information,quits_rate,1.5,JTS510000000000000QUR
+2021-02,INF,Information,layoffs_discharges_rate,1.0,JTS510000000000000LDR
+2021-02,FAS,Financial activities,job_openings_rate,3.8,JTS510099000000000JOR
+2021-02,FAS,Financial activities,hires_rate,2.3,JTS510099000000000HIR
+2021-02,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2021-02,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2021-02,PBS,Professional and business services,job_openings_rate,6.6,JTS540099000000000JOR
+2021-02,PBS,Professional and business services,hires_rate,5.6,JTS540099000000000HIR
+2021-02,PBS,Professional and business services,quits_rate,3.1,JTS540099000000000QUR
+2021-02,PBS,Professional and business services,layoffs_discharges_rate,2.0,JTS540099000000000LDR
+2021-02,HCS,Health care and social assistance,job_openings_rate,7.0,JTS620000000000000JOR
+2021-02,HCS,Health care and social assistance,hires_rate,3.1,JTS620000000000000HIR
+2021-02,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2021-02,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2021-02,RET,Retail trade,job_openings_rate,5.2,JTS440000000000000JOR
+2021-02,RET,Retail trade,hires_rate,4.8,JTS440000000000000HIR
+2021-02,RET,Retail trade,quits_rate,3.5,JTS440000000000000QUR
+2021-02,RET,Retail trade,layoffs_discharges_rate,1.1,JTS440000000000000LDR
+2021-03,MFG,Manufacturing,job_openings_rate,5.7,JTS300000000000000JOR
+2021-03,MFG,Manufacturing,hires_rate,3.6,JTS300000000000000HIR
+2021-03,MFG,Manufacturing,quits_rate,2.2,JTS300000000000000QUR
+2021-03,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2021-03,INF,Information,job_openings_rate,3.7,JTS510000000000000JOR
+2021-03,INF,Information,hires_rate,3.7,JTS510000000000000HIR
+2021-03,INF,Information,quits_rate,2.1,JTS510000000000000QUR
+2021-03,INF,Information,layoffs_discharges_rate,1.0,JTS510000000000000LDR
+2021-03,FAS,Financial activities,job_openings_rate,3.7,JTS510099000000000JOR
+2021-03,FAS,Financial activities,hires_rate,2.5,JTS510099000000000HIR
+2021-03,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2021-03,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2021-03,PBS,Professional and business services,job_openings_rate,6.9,JTS540099000000000JOR
+2021-03,PBS,Professional and business services,hires_rate,5.5,JTS540099000000000HIR
+2021-03,PBS,Professional and business services,quits_rate,3.0,JTS540099000000000QUR
+2021-03,PBS,Professional and business services,layoffs_discharges_rate,1.9,JTS540099000000000LDR
+2021-03,HCS,Health care and social assistance,job_openings_rate,6.2,JTS620000000000000JOR
+2021-03,HCS,Health care and social assistance,hires_rate,3.3,JTS620000000000000HIR
+2021-03,HCS,Health care and social assistance,quits_rate,2.4,JTS620000000000000QUR
+2021-03,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2021-03,RET,Retail trade,job_openings_rate,6.2,JTS440000000000000JOR
+2021-03,RET,Retail trade,hires_rate,5.3,JTS440000000000000HIR
+2021-03,RET,Retail trade,quits_rate,3.8,JTS440000000000000QUR
+2021-03,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2021-04,MFG,Manufacturing,job_openings_rate,6.5,JTS300000000000000JOR
+2021-04,MFG,Manufacturing,hires_rate,3.1,JTS300000000000000HIR
+2021-04,MFG,Manufacturing,quits_rate,2.4,JTS300000000000000QUR
+2021-04,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2021-04,INF,Information,job_openings_rate,4.4,JTS510000000000000JOR
+2021-04,INF,Information,hires_rate,4.3,JTS510000000000000HIR
+2021-04,INF,Information,quits_rate,2.0,JTS510000000000000QUR
+2021-04,INF,Information,layoffs_discharges_rate,0.9,JTS510000000000000LDR
+2021-04,FAS,Financial activities,job_openings_rate,4.7,JTS510099000000000JOR
+2021-04,FAS,Financial activities,hires_rate,2.3,JTS510099000000000HIR
+2021-04,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2021-04,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2021-04,PBS,Professional and business services,job_openings_rate,7.6,JTS540099000000000JOR
+2021-04,PBS,Professional and business services,hires_rate,5.6,JTS540099000000000HIR
+2021-04,PBS,Professional and business services,quits_rate,3.4,JTS540099000000000QUR
+2021-04,PBS,Professional and business services,layoffs_discharges_rate,1.6,JTS540099000000000LDR
+2021-04,HCS,Health care and social assistance,job_openings_rate,6.7,JTS620000000000000JOR
+2021-04,HCS,Health care and social assistance,hires_rate,3.2,JTS620000000000000HIR
+2021-04,HCS,Health care and social assistance,quits_rate,2.3,JTS620000000000000QUR
+2021-04,HCS,Health care and social assistance,layoffs_discharges_rate,0.5,JTS620000000000000LDR
+2021-04,RET,Retail trade,job_openings_rate,5.8,JTS440000000000000JOR
+2021-04,RET,Retail trade,hires_rate,5.3,JTS440000000000000HIR
+2021-04,RET,Retail trade,quits_rate,4.2,JTS440000000000000QUR
+2021-04,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2021-05,MFG,Manufacturing,job_openings_rate,6.8,JTS300000000000000JOR
+2021-05,MFG,Manufacturing,hires_rate,3.4,JTS300000000000000HIR
+2021-05,MFG,Manufacturing,quits_rate,2.1,JTS300000000000000QUR
+2021-05,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2021-05,INF,Information,job_openings_rate,5.1,JTS510000000000000JOR
+2021-05,INF,Information,hires_rate,3.6,JTS510000000000000HIR
+2021-05,INF,Information,quits_rate,1.8,JTS510000000000000QUR
+2021-05,INF,Information,layoffs_discharges_rate,1.0,JTS510000000000000LDR
+2021-05,FAS,Financial activities,job_openings_rate,4.5,JTS510099000000000JOR
+2021-05,FAS,Financial activities,hires_rate,2.4,JTS510099000000000HIR
+2021-05,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2021-05,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2021-05,PBS,Professional and business services,job_openings_rate,8.1,JTS540099000000000JOR
+2021-05,PBS,Professional and business services,hires_rate,5.5,JTS540099000000000HIR
+2021-05,PBS,Professional and business services,quits_rate,3.3,JTS540099000000000QUR
+2021-05,PBS,Professional and business services,layoffs_discharges_rate,1.5,JTS540099000000000LDR
+2021-05,HCS,Health care and social assistance,job_openings_rate,7.3,JTS620000000000000JOR
+2021-05,HCS,Health care and social assistance,hires_rate,3.2,JTS620000000000000HIR
+2021-05,HCS,Health care and social assistance,quits_rate,2.4,JTS620000000000000QUR
+2021-05,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2021-05,RET,Retail trade,job_openings_rate,5.8,JTS440000000000000JOR
+2021-05,RET,Retail trade,hires_rate,5.4,JTS440000000000000HIR
+2021-05,RET,Retail trade,quits_rate,4.2,JTS440000000000000QUR
+2021-05,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2021-06,MFG,Manufacturing,job_openings_rate,6.8,JTS300000000000000JOR
+2021-06,MFG,Manufacturing,hires_rate,3.7,JTS300000000000000HIR
+2021-06,MFG,Manufacturing,quits_rate,2.4,JTS300000000000000QUR
+2021-06,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2021-06,INF,Information,job_openings_rate,5.5,JTS510000000000000JOR
+2021-06,INF,Information,hires_rate,3.8,JTS510000000000000HIR
+2021-06,INF,Information,quits_rate,1.8,JTS510000000000000QUR
+2021-06,INF,Information,layoffs_discharges_rate,1.2,JTS510000000000000LDR
+2021-06,FAS,Financial activities,job_openings_rate,3.9,JTS510099000000000JOR
+2021-06,FAS,Financial activities,hires_rate,2.6,JTS510099000000000HIR
+2021-06,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2021-06,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2021-06,PBS,Professional and business services,job_openings_rate,8.3,JTS540099000000000JOR
+2021-06,PBS,Professional and business services,hires_rate,5.8,JTS540099000000000HIR
+2021-06,PBS,Professional and business services,quits_rate,3.5,JTS540099000000000QUR
+2021-06,PBS,Professional and business services,layoffs_discharges_rate,1.4,JTS540099000000000LDR
+2021-06,HCS,Health care and social assistance,job_openings_rate,7.4,JTS620000000000000JOR
+2021-06,HCS,Health care and social assistance,hires_rate,3.4,JTS620000000000000HIR
+2021-06,HCS,Health care and social assistance,quits_rate,2.5,JTS620000000000000QUR
+2021-06,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2021-06,RET,Retail trade,job_openings_rate,6.7,JTS440000000000000JOR
+2021-06,RET,Retail trade,hires_rate,6.5,JTS440000000000000HIR
+2021-06,RET,Retail trade,quits_rate,4.4,JTS440000000000000QUR
+2021-06,RET,Retail trade,layoffs_discharges_rate,1.2,JTS440000000000000LDR
+2021-07,MFG,Manufacturing,job_openings_rate,6.8,JTS300000000000000JOR
+2021-07,MFG,Manufacturing,hires_rate,3.9,JTS300000000000000HIR
+2021-07,MFG,Manufacturing,quits_rate,2.4,JTS300000000000000QUR
+2021-07,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2021-07,INF,Information,job_openings_rate,7.0,JTS510000000000000JOR
+2021-07,INF,Information,hires_rate,4.3,JTS510000000000000HIR
+2021-07,INF,Information,quits_rate,1.7,JTS510000000000000QUR
+2021-07,INF,Information,layoffs_discharges_rate,0.9,JTS510000000000000LDR
+2021-07,FAS,Financial activities,job_openings_rate,5.9,JTS510099000000000JOR
+2021-07,FAS,Financial activities,hires_rate,2.7,JTS510099000000000HIR
+2021-07,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2021-07,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2021-07,PBS,Professional and business services,job_openings_rate,8.8,JTS540099000000000JOR
+2021-07,PBS,Professional and business services,hires_rate,6.2,JTS540099000000000HIR
+2021-07,PBS,Professional and business services,quits_rate,3.2,JTS540099000000000QUR
+2021-07,PBS,Professional and business services,layoffs_discharges_rate,2.0,JTS540099000000000LDR
+2021-07,HCS,Health care and social assistance,job_openings_rate,7.7,JTS620000000000000JOR
+2021-07,HCS,Health care and social assistance,hires_rate,3.3,JTS620000000000000HIR
+2021-07,HCS,Health care and social assistance,quits_rate,2.7,JTS620000000000000QUR
+2021-07,HCS,Health care and social assistance,layoffs_discharges_rate,0.3,JTS620000000000000LDR
+2021-07,RET,Retail trade,job_openings_rate,6.2,JTS440000000000000JOR
+2021-07,RET,Retail trade,hires_rate,5.7,JTS440000000000000HIR
+2021-07,RET,Retail trade,quits_rate,4.5,JTS440000000000000QUR
+2021-07,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2021-08,MFG,Manufacturing,job_openings_rate,6.4,JTS300000000000000JOR
+2021-08,MFG,Manufacturing,hires_rate,3.9,JTS300000000000000HIR
+2021-08,MFG,Manufacturing,quits_rate,2.4,JTS300000000000000QUR
+2021-08,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2021-08,INF,Information,job_openings_rate,6.9,JTS510000000000000JOR
+2021-08,INF,Information,hires_rate,4.0,JTS510000000000000HIR
+2021-08,INF,Information,quits_rate,1.8,JTS510000000000000QUR
+2021-08,INF,Information,layoffs_discharges_rate,1.1,JTS510000000000000LDR
+2021-08,FAS,Financial activities,job_openings_rate,5.3,JTS510099000000000JOR
+2021-08,FAS,Financial activities,hires_rate,2.4,JTS510099000000000HIR
+2021-08,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2021-08,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2021-08,PBS,Professional and business services,job_openings_rate,8.7,JTS540099000000000JOR
+2021-08,PBS,Professional and business services,hires_rate,5.7,JTS540099000000000HIR
+2021-08,PBS,Professional and business services,quits_rate,3.4,JTS540099000000000QUR
+2021-08,PBS,Professional and business services,layoffs_discharges_rate,1.3,JTS540099000000000LDR
+2021-08,HCS,Health care and social assistance,job_openings_rate,7.5,JTS620000000000000JOR
+2021-08,HCS,Health care and social assistance,hires_rate,3.4,JTS620000000000000HIR
+2021-08,HCS,Health care and social assistance,quits_rate,2.7,JTS620000000000000QUR
+2021-08,HCS,Health care and social assistance,layoffs_discharges_rate,0.4,JTS620000000000000LDR
+2021-08,RET,Retail trade,job_openings_rate,6.8,JTS440000000000000JOR
+2021-08,RET,Retail trade,hires_rate,5.9,JTS440000000000000HIR
+2021-08,RET,Retail trade,quits_rate,4.8,JTS440000000000000QUR
+2021-08,RET,Retail trade,layoffs_discharges_rate,1.2,JTS440000000000000LDR
+2021-09,MFG,Manufacturing,job_openings_rate,7.0,JTS300000000000000JOR
+2021-09,MFG,Manufacturing,hires_rate,4.0,JTS300000000000000HIR
+2021-09,MFG,Manufacturing,quits_rate,2.7,JTS300000000000000QUR
+2021-09,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2021-09,INF,Information,job_openings_rate,6.5,JTS510000000000000JOR
+2021-09,INF,Information,hires_rate,4.2,JTS510000000000000HIR
+2021-09,INF,Information,quits_rate,1.8,JTS510000000000000QUR
+2021-09,INF,Information,layoffs_discharges_rate,1.2,JTS510000000000000LDR
+2021-09,FAS,Financial activities,job_openings_rate,5.0,JTS510099000000000JOR
+2021-09,FAS,Financial activities,hires_rate,3.2,JTS510099000000000HIR
+2021-09,FAS,Financial activities,quits_rate,1.7,JTS510099000000000QUR
+2021-09,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2021-09,PBS,Professional and business services,job_openings_rate,8.3,JTS540099000000000JOR
+2021-09,PBS,Professional and business services,hires_rate,6.2,JTS540099000000000HIR
+2021-09,PBS,Professional and business services,quits_rate,3.5,JTS540099000000000QUR
+2021-09,PBS,Professional and business services,layoffs_discharges_rate,1.9,JTS540099000000000LDR
+2021-09,HCS,Health care and social assistance,job_openings_rate,8.1,JTS620000000000000JOR
+2021-09,HCS,Health care and social assistance,hires_rate,3.7,JTS620000000000000HIR
+2021-09,HCS,Health care and social assistance,quits_rate,2.9,JTS620000000000000QUR
+2021-09,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2021-09,RET,Retail trade,job_openings_rate,6.4,JTS440000000000000JOR
+2021-09,RET,Retail trade,hires_rate,5.8,JTS440000000000000HIR
+2021-09,RET,Retail trade,quits_rate,4.4,JTS440000000000000QUR
+2021-09,RET,Retail trade,layoffs_discharges_rate,0.8,JTS440000000000000LDR
+2021-10,MFG,Manufacturing,job_openings_rate,7.1,JTS300000000000000JOR
+2021-10,MFG,Manufacturing,hires_rate,4.0,JTS300000000000000HIR
+2021-10,MFG,Manufacturing,quits_rate,2.4,JTS300000000000000QUR
+2021-10,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2021-10,INF,Information,job_openings_rate,6.6,JTS510000000000000JOR
+2021-10,INF,Information,hires_rate,4.8,JTS510000000000000HIR
+2021-10,INF,Information,quits_rate,2.1,JTS510000000000000QUR
+2021-10,INF,Information,layoffs_discharges_rate,1.1,JTS510000000000000LDR
+2021-10,FAS,Financial activities,job_openings_rate,4.8,JTS510099000000000JOR
+2021-10,FAS,Financial activities,hires_rate,2.6,JTS510099000000000HIR
+2021-10,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2021-10,FAS,Financial activities,layoffs_discharges_rate,0.4,JTS510099000000000LDR
+2021-10,PBS,Professional and business services,job_openings_rate,8.8,JTS540099000000000JOR
+2021-10,PBS,Professional and business services,hires_rate,6.3,JTS540099000000000HIR
+2021-10,PBS,Professional and business services,quits_rate,3.4,JTS540099000000000QUR
+2021-10,PBS,Professional and business services,layoffs_discharges_rate,1.4,JTS540099000000000LDR
+2021-10,HCS,Health care and social assistance,job_openings_rate,8.5,JTS620000000000000JOR
+2021-10,HCS,Health care and social assistance,hires_rate,3.6,JTS620000000000000HIR
+2021-10,HCS,Health care and social assistance,quits_rate,2.7,JTS620000000000000QUR
+2021-10,HCS,Health care and social assistance,layoffs_discharges_rate,0.5,JTS620000000000000LDR
+2021-10,RET,Retail trade,job_openings_rate,6.3,JTS440000000000000JOR
+2021-10,RET,Retail trade,hires_rate,5.7,JTS440000000000000HIR
+2021-10,RET,Retail trade,quits_rate,4.4,JTS440000000000000QUR
+2021-10,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2021-11,MFG,Manufacturing,job_openings_rate,6.3,JTS300000000000000JOR
+2021-11,MFG,Manufacturing,hires_rate,4.0,JTS300000000000000HIR
+2021-11,MFG,Manufacturing,quits_rate,2.5,JTS300000000000000QUR
+2021-11,MFG,Manufacturing,layoffs_discharges_rate,0.7,JTS300000000000000LDR
+2021-11,INF,Information,job_openings_rate,6.8,JTS510000000000000JOR
+2021-11,INF,Information,hires_rate,3.7,JTS510000000000000HIR
+2021-11,INF,Information,quits_rate,1.8,JTS510000000000000QUR
+2021-11,INF,Information,layoffs_discharges_rate,1.1,JTS510000000000000LDR
+2021-11,FAS,Financial activities,job_openings_rate,5.4,JTS510099000000000JOR
+2021-11,FAS,Financial activities,hires_rate,2.8,JTS510099000000000HIR
+2021-11,FAS,Financial activities,quits_rate,1.7,JTS510099000000000QUR
+2021-11,FAS,Financial activities,layoffs_discharges_rate,0.3,JTS510099000000000LDR
+2021-11,PBS,Professional and business services,job_openings_rate,8.5,JTS540099000000000JOR
+2021-11,PBS,Professional and business services,hires_rate,6.4,JTS540099000000000HIR
+2021-11,PBS,Professional and business services,quits_rate,3.8,JTS540099000000000QUR
+2021-11,PBS,Professional and business services,layoffs_discharges_rate,1.6,JTS540099000000000LDR
+2021-11,HCS,Health care and social assistance,job_openings_rate,8.6,JTS620000000000000JOR
+2021-11,HCS,Health care and social assistance,hires_rate,3.7,JTS620000000000000HIR
+2021-11,HCS,Health care and social assistance,quits_rate,2.9,JTS620000000000000QUR
+2021-11,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2021-11,RET,Retail trade,job_openings_rate,6.4,JTS440000000000000JOR
+2021-11,RET,Retail trade,hires_rate,5.9,JTS440000000000000HIR
+2021-11,RET,Retail trade,quits_rate,4.2,JTS440000000000000QUR
+2021-11,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2021-12,MFG,Manufacturing,job_openings_rate,6.5,JTS300000000000000JOR
+2021-12,MFG,Manufacturing,hires_rate,3.9,JTS300000000000000HIR
+2021-12,MFG,Manufacturing,quits_rate,2.6,JTS300000000000000QUR
+2021-12,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2021-12,INF,Information,job_openings_rate,7.7,JTS510000000000000JOR
+2021-12,INF,Information,hires_rate,3.7,JTS510000000000000HIR
+2021-12,INF,Information,quits_rate,1.8,JTS510000000000000QUR
+2021-12,INF,Information,layoffs_discharges_rate,1.2,JTS510000000000000LDR
+2021-12,FAS,Financial activities,job_openings_rate,5.4,JTS510099000000000JOR
+2021-12,FAS,Financial activities,hires_rate,2.8,JTS510099000000000HIR
+2021-12,FAS,Financial activities,quits_rate,1.6,JTS510099000000000QUR
+2021-12,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2021-12,PBS,Professional and business services,job_openings_rate,8.6,JTS540099000000000JOR
+2021-12,PBS,Professional and business services,hires_rate,6.0,JTS540099000000000HIR
+2021-12,PBS,Professional and business services,quits_rate,3.5,JTS540099000000000QUR
+2021-12,PBS,Professional and business services,layoffs_discharges_rate,1.7,JTS540099000000000LDR
+2021-12,HCS,Health care and social assistance,job_openings_rate,8.8,JTS620000000000000JOR
+2021-12,HCS,Health care and social assistance,hires_rate,3.7,JTS620000000000000HIR
+2021-12,HCS,Health care and social assistance,quits_rate,2.6,JTS620000000000000QUR
+2021-12,HCS,Health care and social assistance,layoffs_discharges_rate,0.9,JTS620000000000000LDR
+2021-12,RET,Retail trade,job_openings_rate,6.2,JTS440000000000000JOR
+2021-12,RET,Retail trade,hires_rate,5.5,JTS440000000000000HIR
+2021-12,RET,Retail trade,quits_rate,4.7,JTS440000000000000QUR
+2021-12,RET,Retail trade,layoffs_discharges_rate,0.7,JTS440000000000000LDR
+2022-01,MFG,Manufacturing,job_openings_rate,6.7,JTS300000000000000JOR
+2022-01,MFG,Manufacturing,hires_rate,3.8,JTS300000000000000HIR
+2022-01,MFG,Manufacturing,quits_rate,2.4,JTS300000000000000QUR
+2022-01,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2022-01,INF,Information,job_openings_rate,7.4,JTS510000000000000JOR
+2022-01,INF,Information,hires_rate,4.5,JTS510000000000000HIR
+2022-01,INF,Information,quits_rate,1.7,JTS510000000000000QUR
+2022-01,INF,Information,layoffs_discharges_rate,2.0,JTS510000000000000LDR
+2022-01,FAS,Financial activities,job_openings_rate,5.5,JTS510099000000000JOR
+2022-01,FAS,Financial activities,hires_rate,2.8,JTS510099000000000HIR
+2022-01,FAS,Financial activities,quits_rate,1.9,JTS510099000000000QUR
+2022-01,FAS,Financial activities,layoffs_discharges_rate,0.4,JTS510099000000000LDR
+2022-01,PBS,Professional and business services,job_openings_rate,8.6,JTS540099000000000JOR
+2022-01,PBS,Professional and business services,hires_rate,5.7,JTS540099000000000HIR
+2022-01,PBS,Professional and business services,quits_rate,3.6,JTS540099000000000QUR
+2022-01,PBS,Professional and business services,layoffs_discharges_rate,1.4,JTS540099000000000LDR
+2022-01,HCS,Health care and social assistance,job_openings_rate,8.6,JTS620000000000000JOR
+2022-01,HCS,Health care and social assistance,hires_rate,3.6,JTS620000000000000HIR
+2022-01,HCS,Health care and social assistance,quits_rate,2.8,JTS620000000000000QUR
+2022-01,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2022-01,RET,Retail trade,job_openings_rate,6.1,JTS440000000000000JOR
+2022-01,RET,Retail trade,hires_rate,5.4,JTS440000000000000HIR
+2022-01,RET,Retail trade,quits_rate,4.5,JTS440000000000000QUR
+2022-01,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2022-02,MFG,Manufacturing,job_openings_rate,6.1,JTS300000000000000JOR
+2022-02,MFG,Manufacturing,hires_rate,3.9,JTS300000000000000HIR
+2022-02,MFG,Manufacturing,quits_rate,2.6,JTS300000000000000QUR
+2022-02,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2022-02,INF,Information,job_openings_rate,7.5,JTS510000000000000JOR
+2022-02,INF,Information,hires_rate,2.6,JTS510000000000000HIR
+2022-02,INF,Information,quits_rate,1.6,JTS510000000000000QUR
+2022-02,INF,Information,layoffs_discharges_rate,0.4,JTS510000000000000LDR
+2022-02,FAS,Financial activities,job_openings_rate,5.3,JTS510099000000000JOR
+2022-02,FAS,Financial activities,hires_rate,2.9,JTS510099000000000HIR
+2022-02,FAS,Financial activities,quits_rate,1.7,JTS510099000000000QUR
+2022-02,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2022-02,PBS,Professional and business services,job_openings_rate,9.6,JTS540099000000000JOR
+2022-02,PBS,Professional and business services,hires_rate,6.2,JTS540099000000000HIR
+2022-02,PBS,Professional and business services,quits_rate,3.3,JTS540099000000000QUR
+2022-02,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2022-02,HCS,Health care and social assistance,job_openings_rate,9.1,JTS620000000000000JOR
+2022-02,HCS,Health care and social assistance,hires_rate,3.8,JTS620000000000000HIR
+2022-02,HCS,Health care and social assistance,quits_rate,2.8,JTS620000000000000QUR
+2022-02,HCS,Health care and social assistance,layoffs_discharges_rate,0.5,JTS620000000000000LDR
+2022-02,RET,Retail trade,job_openings_rate,6.4,JTS440000000000000JOR
+2022-02,RET,Retail trade,hires_rate,6.0,JTS440000000000000HIR
+2022-02,RET,Retail trade,quits_rate,4.3,JTS440000000000000QUR
+2022-02,RET,Retail trade,layoffs_discharges_rate,0.8,JTS440000000000000LDR
+2022-03,MFG,Manufacturing,job_openings_rate,6.7,JTS300000000000000JOR
+2022-03,MFG,Manufacturing,hires_rate,4.1,JTS300000000000000HIR
+2022-03,MFG,Manufacturing,quits_rate,2.7,JTS300000000000000QUR
+2022-03,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2022-03,INF,Information,job_openings_rate,8.0,JTS510000000000000JOR
+2022-03,INF,Information,hires_rate,3.6,JTS510000000000000HIR
+2022-03,INF,Information,quits_rate,1.6,JTS510000000000000QUR
+2022-03,INF,Information,layoffs_discharges_rate,0.6,JTS510000000000000LDR
+2022-03,FAS,Financial activities,job_openings_rate,5.3,JTS510099000000000JOR
+2022-03,FAS,Financial activities,hires_rate,2.8,JTS510099000000000HIR
+2022-03,FAS,Financial activities,quits_rate,1.8,JTS510099000000000QUR
+2022-03,FAS,Financial activities,layoffs_discharges_rate,0.4,JTS510099000000000LDR
+2022-03,PBS,Professional and business services,job_openings_rate,9.9,JTS540099000000000JOR
+2022-03,PBS,Professional and business services,hires_rate,5.9,JTS540099000000000HIR
+2022-03,PBS,Professional and business services,quits_rate,3.5,JTS540099000000000QUR
+2022-03,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2022-03,HCS,Health care and social assistance,job_openings_rate,9.4,JTS620000000000000JOR
+2022-03,HCS,Health care and social assistance,hires_rate,3.5,JTS620000000000000HIR
+2022-03,HCS,Health care and social assistance,quits_rate,2.5,JTS620000000000000QUR
+2022-03,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2022-03,RET,Retail trade,job_openings_rate,8.6,JTS440000000000000JOR
+2022-03,RET,Retail trade,hires_rate,5.3,JTS440000000000000HIR
+2022-03,RET,Retail trade,quits_rate,4.1,JTS440000000000000QUR
+2022-03,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2022-04,MFG,Manufacturing,job_openings_rate,7.5,JTS300000000000000JOR
+2022-04,MFG,Manufacturing,hires_rate,3.9,JTS300000000000000HIR
+2022-04,MFG,Manufacturing,quits_rate,2.6,JTS300000000000000QUR
+2022-04,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2022-04,INF,Information,job_openings_rate,8.3,JTS510000000000000JOR
+2022-04,INF,Information,hires_rate,3.6,JTS510000000000000HIR
+2022-04,INF,Information,quits_rate,1.7,JTS510000000000000QUR
+2022-04,INF,Information,layoffs_discharges_rate,1.1,JTS510000000000000LDR
+2022-04,FAS,Financial activities,job_openings_rate,5.8,JTS510099000000000JOR
+2022-04,FAS,Financial activities,hires_rate,3.1,JTS510099000000000HIR
+2022-04,FAS,Financial activities,quits_rate,2.1,JTS510099000000000QUR
+2022-04,FAS,Financial activities,layoffs_discharges_rate,0.3,JTS510099000000000LDR
+2022-04,PBS,Professional and business services,job_openings_rate,9.3,JTS540099000000000JOR
+2022-04,PBS,Professional and business services,hires_rate,5.8,JTS540099000000000HIR
+2022-04,PBS,Professional and business services,quits_rate,3.8,JTS540099000000000QUR
+2022-04,PBS,Professional and business services,layoffs_discharges_rate,1.4,JTS540099000000000LDR
+2022-04,HCS,Health care and social assistance,job_openings_rate,9.0,JTS620000000000000JOR
+2022-04,HCS,Health care and social assistance,hires_rate,3.7,JTS620000000000000HIR
+2022-04,HCS,Health care and social assistance,quits_rate,2.6,JTS620000000000000QUR
+2022-04,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2022-04,RET,Retail trade,job_openings_rate,6.5,JTS440000000000000JOR
+2022-04,RET,Retail trade,hires_rate,5.1,JTS440000000000000HIR
+2022-04,RET,Retail trade,quits_rate,4.3,JTS440000000000000QUR
+2022-04,RET,Retail trade,layoffs_discharges_rate,0.8,JTS440000000000000LDR
+2022-05,MFG,Manufacturing,job_openings_rate,5.9,JTS300000000000000JOR
+2022-05,MFG,Manufacturing,hires_rate,3.5,JTS300000000000000HIR
+2022-05,MFG,Manufacturing,quits_rate,2.4,JTS300000000000000QUR
+2022-05,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2022-05,INF,Information,job_openings_rate,7.5,JTS510000000000000JOR
+2022-05,INF,Information,hires_rate,3.6,JTS510000000000000HIR
+2022-05,INF,Information,quits_rate,1.9,JTS510000000000000QUR
+2022-05,INF,Information,layoffs_discharges_rate,0.9,JTS510000000000000LDR
+2022-05,FAS,Financial activities,job_openings_rate,6.0,JTS510099000000000JOR
+2022-05,FAS,Financial activities,hires_rate,2.6,JTS510099000000000HIR
+2022-05,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2022-05,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2022-05,PBS,Professional and business services,job_openings_rate,9.0,JTS540099000000000JOR
+2022-05,PBS,Professional and business services,hires_rate,5.9,JTS540099000000000HIR
+2022-05,PBS,Professional and business services,quits_rate,3.5,JTS540099000000000QUR
+2022-05,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2022-05,HCS,Health care and social assistance,job_openings_rate,9.1,JTS620000000000000JOR
+2022-05,HCS,Health care and social assistance,hires_rate,3.7,JTS620000000000000HIR
+2022-05,HCS,Health care and social assistance,quits_rate,2.6,JTS620000000000000QUR
+2022-05,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2022-05,RET,Retail trade,job_openings_rate,6.5,JTS440000000000000JOR
+2022-05,RET,Retail trade,hires_rate,4.6,JTS440000000000000HIR
+2022-05,RET,Retail trade,quits_rate,3.8,JTS440000000000000QUR
+2022-05,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2022-06,MFG,Manufacturing,job_openings_rate,6.3,JTS300000000000000JOR
+2022-06,MFG,Manufacturing,hires_rate,3.8,JTS300000000000000HIR
+2022-06,MFG,Manufacturing,quits_rate,2.5,JTS300000000000000QUR
+2022-06,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2022-06,INF,Information,job_openings_rate,7.6,JTS510000000000000JOR
+2022-06,INF,Information,hires_rate,3.9,JTS510000000000000HIR
+2022-06,INF,Information,quits_rate,1.9,JTS510000000000000QUR
+2022-06,INF,Information,layoffs_discharges_rate,1.1,JTS510000000000000LDR
+2022-06,FAS,Financial activities,job_openings_rate,6.8,JTS510099000000000JOR
+2022-06,FAS,Financial activities,hires_rate,2.6,JTS510099000000000HIR
+2022-06,FAS,Financial activities,quits_rate,1.6,JTS510099000000000QUR
+2022-06,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2022-06,PBS,Professional and business services,job_openings_rate,9.2,JTS540099000000000JOR
+2022-06,PBS,Professional and business services,hires_rate,5.7,JTS540099000000000HIR
+2022-06,PBS,Professional and business services,quits_rate,3.4,JTS540099000000000QUR
+2022-06,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2022-06,HCS,Health care and social assistance,job_openings_rate,8.9,JTS620000000000000JOR
+2022-06,HCS,Health care and social assistance,hires_rate,3.8,JTS620000000000000HIR
+2022-06,HCS,Health care and social assistance,quits_rate,2.5,JTS620000000000000QUR
+2022-06,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2022-06,RET,Retail trade,job_openings_rate,5.3,JTS440000000000000JOR
+2022-06,RET,Retail trade,hires_rate,4.9,JTS440000000000000HIR
+2022-06,RET,Retail trade,quits_rate,3.6,JTS440000000000000QUR
+2022-06,RET,Retail trade,layoffs_discharges_rate,0.6,JTS440000000000000LDR
+2022-07,MFG,Manufacturing,job_openings_rate,6.4,JTS300000000000000JOR
+2022-07,MFG,Manufacturing,hires_rate,3.4,JTS300000000000000HIR
+2022-07,MFG,Manufacturing,quits_rate,2.1,JTS300000000000000QUR
+2022-07,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2022-07,INF,Information,job_openings_rate,6.9,JTS510000000000000JOR
+2022-07,INF,Information,hires_rate,3.3,JTS510000000000000HIR
+2022-07,INF,Information,quits_rate,1.6,JTS510000000000000QUR
+2022-07,INF,Information,layoffs_discharges_rate,1.3,JTS510000000000000LDR
+2022-07,FAS,Financial activities,job_openings_rate,6.6,JTS510099000000000JOR
+2022-07,FAS,Financial activities,hires_rate,2.5,JTS510099000000000HIR
+2022-07,FAS,Financial activities,quits_rate,1.9,JTS510099000000000QUR
+2022-07,FAS,Financial activities,layoffs_discharges_rate,0.3,JTS510099000000000LDR
+2022-07,PBS,Professional and business services,job_openings_rate,8.5,JTS540099000000000JOR
+2022-07,PBS,Professional and business services,hires_rate,5.6,JTS540099000000000HIR
+2022-07,PBS,Professional and business services,quits_rate,3.5,JTS540099000000000QUR
+2022-07,PBS,Professional and business services,layoffs_discharges_rate,1.5,JTS540099000000000LDR
+2022-07,HCS,Health care and social assistance,job_openings_rate,9.2,JTS620000000000000JOR
+2022-07,HCS,Health care and social assistance,hires_rate,3.9,JTS620000000000000HIR
+2022-07,HCS,Health care and social assistance,quits_rate,2.4,JTS620000000000000QUR
+2022-07,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2022-07,RET,Retail trade,job_openings_rate,5.4,JTS440000000000000JOR
+2022-07,RET,Retail trade,hires_rate,4.8,JTS440000000000000HIR
+2022-07,RET,Retail trade,quits_rate,3.6,JTS440000000000000QUR
+2022-07,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2022-08,MFG,Manufacturing,job_openings_rate,6.0,JTS300000000000000JOR
+2022-08,MFG,Manufacturing,hires_rate,3.7,JTS300000000000000HIR
+2022-08,MFG,Manufacturing,quits_rate,2.3,JTS300000000000000QUR
+2022-08,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2022-08,INF,Information,job_openings_rate,6.3,JTS510000000000000JOR
+2022-08,INF,Information,hires_rate,3.7,JTS510000000000000HIR
+2022-08,INF,Information,quits_rate,1.8,JTS510000000000000QUR
+2022-08,INF,Information,layoffs_discharges_rate,1.9,JTS510000000000000LDR
+2022-08,FAS,Financial activities,job_openings_rate,5.5,JTS510099000000000JOR
+2022-08,FAS,Financial activities,hires_rate,2.6,JTS510099000000000HIR
+2022-08,FAS,Financial activities,quits_rate,1.6,JTS510099000000000QUR
+2022-08,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2022-08,PBS,Professional and business services,job_openings_rate,7.3,JTS540099000000000JOR
+2022-08,PBS,Professional and business services,hires_rate,5.2,JTS540099000000000HIR
+2022-08,PBS,Professional and business services,quits_rate,3.1,JTS540099000000000QUR
+2022-08,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2022-08,HCS,Health care and social assistance,job_openings_rate,8.6,JTS620000000000000JOR
+2022-08,HCS,Health care and social assistance,hires_rate,3.7,JTS620000000000000HIR
+2022-08,HCS,Health care and social assistance,quits_rate,2.6,JTS620000000000000QUR
+2022-08,HCS,Health care and social assistance,layoffs_discharges_rate,0.5,JTS620000000000000LDR
+2022-08,RET,Retail trade,job_openings_rate,4.9,JTS440000000000000JOR
+2022-08,RET,Retail trade,hires_rate,5.3,JTS440000000000000HIR
+2022-08,RET,Retail trade,quits_rate,3.8,JTS440000000000000QUR
+2022-08,RET,Retail trade,layoffs_discharges_rate,1.2,JTS440000000000000LDR
+2022-09,MFG,Manufacturing,job_openings_rate,6.0,JTS300000000000000JOR
+2022-09,MFG,Manufacturing,hires_rate,3.1,JTS300000000000000HIR
+2022-09,MFG,Manufacturing,quits_rate,2.0,JTS300000000000000QUR
+2022-09,MFG,Manufacturing,layoffs_discharges_rate,0.7,JTS300000000000000LDR
+2022-09,INF,Information,job_openings_rate,6.5,JTS510000000000000JOR
+2022-09,INF,Information,hires_rate,3.1,JTS510000000000000HIR
+2022-09,INF,Information,quits_rate,2.0,JTS510000000000000QUR
+2022-09,INF,Information,layoffs_discharges_rate,0.8,JTS510000000000000LDR
+2022-09,FAS,Financial activities,job_openings_rate,4.6,JTS510099000000000JOR
+2022-09,FAS,Financial activities,hires_rate,2.5,JTS510099000000000HIR
+2022-09,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2022-09,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2022-09,PBS,Professional and business services,job_openings_rate,8.6,JTS540099000000000JOR
+2022-09,PBS,Professional and business services,hires_rate,5.2,JTS540099000000000HIR
+2022-09,PBS,Professional and business services,quits_rate,3.3,JTS540099000000000QUR
+2022-09,PBS,Professional and business services,layoffs_discharges_rate,1.4,JTS540099000000000LDR
+2022-09,HCS,Health care and social assistance,job_openings_rate,9.1,JTS620000000000000JOR
+2022-09,HCS,Health care and social assistance,hires_rate,3.6,JTS620000000000000HIR
+2022-09,HCS,Health care and social assistance,quits_rate,2.5,JTS620000000000000QUR
+2022-09,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2022-09,RET,Retail trade,job_openings_rate,5.2,JTS440000000000000JOR
+2022-09,RET,Retail trade,hires_rate,4.8,JTS440000000000000HIR
+2022-09,RET,Retail trade,quits_rate,3.7,JTS440000000000000QUR
+2022-09,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2022-10,MFG,Manufacturing,job_openings_rate,5.5,JTS300000000000000JOR
+2022-10,MFG,Manufacturing,hires_rate,3.4,JTS300000000000000HIR
+2022-10,MFG,Manufacturing,quits_rate,2.1,JTS300000000000000QUR
+2022-10,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2022-10,INF,Information,job_openings_rate,6.5,JTS510000000000000JOR
+2022-10,INF,Information,hires_rate,3.4,JTS510000000000000HIR
+2022-10,INF,Information,quits_rate,1.0,JTS510000000000000QUR
+2022-10,INF,Information,layoffs_discharges_rate,1.6,JTS510000000000000LDR
+2022-10,FAS,Financial activities,job_openings_rate,6.6,JTS510099000000000JOR
+2022-10,FAS,Financial activities,hires_rate,2.4,JTS510099000000000HIR
+2022-10,FAS,Financial activities,quits_rate,1.6,JTS510099000000000QUR
+2022-10,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2022-10,PBS,Professional and business services,job_openings_rate,7.2,JTS540099000000000JOR
+2022-10,PBS,Professional and business services,hires_rate,5.1,JTS540099000000000HIR
+2022-10,PBS,Professional and business services,quits_rate,2.8,JTS540099000000000QUR
+2022-10,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2022-10,HCS,Health care and social assistance,job_openings_rate,8.8,JTS620000000000000JOR
+2022-10,HCS,Health care and social assistance,hires_rate,3.5,JTS620000000000000HIR
+2022-10,HCS,Health care and social assistance,quits_rate,2.5,JTS620000000000000QUR
+2022-10,HCS,Health care and social assistance,layoffs_discharges_rate,0.5,JTS620000000000000LDR
+2022-10,RET,Retail trade,job_openings_rate,5.4,JTS440000000000000JOR
+2022-10,RET,Retail trade,hires_rate,4.8,JTS440000000000000HIR
+2022-10,RET,Retail trade,quits_rate,3.8,JTS440000000000000QUR
+2022-10,RET,Retail trade,layoffs_discharges_rate,0.8,JTS440000000000000LDR
+2022-11,MFG,Manufacturing,job_openings_rate,5.9,JTS300000000000000JOR
+2022-11,MFG,Manufacturing,hires_rate,3.3,JTS300000000000000HIR
+2022-11,MFG,Manufacturing,quits_rate,2.1,JTS300000000000000QUR
+2022-11,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2022-11,INF,Information,job_openings_rate,6.7,JTS510000000000000JOR
+2022-11,INF,Information,hires_rate,3.5,JTS510000000000000HIR
+2022-11,INF,Information,quits_rate,1.5,JTS510000000000000QUR
+2022-11,INF,Information,layoffs_discharges_rate,1.3,JTS510000000000000LDR
+2022-11,FAS,Financial activities,job_openings_rate,5.8,JTS510099000000000JOR
+2022-11,FAS,Financial activities,hires_rate,2.9,JTS510099000000000HIR
+2022-11,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2022-11,FAS,Financial activities,layoffs_discharges_rate,1.1,JTS510099000000000LDR
+2022-11,PBS,Professional and business services,job_openings_rate,8.5,JTS540099000000000JOR
+2022-11,PBS,Professional and business services,hires_rate,5.0,JTS540099000000000HIR
+2022-11,PBS,Professional and business services,quits_rate,3.2,JTS540099000000000QUR
+2022-11,PBS,Professional and business services,layoffs_discharges_rate,1.5,JTS540099000000000LDR
+2022-11,HCS,Health care and social assistance,job_openings_rate,8.4,JTS620000000000000JOR
+2022-11,HCS,Health care and social assistance,hires_rate,3.6,JTS620000000000000HIR
+2022-11,HCS,Health care and social assistance,quits_rate,2.8,JTS620000000000000QUR
+2022-11,HCS,Health care and social assistance,layoffs_discharges_rate,0.5,JTS620000000000000LDR
+2022-11,RET,Retail trade,job_openings_rate,5.2,JTS440000000000000JOR
+2022-11,RET,Retail trade,hires_rate,4.7,JTS440000000000000HIR
+2022-11,RET,Retail trade,quits_rate,3.8,JTS440000000000000QUR
+2022-11,RET,Retail trade,layoffs_discharges_rate,0.6,JTS440000000000000LDR
+2022-12,MFG,Manufacturing,job_openings_rate,5.5,JTS300000000000000JOR
+2022-12,MFG,Manufacturing,hires_rate,3.2,JTS300000000000000HIR
+2022-12,MFG,Manufacturing,quits_rate,2.0,JTS300000000000000QUR
+2022-12,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2022-12,INF,Information,job_openings_rate,2.5,JTS510000000000000JOR
+2022-12,INF,Information,hires_rate,2.8,JTS510000000000000HIR
+2022-12,INF,Information,quits_rate,1.6,JTS510000000000000QUR
+2022-12,INF,Information,layoffs_discharges_rate,1.5,JTS510000000000000LDR
+2022-12,FAS,Financial activities,job_openings_rate,5.7,JTS510099000000000JOR
+2022-12,FAS,Financial activities,hires_rate,2.4,JTS510099000000000HIR
+2022-12,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2022-12,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2022-12,PBS,Professional and business services,job_openings_rate,8.5,JTS540099000000000JOR
+2022-12,PBS,Professional and business services,hires_rate,4.7,JTS540099000000000HIR
+2022-12,PBS,Professional and business services,quits_rate,3.1,JTS540099000000000QUR
+2022-12,PBS,Professional and business services,layoffs_discharges_rate,1.5,JTS540099000000000LDR
+2022-12,HCS,Health care and social assistance,job_openings_rate,8.5,JTS620000000000000JOR
+2022-12,HCS,Health care and social assistance,hires_rate,3.9,JTS620000000000000HIR
+2022-12,HCS,Health care and social assistance,quits_rate,2.8,JTS620000000000000QUR
+2022-12,HCS,Health care and social assistance,layoffs_discharges_rate,0.5,JTS620000000000000LDR
+2022-12,RET,Retail trade,job_openings_rate,5.7,JTS440000000000000JOR
+2022-12,RET,Retail trade,hires_rate,4.9,JTS440000000000000HIR
+2022-12,RET,Retail trade,quits_rate,3.9,JTS440000000000000QUR
+2022-12,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2023-01,MFG,Manufacturing,job_openings_rate,5.3,JTS300000000000000JOR
+2023-01,MFG,Manufacturing,hires_rate,3.3,JTS300000000000000HIR
+2023-01,MFG,Manufacturing,quits_rate,2.2,JTS300000000000000QUR
+2023-01,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2023-01,INF,Information,job_openings_rate,3.2,JTS510000000000000JOR
+2023-01,INF,Information,hires_rate,2.3,JTS510000000000000HIR
+2023-01,INF,Information,quits_rate,1.3,JTS510000000000000QUR
+2023-01,INF,Information,layoffs_discharges_rate,1.5,JTS510000000000000LDR
+2023-01,FAS,Financial activities,job_openings_rate,4.5,JTS510099000000000JOR
+2023-01,FAS,Financial activities,hires_rate,2.5,JTS510099000000000HIR
+2023-01,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2023-01,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2023-01,PBS,Professional and business services,job_openings_rate,8.1,JTS540099000000000JOR
+2023-01,PBS,Professional and business services,hires_rate,4.8,JTS540099000000000HIR
+2023-01,PBS,Professional and business services,quits_rate,2.4,JTS540099000000000QUR
+2023-01,PBS,Professional and business services,layoffs_discharges_rate,2.2,JTS540099000000000LDR
+2023-01,HCS,Health care and social assistance,job_openings_rate,7.8,JTS620000000000000JOR
+2023-01,HCS,Health care and social assistance,hires_rate,3.8,JTS620000000000000HIR
+2023-01,HCS,Health care and social assistance,quits_rate,2.7,JTS620000000000000QUR
+2023-01,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2023-01,RET,Retail trade,job_openings_rate,5.1,JTS440000000000000JOR
+2023-01,RET,Retail trade,hires_rate,5.2,JTS440000000000000HIR
+2023-01,RET,Retail trade,quits_rate,4.0,JTS440000000000000QUR
+2023-01,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2023-02,MFG,Manufacturing,job_openings_rate,4.9,JTS300000000000000JOR
+2023-02,MFG,Manufacturing,hires_rate,3.4,JTS300000000000000HIR
+2023-02,MFG,Manufacturing,quits_rate,2.4,JTS300000000000000QUR
+2023-02,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2023-02,INF,Information,job_openings_rate,4.5,JTS510000000000000JOR
+2023-02,INF,Information,hires_rate,2.7,JTS510000000000000HIR
+2023-02,INF,Information,quits_rate,1.6,JTS510000000000000QUR
+2023-02,INF,Information,layoffs_discharges_rate,1.5,JTS510000000000000LDR
+2023-02,FAS,Financial activities,job_openings_rate,4.5,JTS510099000000000JOR
+2023-02,FAS,Financial activities,hires_rate,2.3,JTS510099000000000HIR
+2023-02,FAS,Financial activities,quits_rate,1.3,JTS510099000000000QUR
+2023-02,FAS,Financial activities,layoffs_discharges_rate,0.4,JTS510099000000000LDR
+2023-02,PBS,Professional and business services,job_openings_rate,7.5,JTS540099000000000JOR
+2023-02,PBS,Professional and business services,hires_rate,4.6,JTS540099000000000HIR
+2023-02,PBS,Professional and business services,quits_rate,2.8,JTS540099000000000QUR
+2023-02,PBS,Professional and business services,layoffs_discharges_rate,1.6,JTS540099000000000LDR
+2023-02,HCS,Health care and social assistance,job_openings_rate,7.3,JTS620000000000000JOR
+2023-02,HCS,Health care and social assistance,hires_rate,3.6,JTS620000000000000HIR
+2023-02,HCS,Health care and social assistance,quits_rate,2.6,JTS620000000000000QUR
+2023-02,HCS,Health care and social assistance,layoffs_discharges_rate,0.5,JTS620000000000000LDR
+2023-02,RET,Retail trade,job_openings_rate,4.9,JTS440000000000000JOR
+2023-02,RET,Retail trade,hires_rate,4.6,JTS440000000000000HIR
+2023-02,RET,Retail trade,quits_rate,3.3,JTS440000000000000QUR
+2023-02,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2023-03,MFG,Manufacturing,job_openings_rate,5.0,JTS300000000000000JOR
+2023-03,MFG,Manufacturing,hires_rate,3.1,JTS300000000000000HIR
+2023-03,MFG,Manufacturing,quits_rate,2.1,JTS300000000000000QUR
+2023-03,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2023-03,INF,Information,job_openings_rate,4.5,JTS510000000000000JOR
+2023-03,INF,Information,hires_rate,3.4,JTS510000000000000HIR
+2023-03,INF,Information,quits_rate,1.4,JTS510000000000000QUR
+2023-03,INF,Information,layoffs_discharges_rate,1.5,JTS510000000000000LDR
+2023-03,FAS,Financial activities,job_openings_rate,4.9,JTS510099000000000JOR
+2023-03,FAS,Financial activities,hires_rate,2.1,JTS510099000000000HIR
+2023-03,FAS,Financial activities,quits_rate,1.2,JTS510099000000000QUR
+2023-03,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2023-03,PBS,Professional and business services,job_openings_rate,7.4,JTS540099000000000JOR
+2023-03,PBS,Professional and business services,hires_rate,4.6,JTS540099000000000HIR
+2023-03,PBS,Professional and business services,quits_rate,2.7,JTS540099000000000QUR
+2023-03,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2023-03,HCS,Health care and social assistance,job_openings_rate,7.5,JTS620000000000000JOR
+2023-03,HCS,Health care and social assistance,hires_rate,3.7,JTS620000000000000HIR
+2023-03,HCS,Health care and social assistance,quits_rate,2.5,JTS620000000000000QUR
+2023-03,HCS,Health care and social assistance,layoffs_discharges_rate,0.8,JTS620000000000000LDR
+2023-03,RET,Retail trade,job_openings_rate,4.5,JTS440000000000000JOR
+2023-03,RET,Retail trade,hires_rate,4.4,JTS440000000000000HIR
+2023-03,RET,Retail trade,quits_rate,3.5,JTS440000000000000QUR
+2023-03,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2023-04,MFG,Manufacturing,job_openings_rate,4.8,JTS300000000000000JOR
+2023-04,MFG,Manufacturing,hires_rate,2.9,JTS300000000000000HIR
+2023-04,MFG,Manufacturing,quits_rate,1.9,JTS300000000000000QUR
+2023-04,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2023-04,INF,Information,job_openings_rate,4.6,JTS510000000000000JOR
+2023-04,INF,Information,hires_rate,2.6,JTS510000000000000HIR
+2023-04,INF,Information,quits_rate,1.3,JTS510000000000000QUR
+2023-04,INF,Information,layoffs_discharges_rate,1.0,JTS510000000000000LDR
+2023-04,FAS,Financial activities,job_openings_rate,5.0,JTS510099000000000JOR
+2023-04,FAS,Financial activities,hires_rate,2.3,JTS510099000000000HIR
+2023-04,FAS,Financial activities,quits_rate,1.6,JTS510099000000000QUR
+2023-04,FAS,Financial activities,layoffs_discharges_rate,0.4,JTS510099000000000LDR
+2023-04,PBS,Professional and business services,job_openings_rate,7.3,JTS540099000000000JOR
+2023-04,PBS,Professional and business services,hires_rate,5.1,JTS540099000000000HIR
+2023-04,PBS,Professional and business services,quits_rate,2.6,JTS540099000000000QUR
+2023-04,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2023-04,HCS,Health care and social assistance,job_openings_rate,7.6,JTS620000000000000JOR
+2023-04,HCS,Health care and social assistance,hires_rate,3.3,JTS620000000000000HIR
+2023-04,HCS,Health care and social assistance,quits_rate,2.2,JTS620000000000000QUR
+2023-04,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2023-04,RET,Retail trade,job_openings_rate,5.4,JTS440000000000000JOR
+2023-04,RET,Retail trade,hires_rate,4.6,JTS440000000000000HIR
+2023-04,RET,Retail trade,quits_rate,3.2,JTS440000000000000QUR
+2023-04,RET,Retail trade,layoffs_discharges_rate,1.2,JTS440000000000000LDR
+2023-05,MFG,Manufacturing,job_openings_rate,4.1,JTS300000000000000JOR
+2023-05,MFG,Manufacturing,hires_rate,3.4,JTS300000000000000HIR
+2023-05,MFG,Manufacturing,quits_rate,2.2,JTS300000000000000QUR
+2023-05,MFG,Manufacturing,layoffs_discharges_rate,1.1,JTS300000000000000LDR
+2023-05,INF,Information,job_openings_rate,5.2,JTS510000000000000JOR
+2023-05,INF,Information,hires_rate,2.1,JTS510000000000000HIR
+2023-05,INF,Information,quits_rate,1.0,JTS510000000000000QUR
+2023-05,INF,Information,layoffs_discharges_rate,1.3,JTS510000000000000LDR
+2023-05,FAS,Financial activities,job_openings_rate,4.2,JTS510099000000000JOR
+2023-05,FAS,Financial activities,hires_rate,2.2,JTS510099000000000HIR
+2023-05,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2023-05,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2023-05,PBS,Professional and business services,job_openings_rate,6.7,JTS540099000000000JOR
+2023-05,PBS,Professional and business services,hires_rate,4.5,JTS540099000000000HIR
+2023-05,PBS,Professional and business services,quits_rate,2.8,JTS540099000000000QUR
+2023-05,PBS,Professional and business services,layoffs_discharges_rate,1.2,JTS540099000000000LDR
+2023-05,HCS,Health care and social assistance,job_openings_rate,7.2,JTS620000000000000JOR
+2023-05,HCS,Health care and social assistance,hires_rate,4.0,JTS620000000000000HIR
+2023-05,HCS,Health care and social assistance,quits_rate,2.8,JTS620000000000000QUR
+2023-05,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2023-05,RET,Retail trade,job_openings_rate,4.7,JTS440000000000000JOR
+2023-05,RET,Retail trade,hires_rate,5.4,JTS440000000000000HIR
+2023-05,RET,Retail trade,quits_rate,3.7,JTS440000000000000QUR
+2023-05,RET,Retail trade,layoffs_discharges_rate,1.5,JTS440000000000000LDR
+2023-06,MFG,Manufacturing,job_openings_rate,4.3,JTS300000000000000JOR
+2023-06,MFG,Manufacturing,hires_rate,3.1,JTS300000000000000HIR
+2023-06,MFG,Manufacturing,quits_rate,2.0,JTS300000000000000QUR
+2023-06,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2023-06,INF,Information,job_openings_rate,4.9,JTS510000000000000JOR
+2023-06,INF,Information,hires_rate,2.4,JTS510000000000000HIR
+2023-06,INF,Information,quits_rate,1.4,JTS510000000000000QUR
+2023-06,INF,Information,layoffs_discharges_rate,1.0,JTS510000000000000LDR
+2023-06,FAS,Financial activities,job_openings_rate,4.6,JTS510099000000000JOR
+2023-06,FAS,Financial activities,hires_rate,2.0,JTS510099000000000HIR
+2023-06,FAS,Financial activities,quits_rate,1.3,JTS510099000000000QUR
+2023-06,FAS,Financial activities,layoffs_discharges_rate,0.3,JTS510099000000000LDR
+2023-06,PBS,Professional and business services,job_openings_rate,6.3,JTS540099000000000JOR
+2023-06,PBS,Professional and business services,hires_rate,4.6,JTS540099000000000HIR
+2023-06,PBS,Professional and business services,quits_rate,2.6,JTS540099000000000QUR
+2023-06,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2023-06,HCS,Health care and social assistance,job_openings_rate,7.6,JTS620000000000000JOR
+2023-06,HCS,Health care and social assistance,hires_rate,3.9,JTS620000000000000HIR
+2023-06,HCS,Health care and social assistance,quits_rate,2.5,JTS620000000000000QUR
+2023-06,HCS,Health care and social assistance,layoffs_discharges_rate,0.8,JTS620000000000000LDR
+2023-06,RET,Retail trade,job_openings_rate,4.2,JTS440000000000000JOR
+2023-06,RET,Retail trade,hires_rate,4.3,JTS440000000000000HIR
+2023-06,RET,Retail trade,quits_rate,3.1,JTS440000000000000QUR
+2023-06,RET,Retail trade,layoffs_discharges_rate,1.1,JTS440000000000000LDR
+2023-07,MFG,Manufacturing,job_openings_rate,3.8,JTS300000000000000JOR
+2023-07,MFG,Manufacturing,hires_rate,3.1,JTS300000000000000HIR
+2023-07,MFG,Manufacturing,quits_rate,1.9,JTS300000000000000QUR
+2023-07,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2023-07,INF,Information,job_openings_rate,4.7,JTS510000000000000JOR
+2023-07,INF,Information,hires_rate,2.5,JTS510000000000000HIR
+2023-07,INF,Information,quits_rate,1.9,JTS510000000000000QUR
+2023-07,INF,Information,layoffs_discharges_rate,1.6,JTS510000000000000LDR
+2023-07,FAS,Financial activities,job_openings_rate,4.6,JTS510099000000000JOR
+2023-07,FAS,Financial activities,hires_rate,2.0,JTS510099000000000HIR
+2023-07,FAS,Financial activities,quits_rate,1.2,JTS510099000000000QUR
+2023-07,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2023-07,PBS,Professional and business services,job_openings_rate,5.2,JTS540099000000000JOR
+2023-07,PBS,Professional and business services,hires_rate,4.5,JTS540099000000000HIR
+2023-07,PBS,Professional and business services,quits_rate,2.6,JTS540099000000000QUR
+2023-07,PBS,Professional and business services,layoffs_discharges_rate,1.9,JTS540099000000000LDR
+2023-07,HCS,Health care and social assistance,job_openings_rate,7.6,JTS620000000000000JOR
+2023-07,HCS,Health care and social assistance,hires_rate,3.7,JTS620000000000000HIR
+2023-07,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2023-07,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2023-07,RET,Retail trade,job_openings_rate,4.5,JTS440000000000000JOR
+2023-07,RET,Retail trade,hires_rate,4.4,JTS440000000000000HIR
+2023-07,RET,Retail trade,quits_rate,3.4,JTS440000000000000QUR
+2023-07,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2023-08,MFG,Manufacturing,job_openings_rate,4.3,JTS300000000000000JOR
+2023-08,MFG,Manufacturing,hires_rate,3.0,JTS300000000000000HIR
+2023-08,MFG,Manufacturing,quits_rate,1.8,JTS300000000000000QUR
+2023-08,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2023-08,INF,Information,job_openings_rate,4.9,JTS510000000000000JOR
+2023-08,INF,Information,hires_rate,2.1,JTS510000000000000HIR
+2023-08,INF,Information,quits_rate,0.8,JTS510000000000000QUR
+2023-08,INF,Information,layoffs_discharges_rate,0.9,JTS510000000000000LDR
+2023-08,FAS,Financial activities,job_openings_rate,6.1,JTS510099000000000JOR
+2023-08,FAS,Financial activities,hires_rate,2.3,JTS510099000000000HIR
+2023-08,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2023-08,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2023-08,PBS,Professional and business services,job_openings_rate,6.4,JTS540099000000000JOR
+2023-08,PBS,Professional and business services,hires_rate,4.5,JTS540099000000000HIR
+2023-08,PBS,Professional and business services,quits_rate,2.6,JTS540099000000000QUR
+2023-08,PBS,Professional and business services,layoffs_discharges_rate,1.7,JTS540099000000000LDR
+2023-08,HCS,Health care and social assistance,job_openings_rate,8.1,JTS620000000000000JOR
+2023-08,HCS,Health care and social assistance,hires_rate,3.9,JTS620000000000000HIR
+2023-08,HCS,Health care and social assistance,quits_rate,2.3,JTS620000000000000QUR
+2023-08,HCS,Health care and social assistance,layoffs_discharges_rate,0.9,JTS620000000000000LDR
+2023-08,RET,Retail trade,job_openings_rate,3.8,JTS440000000000000JOR
+2023-08,RET,Retail trade,hires_rate,4.3,JTS440000000000000HIR
+2023-08,RET,Retail trade,quits_rate,3.1,JTS440000000000000QUR
+2023-08,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2023-09,MFG,Manufacturing,job_openings_rate,4.5,JTS300000000000000JOR
+2023-09,MFG,Manufacturing,hires_rate,2.9,JTS300000000000000HIR
+2023-09,MFG,Manufacturing,quits_rate,1.8,JTS300000000000000QUR
+2023-09,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2023-09,INF,Information,job_openings_rate,3.1,JTS510000000000000JOR
+2023-09,INF,Information,hires_rate,2.4,JTS510000000000000HIR
+2023-09,INF,Information,quits_rate,1.5,JTS510000000000000QUR
+2023-09,INF,Information,layoffs_discharges_rate,0.6,JTS510000000000000LDR
+2023-09,FAS,Financial activities,job_openings_rate,6.6,JTS510099000000000JOR
+2023-09,FAS,Financial activities,hires_rate,2.0,JTS510099000000000HIR
+2023-09,FAS,Financial activities,quits_rate,1.3,JTS510099000000000QUR
+2023-09,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2023-09,PBS,Professional and business services,job_openings_rate,6.2,JTS540099000000000JOR
+2023-09,PBS,Professional and business services,hires_rate,4.4,JTS540099000000000HIR
+2023-09,PBS,Professional and business services,quits_rate,2.6,JTS540099000000000QUR
+2023-09,PBS,Professional and business services,layoffs_discharges_rate,1.6,JTS540099000000000LDR
+2023-09,HCS,Health care and social assistance,job_openings_rate,7.6,JTS620000000000000JOR
+2023-09,HCS,Health care and social assistance,hires_rate,3.5,JTS620000000000000HIR
+2023-09,HCS,Health care and social assistance,quits_rate,2.2,JTS620000000000000QUR
+2023-09,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2023-09,RET,Retail trade,job_openings_rate,4.1,JTS440000000000000JOR
+2023-09,RET,Retail trade,hires_rate,4.8,JTS440000000000000HIR
+2023-09,RET,Retail trade,quits_rate,3.4,JTS440000000000000QUR
+2023-09,RET,Retail trade,layoffs_discharges_rate,0.8,JTS440000000000000LDR
+2023-10,MFG,Manufacturing,job_openings_rate,4.2,JTS300000000000000JOR
+2023-10,MFG,Manufacturing,hires_rate,2.9,JTS300000000000000HIR
+2023-10,MFG,Manufacturing,quits_rate,1.7,JTS300000000000000QUR
+2023-10,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2023-10,INF,Information,job_openings_rate,3.3,JTS510000000000000JOR
+2023-10,INF,Information,hires_rate,1.6,JTS510000000000000HIR
+2023-10,INF,Information,quits_rate,1.4,JTS510000000000000QUR
+2023-10,INF,Information,layoffs_discharges_rate,0.6,JTS510000000000000LDR
+2023-10,FAS,Financial activities,job_openings_rate,4.3,JTS510099000000000JOR
+2023-10,FAS,Financial activities,hires_rate,2.2,JTS510099000000000HIR
+2023-10,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2023-10,FAS,Financial activities,layoffs_discharges_rate,0.8,JTS510099000000000LDR
+2023-10,PBS,Professional and business services,job_openings_rate,6.1,JTS540099000000000JOR
+2023-10,PBS,Professional and business services,hires_rate,4.7,JTS540099000000000HIR
+2023-10,PBS,Professional and business services,quits_rate,2.8,JTS540099000000000QUR
+2023-10,PBS,Professional and business services,layoffs_discharges_rate,1.7,JTS540099000000000LDR
+2023-10,HCS,Health care and social assistance,job_openings_rate,7.1,JTS620000000000000JOR
+2023-10,HCS,Health care and social assistance,hires_rate,3.6,JTS620000000000000HIR
+2023-10,HCS,Health care and social assistance,quits_rate,2.3,JTS620000000000000QUR
+2023-10,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2023-10,RET,Retail trade,job_openings_rate,3.6,JTS440000000000000JOR
+2023-10,RET,Retail trade,hires_rate,4.3,JTS440000000000000HIR
+2023-10,RET,Retail trade,quits_rate,3.2,JTS440000000000000QUR
+2023-10,RET,Retail trade,layoffs_discharges_rate,0.7,JTS440000000000000LDR
+2023-11,MFG,Manufacturing,job_openings_rate,4.0,JTS300000000000000JOR
+2023-11,MFG,Manufacturing,hires_rate,2.8,JTS300000000000000HIR
+2023-11,MFG,Manufacturing,quits_rate,1.8,JTS300000000000000QUR
+2023-11,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2023-11,INF,Information,job_openings_rate,4.8,JTS510000000000000JOR
+2023-11,INF,Information,hires_rate,2.4,JTS510000000000000HIR
+2023-11,INF,Information,quits_rate,1.5,JTS510000000000000QUR
+2023-11,INF,Information,layoffs_discharges_rate,0.9,JTS510000000000000LDR
+2023-11,FAS,Financial activities,job_openings_rate,4.1,JTS510099000000000JOR
+2023-11,FAS,Financial activities,hires_rate,2.2,JTS510099000000000HIR
+2023-11,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2023-11,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2023-11,PBS,Professional and business services,job_openings_rate,5.5,JTS540099000000000JOR
+2023-11,PBS,Professional and business services,hires_rate,3.9,JTS540099000000000HIR
+2023-11,PBS,Professional and business services,quits_rate,2.7,JTS540099000000000QUR
+2023-11,PBS,Professional and business services,layoffs_discharges_rate,1.4,JTS540099000000000LDR
+2023-11,HCS,Health care and social assistance,job_openings_rate,7.3,JTS620000000000000JOR
+2023-11,HCS,Health care and social assistance,hires_rate,3.7,JTS620000000000000HIR
+2023-11,HCS,Health care and social assistance,quits_rate,2.5,JTS620000000000000QUR
+2023-11,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2023-11,RET,Retail trade,job_openings_rate,3.5,JTS440000000000000JOR
+2023-11,RET,Retail trade,hires_rate,4.2,JTS440000000000000HIR
+2023-11,RET,Retail trade,quits_rate,3.1,JTS440000000000000QUR
+2023-11,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2023-12,MFG,Manufacturing,job_openings_rate,4.4,JTS300000000000000JOR
+2023-12,MFG,Manufacturing,hires_rate,2.8,JTS300000000000000HIR
+2023-12,MFG,Manufacturing,quits_rate,1.8,JTS300000000000000QUR
+2023-12,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2023-12,INF,Information,job_openings_rate,4.5,JTS510000000000000JOR
+2023-12,INF,Information,hires_rate,2.6,JTS510000000000000HIR
+2023-12,INF,Information,quits_rate,1.1,JTS510000000000000QUR
+2023-12,INF,Information,layoffs_discharges_rate,0.9,JTS510000000000000LDR
+2023-12,FAS,Financial activities,job_openings_rate,4.7,JTS510099000000000JOR
+2023-12,FAS,Financial activities,hires_rate,2.2,JTS510099000000000HIR
+2023-12,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2023-12,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2023-12,PBS,Professional and business services,job_openings_rate,5.7,JTS540099000000000JOR
+2023-12,PBS,Professional and business services,hires_rate,4.7,JTS540099000000000HIR
+2023-12,PBS,Professional and business services,quits_rate,2.4,JTS540099000000000QUR
+2023-12,PBS,Professional and business services,layoffs_discharges_rate,2.0,JTS540099000000000LDR
+2023-12,HCS,Health care and social assistance,job_openings_rate,7.7,JTS620000000000000JOR
+2023-12,HCS,Health care and social assistance,hires_rate,3.3,JTS620000000000000HIR
+2023-12,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2023-12,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2023-12,RET,Retail trade,job_openings_rate,4.4,JTS440000000000000JOR
+2023-12,RET,Retail trade,hires_rate,4.0,JTS440000000000000HIR
+2023-12,RET,Retail trade,quits_rate,2.8,JTS440000000000000QUR
+2023-12,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2024-01,MFG,Manufacturing,job_openings_rate,4.1,JTS300000000000000JOR
+2024-01,MFG,Manufacturing,hires_rate,2.9,JTS300000000000000HIR
+2024-01,MFG,Manufacturing,quits_rate,1.7,JTS300000000000000QUR
+2024-01,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2024-01,INF,Information,job_openings_rate,5.1,JTS510000000000000JOR
+2024-01,INF,Information,hires_rate,2.5,JTS510000000000000HIR
+2024-01,INF,Information,quits_rate,1.8,JTS510000000000000QUR
+2024-01,INF,Information,layoffs_discharges_rate,0.6,JTS510000000000000LDR
+2024-01,FAS,Financial activities,job_openings_rate,5.0,JTS510099000000000JOR
+2024-01,FAS,Financial activities,hires_rate,2.2,JTS510099000000000HIR
+2024-01,FAS,Financial activities,quits_rate,1.2,JTS510099000000000QUR
+2024-01,FAS,Financial activities,layoffs_discharges_rate,0.8,JTS510099000000000LDR
+2024-01,PBS,Professional and business services,job_openings_rate,6.0,JTS540099000000000JOR
+2024-01,PBS,Professional and business services,hires_rate,4.7,JTS540099000000000HIR
+2024-01,PBS,Professional and business services,quits_rate,2.2,JTS540099000000000QUR
+2024-01,PBS,Professional and business services,layoffs_discharges_rate,2.2,JTS540099000000000LDR
+2024-01,HCS,Health care and social assistance,job_openings_rate,7.7,JTS620000000000000JOR
+2024-01,HCS,Health care and social assistance,hires_rate,3.4,JTS620000000000000HIR
+2024-01,HCS,Health care and social assistance,quits_rate,2.2,JTS620000000000000QUR
+2024-01,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2024-01,RET,Retail trade,job_openings_rate,3.0,JTS440000000000000JOR
+2024-01,RET,Retail trade,hires_rate,3.7,JTS440000000000000HIR
+2024-01,RET,Retail trade,quits_rate,2.5,JTS440000000000000QUR
+2024-01,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2024-02,MFG,Manufacturing,job_openings_rate,4.1,JTS300000000000000JOR
+2024-02,MFG,Manufacturing,hires_rate,2.5,JTS300000000000000HIR
+2024-02,MFG,Manufacturing,quits_rate,1.7,JTS300000000000000QUR
+2024-02,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2024-02,INF,Information,job_openings_rate,4.2,JTS510000000000000JOR
+2024-02,INF,Information,hires_rate,2.8,JTS510000000000000HIR
+2024-02,INF,Information,quits_rate,1.6,JTS510000000000000QUR
+2024-02,INF,Information,layoffs_discharges_rate,0.9,JTS510000000000000LDR
+2024-02,FAS,Financial activities,job_openings_rate,6.4,JTS510099000000000JOR
+2024-02,FAS,Financial activities,hires_rate,2.1,JTS510099000000000HIR
+2024-02,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2024-02,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2024-02,PBS,Professional and business services,job_openings_rate,5.9,JTS540099000000000JOR
+2024-02,PBS,Professional and business services,hires_rate,4.6,JTS540099000000000HIR
+2024-02,PBS,Professional and business services,quits_rate,2.7,JTS540099000000000QUR
+2024-02,PBS,Professional and business services,layoffs_discharges_rate,1.7,JTS540099000000000LDR
+2024-02,HCS,Health care and social assistance,job_openings_rate,7.4,JTS620000000000000JOR
+2024-02,HCS,Health care and social assistance,hires_rate,3.6,JTS620000000000000HIR
+2024-02,HCS,Health care and social assistance,quits_rate,2.3,JTS620000000000000QUR
+2024-02,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2024-02,RET,Retail trade,job_openings_rate,3.5,JTS440000000000000JOR
+2024-02,RET,Retail trade,hires_rate,4.1,JTS440000000000000HIR
+2024-02,RET,Retail trade,quits_rate,3.0,JTS440000000000000QUR
+2024-02,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2024-03,MFG,Manufacturing,job_openings_rate,3.9,JTS300000000000000JOR
+2024-03,MFG,Manufacturing,hires_rate,2.5,JTS300000000000000HIR
+2024-03,MFG,Manufacturing,quits_rate,1.4,JTS300000000000000QUR
+2024-03,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2024-03,INF,Information,job_openings_rate,4.7,JTS510000000000000JOR
+2024-03,INF,Information,hires_rate,2.7,JTS510000000000000HIR
+2024-03,INF,Information,quits_rate,1.4,JTS510000000000000QUR
+2024-03,INF,Information,layoffs_discharges_rate,1.2,JTS510000000000000LDR
+2024-03,FAS,Financial activities,job_openings_rate,4.8,JTS510099000000000JOR
+2024-03,FAS,Financial activities,hires_rate,2.0,JTS510099000000000HIR
+2024-03,FAS,Financial activities,quits_rate,1.2,JTS510099000000000QUR
+2024-03,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2024-03,PBS,Professional and business services,job_openings_rate,5.5,JTS540099000000000JOR
+2024-03,PBS,Professional and business services,hires_rate,4.7,JTS540099000000000HIR
+2024-03,PBS,Professional and business services,quits_rate,3.0,JTS540099000000000QUR
+2024-03,PBS,Professional and business services,layoffs_discharges_rate,1.6,JTS540099000000000LDR
+2024-03,HCS,Health care and social assistance,job_openings_rate,7.1,JTS620000000000000JOR
+2024-03,HCS,Health care and social assistance,hires_rate,3.4,JTS620000000000000HIR
+2024-03,HCS,Health care and social assistance,quits_rate,2.2,JTS620000000000000QUR
+2024-03,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2024-03,RET,Retail trade,job_openings_rate,3.2,JTS440000000000000JOR
+2024-03,RET,Retail trade,hires_rate,4.0,JTS440000000000000HIR
+2024-03,RET,Retail trade,quits_rate,2.9,JTS440000000000000QUR
+2024-03,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2024-04,MFG,Manufacturing,job_openings_rate,3.7,JTS300000000000000JOR
+2024-04,MFG,Manufacturing,hires_rate,2.9,JTS300000000000000HIR
+2024-04,MFG,Manufacturing,quits_rate,1.7,JTS300000000000000QUR
+2024-04,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2024-04,INF,Information,job_openings_rate,2.9,JTS510000000000000JOR
+2024-04,INF,Information,hires_rate,2.4,JTS510000000000000HIR
+2024-04,INF,Information,quits_rate,1.5,JTS510000000000000QUR
+2024-04,INF,Information,layoffs_discharges_rate,1.0,JTS510000000000000LDR
+2024-04,FAS,Financial activities,job_openings_rate,4.6,JTS510099000000000JOR
+2024-04,FAS,Financial activities,hires_rate,2.1,JTS510099000000000HIR
+2024-04,FAS,Financial activities,quits_rate,1.2,JTS510099000000000QUR
+2024-04,FAS,Financial activities,layoffs_discharges_rate,0.8,JTS510099000000000LDR
+2024-04,PBS,Professional and business services,job_openings_rate,5.2,JTS540099000000000JOR
+2024-04,PBS,Professional and business services,hires_rate,4.4,JTS540099000000000HIR
+2024-04,PBS,Professional and business services,quits_rate,2.3,JTS540099000000000QUR
+2024-04,PBS,Professional and business services,layoffs_discharges_rate,1.4,JTS540099000000000LDR
+2024-04,HCS,Health care and social assistance,job_openings_rate,6.3,JTS620000000000000JOR
+2024-04,HCS,Health care and social assistance,hires_rate,3.5,JTS620000000000000HIR
+2024-04,HCS,Health care and social assistance,quits_rate,2.4,JTS620000000000000QUR
+2024-04,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2024-04,RET,Retail trade,job_openings_rate,3.1,JTS440000000000000JOR
+2024-04,RET,Retail trade,hires_rate,4.3,JTS440000000000000HIR
+2024-04,RET,Retail trade,quits_rate,3.0,JTS440000000000000QUR
+2024-04,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2024-05,MFG,Manufacturing,job_openings_rate,4.0,JTS300000000000000JOR
+2024-05,MFG,Manufacturing,hires_rate,2.7,JTS300000000000000HIR
+2024-05,MFG,Manufacturing,quits_rate,1.7,JTS300000000000000QUR
+2024-05,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2024-05,INF,Information,job_openings_rate,3.9,JTS510000000000000JOR
+2024-05,INF,Information,hires_rate,2.7,JTS510000000000000HIR
+2024-05,INF,Information,quits_rate,1.7,JTS510000000000000QUR
+2024-05,INF,Information,layoffs_discharges_rate,1.3,JTS510000000000000LDR
+2024-05,FAS,Financial activities,job_openings_rate,4.5,JTS510099000000000JOR
+2024-05,FAS,Financial activities,hires_rate,2.2,JTS510099000000000HIR
+2024-05,FAS,Financial activities,quits_rate,1.3,JTS510099000000000QUR
+2024-05,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2024-05,PBS,Professional and business services,job_openings_rate,5.5,JTS540099000000000JOR
+2024-05,PBS,Professional and business services,hires_rate,4.5,JTS540099000000000HIR
+2024-05,PBS,Professional and business services,quits_rate,2.2,JTS540099000000000QUR
+2024-05,PBS,Professional and business services,layoffs_discharges_rate,1.7,JTS540099000000000LDR
+2024-05,HCS,Health care and social assistance,job_openings_rate,6.8,JTS620000000000000JOR
+2024-05,HCS,Health care and social assistance,hires_rate,3.4,JTS620000000000000HIR
+2024-05,HCS,Health care and social assistance,quits_rate,2.4,JTS620000000000000QUR
+2024-05,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2024-05,RET,Retail trade,job_openings_rate,3.2,JTS440000000000000JOR
+2024-05,RET,Retail trade,hires_rate,4.3,JTS440000000000000HIR
+2024-05,RET,Retail trade,quits_rate,3.0,JTS440000000000000QUR
+2024-05,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2024-06,MFG,Manufacturing,job_openings_rate,3.5,JTS300000000000000JOR
+2024-06,MFG,Manufacturing,hires_rate,2.6,JTS300000000000000HIR
+2024-06,MFG,Manufacturing,quits_rate,1.6,JTS300000000000000QUR
+2024-06,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2024-06,INF,Information,job_openings_rate,3.6,JTS510000000000000JOR
+2024-06,INF,Information,hires_rate,2.4,JTS510000000000000HIR
+2024-06,INF,Information,quits_rate,1.1,JTS510000000000000QUR
+2024-06,INF,Information,layoffs_discharges_rate,1.2,JTS510000000000000LDR
+2024-06,FAS,Financial activities,job_openings_rate,4.4,JTS510099000000000JOR
+2024-06,FAS,Financial activities,hires_rate,2.5,JTS510099000000000HIR
+2024-06,FAS,Financial activities,quits_rate,1.6,JTS510099000000000QUR
+2024-06,FAS,Financial activities,layoffs_discharges_rate,0.5,JTS510099000000000LDR
+2024-06,PBS,Professional and business services,job_openings_rate,4.6,JTS540099000000000JOR
+2024-06,PBS,Professional and business services,hires_rate,4.1,JTS540099000000000HIR
+2024-06,PBS,Professional and business services,quits_rate,2.6,JTS540099000000000QUR
+2024-06,PBS,Professional and business services,layoffs_discharges_rate,1.5,JTS540099000000000LDR
+2024-06,HCS,Health care and social assistance,job_openings_rate,6.7,JTS620000000000000JOR
+2024-06,HCS,Health care and social assistance,hires_rate,3.2,JTS620000000000000HIR
+2024-06,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2024-06,HCS,Health care and social assistance,layoffs_discharges_rate,0.5,JTS620000000000000LDR
+2024-06,RET,Retail trade,job_openings_rate,3.1,JTS440000000000000JOR
+2024-06,RET,Retail trade,hires_rate,4.1,JTS440000000000000HIR
+2024-06,RET,Retail trade,quits_rate,3.0,JTS440000000000000QUR
+2024-06,RET,Retail trade,layoffs_discharges_rate,1.1,JTS440000000000000LDR
+2024-07,MFG,Manufacturing,job_openings_rate,3.6,JTS300000000000000JOR
+2024-07,MFG,Manufacturing,hires_rate,2.7,JTS300000000000000HIR
+2024-07,MFG,Manufacturing,quits_rate,1.7,JTS300000000000000QUR
+2024-07,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2024-07,INF,Information,job_openings_rate,3.5,JTS510000000000000JOR
+2024-07,INF,Information,hires_rate,2.5,JTS510000000000000HIR
+2024-07,INF,Information,quits_rate,1.8,JTS510000000000000QUR
+2024-07,INF,Information,layoffs_discharges_rate,1.5,JTS510000000000000LDR
+2024-07,FAS,Financial activities,job_openings_rate,4.0,JTS510099000000000JOR
+2024-07,FAS,Financial activities,hires_rate,2.2,JTS510099000000000HIR
+2024-07,FAS,Financial activities,quits_rate,1.2,JTS510099000000000QUR
+2024-07,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2024-07,PBS,Professional and business services,job_openings_rate,5.5,JTS540099000000000JOR
+2024-07,PBS,Professional and business services,hires_rate,4.0,JTS540099000000000HIR
+2024-07,PBS,Professional and business services,quits_rate,2.2,JTS540099000000000QUR
+2024-07,PBS,Professional and business services,layoffs_discharges_rate,1.6,JTS540099000000000LDR
+2024-07,HCS,Health care and social assistance,job_openings_rate,6.3,JTS620000000000000JOR
+2024-07,HCS,Health care and social assistance,hires_rate,3.6,JTS620000000000000HIR
+2024-07,HCS,Health care and social assistance,quits_rate,2.5,JTS620000000000000QUR
+2024-07,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2024-07,RET,Retail trade,job_openings_rate,3.3,JTS440000000000000JOR
+2024-07,RET,Retail trade,hires_rate,4.1,JTS440000000000000HIR
+2024-07,RET,Retail trade,quits_rate,2.8,JTS440000000000000QUR
+2024-07,RET,Retail trade,layoffs_discharges_rate,1.5,JTS440000000000000LDR
+2024-08,MFG,Manufacturing,job_openings_rate,3.5,JTS300000000000000JOR
+2024-08,MFG,Manufacturing,hires_rate,2.4,JTS300000000000000HIR
+2024-08,MFG,Manufacturing,quits_rate,1.7,JTS300000000000000QUR
+2024-08,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2024-08,INF,Information,job_openings_rate,3.5,JTS510000000000000JOR
+2024-08,INF,Information,hires_rate,2.7,JTS510000000000000HIR
+2024-08,INF,Information,quits_rate,1.5,JTS510000000000000QUR
+2024-08,INF,Information,layoffs_discharges_rate,1.5,JTS510000000000000LDR
+2024-08,FAS,Financial activities,job_openings_rate,3.9,JTS510099000000000JOR
+2024-08,FAS,Financial activities,hires_rate,2.2,JTS510099000000000HIR
+2024-08,FAS,Financial activities,quits_rate,1.0,JTS510099000000000QUR
+2024-08,FAS,Financial activities,layoffs_discharges_rate,0.9,JTS510099000000000LDR
+2024-08,PBS,Professional and business services,job_openings_rate,5.5,JTS540099000000000JOR
+2024-08,PBS,Professional and business services,hires_rate,4.4,JTS540099000000000HIR
+2024-08,PBS,Professional and business services,quits_rate,2.4,JTS540099000000000QUR
+2024-08,PBS,Professional and business services,layoffs_discharges_rate,1.9,JTS540099000000000LDR
+2024-08,HCS,Health care and social assistance,job_openings_rate,6.3,JTS620000000000000JOR
+2024-08,HCS,Health care and social assistance,hires_rate,3.1,JTS620000000000000HIR
+2024-08,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2024-08,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2024-08,RET,Retail trade,job_openings_rate,3.5,JTS440000000000000JOR
+2024-08,RET,Retail trade,hires_rate,3.5,JTS440000000000000HIR
+2024-08,RET,Retail trade,quits_rate,2.5,JTS440000000000000QUR
+2024-08,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2024-09,MFG,Manufacturing,job_openings_rate,3.5,JTS300000000000000JOR
+2024-09,MFG,Manufacturing,hires_rate,2.7,JTS300000000000000HIR
+2024-09,MFG,Manufacturing,quits_rate,1.5,JTS300000000000000QUR
+2024-09,MFG,Manufacturing,layoffs_discharges_rate,1.2,JTS300000000000000LDR
+2024-09,INF,Information,job_openings_rate,3.8,JTS510000000000000JOR
+2024-09,INF,Information,hires_rate,2.7,JTS510000000000000HIR
+2024-09,INF,Information,quits_rate,1.3,JTS510000000000000QUR
+2024-09,INF,Information,layoffs_discharges_rate,1.0,JTS510000000000000LDR
+2024-09,FAS,Financial activities,job_openings_rate,3.8,JTS510099000000000JOR
+2024-09,FAS,Financial activities,hires_rate,2.2,JTS510099000000000HIR
+2024-09,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2024-09,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2024-09,PBS,Professional and business services,job_openings_rate,5.2,JTS540099000000000JOR
+2024-09,PBS,Professional and business services,hires_rate,4.4,JTS540099000000000HIR
+2024-09,PBS,Professional and business services,quits_rate,2.3,JTS540099000000000QUR
+2024-09,PBS,Professional and business services,layoffs_discharges_rate,2.2,JTS540099000000000LDR
+2024-09,HCS,Health care and social assistance,job_openings_rate,5.4,JTS620000000000000JOR
+2024-09,HCS,Health care and social assistance,hires_rate,3.3,JTS620000000000000HIR
+2024-09,HCS,Health care and social assistance,quits_rate,2.0,JTS620000000000000QUR
+2024-09,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2024-09,RET,Retail trade,job_openings_rate,3.2,JTS440000000000000JOR
+2024-09,RET,Retail trade,hires_rate,3.9,JTS440000000000000HIR
+2024-09,RET,Retail trade,quits_rate,2.7,JTS440000000000000QUR
+2024-09,RET,Retail trade,layoffs_discharges_rate,0.8,JTS440000000000000LDR
+2024-10,MFG,Manufacturing,job_openings_rate,3.3,JTS300000000000000JOR
+2024-10,MFG,Manufacturing,hires_rate,2.5,JTS300000000000000HIR
+2024-10,MFG,Manufacturing,quits_rate,1.6,JTS300000000000000QUR
+2024-10,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2024-10,INF,Information,job_openings_rate,5.8,JTS510000000000000JOR
+2024-10,INF,Information,hires_rate,2.3,JTS510000000000000HIR
+2024-10,INF,Information,quits_rate,1.4,JTS510000000000000QUR
+2024-10,INF,Information,layoffs_discharges_rate,1.4,JTS510000000000000LDR
+2024-10,FAS,Financial activities,job_openings_rate,4.5,JTS510099000000000JOR
+2024-10,FAS,Financial activities,hires_rate,2.0,JTS510099000000000HIR
+2024-10,FAS,Financial activities,quits_rate,1.2,JTS510099000000000QUR
+2024-10,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2024-10,PBS,Professional and business services,job_openings_rate,5.3,JTS540099000000000JOR
+2024-10,PBS,Professional and business services,hires_rate,4.2,JTS540099000000000HIR
+2024-10,PBS,Professional and business services,quits_rate,2.4,JTS540099000000000QUR
+2024-10,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2024-10,HCS,Health care and social assistance,job_openings_rate,6.1,JTS620000000000000JOR
+2024-10,HCS,Health care and social assistance,hires_rate,3.3,JTS620000000000000HIR
+2024-10,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2024-10,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2024-10,RET,Retail trade,job_openings_rate,3.2,JTS440000000000000JOR
+2024-10,RET,Retail trade,hires_rate,3.8,JTS440000000000000HIR
+2024-10,RET,Retail trade,quits_rate,2.5,JTS440000000000000QUR
+2024-10,RET,Retail trade,layoffs_discharges_rate,1.3,JTS440000000000000LDR
+2024-11,MFG,Manufacturing,job_openings_rate,3.2,JTS300000000000000JOR
+2024-11,MFG,Manufacturing,hires_rate,2.4,JTS300000000000000HIR
+2024-11,MFG,Manufacturing,quits_rate,1.5,JTS300000000000000QUR
+2024-11,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2024-11,INF,Information,job_openings_rate,4.0,JTS510000000000000JOR
+2024-11,INF,Information,hires_rate,2.5,JTS510000000000000HIR
+2024-11,INF,Information,quits_rate,1.2,JTS510000000000000QUR
+2024-11,INF,Information,layoffs_discharges_rate,1.5,JTS510000000000000LDR
+2024-11,FAS,Financial activities,job_openings_rate,4.6,JTS510099000000000JOR
+2024-11,FAS,Financial activities,hires_rate,2.0,JTS510099000000000HIR
+2024-11,FAS,Financial activities,quits_rate,1.2,JTS510099000000000QUR
+2024-11,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2024-11,PBS,Professional and business services,job_openings_rate,6.3,JTS540099000000000JOR
+2024-11,PBS,Professional and business services,hires_rate,4.0,JTS540099000000000HIR
+2024-11,PBS,Professional and business services,quits_rate,2.2,JTS540099000000000QUR
+2024-11,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2024-11,HCS,Health care and social assistance,job_openings_rate,6.2,JTS620000000000000JOR
+2024-11,HCS,Health care and social assistance,hires_rate,3.2,JTS620000000000000HIR
+2024-11,HCS,Health care and social assistance,quits_rate,2.0,JTS620000000000000QUR
+2024-11,HCS,Health care and social assistance,layoffs_discharges_rate,0.8,JTS620000000000000LDR
+2024-11,RET,Retail trade,job_openings_rate,3.0,JTS440000000000000JOR
+2024-11,RET,Retail trade,hires_rate,3.7,JTS440000000000000HIR
+2024-11,RET,Retail trade,quits_rate,2.6,JTS440000000000000QUR
+2024-11,RET,Retail trade,layoffs_discharges_rate,1.2,JTS440000000000000LDR
+2024-12,MFG,Manufacturing,job_openings_rate,3.1,JTS300000000000000JOR
+2024-12,MFG,Manufacturing,hires_rate,2.4,JTS300000000000000HIR
+2024-12,MFG,Manufacturing,quits_rate,1.5,JTS300000000000000QUR
+2024-12,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2024-12,INF,Information,job_openings_rate,3.5,JTS510000000000000JOR
+2024-12,INF,Information,hires_rate,2.7,JTS510000000000000HIR
+2024-12,INF,Information,quits_rate,1.2,JTS510000000000000QUR
+2024-12,INF,Information,layoffs_discharges_rate,0.7,JTS510000000000000LDR
+2024-12,FAS,Financial activities,job_openings_rate,4.1,JTS510099000000000JOR
+2024-12,FAS,Financial activities,hires_rate,2.3,JTS510099000000000HIR
+2024-12,FAS,Financial activities,quits_rate,1.3,JTS510099000000000QUR
+2024-12,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2024-12,PBS,Professional and business services,job_openings_rate,5.4,JTS540099000000000JOR
+2024-12,PBS,Professional and business services,hires_rate,4.4,JTS540099000000000HIR
+2024-12,PBS,Professional and business services,quits_rate,2.6,JTS540099000000000QUR
+2024-12,PBS,Professional and business services,layoffs_discharges_rate,1.6,JTS540099000000000LDR
+2024-12,HCS,Health care and social assistance,job_openings_rate,5.8,JTS620000000000000JOR
+2024-12,HCS,Health care and social assistance,hires_rate,3.2,JTS620000000000000HIR
+2024-12,HCS,Health care and social assistance,quits_rate,2.0,JTS620000000000000QUR
+2024-12,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2024-12,RET,Retail trade,job_openings_rate,3.1,JTS440000000000000JOR
+2024-12,RET,Retail trade,hires_rate,4.0,JTS440000000000000HIR
+2024-12,RET,Retail trade,quits_rate,2.4,JTS440000000000000QUR
+2024-12,RET,Retail trade,layoffs_discharges_rate,1.3,JTS440000000000000LDR
+2025-01,MFG,Manufacturing,job_openings_rate,3.4,JTS300000000000000JOR
+2025-01,MFG,Manufacturing,hires_rate,2.5,JTS300000000000000HIR
+2025-01,MFG,Manufacturing,quits_rate,1.5,JTS300000000000000QUR
+2025-01,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2025-01,INF,Information,job_openings_rate,3.4,JTS510000000000000JOR
+2025-01,INF,Information,hires_rate,2.2,JTS510000000000000HIR
+2025-01,INF,Information,quits_rate,1.4,JTS510000000000000QUR
+2025-01,INF,Information,layoffs_discharges_rate,1.0,JTS510000000000000LDR
+2025-01,FAS,Financial activities,job_openings_rate,5.2,JTS510099000000000JOR
+2025-01,FAS,Financial activities,hires_rate,2.3,JTS510099000000000HIR
+2025-01,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2025-01,FAS,Financial activities,layoffs_discharges_rate,0.4,JTS510099000000000LDR
+2025-01,PBS,Professional and business services,job_openings_rate,5.3,JTS540099000000000JOR
+2025-01,PBS,Professional and business services,hires_rate,4.3,JTS540099000000000HIR
+2025-01,PBS,Professional and business services,quits_rate,2.4,JTS540099000000000QUR
+2025-01,PBS,Professional and business services,layoffs_discharges_rate,2.0,JTS540099000000000LDR
+2025-01,HCS,Health care and social assistance,job_openings_rate,6.0,JTS620000000000000JOR
+2025-01,HCS,Health care and social assistance,hires_rate,3.2,JTS620000000000000HIR
+2025-01,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2025-01,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2025-01,RET,Retail trade,job_openings_rate,3.4,JTS440000000000000JOR
+2025-01,RET,Retail trade,hires_rate,4.0,JTS440000000000000HIR
+2025-01,RET,Retail trade,quits_rate,2.4,JTS440000000000000QUR
+2025-01,RET,Retail trade,layoffs_discharges_rate,1.2,JTS440000000000000LDR
+2025-02,MFG,Manufacturing,job_openings_rate,3.1,JTS300000000000000JOR
+2025-02,MFG,Manufacturing,hires_rate,2.4,JTS300000000000000HIR
+2025-02,MFG,Manufacturing,quits_rate,1.4,JTS300000000000000QUR
+2025-02,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2025-02,INF,Information,job_openings_rate,4.2,JTS510000000000000JOR
+2025-02,INF,Information,hires_rate,2.6,JTS510000000000000HIR
+2025-02,INF,Information,quits_rate,1.2,JTS510000000000000QUR
+2025-02,INF,Information,layoffs_discharges_rate,1.5,JTS510000000000000LDR
+2025-02,FAS,Financial activities,job_openings_rate,4.5,JTS510099000000000JOR
+2025-02,FAS,Financial activities,hires_rate,2.3,JTS510099000000000HIR
+2025-02,FAS,Financial activities,quits_rate,1.3,JTS510099000000000QUR
+2025-02,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2025-02,PBS,Professional and business services,job_openings_rate,5.2,JTS540099000000000JOR
+2025-02,PBS,Professional and business services,hires_rate,4.6,JTS540099000000000HIR
+2025-02,PBS,Professional and business services,quits_rate,2.3,JTS540099000000000QUR
+2025-02,PBS,Professional and business services,layoffs_discharges_rate,2.1,JTS540099000000000LDR
+2025-02,HCS,Health care and social assistance,job_openings_rate,6.0,JTS620000000000000JOR
+2025-02,HCS,Health care and social assistance,hires_rate,3.1,JTS620000000000000HIR
+2025-02,HCS,Health care and social assistance,quits_rate,1.9,JTS620000000000000QUR
+2025-02,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2025-02,RET,Retail trade,job_openings_rate,3.3,JTS440000000000000JOR
+2025-02,RET,Retail trade,hires_rate,4.0,JTS440000000000000HIR
+2025-02,RET,Retail trade,quits_rate,2.6,JTS440000000000000QUR
+2025-02,RET,Retail trade,layoffs_discharges_rate,1.6,JTS440000000000000LDR
+2025-03,MFG,Manufacturing,job_openings_rate,3.0,JTS300000000000000JOR
+2025-03,MFG,Manufacturing,hires_rate,2.4,JTS300000000000000HIR
+2025-03,MFG,Manufacturing,quits_rate,1.5,JTS300000000000000QUR
+2025-03,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2025-03,INF,Information,job_openings_rate,3.9,JTS510000000000000JOR
+2025-03,INF,Information,hires_rate,2.7,JTS510000000000000HIR
+2025-03,INF,Information,quits_rate,1.4,JTS510000000000000QUR
+2025-03,INF,Information,layoffs_discharges_rate,1.3,JTS510000000000000LDR
+2025-03,FAS,Financial activities,job_openings_rate,4.3,JTS510099000000000JOR
+2025-03,FAS,Financial activities,hires_rate,2.6,JTS510099000000000HIR
+2025-03,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2025-03,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2025-03,PBS,Professional and business services,job_openings_rate,5.1,JTS540099000000000JOR
+2025-03,PBS,Professional and business services,hires_rate,4.7,JTS540099000000000HIR
+2025-03,PBS,Professional and business services,quits_rate,2.9,JTS540099000000000QUR
+2025-03,PBS,Professional and business services,layoffs_discharges_rate,1.7,JTS540099000000000LDR
+2025-03,HCS,Health care and social assistance,job_openings_rate,5.4,JTS620000000000000JOR
+2025-03,HCS,Health care and social assistance,hires_rate,3.1,JTS620000000000000HIR
+2025-03,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2025-03,HCS,Health care and social assistance,layoffs_discharges_rate,0.5,JTS620000000000000LDR
+2025-03,RET,Retail trade,job_openings_rate,3.1,JTS440000000000000JOR
+2025-03,RET,Retail trade,hires_rate,4.1,JTS440000000000000HIR
+2025-03,RET,Retail trade,quits_rate,3.0,JTS440000000000000QUR
+2025-03,RET,Retail trade,layoffs_discharges_rate,1.1,JTS440000000000000LDR
+2025-04,MFG,Manufacturing,job_openings_rate,2.9,JTS300000000000000JOR
+2025-04,MFG,Manufacturing,hires_rate,2.5,JTS300000000000000HIR
+2025-04,MFG,Manufacturing,quits_rate,1.4,JTS300000000000000QUR
+2025-04,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2025-04,INF,Information,job_openings_rate,4.5,JTS510000000000000JOR
+2025-04,INF,Information,hires_rate,2.9,JTS510000000000000HIR
+2025-04,INF,Information,quits_rate,1.1,JTS510000000000000QUR
+2025-04,INF,Information,layoffs_discharges_rate,1.4,JTS510000000000000LDR
+2025-04,FAS,Financial activities,job_openings_rate,4.4,JTS510099000000000JOR
+2025-04,FAS,Financial activities,hires_rate,2.3,JTS510099000000000HIR
+2025-04,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2025-04,FAS,Financial activities,layoffs_discharges_rate,0.9,JTS510099000000000LDR
+2025-04,PBS,Professional and business services,job_openings_rate,5.6,JTS540099000000000JOR
+2025-04,PBS,Professional and business services,hires_rate,4.9,JTS540099000000000HIR
+2025-04,PBS,Professional and business services,quits_rate,2.3,JTS540099000000000QUR
+2025-04,PBS,Professional and business services,layoffs_discharges_rate,2.1,JTS540099000000000LDR
+2025-04,HCS,Health care and social assistance,job_openings_rate,6.2,JTS620000000000000JOR
+2025-04,HCS,Health care and social assistance,hires_rate,3.2,JTS620000000000000HIR
+2025-04,HCS,Health care and social assistance,quits_rate,2.1,JTS620000000000000QUR
+2025-04,HCS,Health care and social assistance,layoffs_discharges_rate,0.8,JTS620000000000000LDR
+2025-04,RET,Retail trade,job_openings_rate,3.5,JTS440000000000000JOR
+2025-04,RET,Retail trade,hires_rate,3.7,JTS440000000000000HIR
+2025-04,RET,Retail trade,quits_rate,2.4,JTS440000000000000QUR
+2025-04,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2025-05,MFG,Manufacturing,job_openings_rate,3.1,JTS300000000000000JOR
+2025-05,MFG,Manufacturing,hires_rate,2.2,JTS300000000000000HIR
+2025-05,MFG,Manufacturing,quits_rate,1.2,JTS300000000000000QUR
+2025-05,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2025-05,INF,Information,job_openings_rate,3.7,JTS510000000000000JOR
+2025-05,INF,Information,hires_rate,2.7,JTS510000000000000HIR
+2025-05,INF,Information,quits_rate,1.3,JTS510000000000000QUR
+2025-05,INF,Information,layoffs_discharges_rate,1.2,JTS510000000000000LDR
+2025-05,FAS,Financial activities,job_openings_rate,5.1,JTS510099000000000JOR
+2025-05,FAS,Financial activities,hires_rate,2.4,JTS510099000000000HIR
+2025-05,FAS,Financial activities,quits_rate,1.5,JTS510099000000000QUR
+2025-05,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2025-05,PBS,Professional and business services,job_openings_rate,5.2,JTS540099000000000JOR
+2025-05,PBS,Professional and business services,hires_rate,4.6,JTS540099000000000HIR
+2025-05,PBS,Professional and business services,quits_rate,2.4,JTS540099000000000QUR
+2025-05,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2025-05,HCS,Health care and social assistance,job_openings_rate,6.5,JTS620000000000000JOR
+2025-05,HCS,Health care and social assistance,hires_rate,2.9,JTS620000000000000HIR
+2025-05,HCS,Health care and social assistance,quits_rate,2.0,JTS620000000000000QUR
+2025-05,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2025-05,RET,Retail trade,job_openings_rate,2.8,JTS440000000000000JOR
+2025-05,RET,Retail trade,hires_rate,3.6,JTS440000000000000HIR
+2025-05,RET,Retail trade,quits_rate,2.6,JTS440000000000000QUR
+2025-05,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2025-06,MFG,Manufacturing,job_openings_rate,3.0,JTS300000000000000JOR
+2025-06,MFG,Manufacturing,hires_rate,2.3,JTS300000000000000HIR
+2025-06,MFG,Manufacturing,quits_rate,1.4,JTS300000000000000QUR
+2025-06,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2025-06,INF,Information,job_openings_rate,4.1,JTS510000000000000JOR
+2025-06,INF,Information,hires_rate,2.9,JTS510000000000000HIR
+2025-06,INF,Information,quits_rate,1.5,JTS510000000000000QUR
+2025-06,INF,Information,layoffs_discharges_rate,1.4,JTS510000000000000LDR
+2025-06,FAS,Financial activities,job_openings_rate,3.7,JTS510099000000000JOR
+2025-06,FAS,Financial activities,hires_rate,2.2,JTS510099000000000HIR
+2025-06,FAS,Financial activities,quits_rate,1.2,JTS510099000000000QUR
+2025-06,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2025-06,PBS,Professional and business services,job_openings_rate,5.6,JTS540099000000000JOR
+2025-06,PBS,Professional and business services,hires_rate,4.6,JTS540099000000000HIR
+2025-06,PBS,Professional and business services,quits_rate,1.9,JTS540099000000000QUR
+2025-06,PBS,Professional and business services,layoffs_discharges_rate,2.6,JTS540099000000000LDR
+2025-06,HCS,Health care and social assistance,job_openings_rate,5.9,JTS620000000000000JOR
+2025-06,HCS,Health care and social assistance,hires_rate,3.1,JTS620000000000000HIR
+2025-06,HCS,Health care and social assistance,quits_rate,2.0,JTS620000000000000QUR
+2025-06,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2025-06,RET,Retail trade,job_openings_rate,3.8,JTS440000000000000JOR
+2025-06,RET,Retail trade,hires_rate,3.8,JTS440000000000000HIR
+2025-06,RET,Retail trade,quits_rate,2.7,JTS440000000000000QUR
+2025-06,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2025-07,MFG,Manufacturing,job_openings_rate,3.3,JTS300000000000000JOR
+2025-07,MFG,Manufacturing,hires_rate,2.3,JTS300000000000000HIR
+2025-07,MFG,Manufacturing,quits_rate,1.4,JTS300000000000000QUR
+2025-07,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2025-07,INF,Information,job_openings_rate,5.2,JTS510000000000000JOR
+2025-07,INF,Information,hires_rate,2.4,JTS510000000000000HIR
+2025-07,INF,Information,quits_rate,1.3,JTS510000000000000QUR
+2025-07,INF,Information,layoffs_discharges_rate,1.4,JTS510000000000000LDR
+2025-07,FAS,Financial activities,job_openings_rate,4.1,JTS510099000000000JOR
+2025-07,FAS,Financial activities,hires_rate,2.3,JTS510099000000000HIR
+2025-07,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2025-07,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2025-07,PBS,Professional and business services,job_openings_rate,5.2,JTS540099000000000JOR
+2025-07,PBS,Professional and business services,hires_rate,4.7,JTS540099000000000HIR
+2025-07,PBS,Professional and business services,quits_rate,2.6,JTS540099000000000QUR
+2025-07,PBS,Professional and business services,layoffs_discharges_rate,1.9,JTS540099000000000LDR
+2025-07,HCS,Health care and social assistance,job_openings_rate,5.3,JTS620000000000000JOR
+2025-07,HCS,Health care and social assistance,hires_rate,3.0,JTS620000000000000HIR
+2025-07,HCS,Health care and social assistance,quits_rate,1.8,JTS620000000000000QUR
+2025-07,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2025-07,RET,Retail trade,job_openings_rate,3.6,JTS440000000000000JOR
+2025-07,RET,Retail trade,hires_rate,3.7,JTS440000000000000HIR
+2025-07,RET,Retail trade,quits_rate,2.3,JTS440000000000000QUR
+2025-07,RET,Retail trade,layoffs_discharges_rate,1.1,JTS440000000000000LDR
+2025-08,MFG,Manufacturing,job_openings_rate,3.2,JTS300000000000000JOR
+2025-08,MFG,Manufacturing,hires_rate,2.4,JTS300000000000000HIR
+2025-08,MFG,Manufacturing,quits_rate,1.3,JTS300000000000000QUR
+2025-08,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2025-08,INF,Information,job_openings_rate,4.7,JTS510000000000000JOR
+2025-08,INF,Information,hires_rate,2.4,JTS510000000000000HIR
+2025-08,INF,Information,quits_rate,1.2,JTS510000000000000QUR
+2025-08,INF,Information,layoffs_discharges_rate,1.2,JTS510000000000000LDR
+2025-08,FAS,Financial activities,job_openings_rate,3.5,JTS510099000000000JOR
+2025-08,FAS,Financial activities,hires_rate,2.1,JTS510099000000000HIR
+2025-08,FAS,Financial activities,quits_rate,1.3,JTS510099000000000QUR
+2025-08,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2025-08,PBS,Professional and business services,job_openings_rate,4.7,JTS540099000000000JOR
+2025-08,PBS,Professional and business services,hires_rate,4.6,JTS540099000000000HIR
+2025-08,PBS,Professional and business services,quits_rate,2.5,JTS540099000000000QUR
+2025-08,PBS,Professional and business services,layoffs_discharges_rate,2.2,JTS540099000000000LDR
+2025-08,HCS,Health care and social assistance,job_openings_rate,5.5,JTS620000000000000JOR
+2025-08,HCS,Health care and social assistance,hires_rate,3.0,JTS620000000000000HIR
+2025-08,HCS,Health care and social assistance,quits_rate,2.2,JTS620000000000000QUR
+2025-08,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2025-08,RET,Retail trade,job_openings_rate,3.8,JTS440000000000000JOR
+2025-08,RET,Retail trade,hires_rate,3.6,JTS440000000000000HIR
+2025-08,RET,Retail trade,quits_rate,2.4,JTS440000000000000QUR
+2025-08,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2025-09,MFG,Manufacturing,job_openings_rate,3.0,JTS300000000000000JOR
+2025-09,MFG,Manufacturing,hires_rate,2.4,JTS300000000000000HIR
+2025-09,MFG,Manufacturing,quits_rate,1.4,JTS300000000000000QUR
+2025-09,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2025-09,INF,Information,job_openings_rate,4.0,JTS510000000000000JOR
+2025-09,INF,Information,hires_rate,2.5,JTS510000000000000HIR
+2025-09,INF,Information,quits_rate,0.8,JTS510000000000000QUR
+2025-09,INF,Information,layoffs_discharges_rate,1.3,JTS510000000000000LDR
+2025-09,FAS,Financial activities,job_openings_rate,4.1,JTS510099000000000JOR
+2025-09,FAS,Financial activities,hires_rate,2.3,JTS510099000000000HIR
+2025-09,FAS,Financial activities,quits_rate,1.4,JTS510099000000000QUR
+2025-09,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2025-09,PBS,Professional and business services,job_openings_rate,5.4,JTS540099000000000JOR
+2025-09,PBS,Professional and business services,hires_rate,4.5,JTS540099000000000HIR
+2025-09,PBS,Professional and business services,quits_rate,2.4,JTS540099000000000QUR
+2025-09,PBS,Professional and business services,layoffs_discharges_rate,2.0,JTS540099000000000LDR
+2025-09,HCS,Health care and social assistance,job_openings_rate,5.7,JTS620000000000000JOR
+2025-09,HCS,Health care and social assistance,hires_rate,3.5,JTS620000000000000HIR
+2025-09,HCS,Health care and social assistance,quits_rate,2.2,JTS620000000000000QUR
+2025-09,HCS,Health care and social assistance,layoffs_discharges_rate,0.8,JTS620000000000000LDR
+2025-09,RET,Retail trade,job_openings_rate,3.7,JTS440000000000000JOR
+2025-09,RET,Retail trade,hires_rate,3.6,JTS440000000000000HIR
+2025-09,RET,Retail trade,quits_rate,2.0,JTS440000000000000QUR
+2025-09,RET,Retail trade,layoffs_discharges_rate,1.0,JTS440000000000000LDR
+2025-10,MFG,Manufacturing,job_openings_rate,3.3,JTS300000000000000JOR
+2025-10,MFG,Manufacturing,hires_rate,2.4,JTS300000000000000HIR
+2025-10,MFG,Manufacturing,quits_rate,1.3,JTS300000000000000QUR
+2025-10,MFG,Manufacturing,layoffs_discharges_rate,1.0,JTS300000000000000LDR
+2025-10,INF,Information,job_openings_rate,3.9,JTS510000000000000JOR
+2025-10,INF,Information,hires_rate,2.5,JTS510000000000000HIR
+2025-10,INF,Information,quits_rate,1.2,JTS510000000000000QUR
+2025-10,INF,Information,layoffs_discharges_rate,1.3,JTS510000000000000LDR
+2025-10,FAS,Financial activities,job_openings_rate,3.2,JTS510099000000000JOR
+2025-10,FAS,Financial activities,hires_rate,2.1,JTS510099000000000HIR
+2025-10,FAS,Financial activities,quits_rate,1.2,JTS510099000000000QUR
+2025-10,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2025-10,PBS,Professional and business services,job_openings_rate,5.4,JTS540099000000000JOR
+2025-10,PBS,Professional and business services,hires_rate,4.4,JTS540099000000000HIR
+2025-10,PBS,Professional and business services,quits_rate,2.4,JTS540099000000000QUR
+2025-10,PBS,Professional and business services,layoffs_discharges_rate,2.1,JTS540099000000000LDR
+2025-10,HCS,Health care and social assistance,job_openings_rate,5.4,JTS620000000000000JOR
+2025-10,HCS,Health care and social assistance,hires_rate,3.1,JTS620000000000000HIR
+2025-10,HCS,Health care and social assistance,quits_rate,1.9,JTS620000000000000QUR
+2025-10,HCS,Health care and social assistance,layoffs_discharges_rate,0.9,JTS620000000000000LDR
+2025-10,RET,Retail trade,job_openings_rate,4.0,JTS440000000000000JOR
+2025-10,RET,Retail trade,hires_rate,3.7,JTS440000000000000HIR
+2025-10,RET,Retail trade,quits_rate,2.6,JTS440000000000000QUR
+2025-10,RET,Retail trade,layoffs_discharges_rate,1.1,JTS440000000000000LDR
+2025-11,MFG,Manufacturing,job_openings_rate,3.0,JTS300000000000000JOR
+2025-11,MFG,Manufacturing,hires_rate,2.2,JTS300000000000000HIR
+2025-11,MFG,Manufacturing,quits_rate,1.5,JTS300000000000000QUR
+2025-11,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2025-11,INF,Information,job_openings_rate,3.0,JTS510000000000000JOR
+2025-11,INF,Information,hires_rate,2.7,JTS510000000000000HIR
+2025-11,INF,Information,quits_rate,1.5,JTS510000000000000QUR
+2025-11,INF,Information,layoffs_discharges_rate,1.2,JTS510000000000000LDR
+2025-11,FAS,Financial activities,job_openings_rate,3.7,JTS510099000000000JOR
+2025-11,FAS,Financial activities,hires_rate,1.9,JTS510099000000000HIR
+2025-11,FAS,Financial activities,quits_rate,1.1,JTS510099000000000QUR
+2025-11,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2025-11,PBS,Professional and business services,job_openings_rate,5.5,JTS540099000000000JOR
+2025-11,PBS,Professional and business services,hires_rate,4.4,JTS540099000000000HIR
+2025-11,PBS,Professional and business services,quits_rate,2.1,JTS540099000000000QUR
+2025-11,PBS,Professional and business services,layoffs_discharges_rate,2.2,JTS540099000000000LDR
+2025-11,HCS,Health care and social assistance,job_openings_rate,5.5,JTS620000000000000JOR
+2025-11,HCS,Health care and social assistance,hires_rate,2.8,JTS620000000000000HIR
+2025-11,HCS,Health care and social assistance,quits_rate,1.9,JTS620000000000000QUR
+2025-11,HCS,Health care and social assistance,layoffs_discharges_rate,0.6,JTS620000000000000LDR
+2025-11,RET,Retail trade,job_openings_rate,4.2,JTS440000000000000JOR
+2025-11,RET,Retail trade,hires_rate,3.7,JTS440000000000000HIR
+2025-11,RET,Retail trade,quits_rate,2.7,JTS440000000000000QUR
+2025-11,RET,Retail trade,layoffs_discharges_rate,0.9,JTS440000000000000LDR
+2025-12,MFG,Manufacturing,job_openings_rate,3.3,JTS300000000000000JOR
+2025-12,MFG,Manufacturing,hires_rate,2.2,JTS300000000000000HIR
+2025-12,MFG,Manufacturing,quits_rate,1.4,JTS300000000000000QUR
+2025-12,MFG,Manufacturing,layoffs_discharges_rate,0.8,JTS300000000000000LDR
+2025-12,INF,Information,job_openings_rate,3.8,JTS510000000000000JOR
+2025-12,INF,Information,hires_rate,3.1,JTS510000000000000HIR
+2025-12,INF,Information,quits_rate,1.6,JTS510000000000000QUR
+2025-12,INF,Information,layoffs_discharges_rate,1.5,JTS510000000000000LDR
+2025-12,FAS,Financial activities,job_openings_rate,2.5,JTS510099000000000JOR
+2025-12,FAS,Financial activities,hires_rate,2.3,JTS510099000000000HIR
+2025-12,FAS,Financial activities,quits_rate,1.3,JTS510099000000000QUR
+2025-12,FAS,Financial activities,layoffs_discharges_rate,0.6,JTS510099000000000LDR
+2025-12,PBS,Professional and business services,job_openings_rate,5.0,JTS540099000000000JOR
+2025-12,PBS,Professional and business services,hires_rate,4.2,JTS540099000000000HIR
+2025-12,PBS,Professional and business services,quits_rate,1.9,JTS540099000000000QUR
+2025-12,PBS,Professional and business services,layoffs_discharges_rate,1.9,JTS540099000000000LDR
+2025-12,HCS,Health care and social assistance,job_openings_rate,5.1,JTS620000000000000JOR
+2025-12,HCS,Health care and social assistance,hires_rate,3.2,JTS620000000000000HIR
+2025-12,HCS,Health care and social assistance,quits_rate,2.0,JTS620000000000000QUR
+2025-12,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2025-12,RET,Retail trade,job_openings_rate,3.2,JTS440000000000000JOR
+2025-12,RET,Retail trade,hires_rate,3.5,JTS440000000000000HIR
+2025-12,RET,Retail trade,quits_rate,3.2,JTS440000000000000QUR
+2025-12,RET,Retail trade,layoffs_discharges_rate,0.8,JTS440000000000000LDR
+2026-01,MFG,Manufacturing,job_openings_rate,3.8,JTS300000000000000JOR
+2026-01,MFG,Manufacturing,hires_rate,2.3,JTS300000000000000HIR
+2026-01,MFG,Manufacturing,quits_rate,1.3,JTS300000000000000QUR
+2026-01,MFG,Manufacturing,layoffs_discharges_rate,0.9,JTS300000000000000LDR
+2026-01,INF,Information,job_openings_rate,3.8,JTS510000000000000JOR
+2026-01,INF,Information,hires_rate,3.2,JTS510000000000000HIR
+2026-01,INF,Information,quits_rate,1.5,JTS510000000000000QUR
+2026-01,INF,Information,layoffs_discharges_rate,1.5,JTS510000000000000LDR
+2026-01,FAS,Financial activities,job_openings_rate,4.2,JTS510099000000000JOR
+2026-01,FAS,Financial activities,hires_rate,1.8,JTS510099000000000HIR
+2026-01,FAS,Financial activities,quits_rate,1.2,JTS510099000000000QUR
+2026-01,FAS,Financial activities,layoffs_discharges_rate,0.7,JTS510099000000000LDR
+2026-01,PBS,Professional and business services,job_openings_rate,4.2,JTS540099000000000JOR
+2026-01,PBS,Professional and business services,hires_rate,4.4,JTS540099000000000HIR
+2026-01,PBS,Professional and business services,quits_rate,2.1,JTS540099000000000QUR
+2026-01,PBS,Professional and business services,layoffs_discharges_rate,1.8,JTS540099000000000LDR
+2026-01,HCS,Health care and social assistance,job_openings_rate,5.6,JTS620000000000000JOR
+2026-01,HCS,Health care and social assistance,hires_rate,3.2,JTS620000000000000HIR
+2026-01,HCS,Health care and social assistance,quits_rate,1.8,JTS620000000000000QUR
+2026-01,HCS,Health care and social assistance,layoffs_discharges_rate,0.7,JTS620000000000000LDR
+2026-01,RET,Retail trade,job_openings_rate,4.0,JTS440000000000000JOR
+2026-01,RET,Retail trade,hires_rate,3.7,JTS440000000000000HIR
+2026-01,RET,Retail trade,quits_rate,2.7,JTS440000000000000QUR
+2026-01,RET,Retail trade,layoffs_discharges_rate,0.8,JTS440000000000000LDR

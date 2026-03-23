@@ -1,4 +1,6 @@
-# PR-000: Shared occupation and sector crosswalks
+# PR-000 — Shared occupation and sector crosswalks (methodology)
+
+Last documentation refresh: 2026-03-22.
 
 ## Purpose
 
@@ -39,7 +41,20 @@ Design choice: BED aggregate `200080` (Education and health services) is mapped 
 
 - Raw inputs live under `raw/` and should not be hand-edited after download.
 - `snapshot_download_date` in `data_registry.csv` records when files were captured in this workspace.
-- BLS `www.bls.gov` file downloads may require a browser or approved client; `download.bls.gov` flat files were retrieved over `http` with a standard User-Agent where automated access is permitted.
+- BLS `www.bls.gov` file downloads may require a browser or approved client; `download.bls.gov` flat files are retrieved over `https` with a standard User-Agent where automated access is permitted.
+
+### Global source-selection policy
+
+- Use pinned official artifacts when an issue requires a fixed reference period.
+- Use \"latest available\" only when the issue template explicitly allows it.
+- For any \"latest available\" path, metadata must record:
+  - selection rule (for example, latest listed year then latest complete period)
+  - resolved artifact URL/file name
+  - local cached path
+  - SHA-256 hash
+- If source pages do not publish a release date or last-modified timestamp,
+  record `Not reported by source` and `Not observed at build snapshot` in
+  `docs/data_registry.csv` instead of leaving blanks.
 
 ## QA
 

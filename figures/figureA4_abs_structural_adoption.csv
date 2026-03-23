@@ -1,0 +1,81 @@
+abs_reference_year,industry_code,industry_label,firm_size_class,measure_key,measure_label,weighted_share,source_table_id
+2018,00,All sectors,Firms with 1 to 9 employees,ai_total_use,Artificial Intelligence: Total use,0.028,ABSTCB2018
+2018,00,All sectors,Firms with 1 to 9 employees,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.058,ABSTCB2018
+2018,00,All sectors,Firms with 1 to 9 employees,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.121,ABSTCB2018
+2018,00,All sectors,Firms with 1 to 9 employees,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.821,ABSTCB2018
+2018,00,All sectors,Firms with 10 employees or more,ai_total_use,Artificial Intelligence: Total use,0.035,ABSTCB2018
+2018,00,All sectors,Firms with 10 employees or more,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.081,ABSTCB2018
+2018,00,All sectors,Firms with 10 employees or more,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.234,ABSTCB2018
+2018,00,All sectors,Firms with 10 employees or more,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.684,ABSTCB2018
+2018,00,All sectors,Firms with no employees,ai_total_use,Artificial Intelligence: Total use,0.03,ABSTCB2018
+2018,00,All sectors,Firms with no employees,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.031,ABSTCB2018
+2018,00,All sectors,Firms with no employees,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.103,ABSTCB2018
+2018,00,All sectors,Firms with no employees,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.865,ABSTCB2018
+2018,11,"Agriculture, forestry, fishing and hunting",All firms,ai_total_use,Artificial Intelligence: Total use,0.015,ABSTCB2018
+2018,11,"Agriculture, forestry, fishing and hunting",All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.139,ABSTCB2018
+2018,11,"Agriculture, forestry, fishing and hunting",All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.0,ABSTCB2018
+2018,11,"Agriculture, forestry, fishing and hunting",All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.681,ABSTCB2018
+2018,21,"Mining, quarrying, and oil and gas extraction",All firms,ai_total_use,Artificial Intelligence: Total use,0.019,ABSTCB2018
+2018,21,"Mining, quarrying, and oil and gas extraction",All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.055,ABSTCB2018
+2018,21,"Mining, quarrying, and oil and gas extraction",All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.21,ABSTCB2018
+2018,21,"Mining, quarrying, and oil and gas extraction",All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.728,ABSTCB2018
+2018,22,Utilities,All firms,ai_total_use,Artificial Intelligence: Total use,0.028,ABSTCB2018
+2018,22,Utilities,All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.0,ABSTCB2018
+2018,22,Utilities,All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.117,ABSTCB2018
+2018,22,Utilities,All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.831,ABSTCB2018
+2018,23,Construction,All firms,ai_total_use,Artificial Intelligence: Total use,0.017,ABSTCB2018
+2018,23,Construction,All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.0,ABSTCB2018
+2018,23,Construction,All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.21,ABSTCB2018
+2018,23,Construction,All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.728,ABSTCB2018
+2018,42,Wholesale trade,All firms,ai_total_use,Artificial Intelligence: Total use,0.022,ABSTCB2018
+2018,42,Wholesale trade,All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.087,ABSTCB2018
+2018,42,Wholesale trade,All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.135,ABSTCB2018
+2018,42,Wholesale trade,All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.778,ABSTCB2018
+2018,51,Information,All firms,ai_total_use,Artificial Intelligence: Total use,0.067,ABSTCB2018
+2018,51,Information,All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.06,ABSTCB2018
+2018,51,Information,All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.2,ABSTCB2018
+2018,51,Information,All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.74,ABSTCB2018
+2018,52,Finance and insurance,All firms,ai_total_use,Artificial Intelligence: Total use,0.045,ABSTCB2018
+2018,52,Finance and insurance,All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.084,ABSTCB2018
+2018,52,Finance and insurance,All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.125,ABSTCB2018
+2018,52,Finance and insurance,All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.792,ABSTCB2018
+2018,53,Real estate and rental and leasing,All firms,ai_total_use,Artificial Intelligence: Total use,0.034,ABSTCB2018
+2018,53,Real estate and rental and leasing,All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.031,ABSTCB2018
+2018,53,Real estate and rental and leasing,All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.092,ABSTCB2018
+2018,53,Real estate and rental and leasing,All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.877,ABSTCB2018
+2018,54,"Professional, scientific, and technical services",All firms,ai_total_use,Artificial Intelligence: Total use,0.056,ABSTCB2018
+2018,54,"Professional, scientific, and technical services",All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.036,ABSTCB2018
+2018,54,"Professional, scientific, and technical services",All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.156,ABSTCB2018
+2018,54,"Professional, scientific, and technical services",All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.808,ABSTCB2018
+2018,55,Management of companies and enterprises,All firms,ai_total_use,Artificial Intelligence: Total use,0.045,ABSTCB2018
+2018,55,Management of companies and enterprises,All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.074,ABSTCB2018
+2018,55,Management of companies and enterprises,All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.173,ABSTCB2018
+2018,55,Management of companies and enterprises,All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.75,ABSTCB2018
+2018,56,Administrative and support and waste management and remediation services,All firms,ai_total_use,Artificial Intelligence: Total use,0.027,ABSTCB2018
+2018,56,Administrative and support and waste management and remediation services,All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.066,ABSTCB2018
+2018,56,Administrative and support and waste management and remediation services,All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.184,ABSTCB2018
+2018,56,Administrative and support and waste management and remediation services,All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.751,ABSTCB2018
+2018,61,Educational services,All firms,ai_total_use,Artificial Intelligence: Total use,0.029,ABSTCB2018
+2018,61,Educational services,All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.111,ABSTCB2018
+2018,61,Educational services,All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.0,ABSTCB2018
+2018,61,Educational services,All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.791,ABSTCB2018
+2018,62,Health care and social assistance,All firms,ai_total_use,Artificial Intelligence: Total use,0.033,ABSTCB2018
+2018,62,Health care and social assistance,All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.041,ABSTCB2018
+2018,62,Health care and social assistance,All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.137,ABSTCB2018
+2018,62,Health care and social assistance,All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.822,ABSTCB2018
+2018,71,"Arts, entertainment, and recreation",All firms,ai_total_use,Artificial Intelligence: Total use,0.016,ABSTCB2018
+2018,71,"Arts, entertainment, and recreation",All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.064,ABSTCB2018
+2018,71,"Arts, entertainment, and recreation",All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.127,ABSTCB2018
+2018,71,"Arts, entertainment, and recreation",All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.81,ABSTCB2018
+2018,72,Accommodation and food services,All firms,ai_total_use,Artificial Intelligence: Total use,0.02,ABSTCB2018
+2018,72,Accommodation and food services,All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.126,ABSTCB2018
+2018,72,Accommodation and food services,All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.177,ABSTCB2018
+2018,72,Accommodation and food services,All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.697,ABSTCB2018
+2018,81,Other services (except public administration),All firms,ai_total_use,Artificial Intelligence: Total use,0.018,ABSTCB2018
+2018,81,Other services (except public administration),All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.0,ABSTCB2018
+2018,81,Other services (except public administration),All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.144,ABSTCB2018
+2018,81,Other services (except public administration),All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.766,ABSTCB2018
+2018,99,Industries not classified,All firms,ai_total_use,Artificial Intelligence: Total use,0.039,ABSTCB2018
+2018,99,Industries not classified,All firms,ai_workforce_decreased,Artificial Intelligence: Decreased number of workers employed by this business,0.0,ABSTCB2018
+2018,99,Industries not classified,All firms,ai_workforce_increased,Artificial Intelligence: Increased number of workers employed by this business,0.0,ABSTCB2018
+2018,99,Industries not classified,All firms,ai_workforce_unchanged,Artificial Intelligence: Did not change number of workers employed by this business,0.904,ABSTCB2018

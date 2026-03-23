@@ -1,0 +1,4 @@
+ai_relevance_tercile,displaced_worker_incidence,mean_current_job_tenure_years,occupational_mobility_share,sum_displaced_worker_person_weight,sum_job_tenure_person_weight
+low,0.020291,7.430589,0.067721,40559178.0619,42084496.3986
+middle,0.018779,7.995011,0.076153,42931967.7999,44137698.8885
+high,0.015372,8.761553,0.05125,52999151.6535,54371858.2459

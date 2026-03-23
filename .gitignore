@@ -5,3 +5,7 @@ __pycache__/
 venv/
 *.xlsx~
 ~$*
+
+# Local microdata and large build artifacts (exceed GitHub file limits; fetch separately)
+raw/
+intermediate/

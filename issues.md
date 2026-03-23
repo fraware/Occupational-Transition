@@ -1,5 +1,8 @@
 # GitHub Issues — AI and Work Public Data Paper
 
+This file holds reusable issue templates. **As of the documentation snapshot (2026-03-23), the repository implements PR-000 and T-001 through T-020 with hardened reproducibility standards** (build scripts under `scripts/`, outputs under `figures/` and `intermediate/`, methods under `docs/t*_*.md`, and JSON lineage metadata under `intermediate/*run_metadata.json`). See `README.md` for the command list. **T-021 and later** appear below as templates only until corresponding scripts and outputs are added.
+
+---
 
 Save the reusable template as:
 
