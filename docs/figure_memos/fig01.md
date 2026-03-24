@@ -27,4 +27,4 @@ The paper’s occupation groups span very different sizes and wage levels, and t
 ## Possible reviewer objections
 
 - **Index construction:** The AI Task Index uses a fixed subset of O*NET elements; robustness checks compare alternative weightings and rank stability (`scripts/robustness/`).
-- **OEWS vintage:** National file year follows the build’s pinned or “latest available” rule; cite run metadata for the exact file.
+- **OEWS vintage:** National file year follows the build’s pinned or “most recent available” rule; cite run metadata for the exact file.

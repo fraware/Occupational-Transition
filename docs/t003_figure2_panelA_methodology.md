@@ -26,7 +26,7 @@ Registry rows: `docs/data_registry.csv` (CPS T-003 entries).
 
 ## Time and geography
 
-- **Reference period:** January 2019 through the latest month with a published Basic CPS file on Census servers (as detected at run time).
+- **Reference period:** January 2019 through the most recent month with a published Basic CPS file on Census servers (as detected at run time).
 - **Geography:** national (all states in the CPS public-use file).
 
 ## Universe and filters
@@ -78,7 +78,7 @@ Implemented in `scripts/qa_figure2_panelA.py`:
 - no missing required fields
 - positive `sum_composite_weight`
 - month sequence starts at `2019-01` and matches build metadata
-- only allowlisted official missing months (currently `2025-10`)
+- only allowlisted official missing months (allowlist at verification time: `2025-10`)
 
 ## Revision policy
 

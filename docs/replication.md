@@ -73,6 +73,18 @@ After a successful run, review:
 - `intermediate/full_clean_rebuild_acceptance_*_audit_summary.md` (if generated)
 - `docs/acceptance_matrix.md` (ticket-level criteria vs automated QA)
 
+### Bounded rerun option (faster validation)
+
+If you need a quicker drift-validation pass (for example while avoiding long appendix rebuild tickets), you can:
+
+1. Run targeted rebuild scripts for the affected tickets.
+2. Generate an audit summary from the selected acceptance log:
+   - `python scripts/build_acceptance_audit_summary.py --log <path_to_log>`
+3. Run main visual QA:
+   - `python scripts/qa_visuals.py`
+
+In that mode, explicitly record scope limits in a closure note (for example which late tickets were not rerun) so reviewers do not misread it as a full `PR-000`..`T-020` replication.
+
 ## Visual style lock
 
 Publication figures use `scripts/viz_style.py` and `docs/visual_style_guide.md`. Do not change colors or fonts ad hoc without updating the style guide and regenerating all visuals.

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-`figures/figureA3_cps_supp_validation.csv` validates the worker-transition story in Figure 2 using direct CPS supplement measures of displacement, current job tenure, and occupational mobility from the CPS Displaced Worker / Employee Tenure / Occupational Mobility supplement (January 2024).
+`figures/figureA3_cps_supp_validation.csv` validates the worker-transition story in Figure 2 using direct CPS supplement measures of displacement, job tenure at survey date, and occupational mobility from the CPS Displaced Worker / Employee Tenure / Occupational Mobility supplement (January 2024).
 
 ## Official data sources
 

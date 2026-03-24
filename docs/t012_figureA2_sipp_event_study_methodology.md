@@ -21,7 +21,7 @@
 For each person identified by `SSUID`, `PNUM`, and `SPANEL`, person-month rows are ordered by `SWAVE` then `MONTHCODE`. The transition month (`event_time = 0`) is the **first** month such that:
 
 - the prior month is in the survey month universe (`RIN_UNIV == 1`), age at least 16, employed under `RMESR` employed codes, and `TJB1_OCC` maps to an `occ22` code in 1–22; and
-- the current month is either not employed under those `RMESR` codes, or is employed with a different mapped `occ22` in 1–22.
+- the transition month is either not employed under those `RMESR` codes, or is employed with a different mapped `occ22` in 1–22.
 
 Only the first qualifying transition per person is used.
 

@@ -20,6 +20,8 @@ CROSS = ROOT / "crosswalks"
 DOCS = ROOT / "docs"
 
 SNAPSHOT_DATE = date.today().isoformat()
+NOT_REPORTED = "Not reported by source"
+NOT_OBSERVED = "Not observed at build snapshot"
 
 SOC_MAJOR_LABELS: dict[str, str] = {
     "11-0000": "Management Occupations",
@@ -538,8 +540,8 @@ def write_registry() -> None:
             "download_url": "https://www2.census.gov/programs-surveys/demo/tables/industry-occupation/time-series/tp78/table-a1_a2.xlsx",
             "file_name": "table-a1_a2.xlsx",
             "file_format": "xlsx",
-            "release_date_reported": "",
-            "source_last_modified_observed": "",
+            "release_date_reported": NOT_REPORTED,
+            "source_last_modified_observed": NOT_OBSERVED,
             "snapshot_download_date": SNAPSHOT_DATE,
             "notes_on_version": "2018 Census occupation codes Table A2",
         },
@@ -550,8 +552,8 @@ def write_registry() -> None:
             "download_url": "https://www2.census.gov/programs-surveys/cps/methodology/Occupation%20Codes.pdf",
             "file_name": "Occupation_Codes_Jan2025.pdf",
             "file_format": "pdf",
-            "release_date_reported": "",
-            "source_last_modified_observed": "",
+            "release_date_reported": NOT_REPORTED,
+            "source_last_modified_observed": NOT_OBSERVED,
             "snapshot_download_date": SNAPSHOT_DATE,
             "notes_on_version": "Appendix 10 PRDTOCC1 recodes",
         },
@@ -562,8 +564,8 @@ def write_registry() -> None:
             "download_url": "https://www.bls.gov/soc/2018/soc_2018_class_and_coding_structure.pdf",
             "file_name": "",
             "file_format": "pdf",
-            "release_date_reported": "",
-            "source_last_modified_observed": "",
+            "release_date_reported": NOT_REPORTED,
+            "source_last_modified_observed": NOT_OBSERVED,
             "snapshot_download_date": SNAPSHOT_DATE,
             "notes_on_version": "2018 SOC major groups",
         },
@@ -574,8 +576,8 @@ def write_registry() -> None:
             "download_url": "https://download.bls.gov/pub/time.series/jt/jt.industry",
             "file_name": "jt.industry.txt",
             "file_format": "tsv",
-            "release_date_reported": "",
-            "source_last_modified_observed": "",
+            "release_date_reported": NOT_REPORTED,
+            "source_last_modified_observed": NOT_OBSERVED,
             "snapshot_download_date": SNAPSHOT_DATE,
             "notes_on_version": "LABSTAT JOLTS industry",
         },
@@ -586,8 +588,8 @@ def write_registry() -> None:
             "download_url": "https://download.bls.gov/pub/time.series/ce/ce.supersector",
             "file_name": "ce.supersector.txt",
             "file_format": "tsv",
-            "release_date_reported": "",
-            "source_last_modified_observed": "",
+            "release_date_reported": NOT_REPORTED,
+            "source_last_modified_observed": NOT_OBSERVED,
             "snapshot_download_date": SNAPSHOT_DATE,
             "notes_on_version": "CES supersector",
         },
@@ -598,8 +600,8 @@ def write_registry() -> None:
             "download_url": "https://download.bls.gov/pub/time.series/ce/ce.industry",
             "file_name": "ce.industry.txt",
             "file_format": "tsv",
-            "release_date_reported": "",
-            "source_last_modified_observed": "",
+            "release_date_reported": NOT_REPORTED,
+            "source_last_modified_observed": NOT_OBSERVED,
             "snapshot_download_date": SNAPSHOT_DATE,
             "notes_on_version": "CES NAICS industry codes; used for NAICS-to-sector6 and QCEW NAICS alignment",
         },
@@ -610,8 +612,8 @@ def write_registry() -> None:
             "download_url": "https://download.bls.gov/pub/time.series/bd/bd.industry",
             "file_name": "bd.industry.txt",
             "file_format": "tsv",
-            "release_date_reported": "",
-            "source_last_modified_observed": "",
+            "release_date_reported": NOT_REPORTED,
+            "source_last_modified_observed": NOT_OBSERVED,
             "snapshot_download_date": SNAPSHOT_DATE,
             "notes_on_version": "BED industry classification",
         },
@@ -622,8 +624,8 @@ def write_registry() -> None:
             "download_url": "https://www.census.gov/hfp/btos/api/strata",
             "file_name": "btos_api_strata.json",
             "file_format": "json",
-            "release_date_reported": "",
-            "source_last_modified_observed": "",
+            "release_date_reported": NOT_REPORTED,
+            "source_last_modified_observed": NOT_OBSERVED,
             "snapshot_download_date": SNAPSHOT_DATE,
             "notes_on_version": "BTOS strata naics2/naics3",
         },
@@ -634,12 +636,18 @@ def write_registry() -> None:
             "download_url": "https://www.bls.gov/cew/classifications/industry/industry-titles.csv",
             "file_name": "industry-titles.csv",
             "file_format": "csv",
-            "release_date_reported": "",
+            "release_date_reported": NOT_REPORTED,
             "source_last_modified_observed": "BLS page Last Modified May 5 2022",
             "snapshot_download_date": SNAPSHOT_DATE,
             "notes_on_version": "QCEW NAICS industry titles; crosswalk uses NAICS 2-digit mapping consistent with BLS industry classification",
         },
     ]
+    for row in rows:
+        if not str(row.get("release_date_reported", "")).strip():
+            row["release_date_reported"] = NOT_REPORTED
+        if not str(row.get("source_last_modified_observed", "")).strip():
+            row["source_last_modified_observed"] = NOT_OBSERVED
+
     DOCS.mkdir(parents=True, exist_ok=True)
     reg_path = DOCS / "data_registry.csv"
     with reg_path.open("w", newline="", encoding="utf-8") as f:

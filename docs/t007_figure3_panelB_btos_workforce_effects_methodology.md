@@ -40,11 +40,11 @@ These match **CES-WP-24-16 Table 6 Panel A** (Last 6 months, firm-weighted) for 
 
 ### Task-effect categories (questionnaire item 25)
 
-The current public `AI_Supplement_Table.xlsx` **does not** include separate rows for questionnaire **item 25** (*Select all that apply*: perform a task previously done by an employee; supplement or enhance a task; introduce a new task; none of the above). A binary search of the downloaded workbook confirms those answer strings are absent.
+The public `AI_Supplement_Table.xlsx` used by this pipeline **does not** include separate rows for questionnaire **item 25** (*Select all that apply*: perform a task previously done by an employee; supplement or enhance a task; introduce a new task; none of the above). A binary search of the downloaded workbook confirms those answer strings are absent.
 
 **Primary-source rule:** the build script first looks for published rows whose question text matches item 25. If Census adds those rows in a future release, they are used automatically and recorded as `exact_published_q25` in metadata.
 
-**Documented fallback (current snapshot):** when item 25 is absent, the pipeline uses **other published Scope 2 rows in the same workbook** as interpretive proxies, not as statistical equivalents to item 25:
+**Documented fallback rule:** when item 25 is absent, the pipeline uses **other published Scope 2 rows in the same workbook** as interpretive proxies, not as statistical equivalents to item 25:
 
 | Frozen `category_key` | Published proxy used (Scope 2) | Interpretation limit |
 |----------------------|--------------------------------|----------------------|

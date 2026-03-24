@@ -15,7 +15,7 @@ T-006 pulls published national stratum series for current and expected AI use by
 
 ## Main takeaway
 
-Public business-side data support time series of stated AI adoption and cross-sectional supplement summaries of reported employment and task effects at the level Census publishes.
+Public business-side data support time series of stated AI adoption and supplement summaries for retained workforce categories; employment-effect categories are the strongest interpretable rows, while task-effect interpretation should be treated as proxy-based when item-25 option rows are not in the public workbook.
 
 ## What the figure does not identify
 

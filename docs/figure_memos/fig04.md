@@ -2,7 +2,7 @@
 
 ## Question
 
-How do job openings rates and payroll employment trajectories compare across the paper’s six-sector groups over the same broad period as other figures?
+How do JOLTS flow rates (openings, hires, quits, layoffs/discharges) and CES payroll employment trajectories compare across the paper’s six-sector groups over the same broad period as other figures?
 
 ## Datasets
 

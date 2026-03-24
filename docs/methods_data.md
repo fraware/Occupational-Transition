@@ -6,7 +6,7 @@ This document summarizes sources, universes, time windows, geography, grouping, 
 
 - **Occupation:** 22-group taxonomy `crosswalks/occ22_crosswalk.csv` (CPS / SOC 2018 aligned). Methodology: `docs/pr000_crosswalk_methodology.md`.
 - **Sector:** Six-sector demand groups `crosswalks/sector6_crosswalk.csv` for BTOS, JOLTS, CES, BED, QCEW-aligned inputs.
-- **Registry:** `docs/data_registry.csv` records canonical HTTPS download URLs, dataset identifiers, and snapshot metadata fields required by QA.
+- **Registry:** `docs/data_registry.csv` records canonical HTTPS download URLs, dataset identifiers, and provenance metadata fields required by QA.
 
 ## Figure 1 — Occupational baseline and task heatmap (T-001, T-002)
 
@@ -19,7 +19,7 @@ This document summarizes sources, universes, time windows, geography, grouping, 
 
 - **Universe:** Civilian noninstitutional population age 16+; employed with valid hours for Panel A; matched adjacent months for Panel B.
 - **Weights:** CPS composite person weight (`PWCMPWGT`) scaled per methodology.
-- **Time:** Monthly series from January 2019 through latest available month subject to file availability rules in build scripts.
+- **Time:** Monthly series from January 2019 through the most recently available month, subject to file availability rules in build scripts.
 - **Geography:** National.
 - **Outputs:** `figures/figure2_panelA_hours_by_ai_tercile.csv`, `figures/figure2_panelB_transition_counts.csv`, `figures/figure2_panelB_transition_probs.csv`.
 
@@ -36,7 +36,7 @@ This document summarizes sources, universes, time windows, geography, grouping, 
 ## Figure 4 — JOLTS and CES sector series (T-008, T-009)
 
 - **Mapping:** Detailed industries or series map to `sector6_code` via `sector6_crosswalk.csv`.
-- **JOLTS:** Published flow rates as selected in the build (e.g., openings rate).
+- **JOLTS:** Published flow rates as selected in the build (openings, hires, quits, layoffs/discharges).
 - **CES:** Payroll employment levels indexed to August 2023 = 100.
 - **Outputs:** `figures/figure4_panelA_jolts_sector_rates.csv`, `figures/figure4_panelB_ces_sector_index.csv`.
 
@@ -44,7 +44,7 @@ This document summarizes sources, universes, time windows, geography, grouping, 
 
 ## Figure 5 — Capability matrix (T-010)
 
-- Non-estimated categorical matrix from `paper-notes.md` / `issues.md` rules; five datasets by seven empirical objects; `scripts/build_figure5_capability_matrix.py`.
+- Non-estimated categorical matrix from `paper-notes.md` / `issues.md` rules; five datasets by seven empirical objects (including `worker_firm_ai_linkage`); `scripts/build_figure5_capability_matrix.py`.
 - **Output:** `figures/figure5_capability_matrix.csv`.
 
 ## Appendix figures (T-011–T-020)
@@ -68,6 +68,8 @@ Each ticket has a matching `docs/tNNN_*_methodology.md` file with full source an
 
 - JSON lineage: `intermediate/*run_metadata.json` (ticket, output paths, source selection rules, SHA-256 of cached inputs where applicable).
 - Full rebuild log: `intermediate/full_clean_rebuild_acceptance_*.md`.
+- Acceptance summary tables (optional): `intermediate/full_clean_rebuild_acceptance_*_audit_summary.md`.
+- Drift-specific closure notes (when used): `intermediate/drift_closure_<UTC>.md`.
 
 ## Replication command
 

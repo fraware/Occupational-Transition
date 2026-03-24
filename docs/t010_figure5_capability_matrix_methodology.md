@@ -15,7 +15,7 @@
    - `OEWS`
    - `O*NET`
 
-The implementation uses the **first seven claim columns** in that matrix (through “Local geographic exposure”), excluding “Worker–firm AI causal claims” so the table matches the seven-column T-010 requirement.
+The retained implementation keeps seven empirical-object columns and explicitly includes `worker_firm_ai_linkage` so the core Claim 5 gap is directly represented in the matrix.
 
 ## Code mapping
 

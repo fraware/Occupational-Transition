@@ -25,10 +25,10 @@ All T-017 inputs are official BLS QCEW public sources:
 Selection rule implemented in build metadata:
 
 1. Parse the official QCEW downloadable-files page.
-2. Select the latest available `qtrly_singlefile` link year.
-3. Within that file, retain the latest observed quarter.
+2. Select the most recent available `qtrly_singlefile` link year.
+3. Within that file, retain the most recent observed quarter.
 
-At the current snapshot this resolves to:
+In the documented run example, this resolves to:
 
 - `qcew_year = 2025`
 - `qcew_quarter = Q3`

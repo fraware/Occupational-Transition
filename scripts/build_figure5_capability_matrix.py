@@ -27,8 +27,9 @@ PAPER_NOTES = ROOT / "paper-notes.md"
 OUT_CSV = FIG / "figure5_capability_matrix.csv"
 OUT_META = INTER / "figure5_capability_matrix_run_metadata.json"
 
-# First seven empirical-object columns in paper-notes.md (excludes
-# Worker–firm AI causal claims). Slugs match column headers.
+# Seven empirical-object columns for the retained synthesis matrix.
+# Include the worker-firm linkage object explicitly so Claim 5's core
+# architecture gap is directly encoded in the output matrix.
 EMPIRICAL_OBJECT_KEYS: list[str] = [
     "worker_outcomes",
     "worker_occupational_transitions",
@@ -36,7 +37,7 @@ EMPIRICAL_OBJECT_KEYS: list[str] = [
     "labor_demand_turnover",
     "occupational_structure_wages",
     "task_exposure_mechanism",
-    "local_geographic_exposure",
+    "worker_firm_ai_linkage",
 ]
 
 # T-010 five core datasets, in stable display order.
@@ -58,7 +59,7 @@ _CAPABILITY: dict[str, tuple[str, ...]] = {
         "partial",
         "partial",
         "none",
-        "partial",
+        "none",
     ),
     "BTOS": (
         "partial",
@@ -67,7 +68,7 @@ _CAPABILITY: dict[str, tuple[str, ...]] = {
         "partial",
         "none",
         "partial",
-        "direct",
+        "none",
     ),
     "JOLTS": (
         "none",
@@ -76,7 +77,7 @@ _CAPABILITY: dict[str, tuple[str, ...]] = {
         "direct",
         "none",
         "none",
-        "partial",
+        "none",
     ),
     "OEWS": (
         "none",
@@ -85,7 +86,7 @@ _CAPABILITY: dict[str, tuple[str, ...]] = {
         "none",
         "direct",
         "none",
-        "direct",
+        "none",
     ),
     "O*NET": (
         "none",
@@ -177,8 +178,9 @@ def main() -> None:
             },
         ],
         "matrix_reference": (
-            "paper-notes.md Dataset-to-claim matrix; first seven claim "
-            "columns; rows CPS (basic monthly), BTOS, JOLTS, OEWS, O*NET"
+            "paper-notes.md Dataset-to-claim matrix adapted to retained seven "
+            "empirical objects, explicitly including worker_firm_ai_linkage; "
+            "rows CPS (basic monthly), BTOS, JOLTS, OEWS, O*NET"
         ),
         "row_count": len(rows),
         "output_csv": str(OUT_CSV.relative_to(ROOT)).replace("\\", "/"),

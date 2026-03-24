@@ -53,7 +53,7 @@ For each sector, exactly one datatype `01` series and exactly one datatype
 
 ## Time window and indexing
 
-- Retained window starts at `2019-01` and extends through latest available
+- Retained window starts at `2019-01` and extends through the most recent available
   month with both employment and hours observations.
 - Base month is `2023-08`.
 

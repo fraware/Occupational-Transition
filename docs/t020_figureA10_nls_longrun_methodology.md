@@ -50,7 +50,7 @@ Frozen in-repo mappings:
 For each retained round and baseline tercile:
 
 - `occupation_switch_rate`:
-  weighted share with valid current mapped occupation where
+  weighted share with valid mapped occupation in round where
   `current_occ22 != baseline_occ22`
 - `employment_rate`:
   weighted mean of annual weekly employed share from `EMP_STATUS_{year}.*`

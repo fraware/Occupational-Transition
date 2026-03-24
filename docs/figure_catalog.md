@@ -24,3 +24,8 @@ Stable slugs map paper figures to pipeline outputs and visual stems (`docs/visua
 
 - Shared style: `scripts/viz_style.py`, `docs/visual_style_guide.md`.
 - Do not change palette, font, or axis formats for a single figure without updating the style guide and regenerating all visuals.
+
+## Validation coverage
+
+- Full visual validation covers main and appendix stems (`t001` to `t020`).
+- Bounded drift-validation may cover main stems (`t001` to `t010`) first; when used, scope must be explicitly documented in the run evidence.

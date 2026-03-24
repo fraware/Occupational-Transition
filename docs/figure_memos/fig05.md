@@ -2,7 +2,7 @@
 
 ## Question
 
-For the five core public datasets used in the paper, which empirical objects (worker outcomes, transitions, firm AI adoption, demand flows, occupational structure, task mechanism, local exposure) can public data support directly, partially, or not at all?
+For the five core public datasets used in the paper, which empirical objects (worker outcomes, transitions, firm AI adoption, demand flows, occupational structure, task mechanism, and worker-firm AI linkage) can public data support directly, partially, or not at all?
 
 ## Datasets
 

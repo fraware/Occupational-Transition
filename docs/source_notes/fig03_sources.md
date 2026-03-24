@@ -14,3 +14,4 @@
 
 - Business-side measures do not link to individual workers in public files.
 - Supplement detail and questionnaire availability can change across waves; methodology docs describe the retained windows and definitions.
+- Task-effect rows in Panel B can require documented proxy mappings when questionnaire item-25 option rows are absent in the public `AI_Supplement_Table.xlsx`.

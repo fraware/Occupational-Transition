@@ -15,6 +15,12 @@ Use this checklist for a second person who did not implement the pipeline. **Do 
 - [ ] Acceptance log exists: `intermediate/full_clean_rebuild_acceptance_*.md` with overall PASS.
 - [ ] Optional: `python scripts/run_full_pipeline_from_raw.py --with-audit-summary` produces an audit summary table.
 
+## Validation mode (select one)
+
+- [ ] **Full replication mode (for freeze/sign-off):** complete `PR-000` through `T-020` plus full visuals coverage.
+- [ ] **Bounded drift-validation mode (faster):** limited rerun with explicit scope note; not eligible for final freeze sign-off.
+- [ ] If bounded mode used, closure note path recorded: `________________`.
+
 ## Main figures (CSV)
 
 Confirm files exist and are non-empty:
@@ -35,6 +41,7 @@ Confirm files exist and are non-empty:
 - [ ] `python scripts/run_visuals_all.py` exits 0.
 - [ ] `python scripts/qa_visuals.py` exits 0.
 - [ ] `python scripts/qa_visual_caption_coverage.py` exits 0.
+- [ ] If `run_visuals_all.py` is expected to fail due to intentionally skipped appendix inputs, this is documented in closure notes and main-figure stems are still verified.
 
 ## Spot-check mapping (sample)
 

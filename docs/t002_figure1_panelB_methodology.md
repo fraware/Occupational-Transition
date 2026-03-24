@@ -20,7 +20,7 @@ Primary files:
 
 - Geography: United States national estimates only.
 - O*NET reference: version selected by `--onet-version` (default `30.2`).
-- OEWS reference in current build: May 2024 national file.
+- OEWS reference in the pinned build configuration: May 2024 national file.
 
 ## Input mapping and joins
 

@@ -4,7 +4,7 @@
 What Exists, What Works, and What Small Survey Changes Would Unlock
 
 ## Abstract
-This paper develops a public-data framework for measuring AI and labor-market change in the United States. Using reproducible outputs from a full PR-000 to T-020 pipeline, we show that existing federal public data already support meaningful evidence on occupational structure and tasks, worker outcomes and mobility, business adoption, labor-demand flows, and the identification frontier across datasets. The current system is strongest when it combines worker-side and business-side sources at coarse, policy-relevant levels of resolution; it is weakest where occupation-level demand flows and worker-firm linkage are required for high-precision attribution. The paper contributes a source-by-source measurement audit, an empirical public-data stack, a sample-sufficiency rule for responsible inference, and a concrete low-, medium-, and high-effort roadmap for improving AI labor measurement through CPS, BTOS, JOLTS, and NLS pathways. The argument is not that public data are sufficient for firm-level causal identification, but that they are already strong enough to produce credible monitoring and to prioritize high-yield survey additions.
+This paper develops a public-data framework for measuring AI and labor-market change in the United States. Using reproducible outputs from a full PR-000 to T-020 pipeline, we show that existing federal public data already support meaningful evidence on occupational structure and tasks, worker outcomes and mobility, business adoption, labor-demand flows, and the identification frontier across datasets. The public measurement stack is strongest when it combines worker-side and business-side sources at coarse, policy-relevant levels of resolution; it is weakest where occupation-level demand flows and worker-firm linkage are required for high-precision attribution. The paper contributes a source-by-source measurement audit, an empirical public-data stack, a sample-sufficiency rule for responsible inference, and a concrete low-, medium-, and high-effort roadmap for improving AI labor measurement through CPS, BTOS, JOLTS, and NLS pathways. The argument is not that public data are sufficient for firm-level causal identification, but that they are already strong enough to produce credible monitoring and to prioritize high-yield survey additions.
 
 ## 1. Introduction
 **Thesis.** Debates on AI and labor markets have moved faster than the U.S. public measurement architecture; this paper asks what federal public data can already support at credible resolution, and where hard limits remain.
@@ -50,7 +50,7 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 
 **Dataset sentence.** BTOS API national series and the published AI Supplement Table for workforce-effect categories.
 
-**Figure discussion.** Panel A plots current and expected AI use rates by collection period; Panel B reports supplement shares for retained workforce-effect categories. See `docs/captions/fig03_caption.md`, `docs/source_notes/fig03_sources.md`, and `README.md` Known Deviations where public table structure differs from the literal issue template.
+**Figure discussion.** Panel A plots current and expected AI use rates by collection period; Panel B reports retained supplement categories, with employment-effect rows directly published and task-effect interpretation explicitly documented as proxy-based where item-25 rows are not publicly tabulated. See `docs/captions/fig03_caption.md`, `docs/source_notes/fig03_sources.md`, and `README.md` Known Deviations.
 
 **Identification boundary.** Business surveys do not link to worker microdata in public release.
 
@@ -63,7 +63,7 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 
 **Dataset sentence.** BLS LABSTAT JOLTS and CES series mapped through `crosswalks/sector6_crosswalk.csv`.
 
-**Figure discussion.** Panel A shows openings rates by six-sector group; Panel B indexes CES payroll employment (August 2023 = 100). See `docs/captions/fig04_caption.md` and `docs/figure_memos/fig04.md`.
+**Figure discussion.** Panel A reports JOLTS rates by six-sector group (openings, hires, quits, layoffs/discharges); Panel B indexes CES payroll employment (August 2023 = 100). See `docs/captions/fig04_caption.md` and `docs/figure_memos/fig04.md`.
 
 **Identification boundary.** Sector flows cannot substitute for occupation-specific vacancy or hire measurement.
 
@@ -93,7 +93,7 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 
 **Identification boundary.** Public data cannot yet deliver firm-level AI causal attribution at scale.
 
-**Implication.** The marginal policy value is in targeted survey extensions and transparent monitoring, not in pretending the current public stack resolves every identification object.
+**Implication.** The marginal policy value is in targeted survey extensions and transparent monitoring, not in pretending the public stack resolves every identification object.
 
 ---
 

@@ -2,14 +2,14 @@
 
 ## Purpose
 
-`figures/figureA9_acs_local_composition.csv` provides a descriptive, geographic snapshot of where workers in AI-relevant
+`figures/figureA9_acs_local_composition.csv` provides a descriptive geographic view of where workers in AI-relevant
 occupation groups are concentrated, using ACS PUMS microdata summarized to PUMA geography.
 
 This is an appendix benchmark/structure table: it should not be interpreted as a transition engine or used for causal identification.
 
 ## Official data sources
 
-Retained ACS PUMS person microdata (deterministically resolved by the build script; current run resolved to):
+Retained ACS PUMS person microdata (deterministically resolved by the build script; documented run example):
 
 - `https://www2.census.gov/programs-surveys/acs/data/pums/2024/1-Year/csv_pus.zip`
 - Zip member read by the build script: `psam_pusa.csv`
@@ -97,7 +97,7 @@ Metadata output:
 
 Metadata includes:
 
-- the resolved ACS PUMS zip + member file used for the current run
+- the resolved ACS PUMS zip + member file used for the documented run
 - SHA-256 hashes for the ACS zip, the frozen crosswalk, and the AI terciles file
 - the exact filters and normalization convention used
 

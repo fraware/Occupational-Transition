@@ -33,7 +33,7 @@ Registry rows for T-009-specific files: see `docs/data_registry.csv` (`bls_ce_*`
 
 ## Time window
 
-- Retained months satisfy `month >= 2019-01` through the latest month available in the published BLS files at run time.
+- Retained months satisfy `month >= 2019-01` through the most recent month available in the published BLS files at run time.
 
 ## Sector mapping (PR-000)
 

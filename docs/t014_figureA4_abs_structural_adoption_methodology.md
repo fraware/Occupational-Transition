@@ -14,7 +14,7 @@ The figure keeps only industry and firm-size groupings (no state/local rows).
   - `https://www.census.gov/programs-surveys/abs/data.html`
 - ABS tables hub:
   - `https://www.census.gov/programs-surveys/abs/data/tables.html`
-- ABS technology module page (latest available technology module with workforce-impact content):
+- ABS technology module page (most recent available technology module with workforce-impact content):
   - `https://www.census.gov/data/tables/2019/econ/abs/2019-abs-automation-technology-module.html`
 - ABS API dataset used for extraction:
   - `https://api.census.gov/data/2018/abstcb`

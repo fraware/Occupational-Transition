@@ -17,7 +17,7 @@ def main() -> None:
         "labor_demand_turnover",
         "occupational_structure_wages",
         "task_exposure_mechanism",
-        "local_geographic_exposure",
+        "worker_firm_ai_linkage",
     ]
     code = {"direct": 2, "partial": 1, "none": 0}
     mat = np.array(

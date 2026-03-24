@@ -36,8 +36,8 @@ Applied fixed filters:
 ## Time window
 
 - Requested minimum quarter: `2019-Q1`
-- Retained output: contiguous quarterly series from `2019-Q1` through latest
-  available retained quarter in the current release.
+- Retained output: contiguous quarterly series from `2019-Q1` through the most recent
+  available retained quarter in the release used for the run.
 
 ## Output schema
 

@@ -20,7 +20,7 @@ Primary file: `oesm24nat.zip` (national OEWS workbook used by `scripts/build_fig
 ## Geography and reference period
 
 - Geography: United States national estimates only.
-- Reference period in current build: May 2024 OEWS (release date April 2, 2025).
+- Reference period in the pinned build configuration: May 2024 OEWS (release date April 2, 2025).
 
 ## Input mapping and joins
 

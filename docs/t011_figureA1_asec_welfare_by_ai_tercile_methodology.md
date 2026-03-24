@@ -35,7 +35,7 @@ Persons with `A_DTOCC` 0 (not in universe or unknown) or 23 (armed forces) are e
 ## Geography and window
 
 - Geography: national (CPS ASEC is designed for national and selected subnational use; this output does not apply a subnational filter).
-- Time window: 2019 through the latest March ASEC CSV bundle available on Census servers at build time (see metadata `retained_years`).
+- Time window: 2019 through the most recent March ASEC CSV bundle available on Census servers at build time (see metadata `retained_years`).
 
 ## Reproducibility
 

@@ -61,12 +61,17 @@ These outputs are required for the main-text empirical spine. Automated QA scrip
 | T-006 | Template start date `2023-08-28` vs first BTOS AI core period | Retained series begins at first API period with AI core questions (`README.md` Known Deviations). |
 | T-007 | Six frozen supplement categories vs XLSX structure | Documented Scope 2 proxy mapping for task-related keys (`README.md` Known Deviations). |
 
+### Rerun policy
+
+- Full acceptance reruns should execute `PR-000` through `T-020`.
+- If a bounded rerun is used for targeted drift checks, record scope limits in the evidence log and do not treat it as a full acceptance replacement.
+
 ## Manual review (not fully encoded in QA)
 
 Reviewers should confirm:
 
 - Substantive claims in the manuscript match the resolution limits in each `docs/t*_methodology.md`.
-- Dynamic source selection (latest PUMS, NLSY97 zip, CPS monthly files) matches the `source_selection_rule` fields in run metadata for the snapshot you are citing.
+- Dynamic source selection (most recent available PUMS, NLSY97 zip, CPS monthly files) matches the `source_selection_rule` fields in run metadata for the evidence window you are citing.
 
 ## Sign-off
 

@@ -148,6 +148,8 @@ One-command visual acceptance (render + QA + log):
 python scripts/run_visuals_acceptance.py
 ```
 
+If you intentionally skip long appendix rebuild tickets, run `python scripts/qa_visuals.py` to validate the retained visual stems and treat `run_visuals_acceptance.py` as full-scope (all figures) coverage.
+
 ## Post-implementation docs (quick index)
 
 - Replication: [docs/replication.md](docs/replication.md)

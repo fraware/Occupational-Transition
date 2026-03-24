@@ -26,7 +26,7 @@ Registry: `docs/data_registry.csv` (including `census_cps_t004_public_match_key`
 
 ## Time and geography
 
-- **Reference period:** January 2019 through the latest month with a published Basic CPS file (as detected at run time), paired only when two consecutive calendar months both have files.
+- **Reference period:** January 2019 through the most recent month with a published Basic CPS file (as detected at run time), paired only when two consecutive calendar months both have files.
 - **Geography:** national.
 
 ## Matching key
