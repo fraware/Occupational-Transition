@@ -1,4 +1,4 @@
-# Measuring AI's Labor-Market Effects with U.S. Public Federal Data
+# What U.S. Public Federal Data Can and Cannot Say About AI and Labor
 
 ## Subtitle
 What Exists, What Works, and What Small Survey Changes Would Unlock
@@ -50,7 +50,7 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 
 **Dataset sentence.** BTOS API national series and the published AI Supplement Table for workforce-effect categories.
 
-**Figure discussion.** Panel A plots current and expected AI use rates by collection period; Panel B reports retained supplement categories, with employment-effect rows directly published and task-effect interpretation explicitly documented as proxy-based where item-25 rows are not publicly tabulated. See `docs/captions/fig03_caption.md`, `docs/source_notes/fig03_sources.md`, and `README.md` Known Deviations.
+**Figure discussion.** Panel A plots current and expected AI use rates by collection period. Panel B reports retained supplement categories, where employment-effect rows are directly published and task-effect interpretation is partial/proxy-based where item-25 rows are not publicly tabulated. See `docs/captions/fig03_caption.md`, `docs/source_notes/fig03_sources.md`, and `README.md` Known Deviations.
 
 **Identification boundary.** Business surveys do not link to worker microdata in public release.
 
@@ -59,7 +59,7 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 ---
 
 ## Section 4 — Labor demand and payroll context (Figure 4; Claim 4)
-**Thesis.** JOLTS and CES provide official sector-group labor-demand and payroll context even though public JOLTS is not occupation-resolved.
+**Thesis.** JOLTS and CES provide official labor-demand and payroll context for selected comparison sectors, even though public JOLTS is not occupation-resolved.
 
 **Dataset sentence.** BLS LABSTAT JOLTS and CES series mapped through `crosswalks/sector6_crosswalk.csv`.
 
@@ -72,7 +72,7 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 ---
 
 ## Section 5 — Identification frontier (Figure 5; Claim 5)
-**Thesis.** The main structural gap in public measurement is the absence of an integrated worker-firm AI panel; the highest-value near-term response is to extend existing instruments.
+**Thesis.** The main structural gap in public measurement is the absence of an integrated worker-firm AI panel.
 
 **Dataset sentence.** Figure 5 is a non-estimated synthesis coded from `paper-notes.md` and `issues.md` T-010 rules (`figures/figure5_capability_matrix.csv`).
 
@@ -80,7 +80,7 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 
 **Identification boundary.** Cells are interpretive documentation, not statistical estimates.
 
-**Implication.** Prioritize CPS and BTOS modules, scoped JOLTS supplements, and NLS career items over greenfield systems; reserve linked administrative ideals for long-run infrastructure discussions.
+**Implication.** A practical policy design judgment is to prioritize CPS and BTOS modules, scoped JOLTS supplements, and NLS career items over greenfield systems, while reserving linked administrative ideals for long-run infrastructure discussions.
 
 ---
 

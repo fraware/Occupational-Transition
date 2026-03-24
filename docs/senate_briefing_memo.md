@@ -1,10 +1,10 @@
 # Senate Briefing Memo
 
 ## Subject
-Measuring AI's labor-market effects with existing U.S. public federal data: immediate actions, expected payoff, and guardrails.
+What U.S. public federal data can and cannot say about AI and labor: immediate actions, expected payoff, and guardrails.
 
 ## Opening
-Federal policymakers do not need to wait for a new national data system to begin credible AI-and-work monitoring. Existing public instruments already support a practical measurement stack when used together: worker-side outcomes (CPS), business-side AI adoption (BTOS), labor-demand context (JOLTS/CES), and occupational/task structure (OEWS/O*NET).  
+Federal policymakers do not need to wait for a new national data system to begin credible AI-and-work monitoring. Existing public instruments already support a practical measurement stack when used together: worker-side outcomes (CPS), business-side AI adoption and directly published employment-effect rows (BTOS), labor-demand context for selected comparison sectors (JOLTS/CES), and occupational/task structure (OEWS/O*NET).  
 
 The core policy message is straightforward: make targeted, low-burden upgrades to existing surveys now, while planning a longer-run linked architecture for causal precision.
 
@@ -16,11 +16,11 @@ The core policy message is straightforward: make targeted, low-burden upgrades t
 
 2. **Stabilize and refine BTOS AI items (highest near-term firm-side leverage).**  
    Preserve a consistent core AI question set in BTOS and add minimal role/occupation-impact detail where feasible.  
-   Why this matters: BTOS is already the strongest public high-frequency business-side AI source.
+   Why this matters: BTOS is already the strongest public high-frequency business-side AI source, and public rows directly identify adoption plus employment-effect categories; task-effect interpretation is only partial when item-25 rows are not publicly tabulated.
 
 3. **Pilot a scoped JOLTS supplement, not a full core redesign.**  
    Test coarse occupation and wage-band demand-flow items in a rotating or annual supplement.  
-   Why this matters: JOLTS is central for openings/hires/separations but is not occupation-resolved in public release; scoped expansion is operationally more realistic than immediate full redesign.
+   Why this matters: JOLTS is central for openings/hires/separations but is not occupation-resolved in public release; it supports selected-sector comparison context, and scoped expansion is operationally more realistic than immediate full redesign.
 
 ## Expected payoff
 
@@ -46,7 +46,10 @@ The core policy message is straightforward: make targeted, low-burden upgrades t
 3. **Do not treat synthesis matrices as estimators.**  
    Capability classifications are decision tools, not empirical effect sizes.
 
-4. **Require reproducibility and provenance for policy-facing outputs.**  
+4. **Split empirical diagnosis from policy recommendation.**  
+   The missing integrated worker-firm AI panel is a direct empirical diagnosis; prioritizing survey extensions over greenfield systems is a policy design judgment.
+
+5. **Require reproducibility and provenance for policy-facing outputs.**  
    Every released metric should carry source, method, and metadata lineage.
 
 ## Bottom line for legislative action

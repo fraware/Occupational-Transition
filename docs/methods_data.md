@@ -13,7 +13,7 @@ This document summarizes sources, universes, time windows, geography, grouping, 
 - **T-001:** BLS OEWS national occupation employment and median annual wage; mapped to `occ22_id`; employment shares sum to national totals within the OEWS universe.
 - **T-002:** O*NET Work Activities (Importance scale) merged via SOC crosswalk; scores aggregated to `occ22_id` using OEWS employment weights within groups; z-scores across 22 groups; AI Task Index = mean of four digital-information-related task z-scores; deterministic tercile cutoffs. Outputs: `figures/figure1_panelA_occ_baseline.csv`, `figures/figure1_panelB_task_heatmap.csv`, `intermediate/ai_relevance_terciles.csv`.
 
-**Limits:** OEWS and O*NET are not realized AI-impact measures; terciles are ordinals for grouping.
+**Limits:** OEWS and O*NET are not realized AI-impact measures; terciles are ordinals for grouping. OEWS is an official wage-and-salary nonfarm establishment baseline (not a full census of all workers).
 
 ## Figure 2 — CPS hours and transitions (T-003–T-005)
 
@@ -31,9 +31,9 @@ This document summarizes sources, universes, time windows, geography, grouping, 
 - **Panel B:** Published supplement table shares for workforce-effect categories; see methodology for window and any documented proxy mapping.
 - **Outputs:** `figures/figure3_panelA_btos_ai_trends.csv`, `figures/figure3_panelB_btos_workforce_effects.csv`.
 
-**Limits:** Business-reported; not linked to worker microdata in public files.
+**Limits:** Business-reported; not linked to worker microdata in public files. In Figure 3 panel B, employment-effect rows are direct published rows, while task-effect interpretation is proxy-based where item-25 rows are absent.
 
-## Figure 4 — JOLTS and CES sector series (T-008, T-009)
+## Figure 4 — JOLTS and CES selected-sector series (T-008, T-009)
 
 - **Mapping:** Detailed industries or series map to `sector6_code` via `sector6_crosswalk.csv`.
 - **JOLTS:** Published flow rates as selected in the build (openings, hires, quits, layoffs/discharges).
