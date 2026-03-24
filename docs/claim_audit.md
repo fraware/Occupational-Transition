@@ -21,7 +21,8 @@ Support levels:
 ## Action items from audit
 
 1. **Claim 1 scope discipline:** Keep Claim 1 in main text scoped to employment, wages, and task content; route geographic composition statements to appendix ACS evidence (`figureA9`).
-2. **Claim 5 split:** Keep a clear split between (a) empirical diagnosis (missing integrated panel) and (b) policy design recommendation (survey-extension priority).
+2. **Claim 3 wording discipline:** Keep proxy-explicit language for Figure 3 panel-B task-effect interpretation in captions, results prose, and summaries when item-25 rows are absent in public supplements.
+3. **Claim 5 split:** Keep a clear split between (a) empirical diagnosis (missing integrated panel) and (b) policy design recommendation (survey-extension priority), including in abstract, conclusion, and policy-facing text.
 
 ## Closure criteria
 

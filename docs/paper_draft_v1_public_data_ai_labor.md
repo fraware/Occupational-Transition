@@ -26,7 +26,7 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 
 **Figure discussion.** Panel A ranks groups by employment share and reports median annual wages; Panel B displays standardized task scores and the AI Task Index used to assign terciles. See `docs/captions/fig01_caption.md` and `docs/figure_memos/fig01.md`.
 
-**Identification boundary.** OEWS and O*NET describe structure and tasks, not realized AI treatment effects; geographic detail is not shown in Figure 1 national panels (see Claim audit: use appendix ACS or narrow Claim 1 wording).
+**Identification boundary.** OEWS and O*NET describe national occupational structure and task content, not realized AI treatment effects; geographic composition is handled separately in the appendix using ACS.
 
 **Implication.** downstream worker and firm figures use the same tercile partition for consistent grouping.
 
