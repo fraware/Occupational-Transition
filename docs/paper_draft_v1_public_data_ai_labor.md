@@ -4,14 +4,14 @@
 What Exists, What Works, and What Small Survey Changes Would Unlock
 
 ## Abstract
-This paper develops a public-data framework for measuring AI and labor-market change in the United States. Using reproducible outputs from a full PR-000 to T-020 pipeline, we show that existing federal public data support a credible descriptive and measurement architecture for occupational structure and tasks, worker outcomes and mobility, business adoption, labor-demand flows, and cross-dataset identification limits. The public measurement stack is strongest when it combines worker-side and business-side sources at coarse, policy-relevant levels of resolution; it is weakest where occupation-level demand flows and worker-firm linkage are required for high-precision attribution. The paper contributes a source-by-source measurement audit, an empirical public-data stack, a sample-sufficiency rule for responsible inference, and a concrete low-, medium-, and high-effort roadmap for improving AI labor measurement through CPS, BTOS, JOLTS, and NLS pathways. The argument is not that public data are sufficient for firm-level causal identification, but that they are already strong enough to produce credible monitoring and to prioritize high-yield survey additions.
+This paper develops a public-data framework for measuring AI and labor-market change in the United States. Using reproducible outputs from a full PR-000 through T-020 pipeline, we show that existing federal public data support a credible descriptive architecture for occupational structure and tasks, worker outcomes and mobility, business adoption, labor-demand flows, and cross-dataset identification limits. The public measurement stack is strongest when it combines worker-side and business-side sources at coarse, policy-relevant resolution; it is weakest where occupation-level demand flows and worker-firm linkage are required for high-precision attribution. The paper contributes a source-by-source measurement audit, an empirical public-data stack, a sample-sufficiency rule for responsible inference, and a concrete low-, medium-, and high-effort roadmap for improving AI labor measurement through CPS, BTOS, JOLTS, and NLS pathways. The argument is not that public data are sufficient for firm-level causal identification, but that they are already strong enough for credible monitoring and for prioritizing high-yield survey additions.
 
 ## 1. Introduction
 **Thesis.** Debates on AI and labor markets have moved faster than the U.S. public measurement architecture; this paper asks what federal public data can already support at credible resolution, and where hard limits remain.
 
-**Dataset sentence.** The empirical core uses OEWS, O*NET, CPS, BTOS, and JOLTS in a single ticketed pipeline with full JSON lineage (`intermediate/*run_metadata.json`), with CES used as contextual payroll series in Section 4.
+**Dataset sentence.** The empirical core uses OEWS, O*NET, CPS, BTOS, and JOLTS in a single ticketed pipeline with full JSON lineage (`intermediate/*run_metadata.json`), with CES used as a contextual payroll series in Section 4.
 
-**Figure discussion.** Figures 1–5 provide the main-text spine: occupational baseline and task structure (Figure 1), worker hours and transitions (Figure 2), business-side AI adoption (Figure 3), sector labor-demand context (Figure 4), and a documentation-based capability matrix (Figure 5). Visuals: `visuals/png/t001_*.png` through `t010_*.png` per `docs/figure_catalog.md`.
+**Figure discussion.** Figures 1-5 provide the main-text descriptive spine: occupational structure and task-intensity ranking (Figure 1), worker hours and matched-month transitions (Figure 2), business-reported AI adoption and workforce-effect categories (Figure 3), sector labor-demand and payroll context (Figure 4), and cross-source capability boundaries (Figure 5). Visuals: `visuals/png/t001_*.png` through `t010_*.png` per `docs/figure_catalog.md`.
 
 **Identification boundary.** Public files do not support worker-firm linked causal identification of AI impacts at scale.
 
@@ -24,11 +24,11 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 
 **Dataset sentence.** Figure 1 combines BLS OEWS national estimates with O*NET Work Activities (Importance) aggregated to the paper’s 22 occupation groups and deterministic AI-relevance terciles (`intermediate/ai_relevance_terciles.csv`).
 
-**Figure discussion.** Panel A ranks groups by employment share and reports median annual wages; Panel B displays standardized task scores and the AI Task Index used to assign terciles. See `docs/captions/fig01_caption.md` and `docs/figure_memos/fig01.md`.
+**Figure discussion.** Panel A reports national employment shares and median annual wages by the 22-group occupation taxonomy. Panel B reports standardized O*NET task intensities and the AI Task Index used for deterministic tercile assignment. This section is descriptive baseline measurement, not causal inference. See `docs/captions/fig01_caption.md` and `docs/figure_memos/fig01.md`.
 
 **Identification boundary.** OEWS and O*NET describe national occupational structure and task content, not realized AI treatment effects; geographic composition is handled separately in the appendix using ACS.
 
-**Implication.** downstream worker and firm figures use the same tercile partition for consistent grouping.
+**Implication.** Downstream worker and firm figures use the same tercile partition for consistent grouping.
 
 ---
 
@@ -37,7 +37,7 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 
 **Dataset sentence.** CPS Basic Monthly files, January 2019 onward, with composite person weights and AI terciles from T-002.
 
-**Figure discussion.** Panel A shows mean usual weekly hours by month and tercile; Panel B summarizes transition probabilities and retention, occupation switching, unemployment entry, and NILF entry metrics. See `docs/captions/fig02_caption.md` and `docs/figure_memos/fig02.md`.
+**Figure discussion.** Panel A reports weighted mean usual weekly hours by month and AI-relevance tercile. Panel B combines a latest-month transition-count heatmap with time-series probabilities for retention, occupation switching, unemployment entry, and NILF entry. This section is descriptive matched-month survey monitoring, not causal attribution to AI adoption. See `docs/captions/fig02_caption.md` and `docs/figure_memos/fig02.md`.
 
 **Identification boundary.** Transitions are survey-based constructs, not administrative job-to-job records; national scope only in the main specification.
 
@@ -50,7 +50,7 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 
 **Dataset sentence.** BTOS API national series and the published AI Supplement Table for workforce-effect categories.
 
-**Figure discussion.** Panel A plots current and expected AI use rates by collection period. Panel B reports retained supplement categories, where employment-effect rows are directly published and task-effect interpretation is partial/proxy-based where item-25 rows are not publicly tabulated. See `docs/captions/fig03_caption.md`, `docs/source_notes/fig03_sources.md`, and `README.md` Known Deviations.
+**Figure discussion.** Panel A reports national BTOS firm-weighted shares for current and expected AI use by collection period. Panel B reports retained AI-supplement workforce-effect categories. Employment-effect rows are directly published, while task-effect interpretation remains proxy-based when item-25 option rows are not publicly tabulated. This section is descriptive business-reported evidence, not linked worker-level causal analysis. See `docs/captions/fig03_caption.md`, `docs/source_notes/fig03_sources.md`, and `README.md` Known Deviations.
 
 **Identification boundary.** Business surveys do not link to worker microdata in public release.
 
@@ -63,11 +63,11 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 
 **Dataset sentence.** BLS LABSTAT JOLTS and CES series mapped through `crosswalks/sector6_crosswalk.csv`.
 
-**Figure discussion.** Panel A reports JOLTS rates by six-sector group (openings, hires, quits, layoffs/discharges); Panel B indexes CES payroll employment (August 2023 = 100). See `docs/captions/fig04_caption.md` and `docs/figure_memos/fig04.md`.
+**Figure discussion.** Panel A reports JOLTS openings, hires, quits, and layoffs/discharges rates by six-sector group. Panel B reports CES payroll employment indexed to 100 in August 2023 for the same sectors. This section is sector-context evidence and does not resolve occupation-level demand measurement. See `docs/captions/fig04_caption.md` and `docs/figure_memos/fig04.md`.
 
 **Identification boundary.** Sector flows cannot substitute for occupation-specific vacancy or hire measurement.
 
-**Implication.** Policy proposals to extend JOLTS should assume coarse occupation or rotating supplements consistent with sample and modeling constraints documented by BLS.
+**Implication.** Policy proposals to extend JOLTS should assume coarse occupation groupings or rotating supplements consistent with sample and modeling constraints documented by BLS.
 
 ---
 
@@ -76,11 +76,11 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 
 **Dataset sentence.** Figure 5 is a non-estimated synthesis coded from `paper-notes.md` and `issues.md` T-010 rules (`figures/figure5_capability_matrix.csv`).
 
-**Figure discussion.** The matrix encodes direct, partial, or none support for seven empirical objects across five core datasets. See `docs/captions/fig05_caption.md` and `docs/figure_memos/fig05.md`.
+**Figure discussion.** The matrix encodes `direct`, `partial`, or `none` support for seven empirical objects across five core datasets as a rule-driven documentation synthesis. It provides an empirical diagnosis of capability boundaries. Any survey-priority recommendation is a policy design judgment rather than a causal estimate. See `docs/captions/fig05_caption.md` and `docs/figure_memos/fig05.md`.
 
 **Identification boundary.** Cells are interpretive documentation, not statistical estimates.
 
-**Implication.** A practical policy design judgment is to prioritize CPS and BTOS modules, scoped JOLTS supplements, and NLS career items over greenfield systems, while reserving linked administrative ideals for long-run infrastructure discussions.
+**Implication.** A practical policy design judgment is to prioritize CPS and BTOS modules, scoped JOLTS supplements, and NLS career items over greenfield systems, while reserving linked-administrative ideals for long-run infrastructure discussions.
 
 ---
 

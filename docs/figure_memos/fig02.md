@@ -2,7 +2,7 @@
 
 ## Question
 
-How do usual weekly hours and broad labor-force and occupational transition patterns differ across AI-relevance terciles in recent monthly CPS data?
+How do usual weekly hours and broad labor-force and occupational transition patterns differ across AI-relevance terciles in recent CPS data?
 
 ## Datasets
 
@@ -11,17 +11,24 @@ How do usual weekly hours and broad labor-force and occupational transition patt
 
 ## Construction
 
-T-003 restricts to the employed civilian noninstitutional population with valid hours and occupation, uses composite person weights, and averages usual weekly hours by month and tercile. T-004 constructs origin and destination states in a 22-occupation plus unemployment plus NILF space; T-005 row-normalizes counts to probabilities and emits summary transition metrics. See `docs/t003_*` through `docs/t005_*`; metadata JSONs under `intermediate/figure2_*`.
+T-003 restricts to the employed civilian noninstitutional population with valid hours and occupation, uses composite person weights, and averages usual weekly hours by month and tercile. T-004 constructs origin and destination states in a 22-occupation plus unemployment plus NILF space. T-005 row-normalizes counts to probabilities and emits summary transition metrics. See `docs/t003_*` through `docs/t005_*`. Metadata JSONs are under `intermediate/figure2_*`.
 
 ## Main takeaway
 
-The figure documents descriptive worker-side patterns at national scale: hours levels by tercile and broad transition flows over time, suitable for monitoring rather than causal attribution to AI.
+The figure documents worker-side descriptive patterns at national scale: hours levels by tercile and broad transition flows over time. It supports monitoring, not causal attribution to AI.
+
+## How to read quickly
+
+- Read Panel A first to compare level differences in usual weekly hours across terciles.
+- Use the latest-month heatmap in Panel B to see where gross transition mass is concentrated.
+- Then read the summary probability lines to track retention, switching, unemployment entry, and NILF entry over time.
+- Interpret the full panel as descriptive labor-market movement, not identification of AI treatment effects.
 
 ## What the figure does not identify
 
-- Which employers adopted AI or caused specific transitions.
-- Subnational or detailed-occupation stable estimates without additional pooling.
-- Causal effects of AI exposure on hours or transitions.
+- Which specific employers adopted AI or whether adoption caused observed transition patterns.
+- Worker-firm linkage needed to attribute transitions to adopting establishments.
+- Causal effects of AI exposure on hours, retention, or labor-force entry/exit outcomes.
 
 ## Possible reviewer objections
 

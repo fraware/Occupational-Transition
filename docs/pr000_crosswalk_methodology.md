@@ -4,7 +4,7 @@ Last documentation refresh: 2026-03-22.
 
 ## Purpose
 
-This project freezes two taxonomies used across the AI-and-work public data paper:
+This project freezes two taxonomies used across the AI-and-labor public-data paper:
 
 1. **22 occupation groups (`occ22`)** — aligned with 2018 SOC major groups excluding military (55-0000), consistent with CPS `PRDTOCC1` and with OEWS/O*NET aggregation.
 2. **Six demand-side sectors (`sector6`)** — Manufacturing; Information; Financial activities; Professional and business services; Health care and social assistance; Retail trade — as specified for main-text JOLTS/CES figures.
@@ -33,7 +33,7 @@ Regenerate: `python scripts/build_crosswalks.py`
 - **CES** uses `ce.supersector` and detailed `ce.industry` with `naics_code` prefixes.
 - **BED** uses `bd.industry`; 6-digit codes beginning with `300` are interpreted as NAICS via `industry_code - 300000`, consistent with BLS flat-file documentation.
 - **BTOS** uses official API strata (`/hfp/btos/api/strata`) for `naics2` and `naics3`.
-- **QCEW** industry labels are versioned by BLS; this repo maps **NAICS 2-digit** sectors to `sector6` using the same NAICS prefix logic as CES, consistent with BLS statements that QCEW classifies establishments by NAICS.
+- **QCEW** industry labels are versioned by BLS; this repository maps **NAICS 2-digit** sectors to `sector6` using the same NAICS prefix logic as CES, consistent with BLS statements that QCEW classifies establishments by NAICS.
 
 Design choice: BED aggregate `200080` (Education and health services) is mapped to **Health care and social assistance** for a single comparable code; detailed BED rows disaggregate education (61) vs health (62) via NAICS-derived rows.
 

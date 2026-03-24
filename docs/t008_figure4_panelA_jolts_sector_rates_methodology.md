@@ -73,7 +73,7 @@ The crosswalk also maps JOLTS `610000` (private educational services) to `PBS`. 
 python scripts/qa_figure4_panelA_jolts_sector_rates.py
 ```
 
-Checks include column schema, uniqueness of `month` x `sector6_code` x `rate_name`, full 6 x 4 grid per month, nonnegative numeric rates, SA-only `series_id` pattern, and consistency between metadata SHA-256 hashes and the retained LABSTAT files (re-download verification).
+Checks include column schema, uniqueness of `month` by `sector6_code` by `rate_name`, a full 6-by-4 grid per month, nonnegative numeric rates, SA-only `series_id` pattern, and consistency between metadata SHA-256 hashes and the retained LABSTAT files (re-download verification).
 
 ## Figure rendering
 

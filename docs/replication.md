@@ -83,7 +83,7 @@ If you need a quicker drift-validation pass (for example while avoiding long app
 3. Run main visual QA:
    - `python scripts/qa_visuals.py`
 
-In that mode, explicitly record scope limits in a closure note (for example which late tickets were not rerun) so reviewers do not misread it as a full `PR-000`..`T-020` replication.
+In that mode, explicitly record scope limits in a closure note (for example, which late tickets were not rerun) so reviewers do not misread it as a full `PR-000` through `T-020` replication.
 
 ## Visual style lock
 

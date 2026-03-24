@@ -16,13 +16,13 @@ These outputs are required for the main-text empirical spine. Automated QA scrip
 | Figure 1 Panel A | `figures/figure1_panelA_occ_baseline.csv` | PASS | 22 rows; shares sum to 1 within tolerance. QA: `qa_figure1_panelA.py` |
 | Figure 1 Panel B | `figures/figure1_panelB_task_heatmap.csv` | PASS | Heatmap + AI index. QA: `qa_figure1_panelB.py` |
 | AI terciles | `intermediate/ai_relevance_terciles.csv` | PASS | Produced with T-002. QA: `qa_figure1_panelB.py` |
-| Figure 2 Panel A | `figures/figure2_panelA_hours_by_ai_tercile.csv` | PASS | One row per month x tercile per issues criterion. QA: `qa_figure2_panelA.py` |
-| Figure 2 Panel B | `figures/figure2_panelB_transition_probs.csv` | PASS | Row-normalized probabilities sum to 1 per month x origin. QA: `qa_figure2_panelB_probs.py` |
+| Figure 2 Panel A | `figures/figure2_panelA_hours_by_ai_tercile.csv` | PASS | One row per month-by-tercile pair per issues criterion. QA: `qa_figure2_panelA.py` |
+| Figure 2 Panel B | `figures/figure2_panelB_transition_probs.csv` | PASS | Row-normalized probabilities sum to 1 per month-by-origin pair. QA: `qa_figure2_panelB_probs.py` |
 | Figure 3 Panel A | `figures/figure3_panelA_btos_ai_trends.csv` | PASS | Published weighted shares per period. QA: `qa_figure3_panelA_btos_ai_trends.py` |
 | Figure 3 Panel B | `figures/figure3_panelB_btos_workforce_effects.csv` | PASS WITH NOTE | See `README.md` Known Deviations (T-007 task-category mapping). QA: `qa_figure3_panelB_btos_workforce_effects.py` |
 | Figure 4 Panel A | `figures/figure4_panelA_jolts_sector_rates.csv` | PASS | QA: `qa_figure4_panelA_jolts_sector_rates.py` |
 | Figure 4 Panel B | `figures/figure4_panelB_ces_sector_index.csv` | PASS | QA: `qa_figure4_panelB_ces_sector_index.py` |
-| Figure 5 | `figures/figure5_capability_matrix.csv` | PASS | Five datasets x seven empirical objects plus legend columns. QA: `qa_figure5_capability_matrix.py` |
+| Figure 5 | `figures/figure5_capability_matrix.csv` | PASS | Five datasets by seven empirical objects plus legend columns. QA: `qa_figure5_capability_matrix.py` |
 
 **Gate rule:** Do not move on to manuscript freeze until every main-text row is **PASS** or **PASS WITH NOTE** (no **FAIL**). A **PASS WITH NOTE** must cite the methodology doc and any deviation from the literal issue template.
 
@@ -42,7 +42,7 @@ These outputs are required for the main-text empirical spine. Automated QA scrip
 | T-007 | `figures/figure3_panelB_btos_workforce_effects.csv` | Supplement workforce shares | `qa_figure3_panelB_btos_workforce_effects.py` | PASS WITH NOTE |
 | T-008 | `figures/figure4_panelA_jolts_sector_rates.csv` | JOLTS sector rates | `qa_figure4_panelA_jolts_sector_rates.py` | PASS |
 | T-009 | `figures/figure4_panelB_ces_sector_index.csv` | CES index by sector | `qa_figure4_panelB_ces_sector_index.py` | PASS |
-| T-010 | `figures/figure5_capability_matrix.csv` | 5 x 7 matrix + legend; no extra rows/columns | `qa_figure5_capability_matrix.py` | PASS |
+| T-010 | `figures/figure5_capability_matrix.csv` | 5-by-7 matrix plus legend; no extra rows/columns | `qa_figure5_capability_matrix.py` | PASS |
 | T-011 | `figures/figureA1_asec_welfare_by_ai_tercile.csv` | Year x tercile welfare rows | `qa_figureA1_asec_welfare_by_ai_tercile.py` | PASS |
 | T-012 | `figures/figureA2_sipp_event_study.csv` | Event-study panel output | `qa_figureA2_sipp_event_study.py` | PASS |
 | T-013 | `figures/figureA3_cps_supp_validation.csv` | Supplement validation metrics | `qa_figureA3_cps_supp_validation.py` | PASS |

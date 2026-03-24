@@ -11,7 +11,7 @@ Use this procedure once main-text figures, manuscript draft, and QA logs align f
 
 ### Full freeze vs bounded validation
 
-- **Full results freeze (recommended for tags):** use a complete `PR-000`..`T-020` acceptance run and full visuals run.
+- **Full results freeze (recommended for tags):** use a complete `PR-000` through `T-020` acceptance run and full visuals run.
 - **Bounded validation (faster, not a freeze):** allowed for drift checks if long appendix tickets are intentionally skipped, but must include an explicit scope note and cannot be tagged as a full freeze milestone.
 
 ## Tag name

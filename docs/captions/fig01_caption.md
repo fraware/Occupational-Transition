@@ -1,5 +1,11 @@
 # Figure 1 — Occupational structure and AI-relevance task profile
 
-**Panel A** shows **national** employment shares and median annual wages for the 22-group occupation taxonomy (OEWS national estimates mapped through the frozen crosswalk). **Panel B** displays z-scores of selected O*NET Work Activities (Importance scale) and the derived AI Task Index, aggregated to the same 22 groups. AI-relevance terciles used downstream are assigned by deterministic rank on the AI Task Index. Geographic composition is not shown here; see appendix Figure A9 and `docs/claim_audit.md` if the prose cites local distribution.
+**What is plotted.** **Panel A** shows national employment shares (percent of total employment) and median annual wages for the paper's 22 occupation groups. Inputs come from OEWS national estimates mapped through the frozen crosswalk. **Panel B** shows occupation-group z-scores for selected O*NET Work Activities (Importance scale) and the derived AI Task Index used for deterministic tercile assignment.
 
-Alt-text: Two-panel figure: horizontal bars of employment share by occupation group with wage labels; heatmap of standardized task scores by occupation group.
+**How to read it.** In Panel A, longer bars indicate larger employment shares. Adjacent labels report median annual wages for the same group. In Panel B, warmer cells indicate above-average standardized task intensity and cooler cells indicate below-average intensity. The AI Task Index column provides the ranking used for tercile assignment.
+
+**Interpretation.** Occupation groups differ substantially in labor-market scale and wage level. Their standardized task profiles provide a transparent basis for the AI-relevance ranking used downstream.
+
+**Boundary.** This figure is descriptive and national in scope; it does not identify causal AI effects, within-group heterogeneity, or geographic composition (appendix Figure A9 covers local composition evidence).
+
+Alt-text: Two-panel figure. Panel A is a horizontal bar chart of national employment shares by occupation group, with median annual wage labels. Panel B is a heatmap of standardized task scores by occupation group, including an AI Task Index column used for deterministic tercile ranking.

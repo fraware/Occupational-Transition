@@ -1,6 +1,6 @@
 # Methods and data (consolidated)
 
-This document summarizes sources, universes, time windows, geography, grouping, weighting, and limitations for the reproducible pipeline (`PR-000` through `T-020`). Authoritative per-ticket detail remains in `docs/t*_methodology.md` rows referenced from `README.md` and in `docs/data_registry.csv`.
+This document summarizes sources, universes, time windows, geography, grouping, weighting, and limitations for the reproducible pipeline (`PR-000` through `T-020`). Authoritative per-ticket detail remains in `docs/t*_methodology.md` files referenced from `README.md` and in `docs/data_registry.csv`.
 
 ## Crosswalks and registry (PR-000)
 
@@ -28,10 +28,10 @@ This document summarizes sources, universes, time windows, geography, grouping, 
 ## Figure 3 — BTOS (T-006, T-007)
 
 - **Panel A:** Census BTOS API published national firm-weighted shares for AI use series retained in metadata.
-- **Panel B:** Published supplement table shares for workforce-effect categories; see methodology for window and any documented proxy mapping.
+- **Panel B:** Published supplement-table shares for workforce-effect categories; see methodology for the retained window and any documented proxy mapping.
 - **Outputs:** `figures/figure3_panelA_btos_ai_trends.csv`, `figures/figure3_panelB_btos_workforce_effects.csv`.
 
-**Limits:** Business-reported; not linked to worker microdata in public files. In Figure 3 panel B, employment-effect rows are direct published rows, while task-effect interpretation is proxy-based where item-25 rows are absent.
+**Limits:** Business-reported; not linked to worker microdata in public files. In Figure 3 Panel B, employment-effect rows are direct published rows, while task-effect interpretation is proxy-based where item-25 rows are absent.
 
 ## Figure 4 — JOLTS and CES selected-sector series (T-008, T-009)
 

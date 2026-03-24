@@ -2,7 +2,7 @@
 
 ## Question
 
-For the five core public datasets used in the paper, which empirical objects (worker outcomes, transitions, firm AI adoption, demand flows, occupational structure, task mechanism, and worker-firm AI linkage) can public data support directly, partially, or not at all?
+For the five core public datasets used in the paper, which empirical objects (worker outcomes, transitions, firm AI adoption, demand flows, occupational structure, task mechanism, and worker-firm AI linkage) are supported directly, partially, or not at all?
 
 ## Datasets
 
@@ -10,16 +10,24 @@ For the five core public datasets used in the paper, which empirical objects (wo
 
 ## Construction
 
-T-010 writes a 5 x 7 categorical matrix (direct / partial / none) plus repeated legend columns for plotting. QA enforces shape and allowed symbols. Metadata records hashes of rule-source files.
+T-010 writes a 5-by-7 categorical matrix (direct / partial / none) plus repeated legend columns for plotting. QA enforces shape and allowed symbols. Metadata records hashes of rule-source files.
 
 ## Main takeaway
 
-The public system is strongest when sources are used for what they actually measure; the matrix makes identification boundaries explicit for policy and methods discussion.
+The public system is strongest when sources are used for what they measure directly. The matrix makes identification boundaries explicit for policy and methods discussion.
+
+## How to read quickly
+
+- Read across a dataset row to see which empirical objects that source can and cannot support.
+- Read down a measurement-object column to identify where the public stack is strongest versus weakest.
+- Interpret `partial` as proxy or incomplete support, not full direct observation.
+- Separate the empirical diagnosis (missing integrated worker-firm AI linkage) from policy recommendations about survey design.
 
 ## What the figure does not identify
 
-- Any numerical treatment effect or empirical magnitude.
-- Firm-worker causal links or AI-specific labor demand.
+- Any numerical treatment effect, elasticity, or point estimate.
+- Causal mechanisms linking worker outcomes to firm AI adoption.
+- Evidence that directly resolves the missing public worker-firm AI linkage.
 
 ## Possible reviewer objections
 

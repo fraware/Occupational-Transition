@@ -11,6 +11,12 @@
 - `intermediate/figure1_panelA_run_metadata.json` (T-001)
 - `intermediate/figure1_panelB_run_metadata.json` (T-002)
 
+## Provenance pointers
+
+- **Figure CSV outputs:** `figures/figure1_panelA_occ_baseline.csv`, `figures/figure1_panelB_task_heatmap.csv`
+- **Methodology docs:** `docs/t001_figure1_panelA_methodology.md`, `docs/t002_figure1_panelB_methodology.md`
+- **Derived grouping input used downstream:** `intermediate/ai_relevance_terciles.csv`
+
 ## Limitations
 
 - OEWS and O*NET describe occupational structure and tasks; they do not by themselves identify realized AI labor-market impacts.

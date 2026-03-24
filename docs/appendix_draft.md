@@ -1,16 +1,16 @@
-# Appendix draft (placeholder prose)
+# Appendix Draft (Placeholder Prose)
 
-This file holds appendix-ready paragraphs in the order defined in `docs/appendix_outline.md`. Replace bracketed notes with numbers and citations from the final manuscript.
+This file contains appendix-ready paragraphs in the order defined in `docs/appendix_outline.md`. Replace bracketed notes with final numbers and citations from the manuscript.
 
 ## A1 — Annual welfare and income by AI tercile (T-011)
 
-CPS ASEC provides annual income, poverty, weeks worked, and unemployment incidence by AI-relevance tercile on the national public-use files. This appendix deepens Figure 2’s monthly worker layer with annual welfare context. Identification limits match ASEC documentation: national and state-oriented analysis is supported; fine subnational direct estimation is not the instrument’s strength.
+CPS ASEC provides annual income, poverty, weeks worked, and unemployment incidence by AI-relevance tercile on national public-use files. This appendix deepens Figure 2's monthly worker layer with annual welfare context. Identification limits follow ASEC documentation: national and state-oriented analysis is supported, while fine subnational direct estimation is not a core strength of the instrument.
 
 **Figure:** `figures/figureA1_asec_welfare_by_ai_tercile.csv` — visual `t011_asec_mean_income`.
 
 ## A2 — SIPP medium-run adjustment (T-012)
 
-SIPP panel data support event-time profiles of employment, income, and program participation around occupational events at the person-month level, grouped by AI-relevance tercile. Runtime and sample design constraints are documented in `docs/t012_figureA2_sipp_event_study_methodology.md`.
+SIPP panel data support event-time profiles of employment, income, and program participation around occupational events at the person-month level, grouped by AI-relevance tercile. Runtime and sample-design constraints are documented in `docs/t012_figureA2_sipp_event_study_methodology.md`.
 
 **Figure:** `figures/figureA2_sipp_event_study.csv` — visual `t012_sipp_event_employment`.
 
@@ -22,19 +22,19 @@ Selected CPS supplements provide direct displacement, tenure, and mobility quest
 
 ## A4 — ABS structural adoption (T-014)
 
-The Annual Business Survey supports richer annual technology and workforce-impact structure than high-frequency BTOS. This appendix summarizes published ABS measure shares for the retained industry and size classes in the build.
+The Annual Business Survey supports a richer annual technology and workforce-impact structure than high-frequency BTOS. This appendix summarizes published ABS measure shares for retained industry and size classes in the build.
 
 **Figure:** `figures/figureA4_abs_structural_adoption.csv` — visual `t014_abs_measure_shares`.
 
 ## A5 — CES payroll and hours (T-015)
 
-CES series complement Figure 4 by reporting payroll and average weekly hours indices alongside employment for sector groups.
+CES series complement Figure 4 by reporting payroll and average weekly-hours indices alongside employment for sector groups.
 
 **Figure:** `figures/figureA5_ces_payroll_hours.csv` — visual `t015_ces_payroll_index_mean`.
 
 ## A6 — BED churn (T-016)
 
-Business Employment Dynamics gross job gains and losses, openings, and closings rates provide establishment-flow context at sector level.
+Business Employment Dynamics gross job gains and losses, openings, and closings rates provide establishment-flow context at the sector level.
 
 **Figure:** `figures/figureA6_bed_churn.csv` — visual `t016_bed_gross_job_gains`.
 
@@ -46,7 +46,7 @@ QCEW supports state-level employment and wage benchmarks by detailed industry ma
 
 ## A8 — LEHD public benchmark (T-018)
 
-Public LEHD J2J-style rates benchmark worker reallocation concepts that are not occupation microdata in public release.
+Public LEHD J2J-style rates benchmark worker-reallocation concepts that are not occupation microdata in public release.
 
 **Figure:** `figures/figureA8_lehd_benchmark.csv` — visual `t018_lehd_benchmark_rate`.
 
