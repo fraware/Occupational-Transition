@@ -4,12 +4,12 @@
 What Exists, What Works, and What Small Survey Changes Would Unlock
 
 ## Abstract
-This paper develops a public-data framework for measuring AI and labor-market change in the United States. Using reproducible outputs from a full PR-000 to T-020 pipeline, we show that existing federal public data already support meaningful evidence on occupational structure and tasks, worker outcomes and mobility, business adoption, labor-demand flows, and the identification frontier across datasets. The public measurement stack is strongest when it combines worker-side and business-side sources at coarse, policy-relevant levels of resolution; it is weakest where occupation-level demand flows and worker-firm linkage are required for high-precision attribution. The paper contributes a source-by-source measurement audit, an empirical public-data stack, a sample-sufficiency rule for responsible inference, and a concrete low-, medium-, and high-effort roadmap for improving AI labor measurement through CPS, BTOS, JOLTS, and NLS pathways. The argument is not that public data are sufficient for firm-level causal identification, but that they are already strong enough to produce credible monitoring and to prioritize high-yield survey additions.
+This paper develops a public-data framework for measuring AI and labor-market change in the United States. Using reproducible outputs from a full PR-000 to T-020 pipeline, we show that existing federal public data support a credible descriptive and measurement architecture for occupational structure and tasks, worker outcomes and mobility, business adoption, labor-demand flows, and cross-dataset identification limits. The public measurement stack is strongest when it combines worker-side and business-side sources at coarse, policy-relevant levels of resolution; it is weakest where occupation-level demand flows and worker-firm linkage are required for high-precision attribution. The paper contributes a source-by-source measurement audit, an empirical public-data stack, a sample-sufficiency rule for responsible inference, and a concrete low-, medium-, and high-effort roadmap for improving AI labor measurement through CPS, BTOS, JOLTS, and NLS pathways. The argument is not that public data are sufficient for firm-level causal identification, but that they are already strong enough to produce credible monitoring and to prioritize high-yield survey additions.
 
 ## 1. Introduction
 **Thesis.** Debates on AI and labor markets have moved faster than the U.S. public measurement architecture; this paper asks what federal public data can already support at credible resolution, and where hard limits remain.
 
-**Dataset sentence.** The empirical core uses OEWS, O*NET, CPS, BTOS, JOLTS, and CES in a single ticketed pipeline with full JSON lineage (`intermediate/*run_metadata.json`).
+**Dataset sentence.** The empirical core uses OEWS, O*NET, CPS, BTOS, and JOLTS in a single ticketed pipeline with full JSON lineage (`intermediate/*run_metadata.json`), with CES used as contextual payroll series in Section 4.
 
 **Figure discussion.** Figures 1–5 provide the main-text spine: occupational baseline and task structure (Figure 1), worker hours and transitions (Figure 2), business-side AI adoption (Figure 3), sector labor-demand context (Figure 4), and a documentation-based capability matrix (Figure 5). Visuals: `visuals/png/t001_*.png` through `t010_*.png` per `docs/figure_catalog.md`.
 
@@ -32,8 +32,8 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 
 ---
 
-## Section 2 — Worker outcomes and mobility (Figure 2; Claim 2)
-**Thesis.** Monthly CPS public-use microdata support national descriptive monitoring of hours and broad occupational and labor-force transitions when matched across adjacent months.
+## Section 2 — Worker hours and mobility (Figure 2; Claim 2)
+**Thesis.** Monthly CPS public-use microdata support national descriptive monitoring of worker hours and broad occupational and labor-force transitions when matched across adjacent months.
 
 **Dataset sentence.** CPS Basic Monthly files, January 2019 onward, with composite person weights and AI terciles from T-002.
 
@@ -89,7 +89,7 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 
 **Dataset sentence.** Full reproducibility is defined by `docs/replication.md` and `python scripts/run_full_pipeline_from_raw.py`.
 
-**Figure discussion.** Main-text figures align with Claims 1–5 subject to `docs/claim_audit.md` (partial support for geography in Claim 1 unless appendix ACS is cited).
+**Figure discussion.** Main-text figures align with Claims 1–5 subject to `docs/claim_audit.md` (Claim 1 in main text is scoped to employment, wages, and task content; geography is appendix evidence).
 
 **Identification boundary.** Public data cannot yet deliver firm-level AI causal attribution at scale.
 

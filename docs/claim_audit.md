@@ -12,7 +12,7 @@ Support levels:
 
 | Claim | Figure | Support level | Evidence | Caveats / minimal fix |
 |-------|--------|---------------|----------|------------------------|
-| **1** — Precise baseline description of AI-relevant occupations: employment, wages, geographic distribution, task content | Figure 1 (OEWS baseline + O*NET heatmap; terciles for downstream use) | **Partial** | `figures/figure1_panelA_occ_baseline.csv`, `figures/figure1_panelB_task_heatmap.csv`, `intermediate/ai_relevance_terciles.csv`; memos `docs/figure_memos/fig01.md` | Geographic distribution is **not** in Figure 1 national panels; cite appendix ACS (`figureA9`) or narrow Claim 1 wording to national structure + task content. |
+| **1** — Precise baseline description of AI-relevant occupations: employment, wages, and task content | Figure 1 (OEWS baseline + O*NET heatmap; terciles for downstream use) | **Supported directly** | `figures/figure1_panelA_occ_baseline.csv`, `figures/figure1_panelB_task_heatmap.csv`, `intermediate/ai_relevance_terciles.csv`; memos `docs/figure_memos/fig01.md` | Geographic distribution evidence is handled in appendix ACS (`figureA9`), not in Figure 1 main-text panels. |
 | **2** — Worker-side outcomes and broad occupational mobility via survey inference, not public linked admin microdata | Figure 2 (CPS hours + transitions) | **Supported directly** (within descriptive scope) | `figures/figure2_panelA_hours_by_ai_tercile.csv`, `figures/figure2_panelB_transition_probs.csv`; `docs/figure_memos/fig02.md` | Avoid causal language; transitions are matched-month public-use constructs. |
 | **3** — Business-side AI adoption and self-reported workforce effects from business surveys | Figure 3 (BTOS trends + supplement shares) | **Partial** | `figures/figure3_panelA_btos_ai_trends.csv`, `figures/figure3_panelB_btos_workforce_effects.csv`; `docs/figure_memos/fig03.md` | Direct for adoption and published employment-effect rows; task-effect interpretation is proxy-based where item-25 rows are absent (see T-007 methodology and `README.md` Known Deviations). |
 | **4** — Labor-demand and turnover dynamics in selected comparison sectors without occupation-resolved public demand flows | Figure 4 (JOLTS + CES by sector6) | **Supported directly** | `figures/figure4_panelA_jolts_sector_rates.csv`, `figures/figure4_panelB_ces_sector_index.csv`; `docs/figure_memos/fig04.md` | Do not claim occupation-level vacancy or hire rates from these panels. |
@@ -20,7 +20,7 @@ Support levels:
 
 ## Action items from audit
 
-1. **Claim 1 vs geography:** Either add explicit ACS appendix citation whenever "geographic distribution" appears, or tighten Claim 1 language to match what Figure 1 actually shows (national OEWS + national O*NET aggregation).
+1. **Claim 1 scope discipline:** Keep Claim 1 in main text scoped to employment, wages, and task content; route geographic composition statements to appendix ACS evidence (`figureA9`).
 2. **Claim 5 split:** Keep a clear split between (a) empirical diagnosis (missing integrated panel) and (b) policy design recommendation (survey-extension priority).
 
 ## Closure criteria
