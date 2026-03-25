@@ -1,7 +1,7 @@
 """
 Build figures/memo_dashboard_kpis.csv for memo Visual 1.
 
-Precision (full detail: docs/memo_visual_precision.md):
+Precision (full detail: docs/quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules):
 - CPS entry KPIs use origin_mass from figure2_panelB_transition_counts.csv merged onto
   summary rows in figure2_panelB_transition_probs.csv (probs-file origin_mass is not used).
 - Reference month for entry KPIs is the latest month (descending) where both
@@ -179,7 +179,7 @@ def main() -> None:
         entry_notes_common += (
             f" Month alignment: CPS hours KPI uses latest month in figure2_panelA "
             f"({h_last_month}); these entry KPIs use {chosen_month}. "
-            "See docs/memo_visual_precision.md."
+            "See docs/quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules."
         )
 
     rows.append(
@@ -313,7 +313,7 @@ def main() -> None:
         "output_csv": str(OUT_CSV.relative_to(ROOT)).replace("\\", "/"),
         "row_count": int(len(out)),
         "kpi_schema": list(out.columns),
-        "precision_reference": "docs/memo_visual_precision.md",
+        "precision_reference": "docs/quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules",
         "cps_hours_kpi_latest_month": h_last_month,
         "cps_entry_kpi_reference_month": chosen_month,
         "cps_dashboard_kpi_month_alignment": bool(h_last_month == chosen_month),

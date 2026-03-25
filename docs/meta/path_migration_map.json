@@ -1,0 +1,41 @@
+{
+  "description": "Old docs paths (from repo root) to new paths after reorganization.",
+  "moves": {
+    "docs/library_overview.md": "docs/library/overview.md",
+    "docs/replication.md": "docs/replication/README.md",
+    "docs/committed_outputs.md": "docs/replication/README.md#committed-outputs-vs-build-generated",
+    "docs/acceptance_matrix.md": "docs/replication/acceptance_matrix.md",
+    "docs/replication_checklist.md": "docs/replication/README.md#independent-replication-checklist",
+    "docs/git_history_hygiene.md": "docs/replication/project_maintenance.md#git-history-size-and-hygiene",
+    "docs/release_process.md": "docs/replication/project_maintenance.md#results-freeze-and-tagging",
+    "docs/pr000_crosswalk_methodology.md": "docs/methodology/pr000_crosswalk_methodology.md",
+    "docs/figure_catalog.md": "docs/figures/figure_catalog.md",
+    "docs/paper_final.md": "docs/paper/paper_final.md",
+    "docs/paper_draft_v1_public_data_ai_labor.md": "docs/paper/paper_draft_v1_public_data_ai_labor.md",
+    "docs/appendix_draft.md": "docs/paper/appendix_draft.md",
+    "docs/appendix_outline.md": "docs/paper/appendix_draft.md#outline-strict-order",
+    "docs/methods_data.md": "docs/paper/methods_data.md",
+    "docs/evidence_snapshot.md": "docs/paper/evidence_snapshot.md",
+    "docs/claim_audit.md": "docs/policy/claim_audit.md",
+    "docs/senate_briefing_memo.md": "docs/policy/briefing/senate_briefing_memo.md",
+    "docs/senate_briefing_evidence_baseline_va.md": "docs/policy/briefing/senate_briefing_evidence_baseline_va.md",
+    "docs/senate_briefing_lineage_va.md": "docs/policy/briefing/senate_briefing_lineage_va.md",
+    "docs/senate_briefing_script_va.md": "docs/policy/briefing/senate_briefing_script_va.md",
+    "docs/senate_briefing_qa_va.md": "docs/policy/briefing/senate_briefing_qa_va.md",
+    "docs/senator_handout_1page_va.md": "docs/policy/briefing/senator_handout_1page_va.md",
+    "docs/senator_packet_order_va.md": "docs/policy/briefing/senator_packet_order_va.md",
+    "docs/senator_cps_condensed_brief.md": "docs/policy/briefing/senator_cps_condensed_brief.md",
+    "docs/virginia_deep_dive.md": "docs/policy/briefing/virginia_deep_dive.md",
+    "docs/reliability_framework.md": "docs/quality/README.md#reliability-framework-policy-facing-metrics",
+    "docs/memo_visual_precision.md": "docs/quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules",
+    "docs/visual_style_guide.md": "docs/quality/README.md#visual-style-guide"
+  },
+  "directory_moves": {
+    "docs/captions": "docs/figures/captions",
+    "docs/source_notes": "docs/figures/source_notes",
+    "docs/figure_memos": "docs/figures/memos"
+  },
+  "ticket_glob": "docs/t*_*.md -> docs/methodology/tickets/",
+  "briefing_isolation": "Senate/senator/Virginia briefing markdown lives under docs/policy/briefing/ (claim_audit stays in docs/policy/).",
+  "unchanged": ["docs/data_registry.csv", "docs/archive/", "docs/lineage/", "docs/references/"]
+}

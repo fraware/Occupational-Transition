@@ -99,7 +99,7 @@ def main() -> None:
         "output_csv": str(OUT_CSV.relative_to(ROOT)).replace("\\", "/"),
         "output_png": str(png.relative_to(ROOT)).replace("\\", "/"),
         "output_pdf": str(pdf.relative_to(ROOT)).replace("\\", "/"),
-        "source_texts": ["docs/archive/paper_notes_full.md", "docs/methods_data.md"],
+        "source_texts": ["docs/archive/paper_notes_full.md", "docs/paper/methods_data.md"],
         "note": "Structured schematic consistent with policy-design section; non-estimated.",
     }
     OUT_META.write_text(json.dumps(meta, indent=2), encoding="utf-8")

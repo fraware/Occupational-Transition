@@ -6,10 +6,11 @@ Run from repo root: python scripts/build_figure1_panelA.py
 
 from __future__ import annotations
 
-import re
-import zipfile
-import json
 import hashlib
+import json
+import re
+import sys
+import zipfile
 from datetime import date
 from pathlib import Path
 
@@ -17,6 +18,10 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT / "src") not in sys.path:
+    sys.path.insert(0, str(ROOT / "src"))
+
+from occupational_transition.crosswalks import load_occ22_labels
 RAW = ROOT / "raw"
 FIG = ROOT / "figures"
 INTER = ROOT / "intermediate"
@@ -37,15 +42,6 @@ def soc_code_to_major(soc: str) -> str:
     if not left.isdigit():
         raise ValueError(f"Invalid SOC code: {soc}")
     return f"{int(left):02d}-0000"
-
-
-def load_occ22_labels() -> pd.DataFrame:
-    """occ22_id and label from CPS_PRDTOCC1 rows (22 civilian groups)."""
-    cx = pd.read_csv(CROSS)
-    pr = cx[cx["source_system"] == "CPS_PRDTOCC1"].copy()
-    pr = pr[pr["source_occ_code"].astype(str) != "23"]
-    pr["occ22_id"] = pr["occ22_id"].astype(int)
-    return pr[["occ22_id", "occ22_label", "soc_major_group_code"]].drop_duplicates()
 
 
 def wage_proxy_row(row: pd.Series) -> float:
@@ -106,7 +102,7 @@ def build_baseline(xlsx_path: Path) -> pd.DataFrame:
     det["wage_proxy"] = det.apply(wage_proxy_row, axis=1)
     det["emp_wage"] = det["TOT_EMP"] * det["wage_proxy"]
 
-    labels = load_occ22_labels()
+    labels = load_occ22_labels(CROSS)
     merged = det.merge(
         labels,
         left_on="soc_major",

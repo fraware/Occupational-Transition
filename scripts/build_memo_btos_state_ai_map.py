@@ -1,7 +1,7 @@
 """
 Build BTOS state AI-use latest CSV and render a tile choropleth (memo t105).
 
-Precision summary (full detail: docs/memo_visual_precision.md):
+Precision summary (full detail: docs/quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules):
 - Period ID = last btos_period_id in figures/figure3_panelA_btos_ai_trends.csv
   (aligned with Figure 3 Panel A national series).
 - State list = STRATA_TYPE 'state' from BTOS /strata, intersected with 50 states + DC.
@@ -337,7 +337,7 @@ def main() -> None:
         "rows_returned": int(len(out)),
         "states_with_published_ai_current_rate": int(present),
         "dropped_or_failed_codes": errors,
-        "precision_reference": "docs/memo_visual_precision.md",
+        "precision_reference": "docs/quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules",
         "missing_reason_values": ["published", "fetch_failed", "no_ai_current_yes_row"],
         "notes": (
             "State map ties period to figure3_panelA_btos_ai_trends last row; "

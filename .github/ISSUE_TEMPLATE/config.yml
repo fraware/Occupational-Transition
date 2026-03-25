@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation hub
+    url: https://github.com/fraware/Occupational-Transition/blob/main/docs/README.md
+    about: Library, replication, methodology, and policy links
+  - name: CONTRIBUTING
+    url: https://github.com/fraware/Occupational-Transition/blob/main/CONTRIBUTING.md
+    about: How to add a source and run QA

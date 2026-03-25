@@ -5,7 +5,7 @@ optional visuals.
 This does not delete the git clone; it runs the same strict sequence as
 `run_full_clean_rebuild_acceptance.py`, which cleans ticket outputs before each
 build step. Raw inputs are fetched by individual build scripts into `raw/`
-when missing (see `docs/replication.md`).
+when missing (see `docs/replication/README.md`).
 
 Usage (from repository root):
 

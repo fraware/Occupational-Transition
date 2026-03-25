@@ -22,3 +22,6 @@ Thumbs.db
 # Local microdata and large build artifacts (exceed GitHub file limits; fetch separately)
 raw/
 intermediate/
+
+# Sphinx API build output
+docs/sphinx/_build/

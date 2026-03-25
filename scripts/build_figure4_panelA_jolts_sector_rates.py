@@ -7,31 +7,38 @@ Run from repo root: python scripts/build_figure4_panelA_jolts_sector_rates.py
 
 from __future__ import annotations
 
-import csv
-import hashlib
 import json
+import sys
 from collections import defaultdict
 from datetime import datetime, timezone
-from io import StringIO
 from pathlib import Path
 from typing import Any
-from urllib.request import Request, urlopen
 
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT / "src") not in sys.path:
+    sys.path.insert(0, str(ROOT / "src"))
+
+from occupational_transition.crosswalks import load_sector6_jolts_labels
+from occupational_transition.http import sha256_bytes
+from occupational_transition.sources.jolts import (
+    DATA_FILE_BY_DATAELEMENT,
+    DATAELEMENT_TO_RATE_NAME,
+    JOLTS_BASE,
+    PROVENANCE_FILES,
+    fetch_jolts_file_bytes,
+    load_jt_series_table,
+    parse_data_line,
+    period_to_month,
+)
+
 FIG = ROOT / "figures"
 INTER = ROOT / "intermediate"
 CROSS = ROOT / "crosswalks" / "sector6_crosswalk.csv"
 
 OUT_CSV = FIG / "figure4_panelA_jolts_sector_rates.csv"
 OUT_META = INTER / "figure4_panelA_jolts_sector_rates_run_metadata.json"
-
-JOLTS_BASE = "https://download.bls.gov/pub/time.series/jt/"
-USER_AGENT = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
-)
 
 # Minimum calendar month (inclusive) for the figure panel.
 MIN_MONTH = "2019-01"
@@ -49,21 +56,6 @@ CANONICAL_JOLTS_INDUSTRY_BY_SECTOR6: dict[str, str] = {
     "HCS": "620000",
 }
 
-# JOLTS data files (LABSTAT) keyed by two-character dataelement_code.
-DATA_FILE_BY_DATAELEMENT: dict[str, str] = {
-    "JO": "jt.data.2.JobOpenings",
-    "HI": "jt.data.3.Hires",
-    "QU": "jt.data.5.Quits",
-    "LD": "jt.data.6.LayoffsDischarges",
-}
-
-DATAELEMENT_TO_RATE_NAME: dict[str, str] = {
-    "JO": "job_openings_rate",
-    "HI": "hires_rate",
-    "QU": "quits_rate",
-    "LD": "layoffs_discharges_rate",
-}
-
 # Stable presentation order for sector6_code in outputs.
 SECTOR6_ORDER: list[str] = ["MFG", "INF", "FAS", "PBS", "HCS", "RET"]
 
@@ -72,18 +64,6 @@ RATE_NAME_ORDER: list[str] = [
     "hires_rate",
     "quits_rate",
     "layoffs_discharges_rate",
-]
-
-# All LABSTAT inputs required for provenance (including reference files for QA).
-PROVENANCE_FILES: list[str] = [
-    "jt.series",
-    "jt.industry",
-    "jt.period",
-    "jt.seasonal",
-    "jt.data.2.JobOpenings",
-    "jt.data.3.Hires",
-    "jt.data.5.Quits",
-    "jt.data.6.LayoffsDischarges",
 ]
 
 OUT_COLS = [
@@ -96,96 +76,23 @@ OUT_COLS = [
 ]
 
 
-def _request(url: str) -> Request:
-    return Request(url, headers={"User-Agent": USER_AGENT})
-
-
-def fetch_bytes(url: str) -> bytes:
-    with urlopen(_request(url), timeout=300) as resp:
-        return resp.read()
-
-
-def sha256_bytes(data: bytes) -> str:
-    return hashlib.sha256(data).hexdigest()
-
-
-def normalize_jt_row(row: dict[str, str]) -> dict[str, str]:
-    return {
-        k.strip(): (v.strip() if isinstance(v, str) else v)
-        for k, v in row.items()
-    }
-
-
-def load_jt_series_table(text: str) -> list[dict[str, str]]:
-    rows = list(csv.DictReader(StringIO(text), delimiter="\t"))
-    return [normalize_jt_row(r) for r in rows]
-
-
-def period_to_month(year_s: str, period: str) -> str | None:
-    if not period.startswith("M") or len(period) != 3:
-        return None
-    try:
-        m = int(period[1:], 10)
-    except ValueError:
-        return None
-    if m < 1 or m > 12:
-        return None
-    try:
-        y = int(year_s, 10)
-    except ValueError:
-        return None
-    return f"{y:04d}-{m:02d}"
-
-
-def parse_data_line(line: str) -> tuple[str, str, str, str] | None:
-    """Return (series_id, year, period, value_raw) or None."""
-    if not line.strip():
-        return None
-    parts = line.split("\t")
-    if len(parts) < 4:
-        return None
-    return (
-        parts[0].strip(),
-        parts[1].strip(),
-        parts[2].strip(),
-        parts[3].strip(),
-    )
-
-
-def load_sector6_labels() -> dict[str, str]:
-    df = pd.read_csv(CROSS)
-    sub = df[
-        (df["source_program"] == "JOLTS")
-        & (df["is_in_scope"] == 1)
-        & (df["sector6_code"].notna())
-        & (df["sector6_code"].astype(str).str.len() > 0)
-    ]
-    out: dict[str, str] = {}
-    for _, row in sub.iterrows():
-        code = str(row["sector6_code"])
-        label = str(row["sector6_label"])
-        if code not in out:
-            out[code] = label
-    for code in CANONICAL_JOLTS_INDUSTRY_BY_SECTOR6:
-        if code not in out:
-            raise RuntimeError(f"missing sector6 label in crosswalk for {code}")
-    return out
-
-
 def main() -> None:
     generated_at = datetime.now(timezone.utc).isoformat()
 
     industry_to_sector6 = {
         v: k for k, v in CANONICAL_JOLTS_INDUSTRY_BY_SECTOR6.items()
     }
-    sector6_labels = load_sector6_labels()
+    sector6_labels = load_sector6_jolts_labels(CROSS)
+    for code in CANONICAL_JOLTS_INDUSTRY_BY_SECTOR6:
+        if code not in sector6_labels:
+            raise RuntimeError(f"missing sector6 label in crosswalk for {code}")
 
     # Fetch provenance payloads and hashes.
     file_hashes: list[dict[str, str]] = []
     series_text: str | None = None
     for fname in PROVENANCE_FILES:
         url = f"{JOLTS_BASE}{fname}"
-        raw = fetch_bytes(url)
+        raw = fetch_jolts_file_bytes(fname)
         file_hashes.append(
             {"file_name": fname, "url": url, "sha256": sha256_bytes(raw)}
         )
@@ -257,8 +164,7 @@ def main() -> None:
     values_by_series: dict[str, list[tuple[str, float]]] = defaultdict(list)
 
     for fname, id_set in ids_by_file.items():
-        url = f"{JOLTS_BASE}{fname}"
-        raw = fetch_bytes(url)
+        raw = fetch_jolts_file_bytes(fname)
         text = raw.decode("utf-8", "replace")
         for line in text.splitlines()[1:]:
             parsed = parse_data_line(line)

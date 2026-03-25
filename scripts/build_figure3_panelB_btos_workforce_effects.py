@@ -239,7 +239,7 @@ def build_output_rows(sub: pd.DataFrame) -> tuple[list[dict[str, Any]], dict[str
     mapping["q25_multiselect_note"] = (
         "The published AI_Supplement_Table.xlsx National sheet does not include "
         "questionnaire item 25 multi-select answer rows. Using published Scope 2 "
-        "proxies from the same workbook; see docs/t007_figure3_panelB_btos_workforce_effects_methodology.md."
+        "proxies from the same workbook; see docs/methodology/tickets/t007_figure3_panelB_btos_workforce_effects_methodology.md."
     )
 
     # Proxy 1: Q3 Yes — used AI to perform tasks previously done by employees (CES-WP discusses

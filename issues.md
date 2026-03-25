@@ -6,4 +6,4 @@ For **replication and automated lineage** (Figure 5 / T-010), the canonical hash
 
 - [docs/lineage/t010_issues.md](docs/lineage/t010_issues.md)
 
-Acceptance criteria and QA mapping: [docs/acceptance_matrix.md](docs/acceptance_matrix.md).
+Acceptance criteria and QA mapping: [docs/replication/acceptance_matrix.md](docs/replication/acceptance_matrix.md).

@@ -1,0 +1,21 @@
+name: Bug — build or QA failure
+description: A build script or QA check failed unexpectedly
+title: "[QA] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Include the ticket (e.g. T-006), command run, and relevant log lines from `intermediate/` or stdout.
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps (Python version, OS, commands)
+    validations:
+      required: true

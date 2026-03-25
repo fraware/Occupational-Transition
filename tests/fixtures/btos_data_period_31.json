@@ -1,0 +1,12 @@
+{
+  "0": {
+    "OPTION_TEXT": "AI current",
+    "ANSWER": "Yes",
+    "ESTIMATE_PERCENTAGE": "12.5"
+  },
+  "1": {
+    "OPTION_TEXT": "AI future",
+    "ANSWER": "Yes",
+    "ESTIMATE_PERCENTAGE": "25.0"
+  }
+}

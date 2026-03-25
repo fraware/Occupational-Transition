@@ -1,6 +1,6 @@
 """
 Verify main-text figure caption and source-note files exist
-(`docs/captions`, `docs/source_notes`).
+(`docs/figures/captions`, `docs/figures/source_notes`).
 
 Usage:
     python scripts/qa_visual_caption_coverage.py
@@ -23,8 +23,8 @@ EXPECTED = [
 
 
 def main() -> int:
-    cap_dir = ROOT / "docs" / "captions"
-    src_dir = ROOT / "docs" / "source_notes"
+    cap_dir = ROOT / "docs" / "figures" / "captions"
+    src_dir = ROOT / "docs" / "figures" / "source_notes"
     errors: list[str] = []
     for cap, src in EXPECTED:
         cp = cap_dir / cap

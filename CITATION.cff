@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+title: Occupational Transition
+message: >-
+  If you use this software, please cite it using the metadata below.
+  For a frozen replication bundle, also cite the specific git tag or commit
+  hash documented alongside your outputs.
+type: software
+authors:
+  - name: Occupational-Transition contributors
+date-released: "2026-03-25"
+version: "0.1.0"
+license: MIT
+repository-code: "https://github.com/fraware/Occupational-Transition"
+url: "https://github.com/fraware/Occupational-Transition"
+abstract: >-
+  Public data, AI, and US labor markets: open extraction (Census BTOS, BLS
+  JOLTS/OEWS, O*NET, crosswalks) and US labor market measurement from public
+  data with QA—not hype. Reproducible US labor and AI indicators via a
+  ticket-gated pipeline with lineage metadata; an open data pipeline for AI and
+  labor economics research.
+keywords:
+  - labor economics
+  - artificial intelligence
+  - public data
+  - reproducibility
+  - US labor market
+  - measurement
+  - indicators
+  - open data pipeline
+  - BLS
+  - Census Bureau
+preferred-citation:
+  type: software
+  title: Occupational Transition
+  authors:
+    - name: Occupational-Transition contributors
+  version: "0.1.0"
+  year: 2026
+  url: "https://github.com/fraware/Occupational-Transition"
+  license: MIT

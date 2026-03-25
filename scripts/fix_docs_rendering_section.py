@@ -20,7 +20,7 @@ def main() -> None:
         f"- {bt}visuals/vector/*.pdf{bt}\n"
         f"- {bt}intermediate/visuals_run_manifest.json{bt}\n\n"
         f"Style and chart standards are documented in "
-        f"{bt}docs/visual_style_guide.md{bt}.\n"
+        f"{bt}docs/quality/README.md#visual-style-guide{bt}.\n"
     )
 
     for p in files:

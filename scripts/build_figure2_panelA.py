@@ -411,7 +411,7 @@ def discover_months_to_process(today: date) -> list[tuple[int, int]]:
     """
     Months from 2019-01 through the last CPS Basic month with a retrievable file.
 
-    Behavior (see docs/memo_visual_precision.md, section 3):
+    Behavior (see docs/quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules, section 3):
     - Append (y, m) while Census hosts that month's CPS Basic asset.
     - Skip months listed in ALLOW_MISSING_MONTHS without failing.
     - If the first missing month is at or after today's calendar month index, stop

@@ -78,7 +78,7 @@ def main() -> None:
         "output_csv": str(OUT_CSV.relative_to(ROOT)).replace("\\", "/"),
         "output_png": str(png.relative_to(ROOT)).replace("\\", "/"),
         "output_pdf": str(pdf.relative_to(ROOT)).replace("\\", "/"),
-        "source_texts": ["docs/methods_data.md", "docs/archive/paper_notes_full.md"],
+        "source_texts": ["docs/paper/methods_data.md", "docs/archive/paper_notes_full.md"],
         "note": "Schematic only; no estimated statistics in this figure.",
     }
     OUT_META.write_text(json.dumps(meta, indent=2), encoding="utf-8")

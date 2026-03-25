@@ -7,7 +7,7 @@ This is a memo-friendly re-skin of Figure 1 inputs:
 - Frozen terciles and AI Task Index: intermediate/ai_relevance_terciles.csv (T-002)
 
 The x-axis uses the AI Task Index (ATI): mean of four digital-information-related
-task z-scores, exactly as defined in docs/methods_data.md and implemented in T-002.
+task z-scores, exactly as defined in docs/paper/methods_data.md and implemented in T-002.
 
 Run from repo root:
   python scripts/build_memo_occ_bubble_scatter.py
