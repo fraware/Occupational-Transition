@@ -18,6 +18,10 @@ Support levels:
 | **4** — Labor-demand and turnover dynamics in selected comparison sectors without occupation-resolved public demand flows | Figure 4 (JOLTS + CES by sector6) | **Supported directly** | `figures/figure4_panelA_jolts_sector_rates.csv`, `figures/figure4_panelB_ces_sector_index.csv`; `docs/figure_memos/fig04.md` | Do not claim occupation-level vacancy or hire rates from these panels. |
 | **5** — Main gap is lack of a public integrated worker–firm AI panel; extend existing surveys | Figure 5 (capability matrix) | **Partial** | `figures/figure5_capability_matrix.csv` (includes `worker_firm_ai_linkage`); `docs/figure_memos/fig05.md` | Direct for the missing integrated panel diagnosis; partial for the policy recommendation (design judgment, not an estimated effect). |
 
+## Composite monitoring metrics (AWES / ALPI; T-021–T-026)
+
+**AWES** (`metrics/awes_occ22_monthly.csv`) and **ALPI** (`metrics/alpi_occ22_monthly.csv`) are **descriptive** occupation-time indices for monitoring and prioritization. They are **not causal** and do not estimate treatment effects. They **complement** the frozen AI-relevance terciles (`intermediate/ai_relevance_terciles.csv`) and inherit the limits of OEWS, O*NET, BTOS, JOLTS, CES, and CPS transition constructs. Method detail: `docs/methods_data.md` (AWES and ALPI section).
+
 ## Action items from audit
 
 1. **Claim 1 scope discipline:** Keep Claim 1 in main text scoped to employment, wages, and task content; route geographic composition statements to appendix ACS evidence (`figureA9`).
@@ -35,3 +39,27 @@ Support levels:
 | Reviewer | Date | Notes |
 |----------|------|-------|
 | | | |
+
+## Senator brief claim ledger (Virginia package)
+
+This ledger enforces the policy-facing claim discipline for the Virginia
+senator brief artifacts.
+
+| Claim ID | Claim (short) | Claim type | Evidence file path | Metadata/provenance path | Guardrail note |
+|----------|----------------|------------|--------------------|---------------------------|----------------|
+| SB-VA-01 | Virginia HCS and manufacturing concentration in retained benchmark frame | `descriptive_fact` | `figures/state_deep_dive_qcew_51_profile.csv` | `intermediate/state_deep_dive_qcew_51_run_metadata.json` | Six-sector denominator only; not all-industry statewide share. |
+| SB-VA-02 | Virginia peer-relative rank position (for example RET rank 1, MFG rank 4) | `descriptive_fact` | `figures/state_deep_dive_qcew_51_ranks.csv` | `intermediate/state_deep_dive_qcew_51_run_metadata.json` | Relative ordering only; not causal or effect magnitude. |
+| SB-VA-03 | Virginia differs from nearby peers in sector structure and wage profile | `inference` | `figures/state_deep_dive_qcew_51_peers.csv` | `intermediate/state_deep_dive_qcew_51_run_metadata.json` | Peer comparison supports prioritization framing, not causal explanation. |
+| SB-VA-04 | Virginia KPI dashboard provides actionable oversight monitoring stack | `inference` | `figures/virginia_memo_kpis.csv` | `intermediate/virginia_memo_kpis_run_metadata.json` | Monitoring construct only; does not estimate treatment effects. |
+| SB-VA-05 | BTOS state AI-use contributes business-side adoption context in Virginia | `descriptive_fact` | `figures/memo_btos_state_ai_use_latest.csv` | `intermediate/virginia_memo_kpis_run_metadata.json` | Business-reported adoption; not worker-level causal evidence. |
+| SB-VA-06 | Priority sequence should be CPS module + BTOS stability + scoped JOLTS pilot | `policy_judgment` | `docs/senate_briefing_memo.md` | `docs/senate_briefing_lineage_va.md` | Policy design recommendation grounded in capability limits, not estimated causal payoff. |
+| SB-VA-07 | Brief is descriptive and excludes worker-firm linked causal claims | `descriptive_fact` | `docs/senate_briefing_memo.md` | `docs/methods_data.md` | Must remain explicit in testimony and hearing responses. |
+
+### Rewrites applied in this pass
+
+- Strengthened non-claim language in the memo to explicitly exclude:
+  - causal AI effect estimation,
+  - worker-firm linked inference from public files,
+  - fine-grained local monthly causal attribution.
+- Kept policy actions framed as design judgments supported by descriptive
+  evidence and measurement constraints.

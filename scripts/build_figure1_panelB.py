@@ -22,6 +22,8 @@ from urllib.request import Request, urlopen
 import numpy as np
 import pandas as pd
 
+from awes_alpi_common import occ22_code_from_id, percentile_rank_01
+
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "raw"
 FIG = ROOT / "figures"
@@ -379,6 +381,41 @@ def main() -> None:
     z_digital = [wide[zcols[e]] for e in DIGITAL_INFO_ELEMENTS]
     wide["ai_task_index"] = pd.concat(z_digital, axis=1).mean(axis=1)
 
+    # AWES input artifact (does not replace or modify AI terciles).
+    z_out_rename = {
+        "Analyzing Data or Information": "onet_analyzing_data_z",
+        "Processing Information": "onet_processing_information_z",
+        "Documenting/Recording Information": "onet_documenting_recording_z",
+        "Working with Computers": "onet_working_with_computers_z",
+        "Assisting and Caring for Others": "onet_assisting_caring_z",
+        "Handling and Moving Objects": "onet_handling_moving_z",
+    }
+    exposure_pct = percentile_rank_01(wide["ai_task_index"])
+    expo_cols = {
+        "occ22_code": wide["occ22_id"].map(occ22_code_from_id),
+        "occ22_label": wide["occ22_label"].astype(str),
+        "ai_task_index_raw": wide["ai_task_index"].astype(float),
+        "exposure_pct": exposure_pct.astype(float),
+    }
+    for elem, outc in z_out_rename.items():
+        expo_cols[outc] = wide[zcols[elem]].astype(float)
+    exposure_df = pd.DataFrame(expo_cols)
+    exposure_df = exposure_df.sort_values("occ22_code").reset_index(drop=True)
+    exposure_cols_order = [
+        "occ22_code",
+        "occ22_label",
+        "ai_task_index_raw",
+        "exposure_pct",
+        "onet_analyzing_data_z",
+        "onet_processing_information_z",
+        "onet_documenting_recording_z",
+        "onet_working_with_computers_z",
+        "onet_assisting_caring_z",
+        "onet_handling_moving_z",
+    ]
+    exposure_path = INTER / "occ22_exposure_components.csv"
+    exposure_df[exposure_cols_order].to_csv(exposure_path, index=False)
+
     terc = assign_terciles(wide[["occ22_id", "occupation_group", "ai_task_index"]].copy())
 
     heatmap_cols = ["occupation_group", "occ22_id"] + [zcols[e] for e in FROZEN_ELEMENTS]
@@ -460,11 +497,19 @@ def main() -> None:
         "crosswalk_sha256": _sha(CROSS),
         "row_count_heatmap": int(len(heatmap_out)),
         "row_count_terciles": int(len(terc_out)),
+        "output_exposure_components_csv": str(
+            exposure_path.relative_to(ROOT)
+        ).replace("\\", "/"),
+        "exposure_components_note": (
+            "occ22_exposure_components.csv: ATI mean of four digital-information "
+            "z-scores; exposure_pct is percentile rank across 22 groups."
+        ),
     }
     meta_json_path.write_text(json.dumps(run_meta, indent=2), encoding="utf-8")
 
     append_registry_rows_t002(onet_v)
     print(f"Wrote {heatmap_path} ({len(heatmap_out)} rows)")
+    print(f"Wrote {exposure_path} ({len(exposure_df)} rows)")
     print(f"Wrote {tercile_path} ({len(terc_out)} rows)")
     print(f"Meta: {meta_path}")
     print(f"Run metadata: {meta_json_path}")

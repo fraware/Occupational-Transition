@@ -1,0 +1,6 @@
+effort_tier,instrument,proposed_addition,unlocks,key_boundary
+low,BTOS,Add 1-2 questions on share of workers affected and broad role location,Better bridge from business adoption to worker-side outcomes,Still no worker-firm linked microdata in public release
+low,CPS,Short AI-use module in supplement format,"Worker-reported AI use, task change, hours/pay/training by occupation",Survey self-report and matched-month design limits
+medium,JOLTS,Rotating supplement with coarse occupation groups + wage bands,Demand-side openings/hires/quits/layoffs by coarse occupation bins,Do not overload monthly core; sample constraints remain binding
+medium,NLS,Longitudinal AI items in planned cohorts,Career-path adaptation and long-run mobility measurement,Not a near-real-time monitoring instrument
+large,Linked admin ideal,Worker-job-quarter occupation transitions linked to employer AI adoption,Closest public infrastructure to causal worker-firm attribution,"High legal, operational, and governance burden"

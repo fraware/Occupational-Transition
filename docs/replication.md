@@ -14,6 +14,7 @@ This document describes how to reproduce pipeline outputs from a clean clone of 
 |------|------|
 | `raw/` | Cached official downloads produced by build scripts when files are not already present |
 | `figures/` | Final tidy CSV outputs for main-text and appendix figures |
+| `metrics/` | Optional occupation-time monitoring metrics (AWES, ALPI; T-023 and T-026) |
 | `intermediate/` | JSON run metadata, QA logs, manifests, and derived intermediates (for example `ai_relevance_terciles.csv`) |
 | `crosswalks/` | Frozen occupation and sector crosswalks (`PR-000`) |
 | `visuals/png/`, `visuals/vector/` | Static charts (optional stage) |
@@ -27,6 +28,8 @@ From the repository root, after creating a virtual environment if desired:
 python -m pip install -r requirements.txt
 python scripts/run_full_pipeline_from_raw.py
 ```
+
+T-021 requires BLS OEWS industry-by-occupation inputs: either `raw/oesm24in4.zip` (see `docs/data_registry.csv`) or pre-extracted `*.xlsx` workbooks under `raw/oesm24in4_extract/`, in addition to the national file used in T-001/T-002.
 
 This runs `scripts/run_full_clean_rebuild_acceptance.py`, which:
 
@@ -88,3 +91,28 @@ In that mode, explicitly record scope limits in a closure note (for example, whi
 ## Visual style lock
 
 Publication figures use `scripts/viz_style.py` and `docs/visual_style_guide.md`. Do not change colors or fonts ad hoc without updating the style guide and regenerating all visuals.
+
+## Senator memo visuals and Virginia brief pack (optional, additive)
+
+These steps are **not** part of the default `run_full_clean_rebuild_acceptance.py` ticket list. They produce memo stems `t101`–`t108`, Virginia stems `va01`–`va08`, related `figures/memo_*.csv`, `figures/state_deep_dive_qcew_51_*.csv`, and `figures/virginia_memo_kpis.csv`.
+
+**Prerequisites:** Figure inputs for the memo pipeline must exist (for example `figures/figure3_panelA_btos_ai_trends.csv`, Figure 1–2 outputs, Figure 4–5, and crosswalk/intermediate artifacts as listed in `scripts/run_memo_visuals_build.py`). Virginia QCEW tables require **T-017** first: `figures/figureA7_qcew_state_benchmark.csv` from `scripts/build_figureA7_qcew_state_benchmark.py`.
+
+**One-command build and QA:**
+
+```bash
+python scripts/run_memo_visuals_build.py
+python scripts/run_memo_visuals_qa.py
+```
+
+**Targeted Virginia-only rebuild** (after T-017 is current):
+
+```bash
+python scripts/build_state_qcew_deep_dive.py --state-fips 51
+python scripts/qa_state_qcew_deep_dive.py --state-fips 51
+python scripts/build_virginia_memo_kpis.py
+python scripts/visualize_virginia_memo.py
+python scripts/qa_virginia_memo_visuals.py
+```
+
+**Documentation:** precision rules for memo KPIs and BTOS state map — `docs/memo_visual_precision.md`. Figure and stem catalog — `docs/figure_catalog.md`. Virginia methodology summary — `docs/virginia_deep_dive.md`. Senator-facing narrative and provenance — `docs/senate_briefing_memo.md`, `docs/senate_briefing_evidence_baseline_va.md`, `docs/senate_briefing_lineage_va.md`.

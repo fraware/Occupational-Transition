@@ -73,6 +73,10 @@ Reviewers should confirm:
 - Substantive claims in the manuscript match the resolution limits in each `docs/t*_methodology.md`.
 - Dynamic source selection (most recent available PUMS, NLSY97 zip, CPS monthly files) matches the `source_selection_rule` fields in run metadata for the evidence window you are citing.
 
+## Optional policy deliverables (outside PR-000–T-020 acceptance list)
+
+Senator memo visuals (`t101`–`t108`), Virginia QCEW deep-dive tables, Virginia visuals (`va01`–`va08`), and senator narrative docs under `docs/senate_briefing_*.md` / `docs/senator_*.md` are **not** rows in the ticket matrix above. When those outputs are claimed current, record evidence from `python scripts/run_memo_visuals_qa.py` (pass/fail) and `docs/senate_briefing_evidence_baseline_va.md` (frozen values). See `docs/replication.md` and `docs/figure_catalog.md`.
+
 ## Sign-off
 
 | Role | Name | Date | Acceptance log path |

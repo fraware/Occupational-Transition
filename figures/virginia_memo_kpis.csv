@@ -1,0 +1,10 @@
+kpi_id,kpi_label,value,unit,reference_period,source_path_or_endpoint,notes_limits
+va_hcs_share,Virginia HCS employment share (six-sector denominator),0.3762171655861766,share,2025 Q3,figures/state_deep_dive_qcew_51_profile.csv,QCEW structural benchmark; descriptive only.
+va_mfg_share,Virginia manufacturing employment share (six-sector denominator),0.2869282227445308,share,2025 Q3,figures/state_deep_dive_qcew_51_profile.csv,QCEW structural benchmark; descriptive only.
+va_ret_share,Virginia retail employment share (six-sector denominator),0.1599814035178345,share,2025 Q3,figures/state_deep_dive_qcew_51_profile.csv,QCEW structural benchmark; descriptive only.
+va_inf_avg_weekly_wage,Virginia information sector average weekly wage,2171.0,usd_per_week,2025 Q3,figures/state_deep_dive_qcew_51_profile.csv,Published QCEW wage aggregate in retained benchmark frame.
+va_ret_share_rank,Virginia retail share rank (1=highest),1.0,rank,2025 Q3,figures/state_deep_dive_qcew_51_ranks.csv,Rank among states in retained T-017 benchmark output.
+va_mfg_share_rank,Virginia manufacturing share rank (1=highest),4.0,rank,2025 Q3,figures/state_deep_dive_qcew_51_ranks.csv,Rank among states in retained T-017 benchmark output.
+va_fas_wage_rank,Virginia financial activities wage rank (1=highest),4.0,rank,2025 Q3,figures/state_deep_dive_qcew_51_ranks.csv,Rank among states in retained T-017 benchmark output.
+va_hcs_share_minus_peer_mean_pp,Virginia HCS share minus peer mean,-21.457478483688774,percentage_points,2025 Q3,figures/state_deep_dive_qcew_51_peers.csv,"Peer set is DC, KY, MD, NC, TN, WV plus Virginia."
+va_btos_current_ai_use_rate,Virginia BTOS current AI use share,0.186,share,BTOS period 95,figures/memo_btos_state_ai_use_latest.csv,Business-reported adoption share; descriptive only.

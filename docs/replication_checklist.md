@@ -43,6 +43,15 @@ Confirm files exist and are non-empty:
 - [ ] `python scripts/qa_visual_caption_coverage.py` exits 0.
 - [ ] If `run_visuals_all.py` is expected to fail due to intentionally skipped appendix inputs, this is documented in closure notes and main-figure stems are still verified.
 
+## Senator memo and Virginia pack (optional; policy/briefing deliverables)
+
+Skip if replication scope is paper figures only. If senator memo or Virginia visuals are in scope:
+
+- [ ] `python scripts/run_memo_visuals_build.py` exits 0.
+- [ ] `python scripts/run_memo_visuals_qa.py` exits 0.
+- [ ] Confirm core Virginia stems exist: `visuals/png/va01_virginia_sector_composition.png` through `va06_virginia_kpi_dashboard.png` (and matching PDFs under `visuals/vector/`).
+- [ ] Confirm `figures/state_deep_dive_qcew_51_profile.csv` and `figures/virginia_memo_kpis.csv` exist when Virginia brief is claimed current.
+
 ## Spot-check mapping (sample)
 
 Pick **one** ticket and trace source URL from `docs/data_registry.csv` to a cached file path named in `intermediate/*run_metadata.json` for that ticket. Record:

@@ -28,7 +28,7 @@ Public-data paper pipeline: shared crosswalks, figures, and documentation.
 | T-019 | `build_figureA9_acs_local_composition.py` / `qa_figureA9_acs_local_composition.py` | `figures/figureA9_acs_local_composition.csv`, `intermediate/figureA9_acs_local_composition_run_metadata.json` |
 | T-020 | `build_figureA10_nls_longrun.py` / `qa_figureA10_nls_longrun.py` | `figures/figureA10_nls_longrun.csv`, `intermediate/figureA10_nls_longrun_run_metadata.json` |
 
-Later tickets (T-021 onward) are defined in `issues.md` but do not yet have build scripts in this repository unless added in a future change.
+Extension tickets **T-021 through T-026** (AWES, ALPI, related intermediates) use scripts under `scripts/build_*` and `scripts/qa_*` as listed in [docs/methods_data.md](docs/methods_data.md). **Senator memo visuals** (`t101`–`t108`) and the **additive Virginia pack** (`va01`–`va08`) are built outside the strict `PR-000`–`T-020` acceptance list; see [docs/replication.md](docs/replication.md) and [docs/figure_catalog.md](docs/figure_catalog.md).
 
 ## Full replication (clean)
 
@@ -150,6 +150,17 @@ python scripts/run_visuals_acceptance.py
 
 If you intentionally skip long appendix rebuild tickets, run `python scripts/qa_visuals.py` to validate the retained visual stems and treat `run_visuals_acceptance.py` as full-scope (all figures) coverage.
 
+### Senator memo visuals and Virginia brief pack (additive)
+
+Orchestrated build and QA (does not replace `run_visuals_all.py` for paper `t001`–`t020`):
+
+```bash
+python scripts/run_memo_visuals_build.py
+python scripts/run_memo_visuals_qa.py
+```
+
+Outputs include `figures/memo_*.csv`, Virginia deep-dive CSVs under `figures/state_deep_dive_qcew_51_*.csv`, `figures/virginia_memo_kpis.csv`, and stems `t101`–`t108` plus `va01`–`va08` under `visuals/png/` and `visuals/vector/`. Precision rules: [docs/memo_visual_precision.md](docs/memo_visual_precision.md). Virginia module detail: [docs/virginia_deep_dive.md](docs/virginia_deep_dive.md).
+
 ## Post-implementation docs (quick index)
 
 - Replication: [docs/replication.md](docs/replication.md)
@@ -157,6 +168,7 @@ If you intentionally skip long appendix rebuild tickets, run `python scripts/qa_
 - Figure catalog, captions, source notes: [docs/figure_catalog.md](docs/figure_catalog.md), `docs/captions/`, `docs/source_notes/`
 - Figure memos (main text): `docs/figure_memos/fig01.md`–`fig05.md`
 - Claim audit: [docs/claim_audit.md](docs/claim_audit.md)
+- Senator briefing (Virginia): [docs/senate_briefing_memo.md](docs/senate_briefing_memo.md), [docs/senate_briefing_evidence_baseline_va.md](docs/senate_briefing_evidence_baseline_va.md), [docs/senate_briefing_lineage_va.md](docs/senate_briefing_lineage_va.md), [docs/senate_briefing_script_va.md](docs/senate_briefing_script_va.md), [docs/senate_briefing_qa_va.md](docs/senate_briefing_qa_va.md), [docs/senator_handout_1page_va.md](docs/senator_handout_1page_va.md), [docs/senator_packet_order_va.md](docs/senator_packet_order_va.md), [docs/virginia_deep_dive.md](docs/virginia_deep_dive.md)
 - Methods/data: [docs/methods_data.md](docs/methods_data.md)
 - Main draft: [docs/paper_draft_v1_public_data_ai_labor.md](docs/paper_draft_v1_public_data_ai_labor.md)
 - Appendix: [docs/appendix_outline.md](docs/appendix_outline.md), [docs/appendix_draft.md](docs/appendix_draft.md)

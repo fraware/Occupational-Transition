@@ -55,7 +55,9 @@ UNEMP_CODES = (3, 4)
 # A_FNLWGT: Census person layout documents width/range; public CSV stores two implied decimals.
 A_FNLWGT_SCALE = 100.0
 
-CHUNKSIZE = 150_000
+# Keep small: wide ASEC person CSVs have hundreds of columns; reading only
+# REQUIRED_PERSON_COLUMNS avoids OOM in pandas' C tokenizer/parser.
+CHUNKSIZE = 50_000
 
 
 def _request(url: str, method: str = "GET") -> urllib.request.Request:
@@ -238,8 +240,8 @@ def aggregate_year(
             zstream,
             encoding="latin-1",
             chunksize=CHUNKSIZE,
-            dtype=str,
-            low_memory=False,
+            usecols=list(REQUIRED_PERSON_COLUMNS),
+            low_memory=True,
         )
         for chunk in reader:
             missing = [c for c in REQUIRED_PERSON_COLUMNS if c not in chunk.columns]

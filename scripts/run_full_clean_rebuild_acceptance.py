@@ -3,7 +3,7 @@ Run strict ticket-by-ticket rebuild + QA with checkpoints and log.
 
 This script:
 - Deletes expected ticket output artifacts before each build step.
-- Runs build then QA for PR-000 through T-020 in strict order.
+- Runs build then QA for PR-000 through T-026 in strict order.
 - Writes a timestamped markdown acceptance log under intermediate/.
 
 Usage:
@@ -53,6 +53,7 @@ TICKETS: list[Ticket] = [
         [
             "figures/figure1_panelB_task_heatmap.csv",
             "intermediate/ai_relevance_terciles.csv",
+            "intermediate/occ22_exposure_components.csv",
             "intermediate/figure1_panelB_meta.csv",
             "intermediate/figure1_panelB_run_metadata.json",
         ],
@@ -225,6 +226,60 @@ TICKETS: list[Ticket] = [
             "intermediate/figureA10_nls_longrun_run_metadata.json",
         ],
     ),
+    (
+        "T-021",
+        "python scripts/build_occ22_sector_weights.py",
+        "python scripts/qa_occ22_sector_weights.py",
+        [
+            "intermediate/occ22_sector_weights.csv",
+            "intermediate/occ22_sector_weights_run_metadata.json",
+        ],
+    ),
+    (
+        "T-022",
+        "python scripts/build_btos_sector_ai_use_monthly.py",
+        "python scripts/qa_btos_sector_ai_use_monthly.py",
+        [
+            "intermediate/btos_sector_ai_use_monthly.csv",
+            "intermediate/btos_sector_ai_use_monthly_run_metadata.json",
+        ],
+    ),
+    (
+        "T-023",
+        "python scripts/build_awes_occ22_monthly.py",
+        "python scripts/qa_awes_occ22_monthly.py",
+        [
+            "metrics/awes_occ22_monthly.csv",
+            "intermediate/awes_run_metadata.json",
+        ],
+    ),
+    (
+        "T-024",
+        "python scripts/build_sector6_stress_monthly.py",
+        "python scripts/qa_sector6_stress_monthly.py",
+        [
+            "intermediate/sector6_stress_monthly.csv",
+            "intermediate/sector6_stress_monthly_run_metadata.json",
+        ],
+    ),
+    (
+        "T-025",
+        "python scripts/build_cps_occ22_exit_risk_monthly.py",
+        "python scripts/qa_cps_occ22_exit_risk_monthly.py",
+        [
+            "intermediate/cps_occ22_exit_risk_monthly.csv",
+            "intermediate/cps_occ22_exit_risk_monthly_run_metadata.json",
+        ],
+    ),
+    (
+        "T-026",
+        "python scripts/build_alpi_occ22_monthly.py",
+        "python scripts/qa_alpi_occ22_monthly.py",
+        [
+            "metrics/alpi_occ22_monthly.csv",
+            "intermediate/alpi_run_metadata.json",
+        ],
+    ),
 ]
 
 
@@ -261,7 +316,7 @@ def main() -> int:
     lines.append(
         f"- Started UTC: {dt.datetime.now(dt.timezone.utc).isoformat()}"
     )
-    lines.append("- Scope: PR-000 through T-020")
+    lines.append("- Scope: PR-000 through T-026")
     lines.append("- Mode: strict ticket-by-ticket rebuild with checkpoints")
     lines.append("")
 

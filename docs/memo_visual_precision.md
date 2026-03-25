@@ -1,0 +1,120 @@
+# Memo visuals (t101–t108): precision and non-invention rules
+
+This note documents design choices for the senator-note memo pack so outputs are reproducible, auditable, and not silently overstated. Builders live under `scripts/build_memo_*.py`; QA under `scripts/qa_memo_*.py`.
+
+## 1. BTOS state map (`t105`) — `figures/memo_btos_state_ai_use_latest.csv`
+
+### Data sources and endpoints
+
+- **Strata catalog:** `GET https://www.census.gov/hfp/btos/api/strata` — rows with `STRATA_TYPE == "state"` define valid two-letter state codes. The memo builder restricts to the fixed set **50 states + DC** (`STATE50_DC` in `scripts/build_memo_btos_state_ai_map.py`), matching the tile layout.
+- **Per-state payload:** `GET .../periods/{PERIOD_ID}/data/state/{STATE_ABBR}` returns a JSON object whose values are row dicts (same pattern as national `naics2/XX` pulls in `scripts/build_figure3_panelA_btos_ai_trends.py`).
+
+### Period alignment (must match national trend file)
+
+- **Rule:** `PERIOD_ID` is taken from the **last row** of `figures/figure3_panelA_btos_ai_trends.csv` after sorting by `period_start_date`.
+- **Rationale:** Figure 3 Panel A is the paper’s canonical national BTOS AI series; the state map is explicitly tied to that same vintage so the memo does not mix “national latest” with “state latest” from different collection waves.
+
+### What is extracted (no imputation)
+
+- **Published field only:** `OPTION_TEXT == "AI current"` and `ANSWER == "Yes"`, using `ESTIMATE_PERCENTAGE` divided by 100 for a share in `[0, 1]`. This mirrors the national extraction logic in `build_figure3_panelA_btos_ai_trends.py`.
+- **No synthetic fill:** If the HTTP request fails, or the payload parses but no matching row exists, the state row is still emitted with `missing_ai_current_rate = 1`, `ai_use_current_rate` empty (NaN in CSV), and **`missing_reason`** set so readers can distinguish causes:
+  - `published` — value present.
+  - `fetch_failed` — network/HTTP/OS error when calling the API.
+  - `no_ai_current_yes_row` — response received but no extractable AI-current Yes row (empty payload, schema change, or suppression pattern not represented as that row).
+
+### Quality gate
+
+- The script **fails closed** if fewer than **45** states have `missing_reason == "published"`. That is a documentation/monitoring floor, not a statistical rule.
+
+### Visual semantics
+
+- **Tile choropleth** is schematic (not a geographic projection). Colored tiles are states with a published value; **grey dashed** tiles are any non-`published` `missing_reason`. The color scale is **across published states only** (min/max of finite values).
+
+### CSV columns (audit trail)
+
+| Column | Meaning |
+|--------|---------|
+| `missing_ai_current_rate` | `0` if a share was extracted; `1` if not. |
+| `missing_reason` | `published` \| `fetch_failed` \| `no_ai_current_yes_row` (must match the flag above). |
+| `ai_use_current_rate` | Share in `[0,1]` when published; empty/NaN when not. |
+
+### What this figure does not show
+
+- Not worker-weighted: BTOS is establishment/firm-weighted published shares by stratum.
+- Not linked to CPS outcomes: no merge to workers or occupations in this output.
+- Not causal: descriptive business-reported adoption only.
+
+---
+
+## 2. Memo dashboard CPS entry KPIs (`t101`) — unemployment / NILF entry for **high** AI tercile
+
+### Inputs
+
+- **Probabilities / summary rows:** `figures/figure2_panelB_transition_probs.csv`, `record_type == "summary"`, `origin_state` matching `occ22_*`.
+- **Origin mass:** recomputed from `figures/figure2_panelB_transition_counts.csv` as, for each `(month, origin_state)`:
+
+  `origin_mass = sum(weighted_transition_count over all destination_state rows for that origin).`
+
+### Why origin mass is not taken from the probs file
+
+- The probs CSV may carry columns such as `origin_mass` that are **not valid** for merging onto summary rows (e.g. NaN for `occ22_*` summaries while matrix rows carry mass). Using those values would under-weight or drop states incorrectly.
+- **Rule:** For this memo KPI only, **drop** `origin_mass`, `weighted_transition_count`, `transition_probability`, and `destination_state` from the summary slice, then **left-merge** the counts-derived `origin_mass` on `(month, origin_state)`.
+
+### Tercile and metric
+
+- **Mapping:** `intermediate/ai_relevance_terciles.csv` maps `occ22_id` → `occ22_XX` → `ai_relevance_tercile`.
+- **Headline:** **high** tercile only for the two KPIs `cps_unemployment_entry_rate` and `cps_nilf_entry_rate`.
+- **Metrics:** `metric_name` equals `unemployment_entry_rate` and `nilf_entry_rate` respectively (same names as in `figure2_panelB_transition_probs.csv` summary rows).
+
+### Weighted mean formula
+
+For a given `month`, metric `M`, and tercile `T`:
+
+Let `O` be the set of `origin_state` values with `ai_relevance_tercile == T`. For each `o in O`, let `p(o)` be the summary `metric_value` and `w(o)` the counts-derived `origin_mass`. Rows with missing `p(o)` or `w(o)` are excluded.
+
+\[
+\text{KPI} = \frac{\sum_{o \in O} p(o)\, w(o)}{\sum_{o \in O} w(o)}
+\]
+
+This is an **origin-mass-weighted average** of published summary probabilities across high-tercile occupation groups, not a single CPS cross-tab published by BLS as-is.
+
+### Month selection (explicit, may differ from “latest hours month”)
+
+- **Hours KPI** uses `max(month)` from `figures/figure2_panelA_hours_by_ai_tercile.csv`.
+- **Entry KPIs** use the **latest calendar month in descending order** (from distinct `month` in the transition probs file) such that **both** unemployment-entry and NILF-entry KPIs are computable via the formula above. If the latest month is missing one of the two (or merge drops all weights), the builder walks backward until a complete month is found.
+- **Consequence:** `reference_period` for hours and for entry KPIs **can differ**. When they differ, the KPI `notes_limits` and `intermediate/memo_dashboard_kpis_run_metadata.json` record the fact (`cps_dashboard_kpi_month_alignment`).
+
+### Limits
+
+- Matched-month CPS constructs only; not administrative job-to-job data.
+- Does not identify AI adoption or causal effects.
+
+---
+
+## 3. CPS month discovery (`scripts/build_figure2_panelA.py` — `discover_months_to_process`)
+
+### Intent
+
+- Walk forward from **2019-01** while `month_asset_available(y, m)` is true (Census CPS Basic file exists for that month).
+- **Allowlisted gaps:** months in `ALLOW_MISSING_MONTHS` are skipped without failing (documented in that module).
+- **Publication lag vs. calendar time:** If a month is **before** “today’s” calendar month index and still missing (and not allowlisted), raise — that is an **unexpected interior gap**.
+- If the first missing month is **at or after** the current calendar month index, **stop** and return months processed so far. That reflects **files not yet released** rather than a broken pipeline.
+
+### What this does not do
+
+- It does not invent CPS files or extrapolate series past the last available microfile.
+
+---
+
+## Related files
+
+| Artifact | Path |
+|----------|------|
+| Memo dashboard KPI table | `figures/memo_dashboard_kpis.csv` |
+| Dashboard build metadata | `intermediate/memo_dashboard_kpis_run_metadata.json` |
+| BTOS state table | `figures/memo_btos_state_ai_use_latest.csv` |
+| BTOS state build metadata | `intermediate/memo_btos_state_ai_use_latest_run_metadata.json` |
+| Virginia briefing KPI table (optional; uses BTOS state row when published) | `figures/virginia_memo_kpis.csv` |
+| Virginia KPI build metadata | `intermediate/virginia_memo_kpis_run_metadata.json` |
+| Frozen senator brief values (Virginia) | `docs/senate_briefing_evidence_baseline_va.md` |
+| Figure catalog (memo + Virginia stems) | `docs/figure_catalog.md` |

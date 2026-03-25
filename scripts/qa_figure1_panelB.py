@@ -12,8 +12,22 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 HEAT = ROOT / "figures" / "figure1_panelB_task_heatmap.csv"
 TERC = ROOT / "intermediate" / "ai_relevance_terciles.csv"
+EXPO = ROOT / "intermediate" / "occ22_exposure_components.csv"
 CROSS_PATH = ROOT / "crosswalks" / "occ22_crosswalk.csv"
 META_JSON = ROOT / "intermediate" / "figure1_panelB_run_metadata.json"
+
+EXPO_COLS = [
+    "occ22_code",
+    "occ22_label",
+    "ai_task_index_raw",
+    "exposure_pct",
+    "onet_analyzing_data_z",
+    "onet_processing_information_z",
+    "onet_documenting_recording_z",
+    "onet_working_with_computers_z",
+    "onet_assisting_caring_z",
+    "onet_handling_moving_z",
+]
 
 Z_COLS = [
     "z_analyzing_data_or_information",
@@ -96,6 +110,24 @@ def main() -> int:
         errors.append(
             "tercile occupation_group set must match PR-000 occ22 CPS labels"
         )
+
+    if not EXPO.is_file():
+        errors.append(f"missing {EXPO}")
+    else:
+        exp = pd.read_csv(EXPO)
+        if list(exp.columns) != EXPO_COLS:
+            errors.append(
+                f"exposure columns must be {EXPO_COLS}, got {list(exp.columns)}"
+            )
+        if len(exp) != 22:
+            errors.append(f"exposure: expected 22 rows, got {len(exp)}")
+        if exp["occ22_code"].duplicated().any():
+            errors.append("exposure: duplicate occ22_code")
+        for c in ("ai_task_index_raw", "exposure_pct"):
+            if exp[c].isna().any():
+                errors.append(f"exposure: NaN in {c}")
+        if (exp["exposure_pct"] < 0).any() or (exp["exposure_pct"] > 1).any():
+            errors.append("exposure: exposure_pct outside [0,1]")
 
     h_ids = set(h["occ22_id"].astype(int))
     if h_ids != set(range(1, 23)):

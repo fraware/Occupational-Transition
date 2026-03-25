@@ -1,0 +1,7 @@
+qcew_year,qcew_quarter,state_fips,state_name,sector6_code,sector6_label,state_sector_employment_share,average_weekly_wage,share_rank_desc,wage_rank_desc,num_states_in_sector,sector_share_pct
+2025,3,51,Virginia,MFG,Manufacturing,0.2869282227445308,1914.2863624088577,4,26,31,28.69282227445308
+2025,3,51,Virginia,INF,Information,0.0032285559315029,2171.0,10,5,31,0.32285559315029
+2025,3,51,Virginia,FAS,Financial activities,0.0141281607562569,3622.621206581353,19,4,31,1.41281607562569
+2025,3,51,Virginia,PBS,Professional and business services,0.1595164914636981,2121.717163212435,9,7,31,15.951649146369808
+2025,3,51,Virginia,HCS,Health care and social assistance,0.3762171655861766,2249.9122202389126,27,17,31,37.62171655861766
+2025,3,51,Virginia,RET,Retail trade,0.1599814035178345,1069.2003551824346,1,3,31,15.99814035178345

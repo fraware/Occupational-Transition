@@ -7,7 +7,8 @@ Use this procedure once main-text figures, manuscript draft, and QA logs align f
 - `python scripts/run_full_pipeline_from_raw.py` completes with exit code 0.
 - `docs/acceptance_matrix.md` main-text gate shows PASS or PASS WITH NOTE only.
 - `python scripts/run_visuals_all.py` and `python scripts/qa_visuals.py` complete if visuals are in scope.
-- `docs/claim_audit.md` reviewed for partial-support items.
+- If senator memo visuals or Virginia brief outputs are in scope for the same milestone, `python scripts/run_memo_visuals_build.py` and `python scripts/run_memo_visuals_qa.py` complete (see `docs/replication.md`).
+- `docs/claim_audit.md` reviewed for partial-support items (including senator brief claim ledger rows when Virginia briefing is published).
 
 ### Full freeze vs bounded validation
 

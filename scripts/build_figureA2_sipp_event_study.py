@@ -9,8 +9,8 @@ from __future__ import annotations
 
 import csv
 import hashlib
-import io
 import json
+import shutil
 import sqlite3
 import urllib.request
 import uuid
@@ -339,11 +339,18 @@ def ingest_panel_sqlite(
     csv_name = "pu.csv"
     # Unique path avoids PermissionError on Windows if a prior build is still running or the file is locked.
     db_path = INTER / f"_sipp_panel_{release_year}_{uuid.uuid4().hex}.sqlite"
+    csv_temp = INTER / f"_sipp_pu_{release_year}_{uuid.uuid4().hex}.csv"
 
-    with zipfile.ZipFile(zip_path, "r") as zf:
-        names = zf.namelist()
-        csv_name = next(n for n in names if n.lower().endswith(".csv"))
-        with zf.open(csv_name) as zstream, sqlite3.connect(db_path) as conn:
+    # TextIOWrapper on ZipExtFile uses read1(); on Windows that can raise OSError EINVAL (22).
+    # Stream the member to a real file, then csv over open() (read/readline only).
+    try:
+        with zipfile.ZipFile(zip_path, "r") as zf:
+            names = zf.namelist()
+            csv_name = next(n for n in names if n.lower().endswith(".csv"))
+            with zf.open(csv_name) as zin, csv_temp.open("wb") as bout:
+                shutil.copyfileobj(zin, bout, length=1 << 20)
+
+        with sqlite3.connect(db_path) as conn:
             conn.execute("PRAGMA journal_mode=OFF")
             conn.execute("PRAGMA synchronous=OFF")
             conn.execute(
@@ -371,24 +378,29 @@ def ingest_panel_sqlite(
             )
             batch_size = 50_000
             batch: list[tuple[Any, ...]] = []
-            text_io = io.TextIOWrapper(zstream, encoding="utf-8", newline="")
-            reader = csv.DictReader(text_io, delimiter="|")
-            fields = reader.fieldnames or []
-            missing = [c for c in USECOLS if c not in fields]
-            if missing:
-                raise ValueError(
-                    f"SIPP CSV missing columns {missing}; fieldnames={fields[:30]}"
-                )
-            for row in reader:
-                clean = {k: ("" if row.get(k) is None else str(row.get(k))) for k in USECOLS}
-                batch.append(_row_tuple_from_csv(clean))
-                if len(batch) >= batch_size:
+            with csv_temp.open("r", encoding="utf-8", newline="") as text_io:
+                reader = csv.DictReader(text_io, delimiter="|")
+                fields = reader.fieldnames or []
+                missing = [c for c in USECOLS if c not in fields]
+                if missing:
+                    raise ValueError(
+                        f"SIPP CSV missing columns {missing}; fieldnames={fields[:30]}"
+                    )
+                for row in reader:
+                    clean = {k: ("" if row.get(k) is None else str(row.get(k))) for k in USECOLS}
+                    batch.append(_row_tuple_from_csv(clean))
+                    if len(batch) >= batch_size:
+                        conn.executemany(insert_sql, batch)
+                        batch.clear()
+                        conn.commit()
+                if batch:
                     conn.executemany(insert_sql, batch)
-                    batch.clear()
                     conn.commit()
-            if batch:
-                conn.executemany(insert_sql, batch)
-                conn.commit()
+
+            try:
+                csv_temp.unlink(missing_ok=True)
+            except OSError:
+                pass
 
             conn.execute(
                 "CREATE INDEX idx_pm_person_time ON pm (ssuid, pnum, spanel, swave, monthcode)"
@@ -430,6 +442,11 @@ def ingest_panel_sqlite(
                     prev_key = key
                 buf.append(_monthrow_from_sql_row(row))
             flush_group()
+    finally:
+        try:
+            csv_temp.unlink(missing_ok=True)
+        except OSError:
+            pass
 
     try:
         db_path.unlink()
@@ -444,7 +461,10 @@ def ingest_panel_sqlite(
         "csv_member": csv_name,
         "schema_url": pu_schema_json_url(release_year),
         "sqlite_ingest_batch_rows": 50_000,
-        "ingest_note": "stdlib csv.DictReader streaming into SQLite (avoids pandas OOM on large pu.csv).",
+        "ingest_note": (
+            "Zip member copied to temp CSV (Windows-safe), then csv.DictReader into SQLite "
+            "(avoids pandas OOM on large pu.csv)."
+        ),
     }
 
 

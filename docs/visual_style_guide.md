@@ -27,10 +27,12 @@ This guide defines deterministic publication-ready static rendering for figure o
 - Sector sequences: fixed 6-color palette in `scripts/viz_style.py`.
 
 ## Naming Conventions
-- Visual stem format: `tNNN_<chart_slug>`.
+- Paper and appendix stems: `tNNN_<chart_slug>` for `T-001`–`T-020`.
+- Senator memo pack (additive): stems `t101_memo_dashboard` through `t108_memo_policy_roadmap` (see `docs/figure_catalog.md`).
+- Virginia brief pack (additive): stems `va01_virginia_sector_composition` through `va08_virginia_occ_context` (see `docs/figure_catalog.md`).
 - Each stem must generate both:
-  - `visuals/png/tNNN_<chart_slug>.png`
-  - `visuals/vector/tNNN_<chart_slug>.pdf`
+  - `visuals/png/<stem>.png`
+  - `visuals/vector/<stem>.pdf`
 
 ## Chart Grammar by Family
 - Time series: line chart with consistent axis format and reference baseline when applicable.
@@ -45,10 +47,13 @@ After editorial sign-off, treat `scripts/viz_style.py` as frozen for this paper 
 Figure-to-stem mapping and caption paths: `docs/figure_catalog.md`.
 
 ## Reproducibility and QA
-- Render commands:
+- Render commands (paper `t001`–`t020`):
   - `python scripts/run_visuals_all.py`
-- Visual QA:
+- Visual QA (paper `t001`–`t020`):
   - `python scripts/qa_visuals.py`
+- Memo + Virginia stems (`t101`–`t108`, `va01`–`va06` required in Virginia QA):
+  - `python scripts/run_memo_visuals_build.py`
+  - `python scripts/run_memo_visuals_qa.py`
 - Caption and source-note file coverage (main text):
   - `python scripts/qa_visual_caption_coverage.py`
 - QA verifies:

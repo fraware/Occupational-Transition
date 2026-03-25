@@ -408,7 +408,16 @@ def weighted_mean_hours(dat_path: Path, positions: dict[str, tuple[int, int]]) -
 
 
 def discover_months_to_process(today: date) -> list[tuple[int, int]]:
-    """Months from 2019-01 through the latest file available on Census servers."""
+    """
+    Months from 2019-01 through the last CPS Basic month with a retrievable file.
+
+    Behavior (see docs/memo_visual_precision.md, section 3):
+    - Append (y, m) while Census hosts that month's CPS Basic asset.
+    - Skip months listed in ALLOW_MISSING_MONTHS without failing.
+    - If the first missing month is at or after today's calendar month index, stop
+      (publication lag: files not released yet). This is not treated as an error.
+    - If a month before today is missing and not allowlisted, raise (unexpected gap).
+    """
     months: list[tuple[int, int]] = []
     y, m = 2019, 1
     today_idx = month_index(today.year, today.month)
@@ -423,12 +432,17 @@ def discover_months_to_process(today: date) -> list[tuple[int, int]]:
             y, m = next_month(y, m)
             continue
 
+        # Census publication lags: do not treat "no file yet" for months at or
+        # beyond the calendar month as a pipeline failure. Stop at the last
+        # available month instead (still strict for missing interior months).
         if month_index(y, m) >= today_idx:
             break
 
+        zip_u = month_zip_url(y, m)
+        gz_u = month_dat_gz_url(y, m)
         raise RuntimeError(
-            f"Unexpected missing CPS Basic file (not allowlisted): {y}-{m:02d} "
-            f"(tried {month_zip_url(y, m)} and {month_dat_gz_url(y, m)})"
+            "Unexpected missing CPS Basic file (not allowlisted): "
+            f"{y}-{m:02d} (tried {zip_u} and {gz_u})"
         )
 
     return months

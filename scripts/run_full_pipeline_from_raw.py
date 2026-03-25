@@ -1,5 +1,5 @@
 """
-Single ordered entrypoint: dependencies, full PR-000 to T-020 rebuild + QA,
+Single ordered entrypoint: dependencies, full PR-000 to T-026 rebuild + QA,
 optional visuals.
 
 This does not delete the git clone; it runs the same strict sequence as
@@ -58,7 +58,7 @@ def _latest_acceptance_log() -> Path | None:
 def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
-            "Full pipeline: install deps, PR-000 to T-020, optional QA extras."
+            "Full pipeline: install deps, PR-000 to T-026, optional QA extras."
         ),
     )
     parser.add_argument(
