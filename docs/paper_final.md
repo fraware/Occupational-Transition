@@ -10,11 +10,15 @@ What Exists, What Works, and What Small Survey Changes Would Unlock
 
 This file is the **expanded manuscript** synthesized from the repository. Numeric claims must match frozen outputs for the evidence window you publish against. See [evidence_snapshot.md](evidence_snapshot.md) for tagging policy and the **T-004** transition-count snapshot rule. The bullet skeleton remains in [paper_draft_v1_public_data_ai_labor.md](paper_draft_v1_public_data_ai_labor.md) for comparison.
 
+**Repository state for this revision:** manuscript numbers and examples below are aligned with commit `72f02bf2e7897f5515ab9212f9e6fe6fbcd2c432` (short `72f02bf`). Replace with a [release tag](release_process.md) such as `results-YYYY-MM-DD` when you publish a labeled freeze.
+
 ---
 
 ## Abstract
 
 Debates over AI and labor have outpaced the U.S. federal public measurement system. This paper develops a **public-data framework**: a reproducible pipeline (PR-000 through T-020, with extension metrics T-021–T-026) that produces transparent CSV outputs, JSON lineage, and publication visuals for occupational structure and tasks, worker hours and matched-month transitions, business-reported AI adoption and workforce-effect categories, sector labor-demand and payroll context, and a rule-based **capability matrix** of what each major source can support for seven measurement objects—including the absence of a public worker–firm AI linkage.
+
+**Substantive snapshot (descriptive, non-causal):** In the frozen outputs tied to commit `72f02bf`, high–low AI-relevance terciles differ by roughly **four weekly hours** in early 2026 CPS microdata; nationally BTOS firm-weighted **current AI-use** shares reach the **mid-20 percent range** in recent periods; and JOLTS **job-opening rates** in January 2026 differ by **nearly two percentage points** across the six comparison sectors—patterns that illustrate what the public stack can show without worker–firm linkage or AI treatment effects.
 
 **Claim discipline (see [claim_audit.md](claim_audit.md)):** Main-text Figures 1–2 **directly support** Claims 1–2 within descriptive scope. **Claim 3** is **partially** supported: BTOS adoption and published employment-effect rows are direct; task-effect rows in Figure 3 Panel B require **proxy-explicit** wording where detailed supplement item tabulations are absent in public workbooks ([README.md](../README.md) Known Deviations; T-007). **Claim 4** is **directly supported** for sector context without occupation-resolved JOLTS. **Claim 5** splits an **empirical diagnosis** (no integrated public worker–firm AI panel in the matrix) from **policy design judgments** (survey priorities), which are not treatment-effect estimates.
 
@@ -36,6 +40,8 @@ The gap this paper targets is not “more AI hype” but **measurement architect
 
 **Claim 1** is that the paper provides a precise **national** baseline of AI-relevant occupations: employment, wages, and task content, before any dynamic interpretation.
 
+**Main descriptive result.** We find **highly concentrated national employment** across the 22 groups: the largest shares in the baseline OEWS file are in Office and Administrative Support (about **11.8%** of employment), Transportation and Material Moving (about **8.9%**), and Food Preparation and Serving (about **8.8%**), with median annual wages spanning roughly **$34k** to **$121k** across groups; **Panel B** shows wide dispersion in standardized digital-task z-scores and in the AI Task Index, motivating deterministic tercile cuts (`figures/figure1_panelA_occ_baseline.csv`, `figures/figure1_panelB_task_heatmap.csv`).
+
 **Data and construction.** Figure 1 combines BLS OEWS national employment and median annual wages with O*NET Work Activities (Importance scale), aggregated to **22 occupation groups** via the frozen crosswalk `crosswalks/occ22_crosswalk.csv`. T-002 forms z-scores for selected work activities, builds an **AI Task Index** as the mean of four digital-information-related z-scores, and assigns **deterministic AI-relevance terciles** for downstream figures. Outputs include `figures/figure1_panelA_occ_baseline.csv`, `figures/figure1_panelB_task_heatmap.csv`, and `intermediate/ai_relevance_terciles.csv` (build-generated).
 
 **How to read Figure 1.** Panel A ranks groups by employment share and reports median wages. Panel B heatmaps standardized task intensities and the AI Task Index column that drives terciles. The figure is **descriptive and national**; it does not identify causal AI impacts or within-group heterogeneity.
@@ -47,6 +53,8 @@ The gap this paper targets is not “more AI hype” but **measurement architect
 ## 3. Worker hours and mobility (Figure 2; Claim 2)
 
 **Claim 2** is that monthly CPS public-use microdata support **national descriptive monitoring** of usual weekly hours and broad occupational and labor-force transitions when persons are matched across **adjacent months**, using composite person weights and AI terciles from T-002.
+
+**Main descriptive result.** We find a **stable weekly-hours gap** between AI-relevance terciles: in **2026-01** weighted mean usual weekly hours are about **40.4** (high), **37.4** (middle), and **36.3** (low)—roughly **four hours** between high and low (`figures/figure2_panelA_hours_by_ai_tercile.csv`). For transition summaries, origin-mass-weighted dashboard KPIs (same evidence window) report **unemployment-entry** and **NILF-entry** shares on the order of **0.7%** and **1.6%** for high-origin mass in **2026-01** (`figures/memo_dashboard_kpis.csv`; construction `docs/memo_visual_precision.md`). These are **descriptive** matched-month constructs, not causal AI effects.
 
 **Data and construction.** T-003 averages usual weekly hours by month and tercile. T-004 builds transition counts in a coarse state space (22 occupation groups plus unemployment and NILF). T-005 row-normalizes to probabilities and produces summary metrics. Panel B combines a **latest-month** transition-count heatmap with time series of retention, occupation switching, unemployment entry, and NILF entry. See `docs/t003_*` through `docs/t005_*` for windows and weight handling.
 
@@ -60,6 +68,8 @@ The gap this paper targets is not “more AI hype” but **measurement architect
 
 **Claim 3** is **partially** supported: BTOS provides high-frequency, **business-reported** AI use and supplement-based workforce-effect shares suitable as the public firm-side benchmark—but not linked worker microdata.
 
+**Main descriptive result.** We find that **national firm-weighted current AI-use** shares vary over time in the BTOS API series and reach the **mid-20 percent range** in recent periods (e.g., **25.1%** current and **33.7%** expected for the period starting **2026-01-26** in `figures/figure3_panelA_btos_ai_trends.csv`). In the retained supplement window, **directly published** employment-effect rows are dominated by **“employment did not change”** (**94.6%**), while the three **task-related** categories are **proxy-mapped** at **~27%, 21%, and 20%** shares (`figures/figure3_panelB_btos_workforce_effects.csv`, `evidence_directness` column)—language must remain **proxy-explicit** for those rows.
+
 **Data and construction.** T-006 assembles national firm-weighted series for current and expected AI use by collection period. T-007 reads published AI Supplement Table shares for retained workforce-effect categories. **Known deviations:** the issue template’s locked BTOS window may differ from the first period with AI core questions in the API; the retained series follows published API periods ([README.md](../README.md)). For Panel B, **employment-effect** rows follow published tables; **task-related** categories may use **Scope 2 proxy mapping** when item-25 option rows are not publicly tabulated—prose must say “proxy-interpreted” or equivalent, not direct publication (T-007 methodology).
 
 **Interpretation.** Read Panel A for adoption trends; Panel B for relative size of retained effect categories at business-reported descriptive level. Avoid worker-level or causal claims.
@@ -70,6 +80,8 @@ The gap this paper targets is not “more AI hype” but **measurement architect
 
 **Claim 4** is that JOLTS and CES provide official **sector-group** labor-demand and payroll context even though public JOLTS is **not** occupation-resolved.
 
+**Main descriptive result.** We find **substantial cross-sector dispersion** in official flows and payroll: in **2026-01** JOLTS **job-opening rates** range from **3.8%** (Manufacturing and Information) to **5.6%** (Health care and social assistance)—about **1.8** percentage points across the six sectors (`figures/figure4_panelA_jolts_sector_rates.csv`). CES payroll employment indexed to August 2023 in the same month spans roughly **94.7** (Information) to **108.7** (Health care) (`figures/figure4_panelB_ces_sector_index.csv`). These are **sector aggregates**, not occupation-level or AI-attributed demand.
+
 **Data and construction.** T-008 maps JOLTS flow rates to six sector groups; T-009 indexes CES payroll employment to 100 in August 2023. Mapping uses `crosswalks/sector6_crosswalk.csv`.
 
 **Interpretation.** Panel A compares openings, hires, quits, and layoffs/discharges rates across sectors; Panel B shows payroll paths. These are **macro sector context**, not occupation-level vacancy or AI-specific demand.
@@ -79,6 +91,8 @@ The gap this paper targets is not “more AI hype” but **measurement architect
 ## 6. Identification frontier (Figure 5; Claim 5)
 
 **Claim 5** combines an **empirical** statement and a **design** judgment. The matrix in Figure 5 is **not estimated**; it encodes `direct`, `partial`, or `none` for seven empirical objects across five core datasets (CPS, BTOS, JOLTS, OEWS, O*NET), including **`worker_firm_ai_linkage`**, from locked rules in [lineage/t010_paper_notes_matrix.md](lineage/t010_paper_notes_matrix.md) and [lineage/t010_issues.md](lineage/t010_issues.md).
+
+**Main boundary finding.** We find that **`worker_firm_ai_linkage` is coded `none` for all five datasets**—the matrix’s sharpest single statement is that **no** core public source in this stack can directly support integrated worker–firm AI linkage claims. **CPS** is `direct` on worker outcomes and occupational transitions; **BTOS** on `firm_ai_adoption`; **JOLTS** on `labor_demand_turnover`; **OEWS** on occupational structure/wages; **O*NET** on `task_exposure_mechanism` (`figures/figure5_capability_matrix.csv`).
 
 **Empirical diagnosis.** The public stack does not supply an integrated worker–firm AI panel at scale.
 
@@ -96,13 +110,15 @@ The extension pipeline (T-021–T-026) produces **Adoption-Weighted Exposure Sco
 
 **Design.** The analysis is **descriptive**: official weights where applicable, frozen crosswalks, and ticketed build/QA scripts. Full construction, universes, time windows, and limitations appear in [methods_data.md](methods_data.md) and per-ticket `docs/t*_methodology.md`. **Authoritative URLs and snapshot fields** are recorded in [data_registry.csv](data_registry.csv).
 
-**Replication.** Environment, download behavior, and commands are in [replication.md](replication.md). Full clean rebuild: `python scripts/run_full_pipeline_from_raw.py` (see [README.md](../README.md)). Acceptance criteria: [acceptance_matrix.md](acceptance_matrix.md).
+**Replication.** Environment, download behavior, and commands are in [replication.md](replication.md). Full clean rebuild: `python scripts/run_full_pipeline_from_raw.py` (see [README.md](../README.md)). Acceptance criteria: [acceptance_matrix.md](acceptance_matrix.md). **Evidence freeze:** examples and percentages in this manuscript were checked against commit **`72f02bf`** (`72f02bf2e7897f5515ab9212f9e6fe6fbcd2c432`); substitute an annotated tag (e.g. `results-YYYY-MM-DD`) when you publish a labeled release.
 
 **Option (self-contained journal version).** For submission, paste or adapt subsections from [methods_data.md](methods_data.md) into the journal template; avoid duplicating every ticket verbatim.
 
 ---
 
 ## 9. Conclusion
+
+The strongest **descriptive** takeaway from the frozen stack is not a causal estimate but a **joint pattern**: large national dispersion in occupational tasks and wages (Figure 1), persistent **hours and transition** differences by AI-relevance tercile in CPS (Figure 2), rising **business-reported AI use** in BTOS with **employment effects** mostly unchanged in published supplement rows (Figure 3), **wide sector gaps** in JOLTS/CES context (Figure 4), and a matrix that marks **worker–firm AI linkage as unsupported everywhere** (Figure 5).
 
 U.S. public federal data can already support a **serious** AI-and-labor measurement program when integrated with explicit **resolution limits**: national occupational structure and tasks (Figure 1), worker hours and broad transitions (Figure 2), business-reported adoption and effects (Figure 3), sector demand and payroll (Figure 4), and explicit capability boundaries (Figure 5). The marginal policy value lies in **targeted survey extensions** and **transparent monitoring**, not in simulating firm-level causal identification from public files. Geographic composition belongs in appendix ACS (Figure A9); sector flows do not substitute for occupation-level demand. BTOS task-effect language must remain **proxy-explicit** where public tables require it.
 
@@ -143,11 +159,12 @@ Export to Word or LaTeX via your journal template or Pandoc after content freeze
 
 ## Reproducibility and integrity checklist
 
+- [x] At least one **empirical result lead** (we find / main pattern) in each main-text figure section (§§2–6).
 - [ ] Numeric claims reconciled to `figures/*.csv` and evidence tag per [evidence_snapshot.md](evidence_snapshot.md).
 - [ ] [claim_audit.md](claim_audit.md) caveats reflected (Claim 1 geography → A9; Claim 3 proxy language; Claim 5 diagnosis vs policy).
 - [ ] [README.md](../README.md) Known Deviations (T-006, T-007) reflected wherever Figure 3 / BTOS is discussed.
 - [ ] Abstract and conclusion avoid overstating support for partial claims.
-- [ ] Reproducibility blurb cites [replication.md](replication.md) and optional git tag.
+- [ ] Reproducibility blurb cites [replication.md](replication.md) and a **concrete** git commit or tag (this draft: `72f02bf`).
 - [ ] AWES/ALPI mentioned only as non-causal monitoring metrics if included.
 
 The drafting rule remains: **no invented datasets, no synthetic backfilling, and no claims beyond the resolution permitted by the underlying public instruments.**

@@ -94,7 +94,9 @@ Policy release mode additionally requires:
 
 ## Sign-off
 
+Fill before public freeze; remove underscores when complete. Point **Acceptance log path** to a concrete file such as `intermediate/full_clean_rebuild_acceptance_<UTC>.md` after a run.
+
 | Role | Name | Date | Acceptance log path |
 |------|------|------|----------------------|
-| Implementer | | | |
-| Reviewer | | | |
+| Implementer | _Name_ | _YYYY-MM-DD_ | _intermediate/full_clean_rebuild_acceptance_<UTC>.md_ |
+| Reviewer | _Name_ | _YYYY-MM-DD_ | _Same or review note_ |

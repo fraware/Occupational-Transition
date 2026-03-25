@@ -36,9 +36,11 @@ Support levels:
 
 ## Sign-off
 
+Fill before public freeze; remove underscores when complete.
+
 | Reviewer | Date | Notes |
 |----------|------|-------|
-| | | |
+| _Name_ | _YYYY-MM-DD_ | _Optional notes_ |
 
 ## Senator brief claim ledger (Virginia package)
 

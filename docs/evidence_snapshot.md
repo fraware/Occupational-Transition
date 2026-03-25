@@ -2,6 +2,17 @@
 
 Use this note when locking numeric prose in [paper_final.md](paper_final.md) to a specific repository state.
 
+## This repository (worked example)
+
+The expanded manuscript in [paper_final.md](paper_final.md) cites concrete percentages and month labels checked against commit **`72f02bf2e7897f5515ab9212f9e6fe6fbcd2c432`** (short **`72f02bf`**). When you publish a labeled freeze, add an annotated tag and replace the commit reference in the manuscript with that tag name.
+
+To create a tag after a clean acceptance run (illustrative):
+
+```bash
+git tag -a results-YYYY-MM-DD -m "Frozen research state for manuscript"
+git push origin results-YYYY-MM-DD
+```
+
 ## Recommended practice
 
 1. Run a full or scoped acceptance pass and record results in [acceptance_matrix.md](acceptance_matrix.md).
