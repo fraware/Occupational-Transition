@@ -102,8 +102,6 @@ Add a compact CPS worker AI module, then merge those responses into the existing
 
 ## Traceability list
 
-- `docs/cps_deep_exploration_report.md`
-- `docs/cps_extension_blueprint.md`
 - `docs/methods_data.md`
 - `docs/t005_figure2_panelB_probs_methodology.md`
 - `docs/t013_figureA3_cps_supp_validation_methodology.md`

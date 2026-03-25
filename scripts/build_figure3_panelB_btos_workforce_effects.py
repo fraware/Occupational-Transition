@@ -37,7 +37,7 @@ USER_AGENT = (
     "(KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 )
 
-# Frozen design window (T-007 / issues.md).
+# Frozen design window (T-007 / docs/archive/issues_full.md).
 WINDOW_START = "2023-12-04"
 WINDOW_END = "2024-02-25"
 

@@ -1,6 +1,6 @@
-# Acceptance matrix (issues.md criteria)
+# Acceptance matrix (issue template criteria)
 
-This matrix maps each ticket to outputs, the acceptance language in `issues.md`, the automated QA script, and a recorded result. **Update the Result and Evidence columns after each full acceptance run.**
+This matrix maps each ticket to outputs, the acceptance language in the archived issue templates ([docs/archive/issues_full.md](archive/issues_full.md)), the automated QA script, and a recorded result. **Update the Result and Evidence columns after each full acceptance run.**
 
 Evidence should point to:
 
@@ -30,7 +30,7 @@ These outputs are required for the main-text empirical spine. Automated QA scrip
 
 ## Full ticket list (PR-000 through T-020)
 
-| Ticket | Primary outputs | Acceptance criterion (summary from issues.md) | QA script | Result |
+| Ticket | Primary outputs | Acceptance criterion (summary from issue templates) | QA script | Result |
 |--------|-----------------|-----------------------------------------------|-----------|--------|
 | PR-000 | `crosswalks/occ22_crosswalk.csv`, `crosswalks/sector6_crosswalk.csv`, `docs/data_registry.csv` | Unique mappings; registry rows for sources used | `qa_crosswalks.py` | PASS |
 | T-001 | `figures/figure1_panelA_occ_baseline.csv` | 22 rows; employment shares sum to 1 | `qa_figure1_panelA.py` | PASS |

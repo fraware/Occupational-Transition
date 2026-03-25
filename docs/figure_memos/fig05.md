@@ -6,7 +6,7 @@ For the five core public datasets used in the paper, which empirical objects (wo
 
 ## Datasets
 
-- None in the estimation sense; inputs are `issues.md` and `paper-notes.md` rules implemented in `scripts/build_figure5_capability_matrix.py`.
+- None in the estimation sense; inputs are `docs/lineage/t010_issues.md` and `docs/lineage/t010_paper_notes_matrix.md` rules implemented in `scripts/build_figure5_capability_matrix.py`.
 
 ## Construction
 
@@ -31,4 +31,4 @@ The public system is strongest when sources are used for what they measure direc
 
 ## Possible reviewer objections
 
-- **Subjectivity of “partial”:** Cells follow locked symbols from `paper-notes.md`; changes require updating the rule text and rebuilding, not ad hoc edits to the CSV.
+- **Subjectivity of “partial”:** Cells follow locked symbols from `docs/lineage/t010_paper_notes_matrix.md`; changes require updating the rule text and rebuilding, not ad hoc edits to the CSV.

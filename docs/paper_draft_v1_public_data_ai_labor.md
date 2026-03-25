@@ -1,5 +1,7 @@
 # What U.S. Public Federal Data Can and Cannot Say About AI and Labor
 
+**Expanded manuscript (full prose):** [paper_final.md](paper_final.md). **Evidence tagging:** [evidence_snapshot.md](evidence_snapshot.md).
+
 ## Subtitle
 What Exists, What Works, and What Small Survey Changes Would Unlock
 
@@ -74,7 +76,7 @@ This paper develops a public-data framework for measuring AI and labor-market ch
 ## Section 5 — Identification frontier (Figure 5; Claim 5)
 **Thesis.** The main structural gap in public measurement is the absence of an integrated worker-firm AI panel.
 
-**Dataset sentence.** Figure 5 is a non-estimated synthesis coded from `paper-notes.md` and `issues.md` T-010 rules (`figures/figure5_capability_matrix.csv`).
+**Dataset sentence.** Figure 5 is a non-estimated synthesis coded from `docs/lineage/t010_paper_notes_matrix.md` and `docs/lineage/t010_issues.md` (T-010 rules; `figures/figure5_capability_matrix.csv`).
 
 **Figure discussion.** The matrix encodes `direct`, `partial`, or `none` support for seven empirical objects across five core datasets as a rule-driven documentation synthesis. It provides an empirical diagnosis of capability boundaries. Any survey-priority recommendation is a policy design judgment rather than a causal estimate. See `docs/captions/fig05_caption.md` and `docs/figure_memos/fig05.md`.
 

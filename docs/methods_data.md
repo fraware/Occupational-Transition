@@ -58,7 +58,7 @@ Composite **descriptive** occupation-time indices for monitoring and prioritizat
 
 ## Figure 5 — Capability matrix (T-010)
 
-- Non-estimated categorical matrix from `paper-notes.md` / `issues.md` rules; five datasets by seven empirical objects (including `worker_firm_ai_linkage`); `scripts/build_figure5_capability_matrix.py`.
+- Non-estimated categorical matrix from `docs/lineage/t010_paper_notes_matrix.md` / `docs/lineage/t010_issues.md` rules; five datasets by seven empirical objects (including `worker_firm_ai_linkage`); `scripts/build_figure5_capability_matrix.py`.
 - **Output:** `figures/figure5_capability_matrix.csv`.
 
 ## Appendix figures (T-011–T-020) and extension metrics (T-021–T-026)

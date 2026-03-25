@@ -1,9 +1,9 @@
 """
 Build figures/figure5_capability_matrix.csv — synthesis-only capability matrix.
 
-Coding is frozen from paper-notes.md (Dataset-to-claim matrix, first seven
-claim columns) for the five core datasets listed in T-010. No empirical
-estimation.
+Coding is frozen from docs/lineage/t010_paper_notes_matrix.md (Dataset-to-claim
+matrix, seven empirical objects) for the five core datasets listed in T-010. No
+empirical estimation.
 
 Run from repo root: python scripts/build_figure5_capability_matrix.py
 """
@@ -21,8 +21,8 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 FIG = ROOT / "figures"
 INTER = ROOT / "intermediate"
-ISSUES = ROOT / "issues.md"
-PAPER_NOTES = ROOT / "paper-notes.md"
+ISSUES = ROOT / "docs" / "lineage" / "t010_issues.md"
+PAPER_NOTES = ROOT / "docs" / "lineage" / "t010_paper_notes_matrix.md"
 
 OUT_CSV = FIG / "figure5_capability_matrix.csv"
 OUT_META = INTER / "figure5_capability_matrix_run_metadata.json"
@@ -49,7 +49,8 @@ DATASET_ORDER: list[str] = [
     "O*NET",
 ]
 
-# Frozen symbols from paper-notes.md lines 517–650, mapped to issue vocabulary.
+# Frozen symbols from docs/lineage/t010_paper_notes_matrix.md,
+# mapped to issue vocabulary.
 # direct = check, partial = triangle, none = x-mark.
 _CAPABILITY: dict[str, tuple[str, ...]] = {
     "CPS (basic monthly)": (
@@ -154,7 +155,8 @@ def main() -> None:
         "generated_at_utc": generated_at,
         "assertion_synthesis_only": (
             "This output encodes categorical capability judgments from "
-            "paper-notes.md; it does not compute new statistics or estimates."
+            "docs/lineage/t010_paper_notes_matrix.md; it does not compute new "
+            "statistics or estimates."
         ),
         "symbol_mapping": {
             "check_mark": "direct",
@@ -178,9 +180,10 @@ def main() -> None:
             },
         ],
         "matrix_reference": (
-            "paper-notes.md Dataset-to-claim matrix adapted to retained seven "
-            "empirical objects, explicitly including worker_firm_ai_linkage; "
-            "rows CPS (basic monthly), BTOS, JOLTS, OEWS, O*NET"
+            "docs/lineage/t010_paper_notes_matrix.md Dataset-to-claim matrix "
+            "adapted to retained seven empirical objects, including "
+            "worker_firm_ai_linkage; rows CPS (basic monthly), BTOS, JOLTS, "
+            "OEWS, O*NET"
         ),
         "row_count": len(rows),
         "output_csv": str(OUT_CSV.relative_to(ROOT)).replace("\\", "/"),

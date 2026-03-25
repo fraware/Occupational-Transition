@@ -1,6 +1,6 @@
 # Claim audit (frozen five claims)
 
-Source text: `paper-notes.md` section "Recommended final set of 5 core claims" (and the locked wording block that follows).
+Source text: `docs/archive/paper_notes_full.md` section "Recommended final set of 5 core claims" (and the locked wording block that follows).
 
 Mapping: Claim *k* is evaluated against **Figure *k*** main-text outputs (multi-panel figures combine panels listed in `docs/figure_catalog.md`).
 

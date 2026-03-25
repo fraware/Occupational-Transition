@@ -2,6 +2,14 @@
 
 Public-data paper pipeline: shared crosswalks, figures, and documentation.
 
+## Public release
+
+- **License:** [LICENSE](LICENSE) (MIT). Third-party PDFs and auxiliary tables are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+- **Contributing and security:** [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md).
+- **What is committed vs generated:** [docs/committed_outputs.md](docs/committed_outputs.md) (frozen CSVs in git; large `raw/` downloads and `intermediate/` artifacts are local).
+- **Replication:** Full runs can require **many gigabytes** of disk space and hours of download or compute; see [docs/replication.md](docs/replication.md).
+- **Git history size:** If `.git` is unexpectedly large, see [docs/git_history_hygiene.md](docs/git_history_hygiene.md).
+
 ## Pipeline status
 
 | Ticket | Scripts (build / QA) | Primary outputs |
@@ -174,6 +182,7 @@ Outputs include `figures/memo_*.csv`, Virginia deep-dive CSVs under `figures/sta
 
 ## Post-implementation docs (quick index)
 
+- Committed outputs inventory: [docs/committed_outputs.md](docs/committed_outputs.md)
 - Replication: [docs/replication.md](docs/replication.md)
 - Acceptance matrix: [docs/acceptance_matrix.md](docs/acceptance_matrix.md)
 - Figure catalog, captions, source notes: [docs/figure_catalog.md](docs/figure_catalog.md), `docs/captions/`, `docs/source_notes/`
@@ -181,7 +190,8 @@ Outputs include `figures/memo_*.csv`, Virginia deep-dive CSVs under `figures/sta
 - Claim audit: [docs/claim_audit.md](docs/claim_audit.md)
 - Senator briefing (Virginia): [docs/senate_briefing_memo.md](docs/senate_briefing_memo.md), [docs/senate_briefing_evidence_baseline_va.md](docs/senate_briefing_evidence_baseline_va.md), [docs/senate_briefing_lineage_va.md](docs/senate_briefing_lineage_va.md), [docs/senate_briefing_script_va.md](docs/senate_briefing_script_va.md), [docs/senate_briefing_qa_va.md](docs/senate_briefing_qa_va.md), [docs/senator_handout_1page_va.md](docs/senator_handout_1page_va.md), [docs/senator_packet_order_va.md](docs/senator_packet_order_va.md), [docs/virginia_deep_dive.md](docs/virginia_deep_dive.md)
 - Methods/data: [docs/methods_data.md](docs/methods_data.md)
-- Main draft: [docs/paper_draft_v1_public_data_ai_labor.md](docs/paper_draft_v1_public_data_ai_labor.md)
+- Main draft (skeleton): [docs/paper_draft_v1_public_data_ai_labor.md](docs/paper_draft_v1_public_data_ai_labor.md)
+- Final paper draft (expanded): [docs/paper_final.md](docs/paper_final.md); evidence snapshot: [docs/evidence_snapshot.md](docs/evidence_snapshot.md)
 - Appendix: [docs/appendix_outline.md](docs/appendix_outline.md), [docs/appendix_draft.md](docs/appendix_draft.md)
 - Release/freeze: [docs/release_process.md](docs/release_process.md), `python scripts/build_freeze_manifest.py`
 - Reliability framework: [docs/reliability_framework.md](docs/reliability_framework.md)

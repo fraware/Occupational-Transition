@@ -6,6 +6,19 @@ venv/
 *.xlsx~
 ~$*
 
+# Secrets and local env
+.env
+.env.*
+
+# Logs and editor/OS cruft
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
 # Local microdata and large build artifacts (exceed GitHub file limits; fetch separately)
 raw/
 intermediate/

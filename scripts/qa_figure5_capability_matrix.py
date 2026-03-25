@@ -12,8 +12,8 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 FIG_CSV = ROOT / "figures" / "figure5_capability_matrix.csv"
 META_JSON = ROOT / "intermediate" / "figure5_capability_matrix_run_metadata.json"
-ISSUES = ROOT / "issues.md"
-PAPER_NOTES = ROOT / "paper-notes.md"
+ISSUES = ROOT / "docs" / "lineage" / "t010_issues.md"
+PAPER_NOTES = ROOT / "docs" / "lineage" / "t010_paper_notes_matrix.md"
 
 ALLOWED = {"direct", "partial", "none"}
 
@@ -95,8 +95,8 @@ def main() -> int:
     entries = meta.get("source_files_sha256") or []
     by_name = {e.get("file_name"): e for e in entries}
     for rel, path in (
-        ("issues.md", ISSUES),
-        ("paper-notes.md", PAPER_NOTES),
+        ("docs/lineage/t010_issues.md", ISSUES),
+        ("docs/lineage/t010_paper_notes_matrix.md", PAPER_NOTES),
     ):
         ex = by_name.get(rel)
         if not ex:
