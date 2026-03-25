@@ -13,6 +13,16 @@ git tag -a results-YYYY-MM-DD -m "Frozen research state for manuscript"
 git push origin results-YYYY-MM-DD
 ```
 
+## Commit vs. build-state (why both matter)
+
+Pointing readers to a **git commit** or **tag** proves which **versioned** `figures/*.csv` files belong with the paper. It does **not** by itself prove that locally regenerated `intermediate/` outputs (or memo KPIs that aggregate transitions) came from the **same** pipeline execution as those CSVs—unless you also archive the **acceptance log** and rely on a single full rebuild.
+
+**Before circulating or submitting**, treat “freeze discipline” as:
+
+1. One **full** or **strict acceptance** run whose log you keep (`intermediate/full_clean_rebuild_acceptance_<UTC>.md` or equivalent).
+2. Spot-check that manuscript numbers match the **committed** figure CSVs at that commit (or at the tag).
+3. For **Figure 2** especially: transition **counts** (T-004), **probabilities** (T-005), and any **memo dashboard KPI** that averages over origins must be internally consistent for the **same** origin months and weights—ideally from one uninterrupted build, not a mix of reruns. If `figure2_panelB_transition_counts.csv` is not in git, it must still exist on disk from that run and match the probs file.
+
 ## Recommended practice
 
 1. Run a full or scoped acceptance pass and record results in [acceptance_matrix.md](acceptance_matrix.md).

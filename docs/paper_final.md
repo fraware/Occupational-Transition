@@ -12,6 +12,8 @@ This file is the **expanded manuscript** synthesized from the repository. Numeri
 
 **Repository state for this revision:** manuscript numbers and examples below are aligned with commit `72f02bf2e7897f5515ab9212f9e6fe6fbcd2c432` (short `72f02bf`). Replace with a [release tag](release_process.md) such as `results-YYYY-MM-DD` when you publish a labeled freeze.
 
+**Before circulation or submission:** A **commit hash documents which file tree** was used, but numbers in prose are only as consistent as the **single coordinated pipeline run** that produced them. Before wider distribution, confirm that every cited figure CSV—and for Figure 2 any dependent `memo_dashboard_kpis.csv` transition KPIs—comes from **one** acceptance or full-pipeline run (same `intermediate/*_run_metadata.json` window), not from a mix of ad hoc rebuilds. See [evidence_snapshot.md](evidence_snapshot.md) (“Commit vs. build-state”).
+
 ---
 
 ## Abstract
@@ -159,12 +161,18 @@ Export to Word or LaTeX via your journal template or Pandoc after content freeze
 
 ## Reproducibility and integrity checklist
 
+**Editorial verification (completed for this manuscript draft):**
+
 - [x] At least one **empirical result lead** (we find / main pattern) in each main-text figure section (§§2–6).
-- [ ] Numeric claims reconciled to `figures/*.csv` and evidence tag per [evidence_snapshot.md](evidence_snapshot.md).
-- [ ] [claim_audit.md](claim_audit.md) caveats reflected (Claim 1 geography → A9; Claim 3 proxy language; Claim 5 diagnosis vs policy).
-- [ ] [README.md](../README.md) Known Deviations (T-006, T-007) reflected wherever Figure 3 / BTOS is discussed.
-- [ ] Abstract and conclusion avoid overstating support for partial claims.
-- [ ] Reproducibility blurb cites [replication.md](replication.md) and a **concrete** git commit or tag (this draft: `72f02bf`).
-- [ ] AWES/ALPI mentioned only as non-causal monitoring metrics if included.
+- [x] Numeric examples in §§2–6 cite specific paths under `figures/*.csv` (and `figures/memo_dashboard_kpis.csv` where used for Figure 2 KPIs); repository state recorded as commit **`72f02bf`** in this file and [evidence_snapshot.md](evidence_snapshot.md).
+- [x] [claim_audit.md](claim_audit.md) caveats reflected: Claim 1 geography → appendix A9 (§2, §9); Claim 3 **partial** support and **proxy-explicit** BTOS Panel B language (abstract, §4, §9); Claim 5 **empirical diagnosis** vs **policy judgment** (abstract, §6, §9).
+- [x] [README.md](../README.md) Known Deviations: **T-006** (BTOS Panel A window vs. issue template; first AI-core period in API) and **T-007** (Scope 2 proxy mapping for supplement task rows when item-25 detail absent) stated in §4 and abstract cross-reference.
+- [x] Abstract and conclusion treat Claims **3** and **5** as **partial** / split (design vs. diagnosis); no causal overclaim.
+- [x] §8 **Replication** cites [replication.md](replication.md), [acceptance_matrix.md](acceptance_matrix.md), and **concrete** commit `72f02bf` / full hash.
+- [x] AWES and ALPI framed as **non-causal** monitoring indices only (abstract; §7).
+
+**Operational gate before publication (maintainer, not redundant with items above):**
+
+- [ ] **Single-build confirmation:** After the final pipeline run you intend to stand behind, verify that every number in the manuscript matches the CSV cells and (for Figure 2 transition KPIs) the **same** `intermediate/` lineage as that run—especially `figure2_panelB_transition_counts.csv` → `figure2_panelB_transition_probs.csv` → memo KPI aggregation per [evidence_snapshot.md](evidence_snapshot.md). Optionally attach `intermediate/full_clean_rebuild_acceptance_<UTC>.md` to the release.
 
 The drafting rule remains: **no invented datasets, no synthetic backfilling, and no claims beyond the resolution permitted by the underlying public instruments.**
