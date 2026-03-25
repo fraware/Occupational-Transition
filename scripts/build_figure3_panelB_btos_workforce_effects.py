@@ -57,6 +57,7 @@ OUT_COLS = [
     "window_start",
     "window_end",
     "source_series_id",
+    "evidence_directness",
 ]
 
 
@@ -169,6 +170,7 @@ def build_output_rows(sub: pd.DataFrame) -> tuple[list[dict[str, Any]], dict[str
                 "window_start": WINDOW_START,
                 "window_end": WINDOW_END,
                 "source_series_id": sid,
+                "evidence_directness": "direct_published",
             }
         )
         mapping["category_to_source"][key] = {
@@ -211,6 +213,7 @@ def build_output_rows(sub: pd.DataFrame) -> tuple[list[dict[str, Any]], dict[str
                     "window_start": WINDOW_START,
                     "window_end": WINDOW_END,
                     "source_series_id": "scope2_national_q25_multiselect_" + key,
+                    "evidence_directness": "direct_published",
                 }
             )
             mapping["category_to_source"][key] = {
@@ -251,6 +254,7 @@ def build_output_rows(sub: pd.DataFrame) -> tuple[list[dict[str, Any]], dict[str
             "window_start": WINDOW_START,
             "window_end": WINDOW_END,
             "source_series_id": "scope2_national_q3_yes_ai_performed_tasks_previously_done_by_employees",
+            "evidence_directness": "proxy_mapping",
         }
     )
     mapping["category_to_source"]["perform_task_previously_done_by_employee"] = {
@@ -278,6 +282,7 @@ def build_output_rows(sub: pd.DataFrame) -> tuple[list[dict[str, Any]], dict[str
             "window_start": WINDOW_START,
             "window_end": WINDOW_END,
             "source_series_id": "scope2_national_q7_trained_current_staff_to_use_ai",
+            "evidence_directness": "proxy_mapping",
         }
     )
     mapping["category_to_source"]["supplement_or_enhance_task_performed_by_employee"] = {
@@ -295,6 +300,7 @@ def build_output_rows(sub: pd.DataFrame) -> tuple[list[dict[str, Any]], dict[str
             "window_start": WINDOW_START,
             "window_end": WINDOW_END,
             "source_series_id": "scope2_national_q7_developed_new_workflows",
+            "evidence_directness": "proxy_mapping",
         }
     )
     mapping["category_to_source"]["introduce_new_task_not_previously_done_by_employee"] = {

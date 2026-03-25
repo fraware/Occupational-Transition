@@ -16,6 +16,8 @@ SCRIPTS = [
     "scripts/qa_memo_btos_state_ai_use_latest.py",
     "scripts/qa_state_qcew_deep_dive.py",
     "scripts/qa_virginia_memo_visuals.py",
+    "scripts/build_drift_dashboard.py",
+    "scripts/qa_drift_dashboard.py",
 ]
 
 

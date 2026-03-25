@@ -28,7 +28,7 @@ Public-data paper pipeline: shared crosswalks, figures, and documentation.
 | T-019 | `build_figureA9_acs_local_composition.py` / `qa_figureA9_acs_local_composition.py` | `figures/figureA9_acs_local_composition.csv`, `intermediate/figureA9_acs_local_composition_run_metadata.json` |
 | T-020 | `build_figureA10_nls_longrun.py` / `qa_figureA10_nls_longrun.py` | `figures/figureA10_nls_longrun.csv`, `intermediate/figureA10_nls_longrun_run_metadata.json` |
 
-Extension tickets **T-021 through T-026** (AWES, ALPI, related intermediates) use scripts under `scripts/build_*` and `scripts/qa_*` as listed in [docs/methods_data.md](docs/methods_data.md). **Senator memo visuals** (`t101`–`t108`) and the **additive Virginia pack** (`va01`–`va08`) are built outside the strict `PR-000`–`T-020` acceptance list; see [docs/replication.md](docs/replication.md) and [docs/figure_catalog.md](docs/figure_catalog.md).
+Extension tickets **T-021 through T-026** (AWES, ALPI, related intermediates) use scripts under `scripts/build_*` and `scripts/qa_*` as listed in [docs/methods_data.md](docs/methods_data.md). Senator memo visuals (`t101`–`t108`) and Virginia pack outputs (`va01`–`va08`) are enforced as post-ticket policy gates in strict acceptance.
 
 ## Full replication (clean)
 
@@ -46,6 +46,8 @@ Optional flags:
 - `--with-audit-summary` — builds `intermediate/full_clean_rebuild_acceptance_<UTC>_audit_summary.md` from the new log
 - `--with-visuals` — after a successful data pipeline, runs `run_visuals_all.py` and `qa_visuals.py`
 - `--skip-install` — skips `pip install`
+- `--source-selection-mode freeze_mode` — enforces drift comparability against an existing baseline snapshot
+- `--require-signoff` — requires approved `intermediate/release_signoff.json` before final PASS
 
 Prerequisites, directory layout, recovery from download failures, and acceptance review pointers: [docs/replication.md](docs/replication.md). Runtime can range from hours on a single machine when large files (for example NLSY97, ACS PUMS) are fetched and processed.
 
@@ -53,6 +55,8 @@ Prerequisites, directory layout, recovery from download failures, and acceptance
 
 - Every retained output must include machine-readable JSON lineage metadata under `intermediate/*run_metadata.json`.
 - Every QA script validates strict schema/domain checks and local SHA-256 lineage against cached artifacts.
+- Policy-facing KPI tables must include uncertainty/reliability fields (`se`, `ci_lower`, `ci_upper`, `weighted_n`, `effective_n`, `cv`) and deterministic publication fields (`publish_flag`, `suppression_reason`, `reliability_tier`).
+- Policy-facing KPI tables must include `evidence_directness` with one of `direct_published`, `derived_transform`, `proxy_mapping`.
 - Registry entries in `docs/data_registry.csv` use canonical HTTPS URLs and explicit values for release/last-modified fields (`Not reported by source` / `Not observed at build snapshot` when unavailable).
 - Dynamic source selectors must record an explicit selection rule and selection mode in metadata.
 
@@ -96,6 +100,13 @@ This executes `PR-000` through `T-020` in strict order (build + QA), writes:
 
 - `intermediate/full_clean_rebuild_acceptance_<UTC>.md`
 - `intermediate/full_clean_rebuild_acceptance_<UTC>_audit_summary.md`
+
+It also runs policy-facing hardening gates:
+
+- memo/brief build and QA,
+- robustness suite,
+- drift dashboard build + QA,
+- freeze manifest generation + QA.
 
 ### Targeted reruns
 
@@ -173,6 +184,7 @@ Outputs include `figures/memo_*.csv`, Virginia deep-dive CSVs under `figures/sta
 - Main draft: [docs/paper_draft_v1_public_data_ai_labor.md](docs/paper_draft_v1_public_data_ai_labor.md)
 - Appendix: [docs/appendix_outline.md](docs/appendix_outline.md), [docs/appendix_draft.md](docs/appendix_draft.md)
 - Release/freeze: [docs/release_process.md](docs/release_process.md), `python scripts/build_freeze_manifest.py`
+- Reliability framework: [docs/reliability_framework.md](docs/reliability_framework.md)
 - Independent replication: [docs/replication_checklist.md](docs/replication_checklist.md)
 
 ## Robustness and freeze helpers

@@ -51,6 +51,16 @@ Skip if replication scope is paper figures only. If senator memo or Virginia vis
 - [ ] `python scripts/run_memo_visuals_qa.py` exits 0.
 - [ ] Confirm core Virginia stems exist: `visuals/png/va01_virginia_sector_composition.png` through `va06_virginia_kpi_dashboard.png` (and matching PDFs under `visuals/vector/`).
 - [ ] Confirm `figures/state_deep_dive_qcew_51_profile.csv` and `figures/virginia_memo_kpis.csv` exist when Virginia brief is claimed current.
+- [ ] Confirm policy-facing KPI tables include reliability fields (`weighted_n`, `effective_n`, `cv`, `se`, `ci_lower`, `ci_upper`, `publish_flag`, `suppression_reason`, `evidence_directness`).
+
+## Drift and freeze (policy release mode)
+
+- [ ] `python scripts/build_drift_dashboard.py` exits 0.
+- [ ] `python scripts/qa_drift_dashboard.py` exits 0.
+- [ ] `intermediate/drift/drift_dashboard.csv` contains no `critical` alerts.
+- [ ] `python scripts/build_freeze_manifest.py` exits 0.
+- [ ] `python scripts/qa_freeze_manifest.py` exits 0.
+- [ ] `python scripts/qa_release_signoff.py` exits 0 (approved sign-off file present).
 
 ## Spot-check mapping (sample)
 
@@ -61,7 +71,7 @@ Pick **one** ticket and trace source URL from `docs/data_registry.csv` to a cach
 - Local cache path observed: `____`
 - SHA-256 matches metadata: yes / no
 
-## Robustness (optional)
+## Robustness (required in release mode)
 
 - [ ] `python scripts/run_robustness_all.py` exits 0 (or reviewer notes acceptable failures in `intermediate/robustness/`).
 

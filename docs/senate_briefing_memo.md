@@ -91,6 +91,13 @@ The core policy message is straightforward: make targeted, low-burden upgrades t
 
 5. **Require reproducibility and provenance for policy-facing outputs.**
    Every released metric should carry source, method, and metadata lineage.
+   In release mode, policy-facing KPI tables also carry uncertainty/reliability fields
+   (`se`, `ci_lower`, `ci_upper`, `weighted_n`, `effective_n`, `cv`), deterministic
+   publication flags (`publish_flag`, `suppression_reason`), and evidence directness
+   labels (`direct_published`, `derived_transform`, `proxy_mapping`).
+   For ordinal rank rows, those uncertainty fields are governance metadata only unless
+   the source publishes a meaningful variance measure; rank rows should not present
+   synthetic confidence intervals as if they were source-published precision.
 
 ## Virginia deep-dive section (for senator briefing)
 

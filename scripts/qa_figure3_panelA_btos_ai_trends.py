@@ -20,6 +20,7 @@ EXP_COLS = [
     "ai_use_current_rate",
     "ai_use_expected_6m_rate",
     "source_series_id",
+    "evidence_directness",
 ]
 
 MIN_PERIOD_START = "2023-08-28"
@@ -36,6 +37,7 @@ def main() -> int:
     df = pd.read_csv(FIG_CSV)
     if list(df.columns) != EXP_COLS:
         errors.append(f"columns must be {EXP_COLS}, got {list(df.columns)}")
+        return _report(errors)
 
     for c in EXP_COLS:
         if c in df.columns and df[c].isna().any():
@@ -44,6 +46,8 @@ def main() -> int:
     if not df.empty:
         if str(df["source_series_id"].iloc[0]) != "naics2_XX":
             errors.append("source_series_id must be naics2_XX for national stratum")
+        if set(df["evidence_directness"].astype(str).unique()) != {"direct_published"}:
+            errors.append("evidence_directness must be direct_published for T-006")
 
     for col in ("ai_use_current_rate", "ai_use_expected_6m_rate"):
         if col in df.columns:

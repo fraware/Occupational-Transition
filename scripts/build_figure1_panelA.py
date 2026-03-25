@@ -134,9 +134,11 @@ def build_baseline(xlsx_path: Path) -> pd.DataFrame:
             "employment_share",
             "median_annual_wage",
         ]
-    ]
-    out["median_annual_wage"] = out["median_annual_wage"].round(0).astype(int)
-    out["employment"] = out["employment"].astype(int)
+    ].copy()
+    out.loc[:, "median_annual_wage"] = (
+        out["median_annual_wage"].round(0).astype(int)
+    )
+    out.loc[:, "employment"] = out["employment"].astype(int)
     return out
 
 

@@ -97,6 +97,17 @@ Briefing KPIs and static Virginia visuals (`va01`–`va08`) are produced by `scr
 - Acceptance summary tables (optional): `intermediate/full_clean_rebuild_acceptance_*_audit_summary.md`.
 - Drift-specific closure notes (when used): `intermediate/drift_closure_<UTC>.md`.
 
+## Reliability and suppression contract (policy-facing outputs)
+
+Policy-facing KPI tables (memo and briefing outputs) include:
+
+- uncertainty fields: `se`, `ci_lower`, `ci_upper`, `ci_level`, `variance_method`,
+- reliability fields: `weighted_n`, `effective_n`, `cv`, `reliability_tier`,
+- publishability fields: `publish_flag`, `suppression_reason`, `pooling_applied`,
+- evidence directness: `evidence_directness` in `{direct_published, derived_transform, proxy_mapping}`.
+
+Thresholds are centralized in `config/reliability_thresholds.json` and enforced in build/QA scripts via shared helpers under `scripts/reliability/`.
+
 ## Replication command
 
 See `docs/replication.md` and `python scripts/run_full_pipeline_from_raw.py`.

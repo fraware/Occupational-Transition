@@ -9,6 +9,7 @@ Use this procedure once main-text figures, manuscript draft, and QA logs align f
 - `python scripts/run_visuals_all.py` and `python scripts/qa_visuals.py` complete if visuals are in scope.
 - If senator memo visuals or Virginia brief outputs are in scope for the same milestone, `python scripts/run_memo_visuals_build.py` and `python scripts/run_memo_visuals_qa.py` complete (see `docs/replication.md`).
 - `docs/claim_audit.md` reviewed for partial-support items (including senator brief claim ledger rows when Virginia briefing is published).
+- Drift checks pass with no critical alerts: `python scripts/build_drift_dashboard.py` and `python scripts/qa_drift_dashboard.py`.
 
 ### Full freeze vs bounded validation
 
@@ -37,6 +38,7 @@ python scripts/build_freeze_manifest.py
 ```
 
 This writes `intermediate/freeze_manifest.json` listing hashes for `figures/*.csv`, key `intermediate/*run_metadata.json` files, and `intermediate/visuals_run_manifest.json` when present.
+When available, the manifest also includes `intermediate/drift/drift_dashboard_run_metadata.json`.
 
 ## Git commands (illustrative)
 

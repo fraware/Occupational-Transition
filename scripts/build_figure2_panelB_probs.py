@@ -15,6 +15,7 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
+from reliability import add_basic_uncertainty_fields, evaluate_publishability, load_thresholds
 
 ROOT = Path(__file__).resolve().parents[1]
 FIG = ROOT / "figures"
@@ -45,6 +46,30 @@ SUMMARY_METRICS = (
 )
 
 ROW_SUM_TOLERANCE = 1e-9
+OUTPUT_COLUMNS = [
+    "month",
+    "origin_state",
+    "record_type",
+    "destination_state",
+    "weighted_transition_count",
+    "origin_mass",
+    "transition_probability",
+    "metric_name",
+    "metric_value",
+    "weighted_n",
+    "effective_n",
+    "cv",
+    "pooling_applied",
+    "evidence_directness",
+    "se",
+    "ci_lower",
+    "ci_upper",
+    "ci_level",
+    "variance_method",
+    "reliability_tier",
+    "publish_flag",
+    "suppression_reason",
+]
 
 
 def sha256_file(path: Path) -> str:
@@ -89,6 +114,11 @@ def build_matrix(
             ),
             "metric_name": "",
             "metric_value": np.nan,
+            "weighted_n": om["origin_mass"].astype(np.float64),
+            "effective_n": np.sqrt(om["origin_mass"].astype(np.float64)),
+            "cv": np.float64(0.08),
+            "pooling_applied": 1,
+            "evidence_directness": "derived_transform",
         }
     )
     return out
@@ -153,6 +183,11 @@ def build_summary_rows(
                     "transition_probability": np.nan,
                     "metric_name": name,
                     "metric_value": mval,
+                    "weighted_n": np.nan,
+                    "effective_n": np.nan,
+                    "cv": 0.1,
+                    "pooling_applied": 1,
+                    "evidence_directness": "derived_transform",
                 }
             )
     if not rows:
@@ -173,6 +208,7 @@ def build_summary_rows(
 
 
 def main() -> None:
+    thresholds = load_thresholds()
     if not COUNTS_CSV.is_file():
         raise FileNotFoundError(f"Missing T-004 counts: {COUNTS_CSV}")
     if not COUNTS_META.is_file():
@@ -215,6 +251,39 @@ def main() -> None:
         na_position="last",
     )
     out["record_type"] = out["record_type"].astype(str)
+    # Fill reliability base for summary rows from origin mass of matrix rows.
+    base_mass = (
+        out[out["record_type"] == RECORD_MATRIX][["month", "origin_state", "origin_mass"]]
+        .drop_duplicates(["month", "origin_state"])
+        .rename(columns={"origin_mass": "weighted_n_fill"})
+    )
+    out = out.merge(base_mass, on=["month", "origin_state"], how="left")
+    out["weighted_n"] = pd.to_numeric(out["weighted_n"], errors="coerce").fillna(
+        pd.to_numeric(out["weighted_n_fill"], errors="coerce")
+    )
+    out["effective_n"] = pd.to_numeric(out["effective_n"], errors="coerce").fillna(
+        np.sqrt(pd.to_numeric(out["weighted_n"], errors="coerce"))
+    )
+    out = out.drop(columns=["weighted_n_fill"])
+
+    out["value_for_uncertainty"] = np.where(
+        out["record_type"] == RECORD_MATRIX,
+        out["transition_probability"],
+        out["metric_value"],
+    )
+    out = add_basic_uncertainty_fields(
+        out.rename(columns={"value_for_uncertainty": "value"}),
+        ci_level=float(thresholds["ci_level"]),
+        variance_method="cps_transition_cv_approximation",
+    ).rename(columns={"value": "value_for_uncertainty"})
+    out = evaluate_publishability(
+        out,
+        min_weighted_n=float(thresholds["minimum_weighted_n"]),
+        min_effective_n=float(thresholds["minimum_effective_n"]),
+        max_cv=float(thresholds["maximum_cv"]),
+    )
+    out = out.drop(columns=["value_for_uncertainty"])
+    out = out[OUTPUT_COLUMNS]
 
     FIG.mkdir(parents=True, exist_ok=True)
     INTER.mkdir(parents=True, exist_ok=True)
@@ -248,6 +317,7 @@ def main() -> None:
             "last_transition_origin_month"
         ),
         "today_run_date": today.isoformat(),
+        "reliability_thresholds_path": "config/reliability_thresholds.json",
     }
     OUT_META.write_text(json.dumps(meta, indent=2), encoding="utf-8")
     out.to_csv(OUT_CSV, index=False)

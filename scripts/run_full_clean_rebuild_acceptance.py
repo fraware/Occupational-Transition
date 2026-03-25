@@ -13,6 +13,7 @@ Usage:
 from __future__ import annotations
 
 import datetime as dt
+import os
 import subprocess
 import sys
 import time
@@ -24,6 +25,7 @@ INTER = ROOT / "intermediate"
 
 
 Ticket = tuple[str, str, str, list[str]]
+Gate = tuple[str, str]
 
 TICKETS: list[Ticket] = [
     (
@@ -74,6 +76,9 @@ TICKETS: list[Ticket] = [
         [
             "figures/figure2_panelB_transition_counts.csv",
             "intermediate/figure2_panelB_counts_run_metadata.json",
+            "intermediate/figure2_panelB_attrition_diagnostics.csv",
+            "intermediate/figure2_panelB_match_regime_robustness.csv",
+            "intermediate/figure2_panelB_missing_month_sensitivity.csv",
         ],
     ),
     (
@@ -282,8 +287,26 @@ TICKETS: list[Ticket] = [
     ),
 ]
 
+POST_GATES: list[Gate] = [
+    ("Policy visuals build", "python scripts/run_memo_visuals_build.py"),
+    ("Policy visuals QA", "python scripts/run_memo_visuals_qa.py"),
+    ("Robustness suite", "python scripts/run_robustness_all.py"),
+    ("Freeze manifest build", "python scripts/build_freeze_manifest.py"),
+    ("Freeze manifest QA", "python scripts/qa_freeze_manifest.py"),
+    ("Drift dashboard build", "python scripts/build_drift_dashboard.py"),
+    ("Drift dashboard QA", "python scripts/qa_drift_dashboard.py"),
+]
+
 
 def _run(cmd: str) -> tuple[int, str]:
+    env = os.environ.copy()
+    # Escalate common silent-dataframe-mutation warnings in strict acceptance mode.
+    env["PYTHONWARNINGS"] = ",".join(
+        [
+            "error::FutureWarning",
+            "error::pandas.errors.SettingWithCopyWarning",
+        ]
+    )
     proc = subprocess.run(
         cmd,
         cwd=ROOT,
@@ -291,6 +314,7 @@ def _run(cmd: str) -> tuple[int, str]:
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
+        env=env,
     )
     return proc.returncode, proc.stdout
 
@@ -334,6 +358,9 @@ def main() -> int:
         )
 
         rc_b, out_b = _run(build_cmd)
+        if "SettingWithCopyWarning" in out_b:
+            rc_b = 1
+            out_b = out_b + "\n[STRICT WARNING POLICY] SettingWithCopyWarning escalated to failure.\n"
         lines.append(f"- Build command: `{build_cmd}`")
         lines.append(f"- Build exit code: `{rc_b}`")
         lines.append("")
@@ -375,6 +402,24 @@ def main() -> int:
             return 1
 
     total_elapsed = round(time.time() - start_all, 2)
+    lines.append("## Post-Ticket Release Gates")
+    lines.append("")
+    for gate_name, gate_cmd in POST_GATES:
+        rc_g, out_g = _run(gate_cmd)
+        lines.append(f"- Gate: `{gate_name}`")
+        lines.append(f"- Command: `{gate_cmd}`")
+        lines.append(f"- Exit code: `{rc_g}`")
+        lines.append("```text")
+        lines.append(out_g.rstrip() if out_g.strip() else "(no output)")
+        lines.append("```")
+        lines.append("")
+        log_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        if rc_g != 0:
+            lines.append("Stopping after failed post-ticket release gate.")
+            log_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+            print(f"FAILED at post gate: {gate_name}. See log: {log_path}")
+            return 1
+
     lines.append("## Final Summary")
     lines.append("")
     lines.append(f"- Failures: `{failures}`")

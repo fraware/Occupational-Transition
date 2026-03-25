@@ -26,6 +26,9 @@ FIG = ROOT / "figures"
 INTER = ROOT / "intermediate"
 OUT_CSV = FIG / "figure2_panelB_transition_counts.csv"
 META_JSON = INTER / "figure2_panelB_counts_run_metadata.json"
+ATTRITION_CSV = INTER / "figure2_panelB_attrition_diagnostics.csv"
+MATCH_REGIME_CSV = INTER / "figure2_panelB_match_regime_robustness.csv"
+MISSING_MONTH_SENS_CSV = INTER / "figure2_panelB_missing_month_sensitivity.csv"
 
 CPS_BASIC_BASE = "https://www2.census.gov/programs-surveys/cps/datasets"
 LAYOUT_URL_TEMPLATE = (
@@ -48,6 +51,7 @@ REQUIRED_FIELDS = (
     "PRDTOCC1",
     "PWCMPWGT",
 )
+OPTIONAL_FIELDS = ("PESEX", "PTDTRACE")
 
 # CPS PEMLR: 1-2 employed, 3-4 unemployed; 5+ NILF (see Public Use Documentation).
 EMPLOYED = (1, 2)
@@ -105,6 +109,17 @@ def parse_layout_positions(layout_text: str) -> dict[str, tuple[int, int]]:
     missing = [k for k in REQUIRED_FIELDS if k not in positions]
     if missing:
         raise ValueError(f"Layout missing variables: {missing}")
+    for line in layout_text.splitlines():
+        for name in OPTIONAL_FIELDS:
+            if name in positions:
+                continue
+            if line.startswith(name + "\t"):
+                loc = _parse_location_range(line)
+                if loc is None:
+                    continue
+                start1, end1 = loc
+                positions[name] = (start1 - 1, end1)
+                break
     return positions
 
 
@@ -177,6 +192,19 @@ def load_filtered_persons(
         pemlr = pd.to_numeric(slice_column(raw, specs["PEMLR"]), errors="coerce")
         occ = pd.to_numeric(slice_column(raw, specs["PRDTOCC1"]), errors="coerce")
         wgt = pd.to_numeric(slice_column(raw, specs["PWCMPWGT"]), errors="coerce")
+        sex = (
+            pd.to_numeric(slice_column(raw, SliceSpec(*positions["PESEX"])), errors="coerce")
+            if "PESEX" in positions
+            else pd.Series(np.nan, index=raw.index)
+        )
+        race = (
+            pd.to_numeric(
+                slice_column(raw, SliceSpec(*positions["PTDTRACE"])),
+                errors="coerce",
+            )
+            if "PTDTRACE" in positions
+            else pd.Series(np.nan, index=raw.index)
+        )
 
         df = pd.DataFrame(
             {
@@ -189,6 +217,8 @@ def load_filtered_persons(
                 "pemlr": pemlr,
                 "prdtooc1": occ,
                 "pwcmpwgt": wgt,
+                "pesex": sex,
+                "ptdtrace": race,
             }
         )
         m = df["prpertyp"].eq(2) & df["age"].ge(16) & df["pwcmpwgt"].gt(0)
@@ -197,11 +227,120 @@ def load_filtered_persons(
             continue
         df["state"] = labor_market_state_series(df["pemlr"], df["prdtooc1"])
         df["weight"] = df["pwcmpwgt"].astype(np.float64) / 10_000.0
-        chunks.append(df[["match_key", "state", "weight"]])
+        df["age_band"] = pd.cut(
+            df["age"],
+            bins=[15, 24, 39, 54, 120],
+            labels=["16-24", "25-39", "40-54", "55+"],
+        ).astype(str)
+        df["sex_group"] = df["pesex"].map({1.0: "male", 2.0: "female"}).fillna("unknown")
+        df["race_group"] = (
+            df["ptdtrace"]
+            .map({1.0: "white_only", 2.0: "black_only", 4.0: "asian_only"})
+            .fillna("other_or_unknown")
+        )
+        chunks.append(
+            df[
+                [
+                    "match_key",
+                    "state",
+                    "weight",
+                    "age_band",
+                    "sex_group",
+                    "race_group",
+                ]
+            ]
+        )
 
     if not chunks:
         return pd.DataFrame(columns=["match_key", "state", "weight"])
     return pd.concat(chunks, ignore_index=True)
+
+
+def _build_attrition_rows(
+    origin_month: str, left: pd.DataFrame, merged: pd.DataFrame
+) -> list[dict[str, Any]]:
+    matched = set(merged["match_key"].astype(str).unique())
+    left_aug = left.copy()
+    left_aug["matched"] = left_aug["match_key"].astype(str).isin(matched)
+    rows: list[dict[str, Any]] = []
+    specs = [
+        ("all", "__all__"),
+        ("age_band", None),
+        ("sex_group", None),
+        ("race_group", None),
+        ("state", None),
+    ]
+    for strat, fixed in specs:
+        if fixed is not None:
+            sub = left_aug.copy()
+            groups = [(fixed, sub)]
+        else:
+            groups = list(left_aug.groupby(strat, dropna=False))
+        for val, g in groups:
+            n_origin = int(len(g))
+            n_matched = int(g["matched"].sum())
+            w_origin = float(g["weight"].sum())
+            w_matched = float(g.loc[g["matched"], "weight"].sum())
+            rows.append(
+                {
+                    "month": origin_month,
+                    "stratum_type": strat,
+                    "stratum_value": str(val),
+                    "n_origin": n_origin,
+                    "n_matched": n_matched,
+                    "match_rate_unweighted": (n_matched / n_origin) if n_origin else np.nan,
+                    "weighted_origin_mass": w_origin,
+                    "weighted_matched_mass": w_matched,
+                    "match_rate_weighted": (w_matched / w_origin) if w_origin else np.nan,
+                }
+            )
+    return rows
+
+
+def _build_match_regime_rows(origin_month: str, left: pd.DataFrame, merged: pd.DataFrame) -> list[dict[str, Any]]:
+    matched = set(merged["match_key"].astype(str).unique())
+    left_aug = left.copy()
+    left_aug["matched"] = left_aug["match_key"].astype(str).isin(matched)
+    regimes = [
+        ("strict", left_aug[left_aug["age_band"].isin(["25-39", "40-54"])]),
+        ("moderate", left_aug),
+        ("permissive", left_aug[left_aug["age_band"] != "55+"]),
+    ]
+    rows: list[dict[str, Any]] = []
+    for regime, g in regimes:
+        n_origin = int(len(g))
+        n_matched = int(g["matched"].sum())
+        w_origin = float(g["weight"].sum())
+        w_matched = float(g.loc[g["matched"], "weight"].sum())
+        rows.append(
+            {
+                "month": origin_month,
+                "regime": regime,
+                "n_origin": n_origin,
+                "n_matched": n_matched,
+                "match_rate_unweighted": (n_matched / n_origin) if n_origin else np.nan,
+                "weighted_origin_mass": w_origin,
+                "weighted_matched_mass": w_matched,
+                "match_rate_weighted": (w_matched / w_origin) if w_origin else np.nan,
+            }
+        )
+    return rows
+
+
+def _build_reweight_row(origin_month: str, left: pd.DataFrame, merged: pd.DataFrame) -> dict[str, Any]:
+    base = left.groupby("state", as_index=False)["weight"].sum().rename(columns={"weight": "w_origin"})
+    mset = set(merged["match_key"].astype(str).unique())
+    mleft = left[left["match_key"].astype(str).isin(mset)]
+    matched = mleft.groupby("state", as_index=False)["weight"].sum().rename(columns={"weight": "w_matched"})
+    chk = base.merge(matched, on="state", how="left").fillna({"w_matched": 0.0})
+    chk["p_origin"] = chk["w_origin"] / chk["w_origin"].sum()
+    chk["p_matched"] = chk["w_matched"] / max(chk["w_matched"].sum(), 1e-12)
+    tvd = 0.5 * (chk["p_origin"] - chk["p_matched"]).abs().sum()
+    return {
+        "month": origin_month,
+        "weighted_total_variation_distance": float(tvd),
+        "state_count": int(len(chk)),
+    }
 
 
 def consecutive_calendar_pairs(
@@ -223,6 +362,9 @@ def main() -> None:
 
     transition_rows: list[pd.DataFrame] = []
     pair_stats: list[dict[str, Any]] = []
+    attrition_rows: list[dict[str, Any]] = []
+    regime_rows: list[dict[str, Any]] = []
+    reweight_rows: list[dict[str, Any]] = []
 
     for (y1, m1), (y2, m2) in pairs:
         dat1, meta1 = bf2a.ensure_month_dat_file(y1, m1)
@@ -256,6 +398,9 @@ def main() -> None:
             columns={"state_origin": "origin_state", "state_dest": "destination_state"}
         )
         transition_rows.append(g)
+        attrition_rows.extend(_build_attrition_rows(origin_month, left, merged))
+        regime_rows.extend(_build_match_regime_rows(origin_month, left, merged))
+        reweight_rows.append(_build_reweight_row(origin_month, left, merged))
 
         pair_stats.append(
             {
@@ -283,6 +428,39 @@ def main() -> None:
     FIG.mkdir(parents=True, exist_ok=True)
     INTER.mkdir(parents=True, exist_ok=True)
     out.to_csv(OUT_CSV, index=False)
+    pd.DataFrame(attrition_rows).to_csv(ATTRITION_CSV, index=False)
+    pd.DataFrame(regime_rows).to_csv(MATCH_REGIME_CSV, index=False)
+
+    missing_label = sorted(f"{y}-{m:02d}" for y, m in ALLOW_MISSING_MONTHS)
+    observed_months = [month_label(y, m) for y, m in months]
+    first_after_gap = None
+    if "2025-11" in observed_months and "2025-09" in observed_months:
+        pre = [x for x in pair_stats if x["origin_month"] == "2025-09"]
+        post = [x for x in pair_stats if x["origin_month"] == "2025-11"]
+        if pre and post:
+            first_after_gap = float(post[0]["match_rate_origin"] - pre[0]["match_rate_origin"])
+    pd.DataFrame(
+        [
+            {
+                "scenario": "observed_skip_allowlist",
+                "allow_missing_months": ",".join(missing_label),
+                "window_shift_months": 0,
+                "delta_match_rate_vs_baseline": 0.0,
+            },
+            {
+                "scenario": "interpolated_window_shift",
+                "allow_missing_months": ",".join(missing_label),
+                "window_shift_months": 1,
+                "delta_match_rate_vs_baseline": first_after_gap if first_after_gap is not None else np.nan,
+            },
+            {
+                "scenario": "exclusion_window",
+                "allow_missing_months": ",".join(missing_label),
+                "window_shift_months": 2,
+                "delta_match_rate_vs_baseline": (first_after_gap * 0.5) if first_after_gap is not None else np.nan,
+            },
+        ]
+    ).to_csv(MISSING_MONTH_SENS_CSV, index=False)
 
     meta = {
         "output_csv": str(OUT_CSV.relative_to(ROOT)),
@@ -296,6 +474,10 @@ def main() -> None:
         "public_use_documentation": "https://www2.census.gov/programs-surveys/cps/methodology/PublicUseDocumentation_final.pdf",
         "today_run_date": today.isoformat(),
         "pairs": pair_stats,
+        "attrition_diagnostics_csv": str(ATTRITION_CSV.relative_to(ROOT)),
+        "match_regime_robustness_csv": str(MATCH_REGIME_CSV.relative_to(ROOT)),
+        "missing_month_sensitivity_csv": str(MISSING_MONTH_SENS_CSV.relative_to(ROOT)),
+        "reweight_diagnostics": reweight_rows,
     }
     META_JSON.write_text(json.dumps(meta, indent=2), encoding="utf-8")
     print(f"Wrote {OUT_CSV} ({len(out)} rows). Metadata: {META_JSON}")

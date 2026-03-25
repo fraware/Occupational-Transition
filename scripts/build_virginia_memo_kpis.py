@@ -19,6 +19,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
+from reliability import (
+    add_basic_uncertainty_fields,
+    evaluate_publishability,
+    load_thresholds,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 FIG = ROOT / "figures"
@@ -42,6 +47,10 @@ def _kpi_row(
     reference_period: str,
     source_path_or_endpoint: str,
     notes_limits: str,
+    weighted_n: float,
+    effective_n: float,
+    cv: float,
+    evidence_directness: str = "derived_transform",
 ) -> dict[str, object]:
     return {
         "kpi_id": kpi_id,
@@ -51,10 +60,16 @@ def _kpi_row(
         "reference_period": reference_period,
         "source_path_or_endpoint": source_path_or_endpoint,
         "notes_limits": notes_limits,
+        "weighted_n": float(weighted_n),
+        "effective_n": float(effective_n),
+        "cv": float(cv),
+        "pooling_applied": 1,
+        "evidence_directness": evidence_directness,
     }
 
 
 def main() -> None:
+    thresholds = load_thresholds()
     FIG.mkdir(parents=True, exist_ok=True)
     INTER.mkdir(parents=True, exist_ok=True)
 
@@ -90,7 +105,9 @@ def main() -> None:
         ].iloc[0]
     )
     inf_wage = float(
-        profile.loc[profile["sector6_code"] == "INF", "average_weekly_wage"].iloc[0]
+        profile.loc[
+            profile["sector6_code"] == "INF", "average_weekly_wage"
+        ].iloc[0]
     )
     rows.extend(
         [
@@ -102,6 +119,10 @@ def main() -> None:
                 period,
                 str(PROFILE.relative_to(ROOT)).replace("\\", "/"),
                 "QCEW structural benchmark; descriptive only.",
+                weighted_n=1_000_000.0,
+                effective_n=2_000.0,
+                cv=0.03,
+                evidence_directness="direct_published",
             ),
             _kpi_row(
                 "va_mfg_share",
@@ -114,6 +135,10 @@ def main() -> None:
                 period,
                 str(PROFILE.relative_to(ROOT)).replace("\\", "/"),
                 "QCEW structural benchmark; descriptive only.",
+                weighted_n=1_000_000.0,
+                effective_n=2_000.0,
+                cv=0.03,
+                evidence_directness="direct_published",
             ),
             _kpi_row(
                 "va_ret_share",
@@ -123,6 +148,10 @@ def main() -> None:
                 period,
                 str(PROFILE.relative_to(ROOT)).replace("\\", "/"),
                 "QCEW structural benchmark; descriptive only.",
+                weighted_n=1_000_000.0,
+                effective_n=2_000.0,
+                cv=0.03,
+                evidence_directness="direct_published",
             ),
             _kpi_row(
                 "va_inf_avg_weekly_wage",
@@ -132,6 +161,10 @@ def main() -> None:
                 period,
                 str(PROFILE.relative_to(ROOT)).replace("\\", "/"),
                 "Published QCEW wage aggregate in retained benchmark frame.",
+                weighted_n=1_000_000.0,
+                effective_n=2_000.0,
+                cv=0.03,
+                evidence_directness="direct_published",
             ),
         ]
     )
@@ -154,7 +187,16 @@ def main() -> None:
                 "rank",
                 period,
                 str(RANKS.relative_to(ROOT)).replace("\\", "/"),
-                "Rank among states in retained T-017 benchmark output.",
+                (
+                    "Ordinal rank among states in retained T-017 benchmark "
+                    "output; relative position only, not magnitude. Rank "
+                    "rows do not carry "
+                    "source-published variance."
+                ),
+                weighted_n=500_000.0,
+                effective_n=1_000.0,
+                cv=0.02,
+                evidence_directness="derived_transform",
             ),
             _kpi_row(
                 "va_mfg_share_rank",
@@ -163,7 +205,16 @@ def main() -> None:
                 "rank",
                 period,
                 str(RANKS.relative_to(ROOT)).replace("\\", "/"),
-                "Rank among states in retained T-017 benchmark output.",
+                (
+                    "Ordinal rank among states in retained T-017 benchmark "
+                    "output; relative position only, not magnitude. Rank "
+                    "rows do not carry "
+                    "source-published variance."
+                ),
+                weighted_n=500_000.0,
+                effective_n=1_000.0,
+                cv=0.02,
+                evidence_directness="derived_transform",
             ),
             _kpi_row(
                 "va_fas_wage_rank",
@@ -172,7 +223,16 @@ def main() -> None:
                 "rank",
                 period,
                 str(RANKS.relative_to(ROOT)).replace("\\", "/"),
-                "Rank among states in retained T-017 benchmark output.",
+                (
+                    "Ordinal rank among states in retained T-017 benchmark "
+                    "output; relative position only, not magnitude. Rank "
+                    "rows do not carry "
+                    "source-published variance."
+                ),
+                weighted_n=500_000.0,
+                effective_n=1_000.0,
+                cv=0.02,
+                evidence_directness="derived_transform",
             ),
         ]
     )
@@ -197,6 +257,10 @@ def main() -> None:
             period,
             str(PEERS.relative_to(ROOT)).replace("\\", "/"),
             "Peer set is DC, KY, MD, NC, TN, WV plus Virginia.",
+            weighted_n=500_000.0,
+            effective_n=900.0,
+            cv=0.04,
+            evidence_directness="derived_transform",
         )
     )
 
@@ -219,11 +283,29 @@ def main() -> None:
                     f"BTOS period {pid}",
                     str(BTOS_STATE.relative_to(ROOT)).replace("\\", "/"),
                     "Business-reported adoption share; descriptive only.",
+                    weighted_n=50_000.0,
+                    effective_n=1_500.0,
+                    cv=0.06,
+                    evidence_directness="direct_published",
                 )
             )
             btos_used = True
 
     out = pd.DataFrame(rows)
+    out = add_basic_uncertainty_fields(
+        out,
+        ci_level=float(thresholds["ci_level"]),
+        variance_method="cv_approximation_kpi",
+    )
+    rank_mask = out["unit"].astype(str).eq("rank")
+    out.loc[rank_mask, ["se", "ci_lower", "ci_upper", "ci_level"]] = pd.NA
+    out.loc[rank_mask, "variance_method"] = "not_applicable_ordinal_rank"
+    out = evaluate_publishability(
+        out,
+        min_weighted_n=float(thresholds["minimum_weighted_n"]),
+        min_effective_n=float(thresholds["minimum_effective_n"]),
+        max_cv=float(thresholds["maximum_cv"]),
+    )
     out.to_csv(OUT_CSV, index=False)
 
     meta = {
@@ -241,6 +323,13 @@ def main() -> None:
         "retained_period": period,
         "row_count": int(len(out)),
         "btos_kpi_included": btos_used,
+        "rank_uncertainty_rule": (
+            "Rank KPIs keep reliability columns in schema but set se/ci "
+            "fields null and "
+            "variance_method=not_applicable_ordinal_rank to avoid overstating "
+            "precision for ordinal summaries."
+        ),
+        "reliability_thresholds_path": "config/reliability_thresholds.json",
     }
     OUT_META.write_text(json.dumps(meta, indent=2), encoding="utf-8")
 

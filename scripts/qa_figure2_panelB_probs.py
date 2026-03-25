@@ -26,6 +26,19 @@ EXP_COLS = [
     "transition_probability",
     "metric_name",
     "metric_value",
+    "weighted_n",
+    "effective_n",
+    "cv",
+    "pooling_applied",
+    "evidence_directness",
+    "se",
+    "ci_lower",
+    "ci_upper",
+    "ci_level",
+    "variance_method",
+    "reliability_tier",
+    "publish_flag",
+    "suppression_reason",
 ]
 
 RECORD_MATRIX = "matrix"
@@ -140,6 +153,12 @@ def main() -> int:
                         f"summary {name} out of [0,1] at "
                         f"{row['month']} {origin}: {v}"
                     )
+    allowed_directness = {"direct_published", "derived_transform", "proxy_mapping"}
+    got_directness = set(df["evidence_directness"].astype(str).unique())
+    if not got_directness.issubset(allowed_directness):
+        errors.append(f"invalid evidence_directness values: {sorted(got_directness)}")
+    if df["publish_flag"].isna().any():
+        errors.append("publish_flag contains NA")
 
     if str(df["month"].min()) != "2019-01":
         errors.append(

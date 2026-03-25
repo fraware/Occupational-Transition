@@ -34,12 +34,14 @@ def main() -> int:
     figures = sorted((ROOT / "figures").glob("*.csv"))
     meta = sorted(INTER.glob("*run_metadata.json"))
     visual_man = INTER / "visuals_run_manifest.json"
+    drift_meta = INTER / "drift" / "drift_dashboard_run_metadata.json"
 
     payload: dict[str, object] = {
         "generated_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
         "figures": {},
         "intermediate_run_metadata": {},
         "visuals_run_manifest": None,
+        "drift_dashboard_manifest": None,
     }
 
     for p in figures:
@@ -54,6 +56,11 @@ def main() -> int:
         payload["visuals_run_manifest"] = {
             "path": visual_man.relative_to(ROOT).as_posix(),
             "sha256": sha256_file(visual_man),
+        }
+    if drift_meta.is_file():
+        payload["drift_dashboard_manifest"] = {
+            "path": drift_meta.relative_to(ROOT).as_posix(),
+            "sha256": sha256_file(drift_meta),
         }
 
     OUT.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")

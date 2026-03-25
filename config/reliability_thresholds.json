@@ -1,0 +1,23 @@
+{
+  "ci_level": 0.95,
+  "minimum_weighted_n": 1000.0,
+  "minimum_effective_n": 120.0,
+  "maximum_cv": 0.3,
+  "pooling_windows_months": [
+    1,
+    3,
+    6
+  ],
+  "drift_tolerance": {
+    "share_abs_warn": 0.01,
+    "share_abs_critical": 0.03,
+    "rate_abs_warn": 0.01,
+    "rate_abs_critical": 0.025,
+    "hours_abs_warn": 0.5,
+    "hours_abs_critical": 1.5,
+    "rank_abs_warn": 2.0,
+    "rank_abs_critical": 5.0,
+    "index_points_warn": 1.5,
+    "index_points_critical": 4.0
+  }
+}

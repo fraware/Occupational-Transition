@@ -73,12 +73,31 @@ def main() -> int:
         "reference_period",
         "source_path_or_endpoint",
         "notes_limits",
+        "weighted_n",
+        "effective_n",
+        "cv",
+        "se",
+        "ci_lower",
+        "ci_upper",
+        "ci_level",
+        "variance_method",
+        "reliability_tier",
+        "publish_flag",
+        "suppression_reason",
+        "pooling_applied",
+        "evidence_directness",
     ]
     miss = [c for c in req_cols if c not in dkpi.columns]
     if miss:
         errors.append(f"virginia_memo_kpis missing columns: {miss}")
     if dkpi.empty:
         errors.append("virginia_memo_kpis.csv is empty")
+    if dkpi["publish_flag"].isna().any():
+        errors.append("virginia_memo_kpis publish_flag contains NA")
+    allowed_directness = {"direct_published", "derived_transform", "proxy_mapping"}
+    got_directness = set(dkpi["evidence_directness"].astype(str).unique())
+    if not got_directness.issubset(allowed_directness):
+        errors.append("virginia_memo_kpis has invalid evidence_directness values")
 
     required_stems = [
         "va01_virginia_sector_composition",

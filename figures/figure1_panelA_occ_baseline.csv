@@ -1,23 +1,23 @@
 occupation_group,employment,employment_share,median_annual_wage
-Management Occupations,10966830,0.07112663825016029,120935
-Business and Financial Operations Occupations,10351430,0.06713539071745042,82895
-Computer and Mathematical Occupations,5192870,0.03367895608577044,108524
-Architecture and Engineering Occupations,2567220,0.016650000797730657,97911
-"Life, Physical, and Social Science Occupations",1446780,0.00938325821477737,82311
-Community and Social Service Occupations,2569640,0.016665695986273325,57893
-Legal Occupations,1273410,0.008258847124842513,116645
-Educational Instruction and Library Occupations,8947690,0.05803127337658893,58528
-"Arts, Design, Entertainment, Sports, and Media Occupations",2098720,0.013611490123251331,62595
-Healthcare Practitioners and Technical Occupations,9592720,0.06221468968471998,101242
-Healthcare Support Occupations,7448000,0.04830486126685595,38882
-Protective Service Occupations,3654920,0.023704404342300908,56882
-Food Preparation and Serving Related Occupations,13613500,0.08829192116760788,34086
-Building and Grounds Cleaning and Maintenance Occupations,4496160,0.029160363189257122,37591
-Personal Care and Service Occupations,3159920,0.020494024867664266,36359
-Sales and Related Occupations,13351670,0.0865937925659026,46800
-Office and Administrative Support Occupations,18218060,0.11815532503373492,47742
-"Farming, Fishing, and Forestry Occupations",440980,0.0028600265469197286,39439
-Construction and Extraction Occupations,6361730,0.0412597321518791,58608
-"Installation, Maintenance, and Repair Occupations",6045030,0.039205737849621676,58080
-Production Occupations,8743430,0.05670652163620654,47556
-Transportation and Material Moving Occupations,13645590,0.08850004455617574,46202
+Management Occupations,10966830,0.07112663825016029,120935.0
+Business and Financial Operations Occupations,10351430,0.06713539071745042,82895.0
+Computer and Mathematical Occupations,5192870,0.03367895608577044,108524.0
+Architecture and Engineering Occupations,2567220,0.016650000797730657,97911.0
+"Life, Physical, and Social Science Occupations",1446780,0.00938325821477737,82311.0
+Community and Social Service Occupations,2569640,0.016665695986273325,57893.0
+Legal Occupations,1273410,0.008258847124842513,116645.0
+Educational Instruction and Library Occupations,8947690,0.05803127337658893,58528.0
+"Arts, Design, Entertainment, Sports, and Media Occupations",2098720,0.013611490123251331,62595.0
+Healthcare Practitioners and Technical Occupations,9592720,0.06221468968471998,101242.0
+Healthcare Support Occupations,7448000,0.04830486126685595,38882.0
+Protective Service Occupations,3654920,0.023704404342300908,56882.0
+Food Preparation and Serving Related Occupations,13613500,0.08829192116760788,34086.0
+Building and Grounds Cleaning and Maintenance Occupations,4496160,0.029160363189257122,37591.0
+Personal Care and Service Occupations,3159920,0.020494024867664266,36359.0
+Sales and Related Occupations,13351670,0.0865937925659026,46800.0
+Office and Administrative Support Occupations,18218060,0.11815532503373492,47742.0
+"Farming, Fishing, and Forestry Occupations",440980,0.0028600265469197286,39439.0
+Construction and Extraction Occupations,6361730,0.0412597321518791,58608.0
+"Installation, Maintenance, and Repair Occupations",6045030,0.039205737849621676,58080.0
+Production Occupations,8743430,0.05670652163620654,47556.0
+Transportation and Material Moving Occupations,13645590,0.08850004455617574,46202.0

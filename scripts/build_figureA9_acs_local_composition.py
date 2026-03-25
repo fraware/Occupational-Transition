@@ -13,6 +13,7 @@ import csv
 import hashlib
 import io
 import json
+import re
 import zipfile
 from collections import defaultdict
 from datetime import datetime, timezone
@@ -162,6 +163,88 @@ def build_occ22_interval_index(crosswalk_df: pd.DataFrame) -> list[tuple[int, in
     return intervals
 
 
+def select_pums_person_csv_members(all_members: list[str]) -> list[str]:
+    """
+    Identify all person-level PUMS CSV/TXT members inside csv_pus.zip.
+
+    Census typically ships national person microdata as split files
+    (e.g. psam_pusa.csv, psam_pusb.csv). Older or single-file releases may
+    expose one psam_pus.csv. Using only the first lexicographic member would
+    silently drop geography splits.
+    """
+    csv_txt = [m for m in all_members if m.lower().endswith((".csv", ".txt"))]
+    split_pat = re.compile(r"psam_pus[a-z]\.(csv|txt)$", re.IGNORECASE)
+    split_members = [m for m in csv_txt if split_pat.search(m.split("/")[-1])]
+    if split_members:
+        return sorted(split_members)
+    single_pat = re.compile(r"^psam_pus\.(csv|txt)$", re.IGNORECASE)
+    single = [m for m in csv_txt if single_pat.match(m.split("/")[-1])]
+    if single:
+        return sorted(single)
+    if len(csv_txt) == 1:
+        return csv_txt
+    raise RuntimeError(
+        "could not identify PUMS person CSV members in csv_pus.zip "
+        f"(expected psam_pus*.csv split files or a single table); got {csv_txt!r}"
+    )
+
+
+def accumulate_pums_rows_from_reader(
+    rdr: csv.DictReader,
+    intervals: list[tuple[int, int, int]],
+    ai_map: dict[int, str],
+    use_esr_filter: bool,
+    total_w_by_puma: defaultdict[str, float],
+    occ_w_by_puma: dict[str, list[float]],
+    ai_w_by_puma: dict[str, dict[str, float]],
+) -> None:
+    for row in rdr:
+        puma_raw = str(row.get("PUMA", "")).strip()
+        if not puma_raw or not puma_raw.isdigit():
+            continue
+        puma = puma_raw.zfill(5)
+        if puma == "00000":
+            continue
+
+        pwgt_raw = str(row.get("PWGTP", "")).strip()
+        if not pwgt_raw:
+            continue
+        try:
+            pwgt = float(pwgt_raw)
+        except ValueError:
+            continue
+        if pwgt <= 0:
+            continue
+
+        if use_esr_filter:
+            esr_raw = str(row.get("ESR", "")).strip()
+            if esr_raw and esr_raw.isdigit() and int(esr_raw) != 1:
+                continue
+
+        occ_raw = str(row.get("OCCP", "")).strip()
+        if not occ_raw or not occ_raw.isdigit():
+            continue
+        try:
+            occ_code = int(occ_raw)
+        except ValueError:
+            continue
+
+        occ22_id = occ22_id_from_code(occ_code, intervals)
+        if occ22_id is None:
+            continue
+
+        total_w_by_puma[puma] += pwgt
+        if puma not in occ_w_by_puma:
+            occ_w_by_puma[puma] = [0.0] * 22
+        idx = occ22_id - 1
+        occ_w_by_puma[puma][idx] += pwgt
+
+        terc = ai_map[occ22_id]
+        if puma not in ai_w_by_puma:
+            ai_w_by_puma[puma] = {t: 0.0 for t in AI_TERCILE_ORDER}
+        ai_w_by_puma[puma][terc] += pwgt
+
+
 def occ22_id_from_code(occ_code: int, intervals: list[tuple[int, int, int]]) -> int | None:
     starts = [s for s, _, _ in intervals]
     idx = bisect.bisect_right(starts, occ_code) - 1
@@ -212,78 +295,48 @@ def main() -> None:
 
     with zipfile.ZipFile(local_zip) as zf:
         members = zf.namelist()
-        data_members = [m for m in members if m.lower().endswith(".csv") or m.lower().endswith(".txt")]
-        if not data_members:
-            raise RuntimeError("could not locate CSV/TXT member inside csv_pus.zip")
-        data_name = data_members[0]
-        with zf.open(data_name, "r") as f:
-            text = io.TextIOWrapper(f, encoding="utf-8", errors="replace")
-            rdr = csv.DictReader(text)
-            if not rdr.fieldnames:
-                raise RuntimeError("ACS PUMS reader missing fieldnames")
+        person_members = select_pums_person_csv_members(members)
 
-            needed = {"PUMA", "PWGTP", "OCCP"}
-            if not needed.issubset(set(rdr.fieldnames)):
-                missing = sorted(needed - set(rdr.fieldnames))
-                raise RuntimeError(f"ACS PUMS missing required columns: {missing}")
+        total_w_by_puma: defaultdict[str, float] = defaultdict(float)
+        occ_w_by_puma: dict[str, list[float]] = {}
+        ai_w_by_puma: dict[str, dict[str, float]] = {}
 
-            use_esr_filter = "ESR" in rdr.fieldnames
-            for c in ["PUMA", "PWGTP", "OCCP"]:
-                pass
+        needed = {"PUMA", "PWGTP", "OCCP"}
+        use_esr_filter = False
+        fieldnames_set: set[str] | None = None
 
-            total_w_by_puma: defaultdict[str, float] = defaultdict(float)
-            occ_w_by_puma: dict[str, list[float]] = {}
-            ai_w_by_puma: dict[str, dict[str, float]] = {}
+        for data_name in person_members:
+            with zf.open(data_name, "r") as f:
+                text = io.TextIOWrapper(f, encoding="utf-8", errors="replace")
+                rdr = csv.DictReader(text)
+                if not rdr.fieldnames:
+                    raise RuntimeError(
+                        f"ACS PUMS reader missing fieldnames in {data_name!r}"
+                    )
+                fn = set(rdr.fieldnames)
+                if fieldnames_set is None:
+                    fieldnames_set = fn
+                    if not needed.issubset(fn):
+                        missing = sorted(needed - fn)
+                        raise RuntimeError(
+                            f"ACS PUMS missing required columns: {missing}"
+                        )
+                    use_esr_filter = "ESR" in fn
+                elif fn != fieldnames_set:
+                    raise RuntimeError(
+                        "ACS PUMS column set differs between zip members: "
+                        f"{sorted(fn ^ fieldnames_set)}"
+                    )
 
-            # Pre-initialize lists/dicts to keep per-row overhead low.
-            for puma in []:
-                pass
-
-            for row in rdr:
-                puma_raw = str(row.get("PUMA", "")).strip()
-                if not puma_raw or not puma_raw.isdigit():
-                    continue
-                puma = puma_raw.zfill(5)
-                if puma == "00000":
-                    continue
-
-                pwgt_raw = str(row.get("PWGTP", "")).strip()
-                if not pwgt_raw:
-                    continue
-                try:
-                    pwgt = float(pwgt_raw)
-                except ValueError:
-                    continue
-                if pwgt <= 0:
-                    continue
-
-                if use_esr_filter:
-                    esr_raw = str(row.get("ESR", "")).strip()
-                    if esr_raw and esr_raw.isdigit() and int(esr_raw) != 1:
-                        continue
-
-                occ_raw = str(row.get("OCCP", "")).strip()
-                if not occ_raw or not occ_raw.isdigit():
-                    continue
-                try:
-                    occ_code = int(occ_raw)
-                except ValueError:
-                    continue
-
-                occ22_id = occ22_id_from_code(occ_code, intervals)
-                if occ22_id is None:
-                    continue
-
-                total_w_by_puma[puma] += pwgt
-                if puma not in occ_w_by_puma:
-                    occ_w_by_puma[puma] = [0.0] * 22
-                idx = occ22_id - 1
-                occ_w_by_puma[puma][idx] += pwgt
-
-                terc = ai_map[occ22_id]
-                if puma not in ai_w_by_puma:
-                    ai_w_by_puma[puma] = {t: 0.0 for t in AI_TERCILE_ORDER}
-                ai_w_by_puma[puma][terc] += pwgt
+                accumulate_pums_rows_from_reader(
+                    rdr,
+                    intervals,
+                    ai_map,
+                    use_esr_filter,
+                    total_w_by_puma,
+                    occ_w_by_puma,
+                    ai_w_by_puma,
+                )
 
     if not total_w_by_puma:
         raise RuntimeError("ACS aggregation produced zero PUMA totals")
@@ -329,7 +382,8 @@ def main() -> None:
             "source_dir_url": SOURCE_DIR_URL,
             "acs_variant_dir": acs_variant_dir,
             "person_file_name": PUMS_PERSON_ZIP_NAME,
-            "person_file_member": data_name,
+            "person_csv_members": person_members,
+            "person_file_member": person_members[0],
             "person_zip_url": zip_url,
         },
         "source_selection_mode": "rolling_latest_allowed_by_ticket",

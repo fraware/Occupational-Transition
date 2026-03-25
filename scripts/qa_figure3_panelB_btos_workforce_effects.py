@@ -33,6 +33,7 @@ EXPECTED_COLS = [
     "window_start",
     "window_end",
     "source_series_id",
+    "evidence_directness",
 ]
 
 WINDOW_START = "2023-12-04"
@@ -76,6 +77,10 @@ def main() -> None:
     sid = df["source_series_id"]
     if sid.isna().any() or (sid.astype(str) == "").any():
         errors.append("source_series_id must be non-empty")
+    allowed_directness = {"direct_published", "proxy_mapping", "derived_transform"}
+    got_directness = set(df["evidence_directness"].astype(str).unique())
+    if not got_directness.issubset(allowed_directness):
+        errors.append("invalid evidence_directness values")
 
     shares = df["weighted_share"].astype(float)
     if shares.isna().any():

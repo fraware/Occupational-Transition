@@ -1,7 +1,7 @@
-category_key,category_label,weighted_share,window_start,window_end,source_series_id
-perform_task_previously_done_by_employee,Perform a task previously done by an employee,0.266,2023-12-04,2024-02-25,scope2_national_q3_yes_ai_performed_tasks_previously_done_by_employees
-supplement_or_enhance_task_performed_by_employee,Supplement or enhance a task performed by an employee,0.208,2023-12-04,2024-02-25,scope2_national_q7_trained_current_staff_to_use_ai
-introduce_new_task_not_previously_done_by_employee,Introduce a new task not previously done by an employee,0.197,2023-12-04,2024-02-25,scope2_national_q7_developed_new_workflows
-employment_increased,Employment increased,0.028,2023-12-04,2024-02-25,scope2_national_q6_ai_employment_effect_increased
-employment_decreased,Employment decreased,0.026,2023-12-04,2024-02-25,scope2_national_q6_ai_employment_effect_decreased
-employment_did_not_change,Employment did not change,0.946,2023-12-04,2024-02-25,scope2_national_q6_ai_employment_effect_did_not_change
+category_key,category_label,weighted_share,window_start,window_end,source_series_id,evidence_directness
+perform_task_previously_done_by_employee,Perform a task previously done by an employee,0.266,2023-12-04,2024-02-25,scope2_national_q3_yes_ai_performed_tasks_previously_done_by_employees,proxy_mapping
+supplement_or_enhance_task_performed_by_employee,Supplement or enhance a task performed by an employee,0.208,2023-12-04,2024-02-25,scope2_national_q7_trained_current_staff_to_use_ai,proxy_mapping
+introduce_new_task_not_previously_done_by_employee,Introduce a new task not previously done by an employee,0.197,2023-12-04,2024-02-25,scope2_national_q7_developed_new_workflows,proxy_mapping
+employment_increased,Employment increased,0.028,2023-12-04,2024-02-25,scope2_national_q6_ai_employment_effect_increased,direct_published
+employment_decreased,Employment decreased,0.026,2023-12-04,2024-02-25,scope2_national_q6_ai_employment_effect_decreased,direct_published
+employment_did_not_change,Employment did not change,0.946,2023-12-04,2024-02-25,scope2_national_q6_ai_employment_effect_did_not_change,direct_published

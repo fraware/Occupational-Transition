@@ -63,3 +63,12 @@ senator brief artifacts.
   - fine-grained local monthly causal attribution.
 - Kept policy actions framed as design judgments supported by descriptive
   evidence and measurement constraints.
+
+### Reliability field requirement (policy-facing tables)
+
+For dashboard and briefing KPI tables, each claim-supporting row should include:
+
+- uncertainty (`se`, `ci_lower`, `ci_upper`, `ci_level`, `variance_method`),
+- reliability (`weighted_n`, `effective_n`, `cv`, `reliability_tier`),
+- publishability (`publish_flag`, `suppression_reason`, `pooling_applied`),
+- evidence directness (`direct_published`, `derived_transform`, `proxy_mapping`).

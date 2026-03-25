@@ -40,6 +40,7 @@ OUT_COLS = [
     "ai_use_current_rate",
     "ai_use_expected_6m_rate",
     "source_series_id",
+    "evidence_directness",
 ]
 
 
@@ -191,6 +192,7 @@ def main() -> None:
                     "ai_use_current_rate": cur,
                     "ai_use_expected_6m_rate": fut,
                     "source_series_id": f"{STRATA_TYPE}_{STRATA_VALUE}",
+                    "evidence_directness": "direct_published",
                 }
             )
             data_hashes.append(

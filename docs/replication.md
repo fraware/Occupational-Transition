@@ -44,6 +44,8 @@ This runs `scripts/run_full_clean_rebuild_acceptance.py`, which:
 | `--skip-install` | Skip `pip install -r requirements.txt` |
 | `--with-visuals` | After a successful data pipeline, run `run_visuals_all.py` and `qa_visuals.py` |
 | `--with-audit-summary` | After acceptance, build a short table via `build_acceptance_audit_summary.py` |
+| `--source-selection-mode freeze_mode` | Require baseline comparability in drift checks (fails if no baseline snapshot exists) |
+| `--require-signoff` | Require approved `intermediate/release_signoff.json` via `qa_release_signoff.py` |
 
 Example:
 
@@ -75,6 +77,17 @@ After a successful run, review:
 - `intermediate/full_clean_rebuild_acceptance_*.md` (full log)
 - `intermediate/full_clean_rebuild_acceptance_*_audit_summary.md` (if generated)
 - `docs/acceptance_matrix.md` (ticket-level criteria vs automated QA)
+
+Policy-facing reliability gates:
+
+- `python scripts/run_memo_visuals_build.py`
+- `python scripts/run_memo_visuals_qa.py`
+- `python scripts/run_robustness_all.py`
+- `python scripts/build_drift_dashboard.py`
+- `python scripts/qa_drift_dashboard.py`
+- `python scripts/build_freeze_manifest.py`
+- `python scripts/qa_freeze_manifest.py`
+- `python scripts/qa_release_signoff.py` (when `--require-signoff` is used)
 
 ### Bounded rerun option (faster validation)
 

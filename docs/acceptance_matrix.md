@@ -73,9 +73,24 @@ Reviewers should confirm:
 - Substantive claims in the manuscript match the resolution limits in each `docs/t*_methodology.md`.
 - Dynamic source selection (most recent available PUMS, NLSY97 zip, CPS monthly files) matches the `source_selection_rule` fields in run metadata for the evidence window you are citing.
 
-## Optional policy deliverables (outside PR-000–T-020 acceptance list)
+## Policy release gates (required in strict acceptance)
 
-Senator memo visuals (`t101`–`t108`), Virginia QCEW deep-dive tables, Virginia visuals (`va01`–`va08`), and senator narrative docs under `docs/senate_briefing_*.md` / `docs/senator_*.md` are **not** rows in the ticket matrix above. When those outputs are claimed current, record evidence from `python scripts/run_memo_visuals_qa.py` (pass/fail) and `docs/senate_briefing_evidence_baseline_va.md` (frozen values). See `docs/replication.md` and `docs/figure_catalog.md`.
+Policy-facing deliverables (memo stems `t101`–`t108`, Virginia stems `va01`–`va08`, and KPI tables) are enforced in strict acceptance post-ticket gates. A strict acceptance PASS now requires:
+
+- `python scripts/run_memo_visuals_build.py`
+- `python scripts/run_memo_visuals_qa.py`
+- `python scripts/run_robustness_all.py`
+- `python scripts/build_freeze_manifest.py`
+- `python scripts/qa_freeze_manifest.py`
+- `python scripts/build_drift_dashboard.py`
+- `python scripts/qa_drift_dashboard.py`
+
+Policy release mode additionally requires:
+
+- drift dashboard build and QA (`python scripts/build_drift_dashboard.py`, `python scripts/qa_drift_dashboard.py`),
+- freeze manifest generation (`python scripts/build_freeze_manifest.py`),
+- no critical drift alerts in `intermediate/drift/drift_dashboard.csv`,
+- approved machine-readable sign-off (`python scripts/qa_release_signoff.py` against `intermediate/release_signoff.json`).
 
 ## Sign-off
 
