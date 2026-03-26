@@ -73,8 +73,20 @@ def save_dual(fig: plt.Figure, stem: str) -> tuple[Path, Path]:
     ensure_visual_dirs()
     png = PNG_DIR / f"{stem}.png"
     pdf = VECTOR_DIR / f"{stem}.pdf"
+    # Keep exported file metadata aligned with the displayed figure title.
+    title = ""
+    if getattr(fig, "_suptitle", None) is not None:
+        title = (fig._suptitle.get_text() or "").strip()
+    if not title:
+        for ax in fig.axes:
+            t = (ax.get_title() or "").strip()
+            if t:
+                title = t
+                break
+    if not title:
+        title = stem.replace("_", " ")
     fig.tight_layout()
-    fig.savefig(png, bbox_inches="tight")
-    fig.savefig(pdf, bbox_inches="tight")
+    fig.savefig(png, bbox_inches="tight", metadata={"Title": title})
+    fig.savefig(pdf, bbox_inches="tight", metadata={"Title": title})
     plt.close(fig)
     return png, pdf

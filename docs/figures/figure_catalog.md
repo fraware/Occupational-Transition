@@ -4,11 +4,11 @@ Stable slugs map paper figures to pipeline outputs and visual stems (`docs/quali
 
 | Paper figure | Panels / charts | Figure CSV(s) | Visual stem(s) (`visuals/png`) |
 |--------------|-----------------|---------------|--------------------------------|
-| Figure 1 | Occupational baseline (Panel A); O*NET task heatmap and AI terciles (Panel B) | `figures/figure1_panelA_occ_baseline.csv`, `figures/figure1_panelB_task_heatmap.csv`, `intermediate/ai_relevance_terciles.csv` | `t001_occupation_share_barh`, `t002_task_heatmap` |
-| Figure 2 | Hours by AI tercile (Panel A); transition counts heatmap and summary metrics (Panel B) | `figures/figure2_panelA_hours_by_ai_tercile.csv`, `figures/figure2_panelB_transition_counts.csv`, `figures/figure2_panelB_transition_probs.csv` | `t003_hours_timeseries`, `t004_transition_counts_heatmap_latest`, `t005_transition_summary_metrics` |
-| Figure 3 | BTOS AI-use trends (Panel A); supplement workforce effects (Panel B) | `figures/figure3_panelA_btos_ai_trends.csv`, `figures/figure3_panelB_btos_workforce_effects.csv` | `t006_btos_ai_trends`, `t007_btos_workforce_effects_barh` |
-| Figure 4 | JOLTS sector rates (Panel A); CES payroll index (Panel B) | `figures/figure4_panelA_jolts_sector_rates.csv`, `figures/figure4_panelB_ces_sector_index.csv` | `t008_jolts_openings_rate`, `t009_ces_payroll_index` |
-| Figure 5 | Capability matrix | `figures/figure5_capability_matrix.csv` | `t010_capability_matrix_heatmap` |
+| Figure 1 | Occupational baseline (Panel A); O*NET task heatmap and AI terciles (Panel B) | `figures/figure1_panelA_occ_baseline.csv`, `figures/figure1_panelB_task_heatmap.csv`, `intermediate/ai_relevance_terciles.csv` | `occupation_share_barh`, `task_heatmap` |
+| Figure 2 | Hours by AI tercile (Panel A); transition counts heatmap and summary metrics (Panel B) | `figures/figure2_panelA_hours_by_ai_tercile.csv`, `figures/figure2_panelB_transition_counts.csv`, `figures/figure2_panelB_transition_probs.csv` | `hours_timeseries`, `transition_counts_heatmap_latest`, `transition_summary_metrics` |
+| Figure 3 | BTOS AI-use trends (Panel A); supplement workforce effects (Panel B) | `figures/figure3_panelA_btos_ai_trends.csv`, `figures/figure3_panelB_btos_workforce_effects.csv` | `btos_ai_trends`, `btos_workforce_effects_barh` |
+| Figure 4 | JOLTS sector rates (Panel A); CES payroll index (Panel B) | `figures/figure4_panelA_jolts_sector_rates.csv`, `figures/figure4_panelB_ces_sector_index.csv` | `jolts_openings_rate`, `ces_payroll_index` |
+| Figure 5 | Capability matrix | `figures/figure5_capability_matrix.csv` | `capability_matrix_heatmap` |
 
 ## Caption and source note files
 
@@ -39,28 +39,52 @@ Each stem below also has a matching PDF under `visuals/vector/` with the same fi
 
 | Memo visual | Figure CSV(s) | Visual stem(s) (`visuals/png`) |
 |-------------|----------------|--------------------------------|
-| Visual 1 — What we can measure now dashboard | `figures/memo_dashboard_kpis.csv` | `t101_memo_dashboard` |
-| Visual 2 — BTOS two-panel trend/composition | `figures/figure3_panelA_btos_ai_trends.csv`, `figures/figure3_panelB_btos_workforce_effects.csv` | `t102_memo_btos_two_panel` |
-| Visual 3 — CPS transition flow map | `figures/memo_cps_transition_flows.csv` | `t103_memo_cps_sankey` |
-| Visual 4 — Occupation bubble scatter | `figures/memo_occ_bubble_scatter.csv` | `t104_memo_occ_bubble_scatter` |
-| Visual 5 — BTOS state choropleth | `figures/memo_btos_state_ai_use_latest.csv` | `t105_memo_btos_state_choropleth` |
-| Visual 6 — Resolution boundary ladder | `figures/memo_resolution_ladder.csv` | `t106_memo_resolution_ladder` |
-| Visual 7 — Memo capability matrix | `figures/figure5_capability_matrix.csv` | `t107_memo_capability_matrix` |
-| Visual 8 — Policy roadmap | `figures/memo_policy_roadmap.csv` | `t108_memo_policy_roadmap` |
+| Visual 1 — What we can measure now dashboard | `figures/memo_dashboard_kpis.csv` | `memo_dashboard` |
+| Visual 2 — BTOS two-panel trend/composition | `figures/figure3_panelA_btos_ai_trends.csv`, `figures/figure3_panelB_btos_workforce_effects.csv` | `memo_btos_two_panel` |
+| Visual 3 — CPS transition flow map | `figures/memo_cps_transition_flows.csv` | `memo_cps_sankey` |
+| Visual 4 — Occupation bubble scatter | `figures/memo_occ_bubble_scatter.csv` | `memo_occ_bubble_scatter` |
+| Visual 5 — BTOS state choropleth | `figures/memo_btos_state_ai_use_latest.csv` | `memo_btos_state_choropleth` |
+| Visual 6 — Resolution boundary ladder | `figures/memo_resolution_ladder.csv` | `memo_resolution_ladder` |
+| Visual 7 — Memo capability matrix | `figures/figure5_capability_matrix.csv` | `memo_capability_matrix` |
+| Visual 8 — Policy roadmap | `figures/memo_policy_roadmap.csv` | `memo_policy_roadmap` |
 
 ## Virginia memo pack (additive)
 
 | Virginia visual | Figure CSV(s) | Visual stem(s) (`visuals/png` and `visuals/vector`) |
 |-----------------|----------------|--------------------------------|
-| VA 1 — Six-sector composition | `figures/state_deep_dive_qcew_51_profile.csv` | `va01_virginia_sector_composition` |
-| VA 2 — Six-sector wages | `figures/state_deep_dive_qcew_51_profile.csv` | `va02_virginia_sector_wages` |
-| VA 3 — Peer shares comparison | `figures/state_deep_dive_qcew_51_peers.csv` | `va03_virginia_peers_sector_shares` |
-| VA 4 — Peer wages comparison | `figures/state_deep_dive_qcew_51_peers.csv` | `va04_virginia_peers_sector_wages` |
-| VA 5 — State rank profile | `figures/state_deep_dive_qcew_51_ranks.csv` | `va05_virginia_sector_ranks` |
-| VA 6 — Virginia KPI dashboard | `figures/virginia_memo_kpis.csv` | `va06_virginia_kpi_dashboard` |
-| VA 7 — BTOS state highlight (optional) | `figures/memo_btos_state_ai_use_latest.csv` | `va07_virginia_btos_state_highlight` |
-| VA 8 — Occupation context (optional) | `figures/memo_occ_bubble_scatter.csv` | `va08_virginia_occ_context` |
+| VA 1 — Six-sector composition | `figures/state_deep_dive_qcew_51_profile.csv` | `virginia_sector_composition` |
+| VA 2 — Six-sector wages | `figures/state_deep_dive_qcew_51_profile.csv` | `virginia_sector_wages` |
+| VA 3 — Peer shares comparison | `figures/state_deep_dive_qcew_51_peers.csv` | `virginia_peers_sector_shares` |
+| VA 4 — Peer wages comparison | `figures/state_deep_dive_qcew_51_peers.csv` | `virginia_peers_sector_wages` |
+| VA 5 — State rank profile | `figures/state_deep_dive_qcew_51_ranks.csv` | `virginia_sector_ranks` |
+| VA 6 — Virginia KPI dashboard | `figures/virginia_memo_kpis.csv` | `virginia_kpi_dashboard` |
+| VA 7 — BTOS state highlight (optional) | `figures/memo_btos_state_ai_use_latest.csv` | `virginia_btos_state_highlight` |
+| VA 8 — Occupation context (optional) | `figures/memo_occ_bubble_scatter.csv` | `virginia_occ_context` |
 
 **Build and QA (Virginia tables and stems):** `scripts/build_state_qcew_deep_dive.py`, `scripts/qa_state_qcew_deep_dive.py`, `scripts/build_virginia_memo_kpis.py`, `scripts/visualize_virginia_memo.py`, `scripts/qa_virginia_memo_visuals.py`. These are also invoked at the end of `scripts/run_memo_visuals_build.py` and `scripts/run_memo_visuals_qa.py`.
 
 **Memo orchestrator:** full memo + Virginia pack — `python scripts/run_memo_visuals_build.py` then `python scripts/run_memo_visuals_qa.py` (see `docs/replication/README.md`).
+
+## Monitoring metric visuals (AWES/ALPI)
+
+These are additive descriptive monitoring visuals derived from `metrics/` outputs, not main-paper figures.
+
+| Monitoring visual | Metric CSV(s) | Visual stem(s) (`visuals/png` and `visuals/vector`) |
+|-------------------|---------------|--------------------------------|
+| AWES top occupations (latest month) | `metrics/awes_occ22_monthly.csv` | `awes_top20_latest` |
+| ALPI top occupations (latest month) | `metrics/alpi_occ22_monthly.csv` | `alpi_top20_latest` |
+| AWES/ALPI monthly median trend | `metrics/awes_occ22_monthly.csv`, `metrics/alpi_occ22_monthly.csv` | `awes_alpi_monthly_median` |
+| AWES vs ALPI cross-section (latest month) | `metrics/awes_occ22_monthly.csv`, `metrics/alpi_occ22_monthly.csv` | `awes_vs_alpi_latest_scatter` |
+
+Build: `python scripts/visualize_awes_alpi.py`  
+QA: `python scripts/qa_awes_alpi_visuals.py`
+
+## Publication packaging manifest
+
+Generate the packaging manifest (Main, Appendix, Memo, Virginia, and AWES/ALPI monitoring visuals):
+
+`python scripts/build_visual_packaging_manifest.py`
+
+Output:
+
+`docs/figures/visual_packaging_manifest.md`

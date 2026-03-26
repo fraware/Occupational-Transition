@@ -34,7 +34,7 @@ IN_TERCILES = INTER / "ai_relevance_terciles.csv"
 
 OUT_CSV = FIG / "memo_occ_bubble_scatter.csv"
 OUT_META = INTER / "memo_occ_bubble_scatter_run_metadata.json"
-STEM = "t104_memo_occ_bubble_scatter"
+STEM = "memo_occ_bubble_scatter"
 
 ATI_ZCOLS = [
     "z_analyzing_data_or_information",

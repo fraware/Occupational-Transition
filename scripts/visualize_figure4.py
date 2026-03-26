@@ -19,11 +19,11 @@ def render_t008() -> list[str]:
             color=STYLE.palette_sector[i % len(STYLE.palette_sector)],
             linewidth=1.6,
         )
-    ax.set_title("T-008 Figure 4 Panel A: JOLTS Job Openings Rate")
+    ax.set_title("Figure 4 Panel A: JOLTS Job Openings Rate")
     ax.set_xlabel("Month")
     ax.set_ylabel("Rate")
     ax.legend(ncol=2, fontsize=8)
-    p1, _ = save_dual(fig, "t008_jolts_openings_rate")
+    p1, _ = save_dual(fig, "jolts_openings_rate")
     return [p1.stem]
 
 
@@ -41,11 +41,11 @@ def render_t009() -> list[str]:
             linewidth=1.6,
         )
     ax.axhline(100.0, linestyle="--", linewidth=1.0, color=STYLE.neutral_color)
-    ax.set_title("T-009 Figure 4 Panel B: CES Payroll Index (Aug-2023 = 100)")
+    ax.set_title("Figure 4 Panel B: CES Payroll Index (Aug-2023 = 100)")
     ax.set_xlabel("Month")
     ax.set_ylabel("Index")
     ax.legend(ncol=2, fontsize=8)
-    p1, _ = save_dual(fig, "t009_ces_payroll_index")
+    p1, _ = save_dual(fig, "ces_payroll_index")
     return [p1.stem]
 
 

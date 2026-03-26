@@ -24,11 +24,11 @@ def render_t006() -> list[str]:
         color=STYLE.middle_color,
         label="Expected AI use (6m)",
     )
-    ax.set_title("T-006 Figure 3 Panel A: BTOS AI Use Trends")
+    ax.set_title("Figure 3 Panel A: BTOS AI Use Trends")
     ax.set_xlabel("Period start date")
     ax.set_ylabel("Rate")
     ax.legend()
-    p1, _ = save_dual(fig, "t006_btos_ai_trends")
+    p1, _ = save_dual(fig, "btos_ai_trends")
     return [p1.stem]
 
 
@@ -37,10 +37,10 @@ def render_t007() -> list[str]:
     df = df.sort_values("weighted_share", ascending=True)
     fig, ax = plt.subplots(figsize=(9.2, 5.2))
     ax.barh(df["category_label"], df["weighted_share"], color="#5f9ea0")
-    ax.set_title("T-007 Figure 3 Panel B: Workforce Effects")
+    ax.set_title("Figure 3 Panel B: Workforce Effects")
     ax.set_xlabel("Weighted share")
     ax.set_ylabel("Category")
-    p1, _ = save_dual(fig, "t007_btos_workforce_effects_barh")
+    p1, _ = save_dual(fig, "btos_workforce_effects_barh")
     return [p1.stem]
 
 

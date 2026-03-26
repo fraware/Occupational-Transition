@@ -16,7 +16,7 @@ from viz_style import STYLE, apply_matplotlib_style, save_dual
 
 ROOT = Path(__file__).resolve().parents[1]
 FIG = ROOT / "figures"
-STEM = "t101_memo_dashboard"
+STEM = "memo_dashboard"
 
 
 def _fmt_value(v: float, unit: str) -> str:

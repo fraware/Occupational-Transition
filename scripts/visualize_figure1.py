@@ -14,7 +14,7 @@ def render_t001() -> list[str]:
     bars = ax.barh(
         df["occupation_group"], df["employment_share"], color="#4c78a8"
     )
-    ax.set_title("T-001 Figure 1 Panel A: Occupation Employment Share")
+    ax.set_title("Figure 1 Panel A: Occupation Employment Share")
     ax.set_xlabel("Employment share")
     ax.set_ylabel("Occupation group")
     for b, wage in zip(bars, df["median_annual_wage"]):
@@ -25,7 +25,7 @@ def render_t001() -> list[str]:
             va="center",
             fontsize=8,
         )
-    p1, _ = save_dual(fig, "t001_occupation_share_barh")
+    p1, _ = save_dual(fig, "occupation_share_barh")
     return [p1.stem]
 
 
@@ -35,7 +35,7 @@ def render_t002() -> list[str]:
     m = df.sort_values("occ22_id")[zcols].to_numpy()
     fig, ax = plt.subplots(figsize=(10, 6.5))
     im = ax.imshow(m, aspect="auto", cmap="coolwarm")
-    ax.set_title("T-002 Figure 1 Panel B: Task Heatmap (z-scores)")
+    ax.set_title("Figure 1 Panel B: Task Heatmap (z-scores)")
     ax.set_yticks(np.arange(len(df)))
     ax.set_yticklabels(
         df.sort_values("occ22_id")["occupation_group"], fontsize=7
@@ -45,7 +45,7 @@ def render_t002() -> list[str]:
         [c.replace("z_", "") for c in zcols], rotation=30, ha="right"
     )
     fig.colorbar(im, ax=ax, fraction=0.03, pad=0.02)
-    p1, _ = save_dual(fig, "t002_task_heatmap")
+    p1, _ = save_dual(fig, "task_heatmap")
     return [p1.stem]
 
 

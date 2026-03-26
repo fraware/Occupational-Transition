@@ -33,7 +33,7 @@ INTER = ROOT / "intermediate"
 
 OUT_CSV = FIG / "memo_btos_state_ai_use_latest.csv"
 OUT_META = INTER / "memo_btos_state_ai_use_latest_run_metadata.json"
-STEM = "t105_memo_btos_state_choropleth"
+STEM = "memo_btos_state_choropleth"
 
 BTOS_API_BASE = "https://www.census.gov/hfp/btos/api"
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"

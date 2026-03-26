@@ -21,7 +21,7 @@ FIG = ROOT / "figures"
 INTER = ROOT / "intermediate"
 OUT_CSV = FIG / "memo_resolution_ladder.csv"
 OUT_META = INTER / "memo_resolution_ladder_run_metadata.json"
-STEM = "t106_memo_resolution_ladder"
+STEM = "memo_resolution_ladder"
 
 
 def main() -> None:

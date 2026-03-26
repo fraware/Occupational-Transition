@@ -232,9 +232,9 @@ This guide defines deterministic publication-ready static rendering for figure o
 
 ### Naming conventions
 
-- Paper and appendix stems: `tNNN_<chart_slug>` for `T-001`–`T-020`.
-- Senator memo pack (additive): stems `t101_memo_dashboard` through `t108_memo_policy_roadmap` (see `docs/figures/figure_catalog.md`).
-- Virginia brief pack (additive): stems `va01_virginia_sector_composition` through `va08_virginia_occ_context` (see `docs/figures/figure_catalog.md`).
+- Paper and appendix stems: `<chart_slug>` (no ticket prefix), for example `occupation_share_barh` and `nls_occupation_switch_rate`.
+- Senator memo pack (additive): stems `memo_dashboard` through `memo_policy_roadmap` (see `docs/figures/figure_catalog.md`).
+- Virginia brief pack (additive): stems `virginia_sector_composition` through `virginia_occ_context` (see `docs/figures/figure_catalog.md`).
 - Each stem must generate both:
   - `visuals/png/<stem>.png`
   - `visuals/vector/<stem>.pdf`

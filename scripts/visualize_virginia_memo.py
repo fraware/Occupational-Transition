@@ -1,4 +1,4 @@
-"""Render additive Virginia memo visual pack (va01-va08)."""
+"""Render additive Virginia memo visual pack."""
 
 from __future__ import annotations
 
@@ -36,12 +36,14 @@ def render_va01(profile: pd.DataFrame) -> str:
     )
     d = d.sort_values("sector6_code")
     fig, ax = plt.subplots(figsize=(9.0, 4.8))
-    ax.bar(d["sector6_label"], d["sector_share_pct"], color=STYLE.palette_sector)
+    ax.bar(
+        d["sector6_label"], d["sector_share_pct"], color=STYLE.palette_sector
+    )
     ax.set_title("Virginia six-sector employment composition (QCEW benchmark)")
     ax.set_xlabel("")
     ax.set_ylabel("Share (%)")
     ax.tick_params(axis="x", rotation=25)
-    p, _ = save_dual(fig, "va01_virginia_sector_composition")
+    p, _ = save_dual(fig, "virginia_sector_composition")
     return p.stem
 
 
@@ -52,11 +54,15 @@ def render_va02(profile: pd.DataFrame) -> str:
     )
     d = d.sort_values("sector6_code")
     fig, ax = plt.subplots(figsize=(9.0, 4.8))
-    ax.barh(d["sector6_label"], d["average_weekly_wage_usd"], color=STYLE.high_color)
+    ax.barh(
+        d["sector6_label"],
+        d["average_weekly_wage_usd"],
+        color=STYLE.high_color,
+    )
     ax.set_title("Virginia six-sector average weekly wage")
     ax.set_xlabel("USD per week")
     ax.set_ylabel("")
-    p, _ = save_dual(fig, "va02_virginia_sector_wages")
+    p, _ = save_dual(fig, "virginia_sector_wages")
     return p.stem
 
 
@@ -87,7 +93,7 @@ def render_va03(peers: pd.DataFrame) -> str:
         ax.set_xticklabels(states, rotation=35, ha="right")
         ax.set_ylabel("Share (%)")
     fig.suptitle("Virginia vs peers: sector employment shares")
-    p, _ = save_dual(fig, "va03_virginia_peers_sector_shares")
+    p, _ = save_dual(fig, "virginia_peers_sector_shares")
     return p.stem
 
 
@@ -118,7 +124,7 @@ def render_va04(peers: pd.DataFrame) -> str:
         ax.set_xticklabels(states, rotation=35, ha="right")
         ax.set_ylabel("USD per week")
     fig.suptitle("Virginia vs peers: sector average weekly wages")
-    p, _ = save_dual(fig, "va04_virginia_peers_sector_wages")
+    p, _ = save_dual(fig, "virginia_peers_sector_wages")
     return p.stem
 
 
@@ -135,12 +141,14 @@ def render_va05(ranks: pd.DataFrame) -> str:
     axes[0].invert_xaxis()
     axes[0].set_title("Share rank (1=highest)")
     axes[0].set_xlabel("Rank")
-    axes[1].barh(d["sector6_label"], d["wage_rank_desc"], color=STYLE.high_color)
+    axes[1].barh(
+        d["sector6_label"], d["wage_rank_desc"], color=STYLE.high_color
+    )
     axes[1].invert_xaxis()
     axes[1].set_title("Wage rank (1=highest)")
     axes[1].set_xlabel("Rank")
     fig.suptitle("Virginia state-rank profile by sector")
-    p, _ = save_dual(fig, "va05_virginia_sector_ranks")
+    p, _ = save_dual(fig, "virginia_sector_ranks")
     return p.stem
 
 
@@ -179,7 +187,7 @@ def render_va06(kpis: pd.DataFrame) -> str:
         y -= step
         if y < 0.06:
             break
-    p, _ = save_dual(fig, "va06_virginia_kpi_dashboard")
+    p, _ = save_dual(fig, "virginia_kpi_dashboard")
     return p.stem
 
 
@@ -187,7 +195,9 @@ def render_va07_optional() -> str | None:
     if not BTOS_STATE.is_file():
         return None
     d = pd.read_csv(BTOS_STATE)
-    d = d[pd.to_numeric(d["missing_ai_current_rate"], errors="coerce") == 0].copy()
+    d = d[
+        pd.to_numeric(d["missing_ai_current_rate"], errors="coerce") == 0
+    ].copy()
     if d.empty or "VA" not in set(d["state_abbrev"]):
         return None
     d["ai_use_current_rate"] = pd.to_numeric(
@@ -200,10 +210,12 @@ def render_va07_optional() -> str | None:
         for s in d["state_abbrev"]
     ]
     ax.bar(d["state_abbrev"], d["ai_use_current_rate"] * 100.0, color=colors)
-    ax.set_title("BTOS current AI use share (top states shown; VA highlighted)")
+    ax.set_title(
+        "BTOS current AI use share (top states shown; VA highlighted)"
+    )
     ax.set_xlabel("State")
     ax.set_ylabel("Share (%)")
-    p, _ = save_dual(fig, "va07_virginia_btos_state_highlight")
+    p, _ = save_dual(fig, "virginia_btos_state_highlight")
     return p.stem
 
 
@@ -218,13 +230,17 @@ def render_va08_optional() -> str | None:
         "middle": STYLE.middle_color,
         "high": STYLE.high_color,
     }
-    colors = [c.get(str(x), STYLE.neutral_color) for x in d["ai_relevance_tercile"]]
+    colors = [
+        c.get(str(x), STYLE.neutral_color) for x in d["ai_relevance_tercile"]
+    ]
     ax.bar(d["occupation_group"], d["employment_share"] * 100.0, color=colors)
-    ax.set_title("Occupation structure context (top groups by employment share)")
+    ax.set_title(
+        "Occupation structure context (top groups by employment share)"
+    )
     ax.set_xlabel("")
     ax.set_ylabel("Employment share (%)")
     ax.tick_params(axis="x", rotation=65)
-    p, _ = save_dual(fig, "va08_virginia_occ_context")
+    p, _ = save_dual(fig, "virginia_occ_context")
     return p.stem
 
 

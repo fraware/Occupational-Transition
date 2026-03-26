@@ -24,7 +24,7 @@ IN_TRANS = FIG / "figure2_panelB_transition_probs.csv"
 IN_TERC = INTER / "ai_relevance_terciles.csv"
 OUT_CSV = FIG / "memo_cps_transition_flows.csv"
 OUT_META = INTER / "memo_cps_transition_flows_run_metadata.json"
-STEM = "t103_memo_cps_sankey"
+STEM = "memo_cps_sankey"
 
 
 def _map_state_to_group(state: str, terc_map: dict[str, str]) -> str:

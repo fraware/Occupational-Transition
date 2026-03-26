@@ -33,8 +33,8 @@ def render_t011() -> str:
         df,
         "year",
         "mean_annual_income",
-        "T-011 Figure A1: Mean Annual Income by AI Tercile",
-        "t011_asec_mean_income",
+        "Figure A1: Mean Annual Income by AI Tercile",
+        "asec_mean_income",
     )
 
 
@@ -44,8 +44,8 @@ def render_t012() -> str:
         df,
         "event_time",
         "mean_employment_rate",
-        "T-012 Figure A2: Event-Time Employment Rate",
-        "t012_sipp_event_employment",
+        "Figure A2: Event-Time Employment Rate",
+        "sipp_event_employment",
     )
 
 
@@ -58,10 +58,10 @@ def render_t013() -> str:
         df["occupational_mobility_share"],
         color="#6b8e23",
     )
-    ax.set_title("T-013 Figure A3: Occupational Mobility Share")
+    ax.set_title("Figure A3: Occupational Mobility Share")
     ax.set_xlabel("Share")
     ax.set_ylabel("AI tercile")
-    p, _ = save_dual(fig, "t013_cps_supp_mobility_share")
+    p, _ = save_dual(fig, "cps_supp_mobility_share")
     return p.stem
 
 
@@ -74,9 +74,9 @@ def render_t014() -> str:
     )
     fig, ax = plt.subplots(figsize=(9.5, 5.2))
     ax.barh(sub["measure_label"], sub["weighted_share"], color="#4682b4")
-    ax.set_title("T-014 Figure A4: Mean Weighted Share by ABS Measure")
+    ax.set_title("Figure A4: Mean Weighted Share by ABS Measure")
     ax.set_xlabel("Weighted share")
-    p, _ = save_dual(fig, "t014_abs_measure_shares")
+    p, _ = save_dual(fig, "abs_measure_shares")
     return p.stem
 
 
@@ -98,10 +98,10 @@ def render_t015() -> str:
         linewidth=2,
     )
     ax.axhline(100.0, color=STYLE.neutral_color, linestyle="--", linewidth=1)
-    ax.set_title("T-015 Figure A5: Mean Payroll Index Across Sectors")
+    ax.set_title("Figure A5: Mean Payroll Index Across Sectors")
     ax.set_xlabel("Month")
     ax.set_ylabel("Index")
-    p, _ = save_dual(fig, "t015_ces_payroll_index_mean")
+    p, _ = save_dual(fig, "ces_payroll_index_mean")
     return p.stem
 
 
@@ -115,11 +115,11 @@ def render_t016() -> str:
         color=STYLE.middle_color,
         linewidth=2,
     )
-    ax.set_title("T-016 Figure A6: Mean Gross Job Gains Rate")
+    ax.set_title("Figure A6: Mean Gross Job Gains Rate")
     ax.set_xlabel("Quarter")
     ax.set_ylabel("Rate")
     ax.tick_params(axis="x", rotation=45)
-    p, _ = save_dual(fig, "t016_bed_gross_job_gains")
+    p, _ = save_dual(fig, "bed_gross_job_gains")
     return p.stem
 
 
@@ -133,11 +133,11 @@ def render_t017() -> str:
     )
     fig, ax = plt.subplots(figsize=(10, 6))
     ax.bar(sub["state_name"], sub["state_total_employment"], color="#7b68ee")
-    ax.set_title("T-017 Figure A7: Top 20 States by Total Employment")
+    ax.set_title("Figure A7: Top 20 States by Total Employment")
     ax.set_xlabel("State")
     ax.set_ylabel("State total employment")
     ax.tick_params(axis="x", rotation=65)
-    p, _ = save_dual(fig, "t017_qcew_top20_state_employment")
+    p, _ = save_dual(fig, "qcew_top20_state_employment")
     return p.stem
 
 
@@ -145,24 +145,39 @@ def render_t018() -> str:
     df = read_figure_csv("figureA8_lehd_benchmark.csv").copy()
     fig, ax = plt.subplots(figsize=(9.8, 4.8))
     ax.plot(df["quarter"], df["benchmark_rate"], color="#20b2aa", linewidth=2)
-    ax.set_title("T-018 Figure A8: LEHD Benchmark Rate")
+    ax.set_title("Figure A8: LEHD Benchmark Rate")
     ax.set_xlabel("Quarter")
     ax.set_ylabel("Benchmark rate")
     ax.tick_params(axis="x", rotation=45)
-    p, _ = save_dual(fig, "t018_lehd_benchmark_rate")
+    p, _ = save_dual(fig, "lehd_benchmark_rate")
     return p.stem
 
 
 def render_t019() -> str:
     df = read_figure_csv("figureA9_acs_local_composition.csv").copy()
-    sub = df.sort_values("high_ai_tercile_share", ascending=False).head(30)
-    fig, ax = plt.subplots(figsize=(10.2, 5.4))
-    ax.bar(sub["puma"], sub["high_ai_tercile_share"], color=STYLE.high_color)
-    ax.set_title("T-019 Figure A9: Top 30 PUMAs by High-AI Share")
-    ax.set_xlabel("PUMA")
+    sub = (
+        df.sort_values("high_ai_tercile_share", ascending=False)
+        .head(30)
+        .copy()
+    )
+    sub["puma_label"] = (
+        pd.to_numeric(sub["puma"], errors="coerce")
+        .fillna(0)
+        .astype(int)
+        .astype(str)
+        .str.zfill(5)
+    )
+    sub = sub.sort_values("high_ai_tercile_share", ascending=True)
+    fig, ax = plt.subplots(figsize=(10.8, 7.4))
+    y = list(range(len(sub)))
+    ax.barh(y, sub["high_ai_tercile_share"], color=STYLE.high_color)
+    ax.set_title("Figure A9: Top 30 PUMAs by High-AI Share")
+    ax.set_xlabel("High AI tercile share")
     ax.set_ylabel("High AI tercile share")
-    ax.tick_params(axis="x", rotation=75)
-    p, _ = save_dual(fig, "t019_top30_puma_high_ai_share")
+    ax.set_yticks(y)
+    ax.set_yticklabels(sub["puma_label"], fontsize=7)
+    ax.set_ylabel("PUMA")
+    p, _ = save_dual(fig, "top30_puma_high_ai_share")
     return p.stem
 
 
@@ -184,12 +199,12 @@ def render_t020() -> str:
             linewidth=2,
         )
     ax.set_title(
-        "T-020 Figure A10: Occupation Switch Rate by Baseline Tercile"
+        "Figure A10: Occupation Switch Rate by Baseline Tercile"
     )
     ax.set_xlabel("Survey round")
     ax.set_ylabel("Occupation switch rate")
     ax.legend(title="Baseline AI tercile")
-    p, _ = save_dual(fig, "t020_nls_occupation_switch_rate")
+    p, _ = save_dual(fig, "nls_occupation_switch_rate")
     return p.stem
 
 

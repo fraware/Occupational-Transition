@@ -94,18 +94,24 @@ def main() -> int:
         errors.append("virginia_memo_kpis.csv is empty")
     if dkpi["publish_flag"].isna().any():
         errors.append("virginia_memo_kpis publish_flag contains NA")
-    allowed_directness = {"direct_published", "derived_transform", "proxy_mapping"}
+    allowed_directness = {
+        "direct_published",
+        "derived_transform",
+        "proxy_mapping",
+    }
     got_directness = set(dkpi["evidence_directness"].astype(str).unique())
     if not got_directness.issubset(allowed_directness):
-        errors.append("virginia_memo_kpis has invalid evidence_directness values")
+        errors.append(
+            "virginia_memo_kpis has invalid evidence_directness values"
+        )
 
     required_stems = [
-        "va01_virginia_sector_composition",
-        "va02_virginia_sector_wages",
-        "va03_virginia_peers_sector_shares",
-        "va04_virginia_peers_sector_wages",
-        "va05_virginia_sector_ranks",
-        "va06_virginia_kpi_dashboard",
+        "virginia_sector_composition",
+        "virginia_sector_wages",
+        "virginia_peers_sector_shares",
+        "virginia_peers_sector_wages",
+        "virginia_sector_ranks",
+        "virginia_kpi_dashboard",
     ]
     for stem in required_stems:
         _check_exists(PNG / f"{stem}.png", errors)

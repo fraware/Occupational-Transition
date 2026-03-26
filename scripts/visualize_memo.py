@@ -50,7 +50,7 @@ def render_t102() -> list[str]:
     ax2.set_xlabel("Share (Scope 2 AI-using firms)")
     ax2.set_ylabel("")
 
-    p1, _ = save_dual(fig, "t102_memo_btos_two_panel")
+    p1, _ = save_dual(fig, "memo_btos_two_panel")
     return [p1.stem]
 
 
@@ -95,7 +95,7 @@ def render_t107() -> list[str]:
     cbar.set_ticks([0, 1, 2])
     cbar.set_ticklabels(["none", "partial", "direct"])
 
-    p1, _ = save_dual(fig, "t107_memo_capability_matrix")
+    p1, _ = save_dual(fig, "memo_capability_matrix")
     return [p1.stem]
 
 

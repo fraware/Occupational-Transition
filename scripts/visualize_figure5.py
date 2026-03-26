@@ -29,7 +29,7 @@ def main() -> None:
 
     fig, ax = plt.subplots(figsize=(11, 4.8))
     im = ax.imshow(mat, cmap="YlGnBu", vmin=0, vmax=2, aspect="auto")
-    ax.set_title("T-010 Figure 5: Capability Matrix")
+    ax.set_title("Figure 5: Capability Matrix")
     ax.set_yticks(range(len(df)))
     ax.set_yticklabels(df["dataset_label"])
     ax.set_xticks(range(len(cols)))
@@ -39,7 +39,7 @@ def main() -> None:
     cbar = fig.colorbar(im, ax=ax, fraction=0.03, pad=0.02)
     cbar.set_ticks([0, 1, 2])
     cbar.set_ticklabels(["none", "partial", "direct"])
-    p1, _ = save_dual(fig, "t010_capability_matrix_heatmap")
+    p1, _ = save_dual(fig, "capability_matrix_heatmap")
     print("Wrote figure5 visuals:", p1.stem)
 
 

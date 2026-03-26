@@ -21,7 +21,7 @@ FIG = ROOT / "figures"
 INTER = ROOT / "intermediate"
 OUT_CSV = FIG / "memo_policy_roadmap.csv"
 OUT_META = INTER / "memo_policy_roadmap_run_metadata.json"
-STEM = "t108_memo_policy_roadmap"
+STEM = "memo_policy_roadmap"
 
 
 def main() -> None:
