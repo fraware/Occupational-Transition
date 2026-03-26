@@ -20,7 +20,7 @@ This section describes how to reproduce pipeline outputs from a clean clone of t
 
 - Python 3.10 or newer (3.11+ recommended).
 - Network access for first-run downloads from Census, BLS, and other agencies listed in `docs/data_registry.csv`.
-- Sufficient disk space for `raw/` caches and large public-use files (multi-gigabyte downloads are possible for NLSY97 and ACS PUMS; see ticket methodology docs).
+- Sufficient disk space for `raw/` caches and large public-use files (multi-gigabyte downloads are possible for NLSY97 and ACS PUMS; see methodology step notes).
 
 ### Directory layout
 
@@ -47,7 +47,7 @@ T-021 requires BLS OEWS industry-by-occupation inputs: either `raw/oesm24in4.zip
 
 This runs `scripts/run_full_clean_rebuild_acceptance.py`, which:
 
-- Deletes expected outputs for each ticket before rebuilding
+- Deletes expected outputs for each build step before rebuilding
 - Runs each build script then its QA script in order
 - Writes a timestamped log to `intermediate/full_clean_rebuild_acceptance_<UTC>.md`
 
@@ -90,7 +90,7 @@ After a successful run, review:
 
 - `intermediate/full_clean_rebuild_acceptance_*.md` (full log)
 - `intermediate/full_clean_rebuild_acceptance_*_audit_summary.md` (if generated)
-- `docs/replication/acceptance_matrix.md` (ticket-level criteria vs automated QA)
+- `docs/replication/acceptance_matrix.md` (step-level criteria vs automated QA)
 
 Policy-facing reliability gates:
 
@@ -105,15 +105,15 @@ Policy-facing reliability gates:
 
 #### Bounded rerun option (faster validation)
 
-If you need a quicker drift-validation pass (for example while avoiding long appendix rebuild tickets), you can:
+If you need a quicker drift-validation pass (for example while avoiding long appendix rebuild steps), you can:
 
-1. Run targeted rebuild scripts for the affected tickets.
+1. Run targeted rebuild scripts for the affected steps.
 2. Generate an audit summary from the selected acceptance log:
    - `python scripts/build_acceptance_audit_summary.py --log <path_to_log>`
 3. Run main visual QA:
    - `python scripts/qa_visuals.py`
 
-In that mode, explicitly record scope limits in a closure note (for example, which late tickets were not rerun) so reviewers do not misread it as a full `PR-000` through `T-020` replication.
+In that mode, explicitly record scope limits in a closure note (for example, which late steps were not rerun) so reviewers do not misread it as a full `PR-000` through `T-020` replication.
 
 ### Visual style lock
 
@@ -121,7 +121,7 @@ Publication figures use `scripts/viz_style.py` and [quality README — Visual st
 
 ### Senator memo visuals and Virginia brief pack (optional, additive)
 
-These steps are **not** part of the default `run_full_clean_rebuild_acceptance.py` ticket list. They produce memo stems `t101`–`t108`, Virginia stems `va01`–`va08`, related `figures/memo_*.csv`, `figures/state_deep_dive_qcew_51_*.csv`, and `figures/virginia_memo_kpis.csv`.
+These steps are **not** part of the default `run_full_clean_rebuild_acceptance.py` step list. They produce memo stems `t101`–`t108`, Virginia stems `va01`–`va08`, related `figures/memo_*.csv`, `figures/state_deep_dive_qcew_51_*.csv`, and `figures/virginia_memo_kpis.csv`.
 
 **Prerequisites:** Figure inputs for the memo pipeline must exist (for example `figures/figure3_panelA_btos_ai_trends.csv`, Figure 1–2 outputs, Figure 4–5, and crosswalk/intermediate artifacts as listed in `scripts/run_memo_visuals_build.py`). Virginia QCEW tables require **T-017** first: `figures/figureA7_qcew_state_benchmark.csv` from `scripts/build_figureA7_qcew_state_benchmark.py`.
 
@@ -165,7 +165,7 @@ These are required for a full strict rebuild but are **gitignored** or otherwise
 |--------|----------------|-----------------|
 | T-004 transition counts | `figures/figure2_panelB_transition_counts.csv` | After `build_figure2_panelB_counts.py` (feeds T-005 and downstream memo KPIs) |
 | AI relevance terciles | `intermediate/ai_relevance_terciles.csv` | After T-002 build |
-| Run metadata | `intermediate/*run_metadata.json` | Per-ticket build scripts |
+| Run metadata | `intermediate/*run_metadata.json` | Per-step build scripts |
 | Acceptance logs | `intermediate/full_clean_rebuild_acceptance_*.md` | After `run_full_clean_rebuild_acceptance.py` or full pipeline |
 | Visual manifest | `intermediate/visuals_run_manifest.json` | After `run_visuals_all.py` |
 
@@ -173,7 +173,7 @@ Replicators should run the commands in [Replication from a clean clone](#replica
 
 ### Note on T-004
 
-`figures/figure2_panelB_transition_counts.csv` is listed in the acceptance matrix and README ticket table but is **not** a committed file in the default snapshot: it is produced by the CPS pipeline and consumed on disk by `build_figure2_panelB_probs.py` and memo scripts. Obtain it by running T-004 build (see [t004_figure2_panelB_counts_methodology.md](../methodology/tickets/t004_figure2_panelB_counts_methodology.md)).
+`figures/figure2_panelB_transition_counts.csv` is listed in the acceptance matrix and README build-step table but is **not** a committed file in the default snapshot: it is produced by the CPS pipeline and consumed on disk by `build_figure2_panelB_probs.py` and memo scripts. Obtain it by running T-004 build (see [t004_figure2_panelB_counts_methodology.md](../methodology/tickets/t004_figure2_panelB_counts_methodology.md)).
 
 ---
 
@@ -243,9 +243,9 @@ Skip if replication scope is paper figures only. If senator memo or Virginia vis
 
 ### Spot-check mapping (sample)
 
-Pick **one** ticket and trace source URL from `docs/data_registry.csv` to a cached file path named in `intermediate/*run_metadata.json` for that ticket. Record:
+Pick **one** build step and trace source URL from `docs/data_registry.csv` to a cached file path named in `intermediate/*run_metadata.json` for that build step. Record:
 
-- Ticket: `____`
+- Build step: `____`
 - Registry `dataset_id`: `____`
 - Local cache path observed: `____`
 - SHA-256 matches metadata: yes / no

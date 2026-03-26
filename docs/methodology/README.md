@@ -2,17 +2,17 @@
 
 **Audience:** Anyone tracing a figure or table back to data universes, weights, time windows, and known deviations.
 
-**Do not merge** the per-ticket files under [`tickets/`](tickets/): each file is the QA and review anchor for one ticket (diff-friendly, deep-linked from [acceptance_matrix.md](../replication/acceptance_matrix.md) and build metadata).
+**Do not merge** the per-step files under [`tickets/`](tickets/): each file is the QA and review anchor for one build step (diff-friendly, deep-linked from [acceptance_matrix.md](../replication/acceptance_matrix.md) and build metadata).
 
 ## PR-000 (crosswalks and registry)
 
 - [pr000_crosswalk_methodology.md](pr000_crosswalk_methodology.md) — occupation (`occ22`) and sector (`sector6`) crosswalks plus `docs/data_registry.csv` rules.
 
-## Ticket index (PR-000 through T-020)
+## Build-step index (PR-000 through T-020)
 
 Build and QA pairs are defined in `scripts/run_full_clean_rebuild_acceptance.py`. Extensions after T-020 (for example T-021, T-022) follow the same pattern; see that script for the authoritative ordered list.
 
-| Ticket | Primary figure / output | Build script | QA script | Methodology memo |
+| Build step | Primary figure / output | Build script | QA script | Methodology memo |
 |--------|-------------------------|--------------|-----------|------------------|
 | PR-000 | Crosswalks + registry | `build_crosswalks.py` | `qa_crosswalks.py` | [pr000_crosswalk_methodology.md](pr000_crosswalk_methodology.md) |
 | T-001 | Figure 1 Panel A | `build_figure1_panelA.py` | `qa_figure1_panelA.py` | [t001_figure1_panelA_methodology.md](tickets/t001_figure1_panelA_methodology.md) |
@@ -36,7 +36,7 @@ Build and QA pairs are defined in `scripts/run_full_clean_rebuild_acceptance.py`
 | T-019 | Appendix A9 | `build_figureA9_acs_local_composition.py` | `qa_figureA9_acs_local_composition.py` | [t019_figureA9_acs_local_composition_methodology.md](tickets/t019_figureA9_acs_local_composition_methodology.md) |
 | T-020 | Appendix A10 | `build_figureA10_nls_longrun.py` | `qa_figureA10_nls_longrun.py` | [t020_figureA10_nls_longrun_methodology.md](tickets/t020_figureA10_nls_longrun_methodology.md) |
 
-## How to read a ticket methodology memo
+## How to read a build-step methodology memo
 
 Use the same checklist for every `tickets/tNNN_*.md` file (and PR-000):
 

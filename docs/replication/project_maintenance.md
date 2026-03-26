@@ -2,7 +2,7 @@
 
 **Audience:** Maintainers auditing repository size, coordinating history rewrites, and cutting library or results freezes.
 
-**Related:** [replication README](README.md), [THIRD_PARTY_NOTICES.md](../../THIRD_PARTY_NOTICES.md), [CHANGELOG.md](../../CHANGELOG.md).
+**Related:** [replication README](README.md), [THIRD_PARTY_NOTICES.md](../../THIRD_PARTY_NOTICES.md), the release notes in GitHub Releases.
 
 ## Contents
 
@@ -52,7 +52,7 @@ Use this procedure once main-text figures, manuscript draft, and QA logs align f
 
 ### Versioning for downstream users
 
-- **Library releases** follow **semantic versioning** (`vMAJOR.MINOR.PATCH`, e.g. `v0.2.0`) when publishing the `occupational_transition` package API. See `occupational_transition.__version__` and [CHANGELOG.md](../../CHANGELOG.md) at the repo root.
+- **Library releases** follow **semantic versioning** (`vMAJOR.MINOR.PATCH`, e.g. `v0.2.0`) when publishing the `occupational_transition` package API. See `occupational_transition.__version__` and the release notes in GitHub Releases at the repo root.
 - **Research freezes** often use **dated tags** `results-YYYY-MM-DD` (below). In papers, cite **both** the software version (or commit) and the **results tag** when numbers come from a frozen build.
 - **Commit SHA:** Always valid for citing the exact file tree. Prefer an **annotated tag** when sharing with readers so the name is stable and human-meaningful.
 - **Zenodo (optional):** After you enable the GitHub–Zenodo integration for this repository, each **GitHub Release** can mint a **DOI** for the archived tarball. Use that DOI in bibliographies when your publisher requires a persistent archive URL; the canonical code URL remains the git repository.

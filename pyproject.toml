@@ -39,7 +39,6 @@ include = [
     "/README.md",
     "/LICENSE",
     "/CITATION.cff",
-    "/CHANGELOG.md",
     "/CODE_OF_CONDUCT.md",
 ]
 

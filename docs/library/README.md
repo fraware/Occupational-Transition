@@ -65,12 +65,12 @@ This repository is built for **transparent measurement** from **public** US labo
 | Mode | What you do | Time / disk (order of magnitude) | Entry points |
 |------|-------------|-----------------------------------|--------------|
 | **1. Library import** | `pip install -e .`, import `occupational_transition`, use HTTP helpers and source modules. | Minutes; no full pipeline. | This page, [examples/](../../examples/) |
-| **2. One ticket** | Run one `scripts/build_*.py` + matching `qa_*.py` from the [root README pipeline table](../../README.md#research-pipeline-tickets). | Minutes to hours; depends on ticket (downloads). | [Methodology tickets](../methodology/README.md) |
+| **2. One build step** | Run one `scripts/build_*.py` + matching `qa_*.py` from the [root README pipeline table](../../README.md#research-pipeline-build-steps). | Minutes to hours; depends on the step (downloads). | [Methodology steps](../methodology/README.md) |
 | **3. Full replication** | `python scripts/run_full_pipeline_from_raw.py` (see [replication README](../replication/README.md)). | Hours to days; **many GB** possible. | [Replication](../replication/README.md) |
 
 ### What you can claim (and cannot)
 
-- **Descriptive facts** from published outputs: follow wording in [methods and data](../paper/methods_data.md) and per-ticket methodology under [methodology/tickets/](../methodology/tickets/).
+- **Descriptive facts** from published outputs: follow wording in [methods and data](../paper/methods_data.md) and per-step methodology under [methodology/tickets/](../methodology/tickets/).
 - **Causal inference:** this repo does **not** automatically deliver causal estimates for AI adoption or labor outcomes. Capability matrices and memos describe **data availability and resolution**, not treatment effects.
 - **Language discipline:** use [claim audit](../policy/claim_audit.md) and [quality standards](../quality/README.md) for how policy-facing KPIs and visuals are labeled.
 
@@ -91,7 +91,7 @@ Senate- and senator-facing narrative, Q&A, and Virginia-specific briefing packs 
 No. It wraps reproducible downloads and parsing **for this project’s** figure contracts; you remain responsible for terms of use and citation of the underlying agencies.
 
 **Why terciles and indices?**  
-They are **ordinals** for grouping and visualization; see methodology tickets and [methods_data.md](../paper/methods_data.md) for definitions.
+They are **ordinals** for grouping and visualization; see methodology step notes and [methods_data.md](../paper/methods_data.md) for definitions.
 
 **Can I use only Virginia memo visuals?**  
 Yes, but they are **descriptive** and **additive** to the paper stack; see [policy/briefing/README.md](../policy/briefing/README.md).
@@ -103,19 +103,19 @@ Not provided by default. Use your own design; this repo supplies **inputs** and 
 
 ## Related work and positioning
 
-This repo is a **software and reproducibility stack**: it combines **public data** (BLS, Census, O*NET, etc.) with **frozen crosswalks**, **ticketed build scripts**, **QA**, and **JSON lineage** for a specific research pipeline. It is not a substitute for agency documentation or for academic surveys of the literature.
+This repo is a **software and reproducibility stack**: it combines **public data** (BLS, Census, O*NET, etc.) with **frozen crosswalks**, **step-based build scripts**, **QA**, and **JSON lineage** for a specific research pipeline. It is not a substitute for agency documentation or for academic surveys of the literature.
 
 ### Official sources (always cite upstream)
 
-- **BLS:** JOLTS, CES, OEWS, CPS-related products as used in each ticket; canonical URLs in [data_registry.csv](../data_registry.csv).
+- **BLS:** JOLTS, CES, OEWS, CPS-related products as used in each build step; canonical URLs in [data_registry.csv](../data_registry.csv).
 - **U.S. Census Bureau:** BTOS and other Census products as referenced in build scripts and registry.
-- **O*NET / DOL:** O*NET database and crosswalks per `src/occupational_transition/sources/onet.py` usage and ticket methodology.
+- **O*NET / DOL:** O*NET database and crosswalks per `src/occupational_transition/sources/onet.py` usage and build-step methodology note.
 
 Researchers should cite the **underlying datasets** in addition to this software when publishing figures.
 
 ### What is distinctive here
 
-- **Ticketed pipeline:** `PR-000` through `T-020` with explicit `build_*` / `qa_*` pairs and **acceptance** language in [acceptance_matrix.md](../replication/acceptance_matrix.md).
+- **Step-based pipeline:** `PR-000` through `T-020` with explicit `build_*` / `qa_*` pairs and **acceptance** language in [acceptance_matrix.md](../replication/acceptance_matrix.md).
 - **Lineage metadata:** `intermediate/*_run_metadata.json` ties outputs to inputs and hashes where applicable.
 - **Single crosswalk layer:** committed `crosswalks/*.csv` with methodology in [pr000_crosswalk_methodology.md](../methodology/pr000_crosswalk_methodology.md).
 - **Dual use:** importable Python package **and** full replication runner for the paper.
@@ -147,9 +147,9 @@ Open `docs/sphinx/_build/html/index.html` in a browser. Sphinx source lives unde
 
 - **Python:** `>=3.10` as declared in `pyproject.toml` (3.11+ recommended).
 - **Semver:** bump **minor** for backward-compatible API additions, **major** for breaking public symbol or behavior changes in documented entry points.
-- **Replication:** frozen paper builds should pin a **git tag** or **commit**; library semver does not replace ticket output contracts—run `qa_*.py` after upgrades.
+- **Replication:** frozen paper builds should pin a **git tag** or **commit**; library semver does not replace build-step output contracts—run `qa_*.py` after upgrades.
 
-**PyPI (optional):** The project name on PyPI is expected to be `occupational-transition` (see `pyproject.toml`). Publishing wheels is optional: many users will `git clone` + `pip install -e .` for full replication. When a release is published, document it in [CHANGELOG.md](../../CHANGELOG.md) and align `CITATION.cff` / root README BibTeX version fields.
+**PyPI (optional):** The project name on PyPI is expected to be `occupational-transition` (see `pyproject.toml`). Publishing wheels is optional: many users will `git clone` + `pip install -e .` for full replication. When a release is published, document it in align `CITATION.cff` / root README BibTeX version fields.
 
 Package version is `occupational_transition.__version__` (also in `pyproject.toml`). For frozen replication builds, pin a git tag or document the installed version next to `intermediate/*run_metadata.json` outputs.
 
@@ -157,7 +157,7 @@ Package version is `occupational_transition.__version__` (also in `pyproject.tom
 
 ## Registry and methodology pointers
 
-Canonical URLs and snapshot notes remain in [data_registry.csv](../data_registry.csv). Per-ticket assumptions are in `docs/methodology/tickets/t*_methodology.md` (see [methodology README](../methodology/README.md)).
+Canonical URLs and snapshot notes remain in [data_registry.csv](../data_registry.csv). Per-step assumptions are in `docs/methodology/tickets/t*_methodology.md` (see [methodology README](../methodology/README.md)).
 
 ---
 

@@ -1,13 +1,129 @@
 # Occupational Transition
 
-**Public data, AI, and US labor markets** — broad, search-friendly scope: reproducible analytics from **public** official sources, delivered as both a **Python library** (`occupational_transition`) and a **ticket-gated pipeline** that rebuilds tables, figures, and lineage metadata.
+Public data, AI, and US labor markets in one reproducible research stack.
+
+This repository gives you:
+
+- A Python package (`occupational_transition`) for pulling and transforming public labor-market data.
+- A reproducible build workflow that regenerates published indicators and figures from source data.
+- Auditable outputs and metadata so you can trace results to code, inputs, and run settings.
+
+Repository: [github.com/fraware/Occupational-Transition](https://github.com/fraware/Occupational-Transition)
+
+---
+
+## Why This Repo Is Worth Reusing
+
+Most labor/AI projects force you to choose between:
+
+- Fast, one-off analysis scripts that are hard to trust later, or
+- Heavy pipelines that are difficult to adapt for new research questions.
+
+This repo is designed to give you both:
+
+- **Fast entry** for researchers who want to run targeted analyses now.
+- **Strong reproducibility** for papers, policy memos, and peer review.
+- **Clear boundaries** between descriptive measurement and causal interpretation.
+
+If you work in labor economics, applied macro, AI-and-work measurement, or policy analysis with public data, this is built for your workflow.
+
+---
+
+## Choose Your Path
+
+### 1) Use the package in your own project
+
+Install and start importing immediately:
+
+```bash
+pip install -e .
+```
+
+Start with:
+
+- [`docs/library/README.md`](docs/library/README.md) for stable entry points and examples.
+- [`examples/README.md`](examples/README.md) for practical scripts.
+
+### 2) Rebuild specific outputs you care about
+
+Run only the build and QA scripts relevant to your analysis, without running the full stack.
+
+Start with:
+
+- [`docs/methodology/README.md`](docs/methodology/README.md) for step-by-step mapping.
+- [`docs/replication/acceptance_matrix.md`](docs/replication/acceptance_matrix.md) for outputs and checks.
+
+### 3) Fully replicate the published stack
+
+From a clean clone:
+
+```bash
+pip install -r requirements.txt
+python scripts/run_full_pipeline_from_raw.py
+```
+
+Full instructions, expected runtime, and recovery guidance:
+
+- [`docs/replication/README.md`](docs/replication/README.md)
+
+---
+
+## What You Can Build With This
+
+- Descriptive indicators of AI relevance, labor outcomes, transitions, and sector trends.
+- Reproducible figure tables under `figures/`.
+- Run metadata under `intermediate/` for auditability.
+- Optional static visual exports under `visuals/`.
+
+This stack is measurement-first. It gives you clean, documented empirical inputs; causal identification remains a separate design decision.
+
+---
+
+## Documentation Map
+
+Use the docs hub to navigate by role:
+
+- **Docs hub:** [`docs/README.md`](docs/README.md)
+- **Library usage:** [`docs/library/README.md`](docs/library/README.md)
+- **Replication guide:** [`docs/replication/README.md`](docs/replication/README.md)
+- **Methodology mapping:** [`docs/methodology/README.md`](docs/methodology/README.md)
+- **Paper artifacts:** [`docs/paper/README.md`](docs/paper/README.md)
+- **Figure structure:** [`docs/figures/README.md`](docs/figures/README.md)
+- **Policy and claim discipline:** [`docs/policy/claim_audit.md`](docs/policy/claim_audit.md)
+
+Senator and Virginia briefing materials are intentionally isolated in:
+
+- [`docs/policy/briefing/README.md`](docs/policy/briefing/README.md)
+
+---
+
+## Data, Licensing, and Scope
+
+- Built around public and public-use sources (Census, BLS, O*NET, and related documentation).
+- License: [MIT](LICENSE)
+- Third-party materials and notices: [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)
+- Security reporting guidance: [`SECURITY.md`](SECURITY.md)
+
+---
+
+## Contributing
+
+See:
+
+- [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)
+
+If you want to extend data coverage, add new indicators, or harden reproducibility checks, contributions are welcome.
+# Occupational Transition
+
+**Public data, AI, and US labor markets** — broad, search-friendly scope: reproducible analytics from **public** official sources, delivered as both a **Python library** (`occupational_transition`) and a **step-by-step pipeline** that rebuilds tables, figures, and lineage metadata.
 
 ## Scope and positioning
 
 1. **Public data, AI, and US labor markets** — official and public-use series (e.g. CPS, BTOS, JOLTS, OEWS, O*NET), not proprietary panels; written so economists, ML researchers, and search engines can find the topic quickly.
 2. **US labor market measurement from public data** — emphasizes **measurement**: documented universes, weights, crosswalks, and QA—not hype about “AI effects”; causal claims remain your responsibility outside this stack.
-3. **Reproducible US labor & AI indicators** — ticketed `build_*` / `qa_*` pairs, schema-checked outputs, and `intermediate/*_run_metadata.json` so indicators trace to inputs and a git commit or tag.
-4. **Open data pipeline for AI and labor economics** — import the package for new work, rerun single tickets, or replicate the full stack; entry points are **[docs/README.md](docs/README.md)** and [docs/library/README.md](docs/library/README.md).
+3. **Reproducible US labor & AI indicators** — step-based `build_*` / `qa_*` pairs, schema-checked outputs, and `intermediate/*_run_metadata.json` so indicators trace to inputs and a git commit or tag.
+4. **Open data pipeline for AI and labor economics** — import the package for new work, rerun single build steps, or replicate the full stack; entry points are **[docs/README.md](docs/README.md)** and [docs/library/README.md](docs/library/README.md).
 
 **Repository:** [github.com/fraware/Occupational-Transition](https://github.com/fraware/Occupational-Transition) (PyPI/install name: `occupational-transition`; import: `occupational_transition`).
 
@@ -37,7 +153,7 @@ The `url` field matches [CITATION.cff](CITATION.cff).
 | | |
 |--|--|
 | **Library** | `occupational_transition` — HTTP helpers, source clients (e.g. BTOS, JOLTS, O*NET), crosswalk loaders. Install with `pip install -e .`. |
-| **Pipeline** | Ordered tickets `PR-000` → `T-020` (and extensions), each with `build_*` / `qa_*` scripts and `intermediate/*_run_metadata.json` lineage. |
+| **Pipeline** | Ordered build and QA scripts with `intermediate/*_run_metadata.json` run history. Step-by-step details live in [docs/replication/README.md](docs/replication/README.md) and [docs/methodology/README.md](docs/methodology/README.md). |
 | **Documentation** | Single hub: **[docs/README.md](docs/README.md)** (library, replication, methodology, figures, paper, policy, quality). |
 | **Governance** | Schema-checked outputs, registry URLs in [docs/data_registry.csv](docs/data_registry.csv), acceptance matrix and replication runbooks under [docs/replication/](docs/replication/). |
 
@@ -48,8 +164,8 @@ The `url` field matches [CITATION.cff](CITATION.cff).
 **A — Use the package**  
 Install (below), read [docs/library/README.md](docs/library/README.md), run scripts under [examples/](examples/) ([examples/README.md](examples/README.md)). Optional CLI: `ot-fetch` (see `pyproject.toml` `[project.scripts]`).
 
-**B — Run one ticket**  
-Find your ticket in the [pipeline table](#research-pipeline-tickets), then run the listed `scripts/build_*.py` and `scripts/qa_*.py`. Methodology: [docs/methodology/README.md](docs/methodology/README.md) and [docs/methodology/tickets/](docs/methodology/tickets/).
+**B — Run one build step**  
+Find your step in the [pipeline table](#research-pipeline-build-steps), then run the listed `scripts/build_*.py` and `scripts/qa_*.py`. Methodology: [docs/methodology/README.md](docs/methodology/README.md) and [docs/methodology/tickets/](docs/methodology/tickets/).
 
 **C — Replicate the full stack**  
 From a clean clone, follow [docs/replication/README.md](docs/replication/README.md) and run `python scripts/run_full_pipeline_from_raw.py`. Expect large downloads and long runtimes.
@@ -83,35 +199,13 @@ Quick links: [crosswalk methodology](docs/methodology/pr000_crosswalk_methodolog
 
 ---
 
-## Research pipeline (tickets)
+## Research pipeline
 
-Each row is the contract: build script, QA script, and primary artifacts under `figures/` and `intermediate/`.
+The full step list, script mapping, and detailed output contracts are documented in:
 
-| Ticket | Scripts (build / QA) | Primary outputs |
-|--------|----------------------|-----------------|
-| PR-000 | `build_crosswalks.py` / `qa_crosswalks.py` | `crosswalks/occ22_crosswalk.csv`, `crosswalks/sector6_crosswalk.csv`, `docs/data_registry.csv` |
-| T-001 | `build_figure1_panelA.py` / `qa_figure1_panelA.py` | `figures/figure1_panelA_occ_baseline.csv`, `intermediate/figure1_panelA_occ_baseline_meta.csv`, `intermediate/figure1_panelA_run_metadata.json` |
-| T-002 | `build_figure1_panelB.py` / `qa_figure1_panelB.py` | `figures/figure1_panelB_task_heatmap.csv`, `intermediate/ai_relevance_terciles.csv`, `intermediate/figure1_panelB_meta.csv`, `intermediate/figure1_panelB_run_metadata.json` |
-| T-003 | `build_figure2_panelA.py` / `qa_figure2_panelA.py` | `figures/figure2_panelA_hours_by_ai_tercile.csv`, `intermediate/figure2_panelA_run_metadata.json` |
-| T-004 | `build_figure2_panelB_counts.py` / `qa_figure2_panelB_counts.py` | `figures/figure2_panelB_transition_counts.csv`, `intermediate/figure2_panelB_counts_run_metadata.json` |
-| T-005 | `build_figure2_panelB_probs.py` / `qa_figure2_panelB_probs.py` | `figures/figure2_panelB_transition_probs.csv`, `intermediate/figure2_panelB_probs_run_metadata.json` |
-| T-006 | `build_figure3_panelA_btos_ai_trends.py` / `qa_figure3_panelA_btos_ai_trends.py` | `figures/figure3_panelA_btos_ai_trends.csv`, `intermediate/figure3_panelA_btos_ai_trends_run_metadata.json` |
-| T-007 | `build_figure3_panelB_btos_workforce_effects.py` / `qa_figure3_panelB_btos_workforce_effects.py` | `figures/figure3_panelB_btos_workforce_effects.csv`, `intermediate/figure3_panelB_btos_workforce_effects_run_metadata.json` |
-| T-008 | `build_figure4_panelA_jolts_sector_rates.py` / `qa_figure4_panelA_jolts_sector_rates.py` | `figures/figure4_panelA_jolts_sector_rates.csv`, `intermediate/figure4_panelA_jolts_sector_rates_run_metadata.json` |
-| T-009 | `build_figure4_panelB_ces_sector_index.py` / `qa_figure4_panelB_ces_sector_index.py` | `figures/figure4_panelB_ces_sector_index.csv`, `intermediate/figure4_panelB_ces_sector_index_run_metadata.json` |
-| T-010 | `build_figure5_capability_matrix.py` / `qa_figure5_capability_matrix.py` | `figures/figure5_capability_matrix.csv`, `intermediate/figure5_capability_matrix_run_metadata.json` |
-| T-011 | `build_figureA1_asec_welfare_by_ai_tercile.py` / `qa_figureA1_asec_welfare_by_ai_tercile.py` | `figures/figureA1_asec_welfare_by_ai_tercile.csv`, `intermediate/figureA1_asec_welfare_by_ai_tercile_run_metadata.json` |
-| T-012 | `build_figureA2_sipp_event_study.py` / `qa_figureA2_sipp_event_study.py` | `figures/figureA2_sipp_event_study.csv`, `intermediate/figureA2_sipp_event_study_run_metadata.json` |
-| T-013 | `build_figureA3_cps_supp_validation.py` / `qa_figureA3_cps_supp_validation.py` | `figures/figureA3_cps_supp_validation.csv`, `intermediate/figureA3_cps_supp_validation_run_metadata.json` |
-| T-014 | `build_figureA4_abs_structural_adoption.py` / `qa_figureA4_abs_structural_adoption.py` | `figures/figureA4_abs_structural_adoption.csv`, `intermediate/figureA4_abs_structural_adoption_run_metadata.json` |
-| T-015 | `build_figureA5_ces_payroll_hours.py` / `qa_figureA5_ces_payroll_hours.py` | `figures/figureA5_ces_payroll_hours.csv`, `intermediate/figureA5_ces_payroll_hours_run_metadata.json` |
-| T-016 | `build_figureA6_bed_churn.py` / `qa_figureA6_bed_churn.py` | `figures/figureA6_bed_churn.csv`, `intermediate/figureA6_bed_churn_run_metadata.json` |
-| T-017 | `build_figureA7_qcew_state_benchmark.py` / `qa_figureA7_qcew_state_benchmark.py` | `figures/figureA7_qcew_state_benchmark.csv`, `intermediate/figureA7_qcew_state_benchmark_run_metadata.json` |
-| T-018 | `build_figureA8_lehd_benchmark.py` / `qa_figureA8_lehd_benchmark.py` | `figures/figureA8_lehd_benchmark.csv`, `intermediate/figureA8_lehd_benchmark_run_metadata.json` |
-| T-019 | `build_figureA9_acs_local_composition.py` / `qa_figureA9_acs_local_composition.py` | `figures/figureA9_acs_local_composition.csv`, `intermediate/figureA9_acs_local_composition_run_metadata.json` |
-| T-020 | `build_figureA10_nls_longrun.py` / `qa_figureA10_nls_longrun.py` | `figures/figureA10_nls_longrun.csv`, `intermediate/figureA10_nls_longrun_run_metadata.json` |
-
-Extension tickets **T-021–T-026** (AWES, ALPI, related intermediates) are documented in [docs/paper/methods_data.md](docs/paper/methods_data.md). Senator memo visuals (`t101`–`t108`) and Virginia pack outputs (`va01`–`va08`) are additional gates in strict acceptance.
+- [docs/replication/README.md](docs/replication/README.md)
+- [docs/replication/acceptance_matrix.md](docs/replication/acceptance_matrix.md)
+- [docs/methodology/README.md](docs/methodology/README.md)
 
 ---
 
@@ -128,7 +222,7 @@ Writes `intermediate/full_clean_rebuild_acceptance_<UTC>.md` and fails fast on t
 
 **Common flags:** `--with-audit-summary` (audit markdown from the log) · `--with-visuals` (runs `run_visuals_all.py` + `qa_visuals.py`) · `--skip-install` · `--source-selection-mode freeze_mode` · `--require-signoff`
 
-**Typical iterative run** (strict ticket order + audit summary + policy gates):
+**Typical iterative run** (strict step order + audit summary + policy gates):
 
 ```bash
 pip install -r requirements.txt
@@ -137,13 +231,11 @@ python scripts/run_full_pipeline_from_raw.py --with-audit-summary
 
 This also runs memo/brief build and QA, robustness, drift dashboard, and freeze manifest steps as configured.
 
-**Targeted work:** single ticket = run that ticket’s `build_*.py` then `qa_*.py`. Acceptance only: `python scripts/run_full_clean_rebuild_acceptance.py`. Summarize an existing log: `python scripts/build_acceptance_audit_summary.py --log <path>`.
-
-**PR-000 outputs:** `crosswalks/occ22_crosswalk.csv`, `crosswalks/sector6_crosswalk.csv`, `docs/data_registry.csv`.
+**Targeted work:** run only the specific `build_*.py` and matching `qa_*.py` scripts you need. Detailed per-step mappings are in [docs/methodology/README.md](docs/methodology/README.md).
 
 ---
 
-## Quality bar (summary)
+## Quality bar
 
 - JSON lineage under `intermediate/*run_metadata.json` for retained outputs; QA scripts enforce schemas, domains, and SHA-256 checks against cached inputs where applicable.
 - Policy-facing KPI tables carry uncertainty fields and `evidence_directness` per project rules.
@@ -153,10 +245,9 @@ Details: [docs/README.md](docs/README.md) and [docs/replication/acceptance_matri
 
 ---
 
-## Known deviations from issue templates
+## Known deviations and data notes
 
-- **T-006:** BTOS AI core rows for the national series first appear at `2023-09-11` (`PERIOD_ID 31`), not the template’s `2023-08-28`. See [t006 methodology](docs/methodology/tickets/t006_figure3_panelA_btos_ai_trends_methodology.md).
-- **T-007:** Public `AI_Supplement_Table.xlsx` lacks item-25 option rows; Scope 2 proxy mappings apply to task-related keys while employment-effect rows stay published. See [t007 methodology](docs/methodology/tickets/t007_figure3_panelB_btos_workforce_effects_methodology.md).
+Method-specific caveats and exceptions are documented in the detailed methodology files under [docs/methodology/](docs/methodology/), with summary gates in [docs/replication/acceptance_matrix.md](docs/replication/acceptance_matrix.md).
 
 ---
 
@@ -198,7 +289,6 @@ Robustness reports: `intermediate/robustness/`. Freeze manifest hashes figures, 
 | | |
 |--|--|
 | **License** | [MIT](LICENSE) |
-| **Changelog** | [CHANGELOG.md](CHANGELOG.md) |
 | **Cite** | [CITATION.cff](CITATION.cff) |
 | **Code of Conduct** | [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) |
 | **Third-party assets** | [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) |
