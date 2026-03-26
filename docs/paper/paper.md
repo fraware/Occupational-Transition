@@ -1,141 +1,77 @@
-# What U.S. Public Federal Data Can and Cannot Say About AI and Labor
-
-## Subtitle
-
+What U.S. Public Federal Data Can and Cannot Say About AI and Labor
 What Exists, What Works, and What Small Survey Changes Would Unlock
-
----
-
-## Manuscript status and evidence alignment
-
-This file is the publication manuscript for the repository's empirical stack. Quantitative claims should be read as valid for one coordinated frozen run.
-
-Evidence-tagging rules are in [evidence_snapshot.md](evidence_snapshot.md). Replication and freeze procedures are in [../replication/README.md](../replication/README.md) and [../replication/project_maintenance.md](../replication/project_maintenance.md#results-freeze-and-tagging).
-
-The current draft aligns with commit `72f02bf2e7897f5515ab9212f9e6fe6fbcd2c432` (short `72f02bf`). Replace this with the final release tag before circulation.
-
----
-
-## Abstract
-
-Debates over AI and labor market change have outpaced the federal public measurement system. This paper develops a reproducible public-data framework that integrates occupational structure and tasks, worker outcomes and transitions, business-reported AI adoption, sector labor-demand context, and explicit cross-source capability limits.
-
-The framework yields three descriptive findings from frozen outputs. First, AI-relevance groups differ materially in worker outcomes: in early 2026 CPS data, high- and low-AI-relevance terciles differ by roughly four weekly hours (`figures/figure2_panelA_hours_by_ai_tercile.csv`). Second, business-reported AI use in BTOS reaches the mid-20 percent range in recent periods (`figures/figure3_panelA_btos_ai_trends.csv`). Third, labor-demand conditions differ across sectors: January 2026 job-opening rates differ by nearly two percentage points across the six comparison sectors (`figures/figure4_panelA_jolts_sector_rates.csv`).
-
-The framework also identifies hard boundaries. The capability matrix (`figures/figure5_capability_matrix.csv`) shows that no core source in this stack supports direct worker-firm AI linkage. As a result, high-confidence firm-level causal attribution remains outside the scope of current public files. The policy implication is incremental: prioritize targeted survey upgrades in CPS, BTOS, scoped JOLTS supplements, and longitudinal pathways, while using the existing public stack for transparent monitoring.
-
----
-
-## 1. Introduction
-
-Public concern about AI and work has intensified, but measurement often lags rhetoric. Claims about displacement, augmentation, and wage pressure are now common, yet many are not anchored to reproducible public evidence. This paper asks a narrower question: what can U.S. federal public data already measure with discipline, and where are the non-negotiable limits?
-
-Our answer is based on an integrated empirical system rather than stand-alone tables. We combine OEWS, O*NET, CPS, BTOS, JOLTS, and CES context in one reproducible workflow with explicit metadata and quality checks. This design produces a common language of evidence across figures and supports consistent claim discipline.
-
-The boundary condition is explicit. Current public files do not provide an integrated worker-firm AI panel at national scale. We therefore focus on descriptive measurement and survey design priorities, not on treatment-effect identification that the data cannot support.
-
-The paper contributes two outputs. First, it provides a transparent monitoring spine for researchers and policy teams. Second, it provides a survey-priority roadmap focused on marginal information gain per respondent burden.
-
----
-
-## 2. Occupational baseline and task structure (Figure 1; Claim 1)
-
-The analysis begins with a national baseline because dynamic interpretation is credible only when occupational composition and task structure are clearly defined.
-
-Figure 1 Panel A reports national employment shares and median annual wages across 22 occupation groups (`figures/figure1_panelA_occ_baseline.csv`). Employment is concentrated: Office and Administrative Support is about 11.8 percent, Transportation and Material Moving about 8.9 percent, and Food Preparation and Serving about 8.8 percent. Median annual wages span roughly $34k to $121k across groups.
-
-Panel B reports standardized task intensities and the AI Task Index used for deterministic tercile assignment (`figures/figure1_panelB_task_heatmap.csv`; build-generated terciles in `intermediate/ai_relevance_terciles.csv`). The index is a descriptive grouping instrument, not a treatment variable.
-
-Interpretation is intentionally narrow. Figure 1 supports national descriptive statements about occupational structure, wages, and task content. It does not support causal AI-impact claims and does not replace geographic decomposition, which is handled in appendix evidence.
-
----
-
-## 3. Worker hours and mobility (Figure 2; Claim 2)
-
-Figure 2 evaluates what monthly CPS public-use microdata can support for descriptive monitoring when respondents are matched across adjacent months.
-
-Panel A reports weighted mean usual weekly hours by month and AI-relevance tercile (`figures/figure2_panelA_hours_by_ai_tercile.csv`). In 2026-01, the high tercile averages about 40.4 hours, compared with 37.4 in the middle and 36.3 in the low tercile, for a high-low gap of roughly four hours.
-
-Panel B combines transition counts and summary probabilities from the same CPS transition machinery (`figures/figure2_panelB_transition_counts.csv`, `figures/figure2_panelB_transition_probs.csv`). Supporting aggregates in `figures/memo_dashboard_kpis.csv` place unemployment-entry and NILF-entry rates near 0.7 percent and 1.6 percent for high-origin mass in the referenced window.
-
-These are survey-based descriptive constructs. They are suitable for monitoring broad labor-market movement by AI-relevance groups, but they do not identify firm adoption channels or treatment effects.
-
----
-
-## 4. Business-side AI adoption (Figure 3; Claim 3)
-
-Figure 3 introduces business-side evidence from Census BTOS.
-
-Panel A tracks national firm-weighted current and expected AI use over collection periods (`figures/figure3_panelA_btos_ai_trends.csv`). In recent periods, current AI-use shares reach the mid-20 percent range.
-
-Panel B summarizes retained workforce-effect categories from the BTOS supplement (`figures/figure3_panelB_btos_workforce_effects.csv`). Employment-effect rows are directly published. Selected task-effect rows require explicit proxy language when fine-grained public tabulations are unavailable. This distinction should be maintained in manuscript prose, captions, and policy outputs.
-
-Figure 3 therefore provides a credible descriptive business benchmark. It does not link firms to workers and cannot, on its own, support worker-level causal attribution.
-
----
-
-## 5. Labor demand and payroll context (Figure 4; Claim 4)
-
-Figure 4 provides official sector labor-demand context. JOLTS and CES series are mapped to six comparison sectors through `crosswalks/sector6_crosswalk.csv`.
-
-In January 2026, JOLTS job-opening rates range from about 3.8 percent to 5.6 percent across sectors (`figures/figure4_panelA_jolts_sector_rates.csv`), a spread of roughly 1.8 percentage points. CES payroll employment indexed to August 2023 spans roughly 94.7 to 108.7 in the same month (`figures/figure4_panelB_ces_sector_index.csv`).
-
-These patterns are informative for sector context and comparative pressure. They do not resolve occupation-level demand mechanisms.
-
----
-
-## 6. Identification frontier (Figure 5; Claim 5)
-
-Figure 5 is a rule-based synthesis, not a statistical estimate. It records whether each core source provides direct, partial, or no support for seven measurement objects (`figures/figure5_capability_matrix.csv`), using locked rules in `docs/lineage/`.
-
-The central empirical boundary is clear: worker-firm AI linkage is unsupported across all five core sources in the stack. The matrix also identifies concrete strengths: CPS for worker outcomes and transitions, BTOS for firm AI adoption, JOLTS for labor-demand turnover context, OEWS for occupational structure and wages, and O*NET for task-exposure mechanisms.
-
-This distinction matters for inference. The matrix is an empirical diagnosis of capability boundaries. Policy recommendations that follow are design judgments, not estimated treatment effects.
-
----
-
-## 7. Optional monitoring indices (AWES and ALPI)
-
-The extended workflow produces AWES and ALPI in `metrics/` as occupation-time monitoring composites. These indices are descriptive by design. They do not replace the frozen AI-relevance tercile framework and should not be interpreted causally.
-
-Definitions and limitations are documented in [methods_data.md](methods_data.md).
-
----
-
-## 8. Methods and data (condensed)
-
-The empirical design is descriptive and reproducible: official weights where applicable, frozen crosswalks, explicit build and QA scripts, and machine-readable run metadata (`intermediate/*_run_metadata.json`). Source URLs and snapshot fields are maintained in [data_registry.csv](../data_registry.csv).
-
-Full construction detail (universes, windows, and assumptions) is in [methods_data.md](methods_data.md) and `docs/methodology/tickets/`.
-
-Replication procedures and run controls are in [../replication/README.md](../replication/README.md) and [../replication/acceptance_matrix.md](../replication/acceptance_matrix.md).
-
----
-
-## 9. Conclusion
-
-U.S. public federal data already support a serious AI-and-labor measurement program when used with explicit limits. The integrated evidence shows persistent differences in occupational structure and worker outcomes by AI-relevance group, measurable business-reported adoption dynamics, and meaningful sector-demand dispersion.
-
-The same evidence defines a hard boundary: current public files do not provide the linked worker-firm AI information required for high-confidence causal attribution at scale. That boundary should be treated as a design fact, not a rhetorical inconvenience.
-
-The practical path forward is incremental and high-yield: strengthen CPS and BTOS modules, add scoped JOLTS enhancements where feasible, and preserve longitudinal channels for career dynamics. Within those limits, the current public stack is already strong enough for transparent monitoring and policy-relevant descriptive analysis.
-
----
-
-## Appendix and companion materials
-
-- Appendix prose and order: [appendix_draft.md](appendix_draft.md)
-- Methods and data narrative: [methods_data.md](methods_data.md)
-- Claim audit: [../policy/claim_audit.md](../policy/claim_audit.md)
-- Figure catalog and notes: [../figures/figure_catalog.md](../figures/figure_catalog.md)
-- Replication and run controls: [../replication/README.md](../replication/README.md)
-
-Policy and briefing materials under `docs/policy/briefing/` are additive descriptive outputs and should not be interpreted as causal evidence.
-
----
-
-## Reproducibility gate before publication
-
-- Confirm that all numeric statements match one frozen run window.
-- Verify that dependent Figure 2 transition artifacts are internally aligned within that same run.
-- Record and cite the final commit or release tag, and archive the acceptance log with release materials.
+Abstract
+Debates over artificial intelligence (AI) and labor have moved faster than the public institutions meant to measure them. In the resulting vacuum, policy discussion has tended to oscillate between two unsatisfying positions. One dismisses public data as too slow and too coarse to matter. The other asks those same data to answer causal questions they were never designed to support. This paper takes a narrower and more practical view. It asks what U.S. public federal data can already say, at credible resolution, about AI and labor; where the hard limits of that system remain; and which modest survey changes would generate the largest gains in public knowledge.
+To answer that question, we develop a reproducible public-data framework that integrates Occupational Employment and Wage Statistics, O*NET, Current Population Survey public-use microdata, Business Trends and Outlook Survey releases, Job Openings and Labor Turnover Survey sector flows, and Current Employment Statistics payroll context. Together, these sources support a serious descriptive program: a national baseline of occupational employment, wages, and task content; worker hours and broad matched-month transitions by AI-relevance group; business-reported AI adoption and workforce-effect categories; sector labor-demand and payroll context; and a rule-based capability matrix that shows, explicitly, what the public system can and cannot observe.
+The resulting picture is already informative. Occupational structure, wages, and digital task intensity vary sharply across broad occupation groups. In recent CPS data, AI-relevance terciles differ materially in usual weekly hours and show distinct broad mobility and exit patterns. In BTOS, business-reported current AI use has reached the mid-20 percent range in recent periods, while published supplement rows suggest that firms most often report no employment change. In JOLTS and CES, labor-demand and payroll conditions continue to diverge substantially across selected comparison sectors. Across the entire core stack, the sharpest common boundary is also the most important one: no public source provides an integrated worker-firm AI panel.
+The contribution is therefore not firm-level causal identification from public files alone. It is a disciplined public measurement architecture, a set of explicit claim boundaries, and a policy roadmap grounded in what the evidence can actually bear. The central recommendation is sequential rather than maximalist: add a short worker-side AI module to CPS, stabilize and preserve BTOS AI publication continuity, and pilot a scoped JOLTS supplement for coarse occupation-aware demand context. The value of these changes lies in making public monitoring sharper, more transparent, and more defensible, not in pretending that the current system already supports treatment-effect estimation.
+1. Introduction
+Artificial intelligence became a labor-market question before it became a measurement system. Policymakers, journalists, firms, and researchers now speak fluently about displacement, augmentation, hiring compression, reskilling, and occupational churn. Yet the public evidence base remains structurally fragmented. Some of the most detailed information sits inside proprietary firm records, private platforms, or linked administrative systems unavailable to the public. The consequence is a familiar asymmetry: the subject is politically urgent, while the public measurement system remains incomplete.
+We begin from a more modest premise than much of the surrounding debate. The first question is not whether public data can solve the entire AI-and-labor problem. It is whether existing federal public data already support a serious descriptive monitoring program, and where their resolution fails. Put differently, the central issue is one of measurement architecture. Which objects are directly observed, which are only partially observed, which require synthesis across sources, and which remain outside the public system altogether?
+That framing matters because the debate is often pulled toward two equal and opposite mistakes. One is to dismiss the public system entirely and behave as if nothing useful can be learned until an ideal worker-firm linked panel exists. The other is to overstate what current public files can do and speak as though they already support fine-grained causal claims about the effects of AI on workers or firms. Both instincts are misleading. The public federal stack is neither empty nor sufficient. It is modular, informative, and sharply bounded.
+We build a descriptive stack from five core public sources. OEWS provides the occupational baseline for employment and wages. O*NET supplies standardized task and work-activity descriptors. CPS public-use microdata provide worker-side hours and broad matched-month mobility. BTOS contributes the strongest high-frequency public source on business-side AI adoption. JOLTS, supplemented by CES payroll context, captures sector demand and turnover conditions. Together, these sources can answer a coherent set of descriptive questions at credible resolution. They can show which occupations are large, low-wage, high-wage, and digitally task intensive. They can show whether broad worker groups differ in hours and transitions. They can show whether firms report adopting AI and whether they report employment changes. They can show whether sector labor-demand conditions are tightening or softening. They can also make unmistakably clear what is missing.
+That missing element is the paper’s central boundary condition. No source in the public core stack simultaneously identifies worker occupation, employer AI adoption, and subsequent worker outcomes. Public-use files do not support linked worker-firm causal attribution of AI impacts at national scale. This is not a minor technical caveat. It is the line that disciplines the entire paper. The evidence here is descriptive, not causal. The capability matrix is a decision tool, not an estimator. The policy recommendations are measurement design judgments, not treatment effects in disguise.
+Within those limits, however, the public system is more valuable than it is often allowed to be. The paper shows that it already supports a coherent monitoring program and that relatively modest extensions to existing surveys could raise its value considerably. The highest-return worker-side upgrade is a short AI-at-work module in CPS. The highest-return business-side upgrade is stability and publication continuity in BTOS. The most realistic demand-side upgrade is not a redesign of JOLTS, but a scoped supplement pilot that tests coarse occupation-aware demand measures. These are not maximalist institutional dreams. They are practical extensions of instruments that already exist.
+The paper proceeds in that spirit. Section 2 establishes the national occupational baseline in employment, wages, and task content. Section 3 turns to worker hours and broad occupational mobility in CPS. Section 4 examines business-reported AI adoption and workforce-effect categories from BTOS. Section 5 provides labor-demand and payroll context from JOLTS and CES. Section 6 presents the cross-source capability matrix and states the identification frontier. Section 7 briefly describes optional monitoring extensions, including AWES and ALPI, that complement but do not replace the paper’s frozen AI-relevance terciles. Section 8 summarizes methods and data construction. Section 9 concludes with the paper’s main empirical boundary and its implications for survey design.
+2. A National Occupational Baseline
+Any serious AI-and-labor analysis must begin with an occupational baseline. Before asking whether labor-market conditions differ by AI relevance, one has to know how employment, pay, and task content are distributed across the labor market itself. Figure 1 performs that foundational task.
+At the national level, employment is highly concentrated across broad occupation groups. In the retained OEWS baseline, Office and Administrative Support accounts for about 11.8 percent of employment, Transportation and Material Moving about 8.9 percent, and Food Preparation and Serving about 8.8 percent. Wage dispersion is also substantial. Median annual wages across the 22 broad groups run from roughly $34,000 to $121,000. Even before introducing AI, this matters. A public conversation that treats occupations as if they were equally large, equally paid, or equally exposed to similar forms of adjustment will misread where labor-market pressure is most likely to matter.
+The next layer of the baseline comes from ONET. The paper does not use ONET as an outcome measure and does not pretend that it captures realized AI effects. Its value is more basic, and in some ways more important: it supplies a standardized public language for occupational content. Aggregated to the paper’s 22 broad occupation groups, the Work Activities data reveal wide dispersion in the digital-information tasks most plausibly aligned with current AI systems. Some groups are built much more heavily around analyzing information, processing information, documenting and recording information, and working with computers. Others are centered on physical movement, manual handling, or care-intensive interpersonal work.
+From those task dimensions the paper constructs a simple AI Task Index, defined as the mean of standardized scores on four digital-information activities. That index then anchors the deterministic AI-relevance terciles used in the rest of the paper. The point is not that the terciles solve exposure in any causal sense. They do not. The point is that they provide a transparent, reproducible, and interpretable way to organize the worker-side and business-side descriptive evidence that follows.
+The main result of Figure 1 is therefore straightforward but important. The national labor market is highly unequal in its distribution of employment and pay, and broad occupational groups differ sharply in the task profiles that matter most for AI-related monitoring. That is already a useful public contribution, because much of the AI-and-work conversation begins with presumed exposure categories without first showing the occupational structure that would make those categories intelligible.
+The limits of the figure are equally important. It is descriptive and national. It does not identify causal AI effects. It does not capture within-group heterogeneity. It does not tell us which employers adopted AI. It does not make a subnational claim in the main text. Geographic composition belongs in the appendix, where ACS PUMS can support local occupational distributions. The main-text claim is narrower and stronger: the paper provides a precise national baseline of employment, wages, and task content.
+Figure 1 about here.
+3. Worker Hours and Broad Mobility
+With the occupational baseline in place, the next question is whether worker-side labor-market conditions differ across the paper’s AI-relevance groupings. CPS is the natural source for this purpose. It is the core public worker-side survey, supports national estimates at monthly frequency, and, when handled carefully, allows broad matched-month transitions in public-use files.
+The first descriptive result is simple and consequential. In recent CPS data, the gap in usual weekly hours across AI-relevance terciles is stable and non-trivial. In January 2026, weighted mean usual weekly hours are about 40.4 in the high AI-relevance tercile, 37.4 in the middle tercile, and 36.3 in the low tercile. That is roughly a four-hour spread between the high and low groups. The figure does not show that AI caused that difference. But it does show that the broad worker groupings derived from the occupational baseline are not trivial artifacts. They are associated with meaningfully different labor-market behavior in the public worker-side data.
+The second descriptive result comes from matched-month transitions. The state space is intentionally coarse: the 22 occupation groups plus unemployment and not in the labor force. The objective is not to simulate an ideal worker panel. It is to recover the broad mobility and exit patterns that public worker-side files can credibly support. Once the matched-month counts are normalized into probabilities, the resulting summaries show whether workers remain employed in the same broad occupation, move across occupations, enter unemployment, or leave the labor force.
+Those patterns are modest in magnitude but substantively useful. In the retained evidence window, unemployment-entry and not-in-labor-force-entry shares for high-origin mass are on the order of 0.7 percent and 1.6 percent in January 2026. Again, these are not treatment effects. They do not tell us which employers adopted AI or whether AI caused the observed movements. What they do show is that public worker-side data are already capable of describing broad mobility and exit risks in a coherent, nationally weighted framework.
+This is where the paper’s argument gains force. Public data can already show whether broad occupation-based groups differ in hours and broad movement patterns. That is not the same thing as firm-linked causal attribution, and the paper is explicit about that. But it is enough to support a serious descriptive monitoring program, especially when paired with the business-side and demand-side sources that follow.
+Figure 2 about here.
+4. Business-Reported AI Adoption
+Worker-side differences alone cannot tell us whether AI is actually being adopted where those workers sit. Without a business-side source, occupational task structure can too easily be mistaken for realized technological change. BTOS is therefore a necessary complement to the worker-side picture.
+The first BTOS result is that business-reported AI use is no longer hypothetical or marginal. In recent periods of the retained public series, firm-weighted current AI-use shares reach the mid-20 percent range. In the manuscript’s evidence window, current use is 25.1 percent and expected use over the next six months is 33.7 percent for the period beginning January 26, 2026. The exact values matter less than the descriptive message: public business-side adoption is now visible at a scale large enough to make systematic monitoring worthwhile.
+The second BTOS result concerns workforce-effect categories. Here the paper is deliberately more cautious, and that caution is central to its credibility. The strongest direct evidence in the public tables is on the published employment-effect rows. In the retained supplement window, the dominant response is that employment did not change, at 94.6 percent. That is itself an important public fact. It suggests that, in the firm-side supplement rows currently available for public use, the modal business statement is not immediate employment contraction.
+The task-related categories require a more careful reading. Some public BTOS supplement workbooks do not expose the underlying item-25 option rows directly. In those cases, the pipeline uses documented proxy mappings to retain interpretable task-effect categories. That is why Claim 3 remains partial. The paper can directly support business-reported AI adoption and directly published employment-effect categories. It can only partially support task-effect interpretation where detailed item-level rows are not publicly available.
+This is not a weakness to be hidden. It is a model of how partial public evidence should be handled. BTOS remains the strongest public high-frequency source on firm-side AI use. It is already policy-relevant. But it should not be pushed beyond the public rows it actually releases.
+Figure 3 about here.
+5. Labor-Demand and Payroll Context
+Worker-side outcomes and business-side adoption still leave one important question open: what is happening in broader labor-demand conditions? JOLTS and CES help answer that question, not at the level of individual occupations, but at the level of selected comparison sectors.
+The main result is substantial cross-sector dispersion. In January 2026, JOLTS job-opening rates range from 3.8 percent in Manufacturing and Information to 5.6 percent in Health Care and Social Assistance. That is a spread of roughly 1.8 percentage points across the six retained sectors. CES payroll employment, indexed to August 2023, ranges in the same month from about 94.7 in Information to 108.7 in Health Care. These are not subtle differences. They indicate that official labor-demand and payroll conditions continue to diverge meaningfully across the same sectors within which business-side AI adoption and state-level structure must later be interpreted.
+That result is valuable because it adds context without pretending to deliver more than the data allow. JOLTS is not occupation-resolved in public release. It cannot tell us how demand is changing for specific occupations inside those sectors. It cannot identify AI-specific demand shocks. It cannot support worker-firm linkage claims. What it can do is show which sectors are relatively tighter, softer, expanding, or slowing in official public labor-demand series. That is precisely the kind of macro context policymakers need when reading worker-side and business-side signals together.
+CES plays a supporting but important role. It anchors payroll context and shows whether the openings, hires, quits, and layoffs in JOLTS sit alongside broader payroll expansion or contraction. The result is not a causal story about AI. It is a clearer public map of the labor-demand environment in which AI-related monitoring must be interpreted.
+Figure 4 about here.
+6. The Identification Frontier
+If the earlier sections show what the public stack can do, Figure 5 shows where it stops. Unlike the other figures, it is not an estimate. It is a rule-based capability matrix that records whether each of the five core public sources directly supports, partially supports, or does not support a given empirical object.
+Its strongest single finding is also the simplest: worker-firm AI linkage is unsupported everywhere in the core stack. No combination of CPS, BTOS, JOLTS, OEWS, and O*NET, at public release, yields an integrated worker-firm AI panel. That is the paper’s central empirical diagnosis.
+The matrix is useful not because it dramatizes absence, but because it clarifies presence. CPS is direct on worker outcomes and broad occupational transitions. BTOS is direct on firm AI adoption. JOLTS is direct on labor-demand and turnover at selected sector level. OEWS is direct on occupational employment and wages. O*NET is direct on task-exposure mechanisms. The public system is therefore not empty. It is modular. Each source does something real. None closes the full linkage problem.
+That modularity is what gives the paper’s policy recommendations their force. The paper does not estimate the payoff of a CPS AI module, a stabilized BTOS release regime, or a JOLTS supplement pilot. What it does show is that these proposals target the actual weak points of the public measurement stack. The diagnosis is empirical. The prioritization is a design judgment. Keeping those two levels distinct is what allows the paper to be useful without becoming overstated.
+Figure 5 about here.
+7. Monitoring Extensions: AWES and ALPI
+The paper’s main analysis uses frozen AI-relevance terciles because they are interpretable, stable across figures, and easy to explain. But the repo also implements two optional monitoring extensions that complement those terciles: the Adoption-Weighted Exposure Score and the AI Labor Pressure Index.
+AWES combines the structural exposure score derived from O*NET and OEWS with sector-time business-side adoption intensity from BTOS, mapped into occupations using occupation-sector employment weights. In effect, it asks a slightly richer descriptive question than the terciles alone: not only which occupations look more digitally exposed in task structure, but which of those occupations sit more heavily inside sectors where firms are actually reporting AI use.
+ALPI goes one step further. It incorporates sector demand stress from JOLTS and CES together with worker-side exit-risk vulnerability from CPS. The result is a broader occupation-time monitoring and prioritization index. In substantive terms, it is an attempt to identify where structural exposure, realized adoption, labor-demand pressure, and worker vulnerability overlap.
+These metrics are useful, but they should remain subordinate to the core paper. Neither is causal. Neither replaces the frozen terciles. Their value is operational rather than identificatory. They can support dashboards, rankings, and policy prioritization. They should not be described as treatment-effect estimators or as substitutes for the paper’s simpler main-text grouping logic.
+8. Methods and Data
+The design of the paper is descriptive throughout. It uses official program weights where applicable, frozen crosswalks, ticketed build and QA scripts, and versioned outputs with metadata lineage. The objective is not simply to produce figures. It is to produce figures whose provenance, assumptions, and limits remain explicit at every stage.
+The core data logic is straightforward. OEWS and O*NET construct the occupational baseline and the AI-relevance grouping. CPS public-use microdata provide worker hours and matched-month transitions. BTOS supplies business-side AI adoption and workforce-effect categories, with explicit documentation wherever direct item-level publication is unavailable and proxy mapping is required. JOLTS and CES provide sector demand and payroll context. Appendix sources deepen the picture on annual worker welfare, medium-run adjustment, supplement validation, structural adoption, state benchmarking, local composition, and long-run careers.
+The manuscript must also be tied to a frozen evidence state. In the current draft, descriptive examples are aligned to commit 72f02bf. In a publication setting, that should be replaced with an explicit results tag. This is not merely procedural. Some outputs, especially transition-related ones, depend on the exact rebuild state and should not be hand-updated outside the retained evidence policy.
+9. Conclusion
+The central contribution of this work is not a causal estimate of AI’s labor-market effects. It is a disciplined demonstration of what the U.S. public federal data system can already do, what it cannot yet do, and which relatively small changes would make it substantially more useful.
+The most important descriptive pattern in the frozen stack is joint rather than singular. Occupational structure, wages, and task content vary sharply across the labor market. Worker-side CPS data show persistent differences in hours and broad mobility across AI-relevance terciles. BTOS shows meaningful and rising business-reported AI adoption, while published supplement rows suggest that firms most often report no employment change. JOLTS and CES show substantial sector dispersion in labor-demand and payroll conditions. The capability matrix then clarifies the deepest common limit across all of these sources: none closes the worker-firm linkage gap.
+That final point is the paper’s central boundary and its most important policy implication. Public federal data can already support a serious AI-and-labor monitoring program, but they cannot support worker-firm causal attribution at scale. The right response is therefore neither to overclaim the current stack nor to suspend public action until an ideal future system arrives. It is to strengthen the existing stack where the marginal returns are highest: a short AI-at-work module in CPS, stable BTOS AI publication, and a scoped JOLTS supplement pilot for coarse occupation-aware demand context.
+The broader lesson is methodological as much as empirical. In a policy environment crowded with strong claims about AI and work, the value of public measurement lies not in perfection but in accountability. Transparent descriptive systems, explicit evidence boundaries, and disciplined survey extension can carry the public conversation much farther than either hype or false precision. That is the program this paper defends.
+References
+To be converted into journal style at submission. The scaffold below should be completed with the final citation format required by the target venue.
+Bureau of Labor Statistics. Current Employment Statistics.
+Bureau of Labor Statistics. Job Openings and Labor Turnover Survey.
+Bureau of Labor Statistics. Occupational Employment and Wage Statistics.
+Bureau of Labor Statistics. Quarterly Census of Employment and Wages.
+Bureau of Labor Statistics and U.S. Census Bureau. Current Population Survey.
+ONET Resource Center. ONET Database and Work Activities documentation.
+U.S. Census Bureau. American Community Survey Public Use Microdata Sample.
+U.S. Census Bureau. Annual Business Survey.
+U.S. Census Bureau. Business Trends and Outlook Survey.
+U.S. Census Bureau. Survey of Income and Program Participation.
+U.S. Census Bureau, Center for Economic Studies. LEHD public products.
+National Longitudinal Surveys. NLSY97 public-use data.

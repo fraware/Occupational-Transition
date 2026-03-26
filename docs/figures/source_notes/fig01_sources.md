@@ -17,6 +17,15 @@
 - **Methodology docs:** `docs/methodology/tickets/t001_figure1_panelA_methodology.md`, `docs/methodology/tickets/t002_figure1_panelB_methodology.md`
 - **Derived grouping input used downstream:** `intermediate/ai_relevance_terciles.csv`
 
+## Reproducibility hashes (SHA256)
+
+- `figures/figure1_panelA_occ_baseline.csv` — `f3d0e58516bd231cecb05c27889c40644021fbe892def9a7ccdd698d53602555`
+- `figures/figure1_panelB_task_heatmap.csv` — `3d9e4090bfed6a1e3cd04305b79b292d7c4f0e32c4099a58f41d7f6e4f1046f0`
+- `intermediate/ai_relevance_terciles.csv` — `ed51a3d2884c246a6229a2a1c79a49ad7551b700047eae5a4dff7cac5754433b`
+- `intermediate/figure1_panelA_run_metadata.json` — `86fe15822f9a030c87ae7de0307ba4348dadd244e57e462855aaa94853336edc`
+- `intermediate/figure1_panelB_run_metadata.json` — `522784782e7af9436725975d2e0d66f14351e07a29fe678faa7612b783a0e60d`
+- `crosswalks/occ22_crosswalk.csv` — `947ea24f0791b473da0eefa1e0798b3c9b6a6afe55f975368851dc430d3230a4`
+
 ## Limitations
 
 - OEWS and O*NET describe occupational structure and tasks; they do not by themselves identify realized AI labor-market impacts.
