@@ -1,5 +1,0 @@
-level,resolution_label,strength_label,evidence_basis
-1,National x broad occupation groups,strong,CPS matched-month broad-group transitions and hours by frozen AI terciles
-2,National x sector groups x monthly,strong,BTOS national/sector series + JOLTS/CES sector context
-3,State x sector/industry aggregates,partial,Published subnational aggregates with model/coverage limits
-4,State x occupation x month,weak,Public sample sufficiency constraints and no worker-firm linked public panel

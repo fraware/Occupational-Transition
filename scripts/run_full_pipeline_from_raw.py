@@ -137,13 +137,20 @@ def main() -> int:
         if rc != 0:
             return rc
 
-    # Reliability hardening gates for policy-facing releases.
-    rc = _run("python scripts/run_memo_visuals_build.py", extra_env=run_env)
-    if rc != 0:
-        return rc
-    rc = _run("python scripts/run_memo_visuals_qa.py", extra_env=run_env)
-    if rc != 0:
-        return rc
+    # Optional Virginia / policy briefing visuals (local-only; paths are gitignored).
+    memo_orchestrator = ROOT / "scripts" / "run_memo_visuals_build.py"
+    if memo_orchestrator.is_file():
+        rc = _run("python scripts/run_memo_visuals_build.py", extra_env=run_env)
+        if rc != 0:
+            return rc
+        rc = _run("python scripts/run_memo_visuals_qa.py", extra_env=run_env)
+        if rc != 0:
+            return rc
+    else:
+        print(
+            "SKIP: policy briefing visuals (scripts/run_memo_visuals_build.py not in tree).",
+            file=sys.stderr,
+        )
     rc = _run("python scripts/run_robustness_all.py", extra_env=run_env)
     if rc != 0:
         return rc

@@ -271,19 +271,18 @@ Additional references:
 - Caption coverage: `python scripts/qa_visual_caption_coverage.py`
 - One-shot acceptance: `python scripts/run_visuals_acceptance.py`
 
-### Senator memo and Virginia pack
+### Senator memo and Virginia pack (optional, local)
 
-These are additive to main-text stems `t001`–`t020`:
+Memo/Virginia briefing scripts, tables, and policy-facing markdown under `docs/policy/briefing/` are **gitignored** and are not part of a default clone. If you keep that material locally, it is additive to main-text stems `t001`–`t020`:
 
 ```bash
 python scripts/run_memo_visuals_build.py
 python scripts/run_memo_visuals_qa.py
 ```
 
-Related documentation:
+Related documentation (repo-wide, always present):
 
 - Precision rules: [docs/quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules](docs/quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules)
-- Virginia deep dive: [docs/policy/briefing/virginia_deep_dive.md](docs/policy/briefing/virginia_deep_dive.md)
 - Policy lane index: [docs/README.md](docs/README.md)
 
 ---

@@ -287,15 +287,23 @@ TICKETS: list[Ticket] = [
     ),
 ]
 
-POST_GATES: list[Gate] = [
-    ("Policy visuals build", "python scripts/run_memo_visuals_build.py"),
-    ("Policy visuals QA", "python scripts/run_memo_visuals_qa.py"),
+_POST_GATES_CORE: list[Gate] = [
     ("Robustness suite", "python scripts/run_robustness_all.py"),
     ("Freeze manifest build", "python scripts/build_freeze_manifest.py"),
     ("Freeze manifest QA", "python scripts/qa_freeze_manifest.py"),
     ("Drift dashboard build", "python scripts/build_drift_dashboard.py"),
     ("Drift dashboard QA", "python scripts/qa_drift_dashboard.py"),
 ]
+
+
+def _post_gates() -> list[Gate]:
+    """Policy briefing memo/Virginia gates run only if local optional scripts exist."""
+    gates: list[Gate] = []
+    if (ROOT / "scripts" / "run_memo_visuals_build.py").is_file():
+        gates.append(("Policy visuals build", "python scripts/run_memo_visuals_build.py"))
+        gates.append(("Policy visuals QA", "python scripts/run_memo_visuals_qa.py"))
+    gates.extend(_POST_GATES_CORE)
+    return gates
 
 
 def _run(cmd: str) -> tuple[int, str]:
@@ -404,7 +412,7 @@ def main() -> int:
     total_elapsed = round(time.time() - start_all, 2)
     lines.append("## Post-Ticket Release Gates")
     lines.append("")
-    for gate_name, gate_cmd in POST_GATES:
+    for gate_name, gate_cmd in _post_gates():
         rc_g, out_g = _run(gate_cmd)
         lines.append(f"- Gate: `{gate_name}`")
         lines.append(f"- Command: `{gate_cmd}`")

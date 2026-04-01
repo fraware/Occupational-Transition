@@ -25,3 +25,33 @@ intermediate/
 
 # Sphinx API build output
 docs/sphinx/_build/
+
+# Virginia briefing package (docs, generated tables, scripts, and visuals)
+# Docs (current + legacy naming)
+docs/policy/briefing/senate_briefing_*.md
+docs/policy/briefing/senator_*.md
+docs/policy/briefing/virginia_*.md
+docs/policy/briefing/README.md
+
+# Briefing/source tables
+figures/memo_*.csv
+figures/virginia_*.csv
+figures/state_deep_dive_qcew_*.csv
+
+# Briefing build/QA/visualization scripts
+scripts/build_memo_*.py
+scripts/qa_memo_*.py
+scripts/visualize_memo.py
+scripts/run_memo_visuals_build.py
+scripts/run_memo_visuals_qa.py
+scripts/build_virginia_*.py
+scripts/qa_virginia_*.py
+scripts/visualize_virginia_*.py
+
+# Briefing visuals (current + legacy prefixes)
+visuals/png/memo_*.png
+visuals/vector/memo_*.pdf
+visuals/png/virginia_*.png
+visuals/vector/virginia_*.pdf
+visuals/png/va*.png
+visuals/vector/va*.pdf

@@ -45,7 +45,7 @@ This repository is both an installable package (`occupational_transition`) for U
 ## Policy / briefing
 
 1. [policy/claim_audit.md](policy/claim_audit.md) — cross-cutting claim ledger (not limited to briefing).
-2. [policy/briefing/README.md](policy/briefing/README.md) — isolated senator / Virginia pack; handling vs claim audit.
+2. **Senator / Virginia briefing pack** — optional local-only material (paths under `docs/policy/briefing/` are gitignored; not in a default clone). When present, see `docs/policy/briefing/README.md` for the index.
 3. [quality/README.md](quality/README.md) — reliability fields and memo KPI precision.
 
 ---
@@ -70,7 +70,7 @@ This repository is both an installable package (`occupational_transition`) for U
 | [paper/README.md](paper/README.md) | Paper folder reading order | Orientation |
 | [quality/README.md](quality/README.md) | Reliability framework, memo precision, visual style | QA, policy tables, visuals |
 | [policy/claim_audit.md](policy/claim_audit.md) | Claim support ledger | Any external claim |
-| [policy/briefing/README.md](policy/briefing/README.md) | Briefing pack index and handling | Legislative-facing work |
+| `docs/policy/briefing/` (local) | Briefing pack index and handling when present | Legislative-facing work; gitignored |
 | [data_registry.csv](data_registry.csv) | Dataset IDs and HTTPS URLs | Downloads and citations |
 | [archive/README.md](archive/README.md) | Role of full issue / paper-note archives | Traceability, not onboarding |
 | [references/README.md](references/README.md) | PDF reference packs | CPS/BLS documentation |
