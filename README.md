@@ -1,5 +1,9 @@
 # Occupational Transition
 
+<p align="center">
+  <img src="docs/assets/logo.png" alt="Occupational Transition logo" width="320" />
+</p>
+
 **Public data, AI, and US labor markets** in one reproducible research stack.
 
 This repository combines a reusable Python package, a step-by-step empirical pipeline, and auditable research outputs for work on AI and the US labor market.
