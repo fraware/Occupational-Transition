@@ -34,13 +34,20 @@ This section describes how to reproduce pipeline outputs from a clean clone of t
 | `visuals/png/`, `visuals/vector/` | Static charts (optional stage) |
 | `scripts/` | Build, QA, visualization, and orchestration scripts |
 
-### One-command full build (PR-000 through T-020)
+### One-command full build (PR-000 through T-026)
 
 From the repository root, after creating a virtual environment if desired:
 
 ```bash
 python -m pip install -r requirements.txt
+python -m pip install -e .
 python scripts/run_full_pipeline_from_raw.py
+```
+
+Profile/CLI alternative:
+
+```bash
+ot run --profile config/profiles/full-replication.toml
 ```
 
 T-021 requires BLS OEWS industry-by-occupation inputs: either `raw/oesm24in4.zip` (see `docs/data_registry.csv`) or pre-extracted `*.xlsx` workbooks under `raw/oesm24in4_extract/`, in addition to the national file used in T-001/T-002.
@@ -92,10 +99,8 @@ After a successful run, review:
 - `intermediate/full_clean_rebuild_acceptance_*_audit_summary.md` (if generated)
 - `docs/replication/acceptance_matrix.md` (step-level criteria vs automated QA)
 
-Policy-facing reliability gates:
+Reliability gates:
 
-- `python scripts/run_memo_visuals_build.py`
-- `python scripts/run_memo_visuals_qa.py`
 - `python scripts/run_robustness_all.py`
 - `python scripts/build_drift_dashboard.py`
 - `python scripts/qa_drift_dashboard.py`
@@ -113,38 +118,13 @@ If you need a quicker drift-validation pass (for example while avoiding long app
 3. Run main visual QA:
    - `python scripts/qa_visuals.py`
 
-In that mode, explicitly record scope limits in a closure note (for example, which late steps were not rerun) so reviewers do not misread it as a full `PR-000` through `T-020` replication.
+In that mode, explicitly record scope limits in a closure note (for example, which late
+steps were not rerun) so reviewers do not misread it as a full `PR-000` through
+`T-026` replication.
 
 ### Visual style lock
 
 Publication figures use `scripts/viz_style.py` and [quality README — Visual style guide](../quality/README.md#visual-style-guide). Do not change colors or fonts ad hoc without updating the quality doc and regenerating all visuals.
-
-### Senator memo visuals and Virginia brief pack (optional, additive)
-
-These steps are **not** part of the default `run_full_clean_rebuild_acceptance.py` step list. They produce memo stems `t101`–`t108`, Virginia stems `va01`–`va08`, related `figures/memo_*.csv`, `figures/state_deep_dive_qcew_51_*.csv`, and `figures/virginia_memo_kpis.csv`.
-
-**Prerequisites:** Figure inputs for the memo pipeline must exist (for example `figures/figure3_panelA_btos_ai_trends.csv`, Figure 1–2 outputs, Figure 4–5, and crosswalk/intermediate artifacts as listed in `scripts/run_memo_visuals_build.py`). Virginia QCEW tables require **T-017** first: `figures/figureA7_qcew_state_benchmark.csv` from `scripts/build_figureA7_qcew_state_benchmark.py`.
-
-**One-command build and QA:**
-
-```bash
-python scripts/run_memo_visuals_build.py
-python scripts/run_memo_visuals_qa.py
-```
-
-**Targeted Virginia-only rebuild** (after T-017 is current):
-
-```bash
-python scripts/build_state_qcew_deep_dive.py --state-fips 51
-python scripts/qa_state_qcew_deep_dive.py --state-fips 51
-python scripts/build_virginia_memo_kpis.py
-python scripts/visualize_virginia_memo.py
-python scripts/qa_virginia_memo_visuals.py
-```
-
-**Documentation:** precision rules for memo KPIs and BTOS state map — [quality README — Memo visuals](../quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules). Figure and stem catalog — `docs/figures/figure_catalog.md`. Virginia methodology summary — `docs/policy/briefing/virginia_deep_dive.md`. Senator-facing narrative and provenance — `docs/policy/briefing/senate_briefing_memo.md`, `docs/policy/briefing/senate_briefing_evidence_baseline_va.md`, `docs/policy/briefing/senate_briefing_lineage_va.md`.
-
----
 
 ## Committed outputs vs build-generated
 
@@ -153,17 +133,17 @@ This inventory aligns [README.md](../../README.md) and [acceptance_matrix.md](ac
 ### Tracked in git
 
 - **Crosswalks and registry:** `crosswalks/*.csv`, `docs/data_registry.csv`
-- **Figures (CSV):** All paths under `figures/*.csv` listed by `git ls-files figures`. This includes main-text, appendix, memo, and Virginia KPI tables that are checked in as frozen outputs.
+- **Figures (CSV):** All paths under `figures/*.csv` listed by `git ls-files figures`. This includes main-text and appendix tables checked in as frozen outputs.
 - **Metrics:** `metrics/awes_occ22_monthly.csv`, `metrics/alpi_occ22_monthly.csv`
 - **Visuals:** `visuals/png/*.png`, `visuals/vector/*.pdf`
 
 ### Build-generated (not committed; typical paths)
 
-These are required for a full strict rebuild but are **gitignored** or otherwise not versioned:
+These are required for a full strict rebuild but are not versioned in the repository:
 
 | Output | Typical path | When it appears |
 |--------|----------------|-----------------|
-| T-004 transition counts | `figures/figure2_panelB_transition_counts.csv` | After `build_figure2_panelB_counts.py` (feeds T-005 and downstream memo KPIs) |
+| T-004 transition counts | `figures/figure2_panelB_transition_counts.csv` | After `build_figure2_panelB_counts.py` (feeds T-005 downstream rates) |
 | AI relevance terciles | `intermediate/ai_relevance_terciles.csv` | After T-002 build |
 | Run metadata | `intermediate/*run_metadata.json` | Per-step build scripts |
 | Acceptance logs | `intermediate/full_clean_rebuild_acceptance_*.md` | After `run_full_clean_rebuild_acceptance.py` or full pipeline |
@@ -173,7 +153,7 @@ Replicators should run the commands in [Replication from a clean clone](#replica
 
 ### Note on T-004
 
-`figures/figure2_panelB_transition_counts.csv` is listed in the acceptance matrix and README build-step table but is **not** a committed file in the default snapshot: it is produced by the CPS pipeline and consumed on disk by `build_figure2_panelB_probs.py` and memo scripts. Obtain it by running T-004 build (see [t004_figure2_panelB_counts_methodology.md](../methodology/tickets/t004_figure2_panelB_counts_methodology.md)).
+`figures/figure2_panelB_transition_counts.csv` is listed in the acceptance matrix and README build-step table but is **not** a committed file in the default snapshot: it is produced by the CPS pipeline and consumed on disk by `build_figure2_panelB_probs.py`. Obtain it by running T-004 build (see [t004_figure2_panelB_counts_methodology.md](../methodology/tickets/t004_figure2_panelB_counts_methodology.md)).
 
 ---
 
@@ -221,16 +201,6 @@ Confirm files exist and are non-empty:
 - [ ] `python scripts/qa_visuals.py` exits 0.
 - [ ] `python scripts/qa_visual_caption_coverage.py` exits 0.
 - [ ] If `run_visuals_all.py` is expected to fail due to intentionally skipped appendix inputs, this is documented in closure notes and main-figure stems are still verified.
-
-### Senator memo and Virginia pack (optional; policy/briefing deliverables)
-
-Skip if replication scope is paper figures only. If senator memo or Virginia visuals are in scope:
-
-- [ ] `python scripts/run_memo_visuals_build.py` exits 0.
-- [ ] `python scripts/run_memo_visuals_qa.py` exits 0.
-- [ ] Confirm core Virginia stems exist: `visuals/png/va01_virginia_sector_composition.png` through `va06_virginia_kpi_dashboard.png` (and matching PDFs under `visuals/vector/`).
-- [ ] Confirm `figures/state_deep_dive_qcew_51_profile.csv` and `figures/virginia_memo_kpis.csv` exist when Virginia brief is claimed current.
-- [ ] Confirm policy-facing KPI tables include reliability fields (`weighted_n`, `effective_n`, `cv`, `se`, `ci_lower`, `ci_upper`, `publish_flag`, `suppression_reason`, `evidence_directness`).
 
 ### Drift and freeze (policy release mode)
 

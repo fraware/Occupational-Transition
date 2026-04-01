@@ -14,6 +14,7 @@ dependencies = [
     "pandas>=2.0.0",
     "pypdf>=4.0.0",
     "scipy>=1.9.0",
+    "tomli>=2.0.0; python_version < '3.11'",
 ]
 
 [project.optional-dependencies]
@@ -28,7 +29,10 @@ Homepage = "https://github.com/fraware/Occupational-Transition"
 Repository = "https://github.com/fraware/Occupational-Transition"
 
 [project.scripts]
+ot = "occupational_transition.cli:main"
 ot-fetch = "occupational_transition.cli:main"
+ot-run-full = "occupational_transition.cli:main_run_full"
+ot-run-visuals = "occupational_transition.cli:main_run_visuals"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/occupational_transition"]

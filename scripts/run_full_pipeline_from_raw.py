@@ -26,39 +26,15 @@ PowerShell uses `;` between commands if chaining manually:
 from __future__ import annotations
 
 import argparse
-import glob
-import os
-import subprocess
 import sys
 from pathlib import Path
 
+if str(Path(__file__).resolve().parents[1] / "src") not in sys.path:
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+
+from occupational_transition.orchestration import env_for_source_mode, latest_acceptance_log, run_shell
 
 ROOT = Path(__file__).resolve().parents[1]
-
-
-def _run(cmd: str, *, extra_env: dict[str, str] | None = None) -> int:
-    env = os.environ.copy()
-    if extra_env:
-        env.update(extra_env)
-    proc = subprocess.run(
-        cmd,
-        cwd=ROOT,
-        shell=True,
-        env=env,
-    )
-    return proc.returncode
-
-
-def _latest_acceptance_log() -> Path | None:
-    pattern = str(ROOT / "intermediate" / "full_clean_rebuild_acceptance_*.md")
-    paths = [
-        Path(p)
-        for p in glob.glob(pattern)
-        if "_audit_summary" not in p and p.endswith(".md")
-    ]
-    if not paths:
-        return None
-    return max(paths, key=lambda p: p.stat().st_mtime)
 
 
 def main() -> int:
@@ -100,20 +76,24 @@ def main() -> int:
         help="Require intermediate/release_signoff.json approval in release gating",
     )
     args = parser.parse_args()
-    run_env = {"SOURCE_SELECTION_MODE": args.source_selection_mode}
+    run_env = env_for_source_mode(args.source_selection_mode)
 
     if not args.skip_install:
-        rc = _run("python -m pip install -r requirements.txt", extra_env=run_env)
+        rc, _ = run_shell(
+            ROOT,
+            "python -m pip install -r requirements.txt && python -m pip install -e .",
+            env_overrides=run_env,
+        )
         if rc != 0:
             print("FAIL: pip install", file=sys.stderr)
             return rc
 
-    rc = _run("python scripts/run_full_clean_rebuild_acceptance.py", extra_env=run_env)
+    rc, _ = run_shell(ROOT, "python scripts/run_full_clean_rebuild_acceptance.py", env_overrides=run_env)
     if rc != 0:
         return rc
 
     if args.with_audit_summary:
-        log = _latest_acceptance_log()
+        log = latest_acceptance_log(ROOT)
         if log is None:
             print(
                 "WARN: no full_clean_rebuild_acceptance_*.md found; "
@@ -121,29 +101,30 @@ def main() -> int:
                 file=sys.stderr,
             )
         else:
-            rc = _run(
+            rc, _ = run_shell(
+                ROOT,
                 "python scripts/build_acceptance_audit_summary.py "
                 f'--log "{log.relative_to(ROOT).as_posix()}"',
-                extra_env=run_env,
+                env_overrides=run_env,
             )
             if rc != 0:
                 return rc
 
     if args.with_visuals:
-        rc = _run("python scripts/run_visuals_all.py", extra_env=run_env)
+        rc, _ = run_shell(ROOT, "python scripts/run_visuals_all.py", env_overrides=run_env)
         if rc != 0:
             return rc
-        rc = _run("python scripts/qa_visuals.py", extra_env=run_env)
+        rc, _ = run_shell(ROOT, "python scripts/qa_visuals.py", env_overrides=run_env)
         if rc != 0:
             return rc
 
     # Optional Virginia / policy briefing visuals (local-only; paths are gitignored).
     memo_orchestrator = ROOT / "scripts" / "run_memo_visuals_build.py"
     if memo_orchestrator.is_file():
-        rc = _run("python scripts/run_memo_visuals_build.py", extra_env=run_env)
+        rc, _ = run_shell(ROOT, "python scripts/run_memo_visuals_build.py", env_overrides=run_env)
         if rc != 0:
             return rc
-        rc = _run("python scripts/run_memo_visuals_qa.py", extra_env=run_env)
+        rc, _ = run_shell(ROOT, "python scripts/run_memo_visuals_qa.py", env_overrides=run_env)
         if rc != 0:
             return rc
     else:
@@ -151,23 +132,23 @@ def main() -> int:
             "SKIP: policy briefing visuals (scripts/run_memo_visuals_build.py not in tree).",
             file=sys.stderr,
         )
-    rc = _run("python scripts/run_robustness_all.py", extra_env=run_env)
+    rc, _ = run_shell(ROOT, "python scripts/run_robustness_all.py", env_overrides=run_env)
     if rc != 0:
         return rc
-    rc = _run("python scripts/build_freeze_manifest.py", extra_env=run_env)
+    rc, _ = run_shell(ROOT, "python scripts/build_freeze_manifest.py", env_overrides=run_env)
     if rc != 0:
         return rc
-    rc = _run("python scripts/qa_freeze_manifest.py", extra_env=run_env)
+    rc, _ = run_shell(ROOT, "python scripts/qa_freeze_manifest.py", env_overrides=run_env)
     if rc != 0:
         return rc
-    rc = _run("python scripts/build_drift_dashboard.py", extra_env=run_env)
+    rc, _ = run_shell(ROOT, "python scripts/build_drift_dashboard.py", env_overrides=run_env)
     if rc != 0:
         return rc
-    rc = _run("python scripts/qa_drift_dashboard.py", extra_env=run_env)
+    rc, _ = run_shell(ROOT, "python scripts/qa_drift_dashboard.py", env_overrides=run_env)
     if rc != 0:
         return rc
     if args.require_signoff:
-        rc = _run("python scripts/qa_release_signoff.py", extra_env=run_env)
+        rc, _ = run_shell(ROOT, "python scripts/qa_release_signoff.py", env_overrides=run_env)
         if rc != 0:
             return rc
 

@@ -28,7 +28,7 @@ Most labor/AI projects force you to choose between:
 This repository is built to give you both:
 
 - **Fast entry** for researchers who want to run targeted analyses now.
-- **Strong reproducibility** for papers, policy memos, and peer review.
+- **Strong reproducibility** for papers, public releases, and peer review.
 - **Clear boundaries** between descriptive measurement and causal interpretation.
 
 If you work in labor economics, applied macro, AI-and-work measurement, or policy analysis with public data, this stack is designed for your workflow.
@@ -68,7 +68,12 @@ Start with:
 - [docs/library/README.md](docs/library/README.md) for stable entry points and examples.
 - [examples/README.md](examples/README.md) for practical scripts.
 
-Optional CLI: `ot-fetch` (see `pyproject.toml` `[project.scripts]`).
+Optional CLI:
+
+- `ot list-analyses`
+- `ot list-sources`
+- `ot run --bundle quick-start`
+- `ot run --profile config/profiles/quick-start.toml`
 
 ---
 
@@ -92,12 +97,16 @@ From a clean clone:
 
 ```bash
 pip install -r requirements.txt
+pip install -e .
 python scripts/run_full_pipeline_from_raw.py
 ```
 
 Full instructions, expected runtime, recovery guidance, committed-vs-generated outputs, and replication conventions are in:
 
 - [docs/replication/README.md](docs/replication/README.md)
+- [docs/start_here.md](docs/start_here.md)
+- [docs/analysis_catalog.md](docs/analysis_catalog.md)
+- [docs/source_selection.md](docs/source_selection.md)
 
 Expect large downloads, large disk usage, and long runtimes.
 
@@ -170,11 +179,7 @@ Additional quick links:
 - [data registry](docs/data_registry.csv)
 - [committed vs generated outputs](docs/replication/README.md#committed-outputs-vs-build-generated)
 
-All Markdown is organized by audience in **[docs/README.md](docs/README.md)**. Start there for crosswalk notes, figure catalog, claim audit, briefing materials, and manuscript drafts.
-
-Senator and Virginia briefing materials are intentionally isolated in:
-
-- [docs/policy/briefing/README.md](docs/policy/briefing/README.md)
+All Markdown is organized by audience in **[docs/README.md](docs/README.md)**. Start there for crosswalk notes, figure catalogs, claim audit, and manuscript drafts.
 
 ---
 
@@ -222,7 +227,7 @@ pip install -r requirements.txt
 python scripts/run_full_pipeline_from_raw.py --with-audit-summary
 ```
 
-This also runs memo/brief build and QA, robustness, drift dashboard, and freeze manifest steps as configured.
+This also runs robustness checks, drift dashboard steps, and freeze-manifest steps as configured.
 
 ### Targeted work
 
@@ -270,20 +275,6 @@ Additional references:
 - Style guide: [docs/quality/README.md#visual-style-guide](docs/quality/README.md#visual-style-guide)
 - Caption coverage: `python scripts/qa_visual_caption_coverage.py`
 - One-shot acceptance: `python scripts/run_visuals_acceptance.py`
-
-### Senator memo and Virginia pack (optional, local)
-
-Memo/Virginia briefing scripts, tables, and policy-facing markdown under `docs/policy/briefing/` are **gitignored** and are not part of a default clone. If you keep that material locally, it is additive to main-text stems `t001`–`t020`:
-
-```bash
-python scripts/run_memo_visuals_build.py
-python scripts/run_memo_visuals_qa.py
-```
-
-Related documentation (repo-wide, always present):
-
-- Precision rules: [docs/quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules](docs/quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules)
-- Policy lane index: [docs/README.md](docs/README.md)
 
 ---
 
@@ -362,4 +353,7 @@ If you want to extend data coverage, add new indicators, or harden reproducibili
 | **Security** | [SECURITY.md](SECURITY.md) |
 | **Git size** | [docs/replication/project_maintenance.md#git-history-size-and-hygiene](docs/replication/project_maintenance.md#git-history-size-and-hygiene) |
 
-Full replication can require **many gigabytes** and **hours** of download and compute. Committed `figures/` snapshots and [docs/replication/README.md#committed-outputs-vs-build-generated](docs/replication/README.md#committed-outputs-vs-build-generated) document what ships in git versus what builds locally.
+Full replication can require **many gigabytes** and **hours** of download and compute.
+Committed `figures/` snapshots and
+[docs/replication/README.md#committed-outputs-vs-build-generated](docs/replication/README.md#committed-outputs-vs-build-generated)
+document what ships in git versus what builds locally.

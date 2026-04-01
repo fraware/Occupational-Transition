@@ -67,8 +67,7 @@ Use this procedure once main-text figures, manuscript draft, and QA logs align f
 - `python scripts/run_full_pipeline_from_raw.py` completes with exit code 0.
 - `docs/replication/acceptance_matrix.md` main-text gate shows PASS or PASS WITH NOTE only.
 - `python scripts/run_visuals_all.py` and `python scripts/qa_visuals.py` complete if visuals are in scope.
-- If senator memo visuals or Virginia brief outputs are in scope for the same milestone, `python scripts/run_memo_visuals_build.py` and `python scripts/run_memo_visuals_qa.py` complete (see [replication README](README.md#senator-memo-visuals-and-virginia-brief-pack-optional-additive)).
-- `docs/policy/claim_audit.md` reviewed for partial-support items (including senator brief claim ledger rows when Virginia briefing is published).
+- `docs/policy/claim_audit.md` reviewed for partial-support items before release.
 - Drift checks pass with no critical alerts: `python scripts/build_drift_dashboard.py` and `python scripts/qa_drift_dashboard.py`.
 
 #### Full freeze vs bounded validation

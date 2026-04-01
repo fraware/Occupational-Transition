@@ -1,0 +1,7 @@
+[run]
+bundle = "core-paper"
+source_selection_mode = "latest_mode"
+skip_install = false
+with_visuals = true
+with_audit_summary = true
+require_signoff = false

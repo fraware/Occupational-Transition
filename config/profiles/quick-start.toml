@@ -1,0 +1,7 @@
+[run]
+bundle = "quick-start"
+source_selection_mode = "latest_mode"
+skip_install = false
+with_visuals = false
+with_audit_summary = false
+require_signoff = false

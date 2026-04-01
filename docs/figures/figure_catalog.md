@@ -28,42 +28,7 @@ Stable slugs map paper figures to pipeline outputs and visual stems (`docs/quali
 ## Validation coverage
 
 - Full visual validation covers main and appendix stems (`t001` to `t020`) via `scripts/qa_visuals.py`.
-- Memo and Virginia stems (`t101`–`t108`, required `va01`–`va06`) are validated by `scripts/run_memo_visuals_qa.py` (including `scripts/qa_virginia_memo_visuals.py`).
 - Bounded drift-validation may cover main stems (`t001` to `t010`) first; when used, scope must be explicitly documented in the run evidence.
-
-## Senator note visuals (memo pack)
-
-Precision, formulas, and month-alignment rules for memo KPIs and BTOS state map: `docs/quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules`.
-
-Each stem below also has a matching PDF under `visuals/vector/` with the same filename.
-
-| Memo visual | Figure CSV(s) | Visual stem(s) (`visuals/png`) |
-|-------------|----------------|--------------------------------|
-| Visual 1 — What we can measure now dashboard | `figures/memo_dashboard_kpis.csv` | `memo_dashboard` |
-| Visual 2 — BTOS two-panel trend/composition | `figures/figure3_panelA_btos_ai_trends.csv`, `figures/figure3_panelB_btos_workforce_effects.csv` | `memo_btos_two_panel` |
-| Visual 3 — CPS transition flow map | `figures/memo_cps_transition_flows.csv` | `memo_cps_sankey` |
-| Visual 4 — Occupation bubble scatter | `figures/memo_occ_bubble_scatter.csv` | `memo_occ_bubble_scatter` |
-| Visual 5 — BTOS state choropleth | `figures/memo_btos_state_ai_use_latest.csv` | `memo_btos_state_choropleth` |
-| Visual 6 — Resolution boundary ladder | `figures/memo_resolution_ladder.csv` | `memo_resolution_ladder` |
-| Visual 7 — Memo capability matrix | `figures/figure5_capability_matrix.csv` | `memo_capability_matrix` |
-| Visual 8 — Policy roadmap | `figures/memo_policy_roadmap.csv` | `memo_policy_roadmap` |
-
-## Virginia memo pack (additive)
-
-| Virginia visual | Figure CSV(s) | Visual stem(s) (`visuals/png` and `visuals/vector`) |
-|-----------------|----------------|--------------------------------|
-| VA 1 — Six-sector composition | `figures/state_deep_dive_qcew_51_profile.csv` | `virginia_sector_composition` |
-| VA 2 — Six-sector wages | `figures/state_deep_dive_qcew_51_profile.csv` | `virginia_sector_wages` |
-| VA 3 — Peer shares comparison | `figures/state_deep_dive_qcew_51_peers.csv` | `virginia_peers_sector_shares` |
-| VA 4 — Peer wages comparison | `figures/state_deep_dive_qcew_51_peers.csv` | `virginia_peers_sector_wages` |
-| VA 5 — State rank profile | `figures/state_deep_dive_qcew_51_ranks.csv` | `virginia_sector_ranks` |
-| VA 6 — Virginia KPI dashboard | `figures/virginia_memo_kpis.csv` | `virginia_kpi_dashboard` |
-| VA 7 — BTOS state highlight (optional) | `figures/memo_btos_state_ai_use_latest.csv` | `virginia_btos_state_highlight` |
-| VA 8 — Occupation context (optional) | `figures/memo_occ_bubble_scatter.csv` | `virginia_occ_context` |
-
-**Build and QA (Virginia tables and stems):** `scripts/build_state_qcew_deep_dive.py`, `scripts/qa_state_qcew_deep_dive.py`, `scripts/build_virginia_memo_kpis.py`, `scripts/visualize_virginia_memo.py`, `scripts/qa_virginia_memo_visuals.py`. These are also invoked at the end of `scripts/run_memo_visuals_build.py` and `scripts/run_memo_visuals_qa.py`.
-
-**Memo orchestrator:** full memo + Virginia pack — `python scripts/run_memo_visuals_build.py` then `python scripts/run_memo_visuals_qa.py` (see `docs/replication/README.md`).
 
 ## Monitoring metric visuals (AWES/ALPI)
 
@@ -81,7 +46,7 @@ QA: `python scripts/qa_awes_alpi_visuals.py`
 
 ## Publication packaging manifest
 
-Generate the packaging manifest (Main, Appendix, Memo, Virginia, and AWES/ALPI monitoring visuals):
+Generate the packaging manifest (Main, Appendix, and AWES/ALPI monitoring visuals):
 
 `python scripts/build_visual_packaging_manifest.py`
 

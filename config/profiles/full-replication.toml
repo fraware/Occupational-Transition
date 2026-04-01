@@ -1,0 +1,7 @@
+[run]
+bundle = "full-replication"
+source_selection_mode = "freeze_mode"
+skip_install = false
+with_visuals = true
+with_audit_summary = true
+require_signoff = false
