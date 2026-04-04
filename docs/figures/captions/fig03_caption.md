@@ -1,11 +1,9 @@
-# Figure 3 — Business-side AI adoption (BTOS)
+# Figure 3 — Business-side AI adoption and evidence classes in BTOS
 
-**What is plotted.** **Panel A** shows national BTOS firm-weighted shares for current AI use and expected AI use in the next six months by collection period. **Panel B** shows retained BTOS AI-supplement workforce-effect categories from the public workbook.
+**What is plotted.** **Panel A** shows direct published national BTOS firm-weighted shares for current AI use and expected AI use in the next six months by collection period, with the November 2025 wording change marked explicitly. **Panel B** separates directly published employment-effect rows from proxy-interpreted task indicators retained from the public supplement workflow.
 
-**How to read it.** In Panel A, compare levels and movements of the current-versus-expected AI-use series across periods. In Panel B, bar lengths indicate reported shares by category. Employment-effect categories map directly to published rows. Task-effect interpretation is proxy-based when questionnaire item-25 option rows are not publicly tabulated.
+**How to read it.** In Panel A, read the level and timing of business-reported AI adoption, but do not treat the pre-change and post-change segments as naively identical observations of the same instrument. In Panel B, the upper block shows direct public rows; the lower block shows descriptive proxy-interpreted indicators used when the public workbook does not expose literal item-25 option rows.
 
-**Interpretation.** Public BTOS data directly support descriptive business-side adoption trends and selected workforce-effect shares over the retained supplement window.
+**Interpretation.** BTOS directly supports descriptive business-side adoption trends and directly supports selected employment-effect rows. Task-related workforce interpretation is weaker and should be read as proxy-based descriptive evidence rather than as literal public tabulations of the original questionnaire options.
 
-**Boundary.** The figure is descriptive and business-reported; it does not identify worker-level outcomes, establishment-linked labor-market effects, or causal employment impacts of AI adoption.
-
-Alt-text: Two-panel figure. Panel A is a time-series chart of firm-weighted shares for current and expected AI use by collection period. Panel B is a horizontal bar chart of retained workforce-effect category shares; task-effect categories are interpreted as proxies when detailed item-25 option rows are unavailable in the public table.
+**Boundary.** The figure is descriptive and business-reported. It does not link firms to workers, identify worker-level outcomes, or support causal estimates of employment effects from AI adoption.

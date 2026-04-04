@@ -1,0 +1,46 @@
+# Machine-readable scope for the empirical paper vs the broader data library.
+# Narrative entry point: docs/paper/README.md
+
+primary_bundle = "core-paper"
+full_appendix_bundle = "full-replication"
+core_paper_profile = "config/profiles/core-paper.toml"
+full_replication_profile = "config/profiles/full-replication.toml"
+
+# Main-text figure tickets (no PR-000); crosswalks/registry are committed separately.
+core_paper_tickets = [
+  "T-001", "T-002", "T-003", "T-004", "T-005",
+  "T-006", "T-007", "T-008", "T-009", "T-010",
+]
+
+# Strict rebuild from raw inputs (crosswalks + all tickets through appendix/metrics).
+full_replication_tickets = [
+  "PR-000",
+  "T-001", "T-002", "T-003", "T-004", "T-005", "T-006", "T-007", "T-008", "T-009",
+  "T-010", "T-011", "T-012", "T-013", "T-014", "T-015", "T-016", "T-017", "T-018",
+  "T-019", "T-020", "T-021", "T-022", "T-023", "T-024", "T-025", "T-026",
+]
+
+# Committed CSV outputs that correspond to core-paper figures (under figures/).
+committed_core_paper_figures = [
+  "figures/figure1_panelA_occ_baseline.csv",
+  "figures/figure1_panelB_task_heatmap.csv",
+  "figures/figure2_panelA_hours_by_ai_tercile.csv",
+  "figures/figure2_panelB_transition_counts.csv",
+  "figures/figure2_panelB_transition_probs.csv",
+  "figures/figure3_panelA_btos_ai_trends.csv",
+  "figures/figure3_panelB_btos_workforce_effects.csv",
+  "figures/figure4_panelA_jolts_sector_rates.csv",
+  "figures/figure4_panelB_ces_sector_index.csv",
+  "figures/figure5_capability_matrix.csv",
+  "figures/figure6_policy_roadmap.csv",
+]
+
+# Committed crosswalks and provenance registry (also maintained by PR-000).
+committed_crosswalks_and_registry = [
+  "crosswalks/occ22_crosswalk.csv",
+  "crosswalks/sector6_crosswalk.csv",
+  "docs/data_registry.csv",
+]
+
+# Run before figure tickets when rebuilding from an empty raw/ cache.
+prerequisite_from_raw = ["PR-000"]

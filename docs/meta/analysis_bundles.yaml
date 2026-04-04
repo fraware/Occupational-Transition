@@ -1,0 +1,334 @@
+# Generated from occupational_transition.manifests
+# Regenerate: python scripts/build_bundle_manifest.py
+
+bundles:
+  - name: quick-start
+    description: 'Main text baseline and core dynamics (T-001 to T-008).'
+    tickets:
+      - id: T-001
+        outputs:
+          - figures/figure1_panelA_occ_baseline.csv
+          - intermediate/figure1_panelA_occ_baseline_meta.csv
+          - intermediate/figure1_panelA_run_metadata.json
+      - id: T-002
+        outputs:
+          - figures/figure1_panelB_task_heatmap.csv
+          - intermediate/ai_relevance_terciles.csv
+          - intermediate/occ22_exposure_components.csv
+          - intermediate/figure1_panelB_meta.csv
+          - intermediate/figure1_panelB_run_metadata.json
+      - id: T-003
+        outputs:
+          - figures/figure2_panelA_hours_by_ai_tercile.csv
+          - intermediate/figure2_panelA_run_metadata.json
+      - id: T-004
+        outputs:
+          - figures/figure2_panelB_transition_counts.csv
+          - intermediate/figure2_panelB_counts_run_metadata.json
+          - intermediate/figure2_panelB_attrition_diagnostics.csv
+          - intermediate/figure2_panelB_match_regime_robustness.csv
+          - intermediate/figure2_panelB_missing_month_sensitivity.csv
+      - id: T-005
+        outputs:
+          - figures/figure2_panelB_transition_probs.csv
+          - intermediate/figure2_panelB_probs_run_metadata.json
+      - id: T-006
+        outputs:
+          - figures/figure3_panelA_btos_ai_trends.csv
+          - intermediate/figure3_panelA_btos_ai_trends_run_metadata.json
+      - id: T-007
+        outputs:
+          - figures/figure3_panelB_btos_workforce_effects.csv
+          - intermediate/figure3_panelB_btos_workforce_effects_run_metadata.json
+      - id: T-008
+        outputs:
+          - figures/figure4_panelA_jolts_sector_rates.csv
+          - intermediate/figure4_panelA_jolts_sector_rates_run_metadata.json
+  - name: core-paper
+    description: 'All main text figures (T-001 to T-010).'
+    tickets:
+      - id: T-001
+        outputs:
+          - figures/figure1_panelA_occ_baseline.csv
+          - intermediate/figure1_panelA_occ_baseline_meta.csv
+          - intermediate/figure1_panelA_run_metadata.json
+      - id: T-002
+        outputs:
+          - figures/figure1_panelB_task_heatmap.csv
+          - intermediate/ai_relevance_terciles.csv
+          - intermediate/occ22_exposure_components.csv
+          - intermediate/figure1_panelB_meta.csv
+          - intermediate/figure1_panelB_run_metadata.json
+      - id: T-003
+        outputs:
+          - figures/figure2_panelA_hours_by_ai_tercile.csv
+          - intermediate/figure2_panelA_run_metadata.json
+      - id: T-004
+        outputs:
+          - figures/figure2_panelB_transition_counts.csv
+          - intermediate/figure2_panelB_counts_run_metadata.json
+          - intermediate/figure2_panelB_attrition_diagnostics.csv
+          - intermediate/figure2_panelB_match_regime_robustness.csv
+          - intermediate/figure2_panelB_missing_month_sensitivity.csv
+      - id: T-005
+        outputs:
+          - figures/figure2_panelB_transition_probs.csv
+          - intermediate/figure2_panelB_probs_run_metadata.json
+      - id: T-006
+        outputs:
+          - figures/figure3_panelA_btos_ai_trends.csv
+          - intermediate/figure3_panelA_btos_ai_trends_run_metadata.json
+      - id: T-007
+        outputs:
+          - figures/figure3_panelB_btos_workforce_effects.csv
+          - intermediate/figure3_panelB_btos_workforce_effects_run_metadata.json
+      - id: T-008
+        outputs:
+          - figures/figure4_panelA_jolts_sector_rates.csv
+          - intermediate/figure4_panelA_jolts_sector_rates_run_metadata.json
+      - id: T-009
+        outputs:
+          - figures/figure4_panelB_ces_sector_index.csv
+          - intermediate/figure4_panelB_ces_sector_index_run_metadata.json
+      - id: T-010
+        outputs:
+          - figures/figure5_capability_matrix.csv
+          - intermediate/figure5_capability_matrix_run_metadata.json
+  - name: full-replication
+    description: 'Full strict rebuild (PR-000 and T-001 to T-026).'
+    tickets:
+      - id: PR-000
+        outputs:
+          - crosswalks/occ22_crosswalk.csv
+          - crosswalks/sector6_crosswalk.csv
+          - docs/data_registry.csv
+      - id: T-001
+        outputs:
+          - figures/figure1_panelA_occ_baseline.csv
+          - intermediate/figure1_panelA_occ_baseline_meta.csv
+          - intermediate/figure1_panelA_run_metadata.json
+      - id: T-002
+        outputs:
+          - figures/figure1_panelB_task_heatmap.csv
+          - intermediate/ai_relevance_terciles.csv
+          - intermediate/occ22_exposure_components.csv
+          - intermediate/figure1_panelB_meta.csv
+          - intermediate/figure1_panelB_run_metadata.json
+      - id: T-003
+        outputs:
+          - figures/figure2_panelA_hours_by_ai_tercile.csv
+          - intermediate/figure2_panelA_run_metadata.json
+      - id: T-004
+        outputs:
+          - figures/figure2_panelB_transition_counts.csv
+          - intermediate/figure2_panelB_counts_run_metadata.json
+          - intermediate/figure2_panelB_attrition_diagnostics.csv
+          - intermediate/figure2_panelB_match_regime_robustness.csv
+          - intermediate/figure2_panelB_missing_month_sensitivity.csv
+      - id: T-005
+        outputs:
+          - figures/figure2_panelB_transition_probs.csv
+          - intermediate/figure2_panelB_probs_run_metadata.json
+      - id: T-006
+        outputs:
+          - figures/figure3_panelA_btos_ai_trends.csv
+          - intermediate/figure3_panelA_btos_ai_trends_run_metadata.json
+      - id: T-007
+        outputs:
+          - figures/figure3_panelB_btos_workforce_effects.csv
+          - intermediate/figure3_panelB_btos_workforce_effects_run_metadata.json
+      - id: T-008
+        outputs:
+          - figures/figure4_panelA_jolts_sector_rates.csv
+          - intermediate/figure4_panelA_jolts_sector_rates_run_metadata.json
+      - id: T-009
+        outputs:
+          - figures/figure4_panelB_ces_sector_index.csv
+          - intermediate/figure4_panelB_ces_sector_index_run_metadata.json
+      - id: T-010
+        outputs:
+          - figures/figure5_capability_matrix.csv
+          - intermediate/figure5_capability_matrix_run_metadata.json
+      - id: T-011
+        outputs:
+          - figures/figureA1_asec_welfare_by_ai_tercile.csv
+          - intermediate/figureA1_asec_welfare_by_ai_tercile_run_metadata.json
+      - id: T-012
+        outputs:
+          - figures/figureA2_sipp_event_study.csv
+          - intermediate/figureA2_sipp_event_study_run_metadata.json
+      - id: T-013
+        outputs:
+          - figures/figureA3_cps_supp_validation.csv
+          - intermediate/figureA3_cps_supp_validation_run_metadata.json
+      - id: T-014
+        outputs:
+          - figures/figureA4_abs_structural_adoption.csv
+          - intermediate/figureA4_abs_structural_adoption_run_metadata.json
+      - id: T-015
+        outputs:
+          - figures/figureA5_ces_payroll_hours.csv
+          - intermediate/figureA5_ces_payroll_hours_run_metadata.json
+      - id: T-016
+        outputs:
+          - figures/figureA6_bed_churn.csv
+          - intermediate/figureA6_bed_churn_run_metadata.json
+      - id: T-017
+        outputs:
+          - figures/figureA7_qcew_state_benchmark.csv
+          - intermediate/figureA7_qcew_state_benchmark_run_metadata.json
+      - id: T-018
+        outputs:
+          - figures/figureA8_lehd_benchmark.csv
+          - intermediate/figureA8_lehd_benchmark_run_metadata.json
+      - id: T-019
+        outputs:
+          - figures/figureA9_acs_local_composition.csv
+          - intermediate/figureA9_acs_local_composition_run_metadata.json
+      - id: T-020
+        outputs:
+          - figures/figureA10_nls_longrun.csv
+          - intermediate/figureA10_nls_longrun_run_metadata.json
+      - id: T-021
+        outputs:
+          - intermediate/occ22_sector_weights.csv
+          - intermediate/occ22_sector_weights_run_metadata.json
+      - id: T-022
+        outputs:
+          - intermediate/btos_sector_ai_use_monthly.csv
+          - intermediate/btos_sector_ai_use_monthly_run_metadata.json
+      - id: T-023
+        outputs:
+          - metrics/awes_occ22_monthly.csv
+          - intermediate/awes_run_metadata.json
+      - id: T-024
+        outputs:
+          - intermediate/sector6_stress_monthly.csv
+          - intermediate/sector6_stress_monthly_run_metadata.json
+      - id: T-025
+        outputs:
+          - intermediate/cps_occ22_exit_risk_monthly.csv
+          - intermediate/cps_occ22_exit_risk_monthly_run_metadata.json
+      - id: T-026
+        outputs:
+          - metrics/alpi_occ22_monthly.csv
+          - intermediate/alpi_run_metadata.json
+  - name: release-signoff
+    description: 'Full replication with release gates and optional signoff checks.'
+    tickets:
+      - id: PR-000
+        outputs:
+          - crosswalks/occ22_crosswalk.csv
+          - crosswalks/sector6_crosswalk.csv
+          - docs/data_registry.csv
+      - id: T-001
+        outputs:
+          - figures/figure1_panelA_occ_baseline.csv
+          - intermediate/figure1_panelA_occ_baseline_meta.csv
+          - intermediate/figure1_panelA_run_metadata.json
+      - id: T-002
+        outputs:
+          - figures/figure1_panelB_task_heatmap.csv
+          - intermediate/ai_relevance_terciles.csv
+          - intermediate/occ22_exposure_components.csv
+          - intermediate/figure1_panelB_meta.csv
+          - intermediate/figure1_panelB_run_metadata.json
+      - id: T-003
+        outputs:
+          - figures/figure2_panelA_hours_by_ai_tercile.csv
+          - intermediate/figure2_panelA_run_metadata.json
+      - id: T-004
+        outputs:
+          - figures/figure2_panelB_transition_counts.csv
+          - intermediate/figure2_panelB_counts_run_metadata.json
+          - intermediate/figure2_panelB_attrition_diagnostics.csv
+          - intermediate/figure2_panelB_match_regime_robustness.csv
+          - intermediate/figure2_panelB_missing_month_sensitivity.csv
+      - id: T-005
+        outputs:
+          - figures/figure2_panelB_transition_probs.csv
+          - intermediate/figure2_panelB_probs_run_metadata.json
+      - id: T-006
+        outputs:
+          - figures/figure3_panelA_btos_ai_trends.csv
+          - intermediate/figure3_panelA_btos_ai_trends_run_metadata.json
+      - id: T-007
+        outputs:
+          - figures/figure3_panelB_btos_workforce_effects.csv
+          - intermediate/figure3_panelB_btos_workforce_effects_run_metadata.json
+      - id: T-008
+        outputs:
+          - figures/figure4_panelA_jolts_sector_rates.csv
+          - intermediate/figure4_panelA_jolts_sector_rates_run_metadata.json
+      - id: T-009
+        outputs:
+          - figures/figure4_panelB_ces_sector_index.csv
+          - intermediate/figure4_panelB_ces_sector_index_run_metadata.json
+      - id: T-010
+        outputs:
+          - figures/figure5_capability_matrix.csv
+          - intermediate/figure5_capability_matrix_run_metadata.json
+      - id: T-011
+        outputs:
+          - figures/figureA1_asec_welfare_by_ai_tercile.csv
+          - intermediate/figureA1_asec_welfare_by_ai_tercile_run_metadata.json
+      - id: T-012
+        outputs:
+          - figures/figureA2_sipp_event_study.csv
+          - intermediate/figureA2_sipp_event_study_run_metadata.json
+      - id: T-013
+        outputs:
+          - figures/figureA3_cps_supp_validation.csv
+          - intermediate/figureA3_cps_supp_validation_run_metadata.json
+      - id: T-014
+        outputs:
+          - figures/figureA4_abs_structural_adoption.csv
+          - intermediate/figureA4_abs_structural_adoption_run_metadata.json
+      - id: T-015
+        outputs:
+          - figures/figureA5_ces_payroll_hours.csv
+          - intermediate/figureA5_ces_payroll_hours_run_metadata.json
+      - id: T-016
+        outputs:
+          - figures/figureA6_bed_churn.csv
+          - intermediate/figureA6_bed_churn_run_metadata.json
+      - id: T-017
+        outputs:
+          - figures/figureA7_qcew_state_benchmark.csv
+          - intermediate/figureA7_qcew_state_benchmark_run_metadata.json
+      - id: T-018
+        outputs:
+          - figures/figureA8_lehd_benchmark.csv
+          - intermediate/figureA8_lehd_benchmark_run_metadata.json
+      - id: T-019
+        outputs:
+          - figures/figureA9_acs_local_composition.csv
+          - intermediate/figureA9_acs_local_composition_run_metadata.json
+      - id: T-020
+        outputs:
+          - figures/figureA10_nls_longrun.csv
+          - intermediate/figureA10_nls_longrun_run_metadata.json
+      - id: T-021
+        outputs:
+          - intermediate/occ22_sector_weights.csv
+          - intermediate/occ22_sector_weights_run_metadata.json
+      - id: T-022
+        outputs:
+          - intermediate/btos_sector_ai_use_monthly.csv
+          - intermediate/btos_sector_ai_use_monthly_run_metadata.json
+      - id: T-023
+        outputs:
+          - metrics/awes_occ22_monthly.csv
+          - intermediate/awes_run_metadata.json
+      - id: T-024
+        outputs:
+          - intermediate/sector6_stress_monthly.csv
+          - intermediate/sector6_stress_monthly_run_metadata.json
+      - id: T-025
+        outputs:
+          - intermediate/cps_occ22_exit_risk_monthly.csv
+          - intermediate/cps_occ22_exit_risk_monthly_run_metadata.json
+      - id: T-026
+        outputs:
+          - metrics/alpi_occ22_monthly.csv
+          - intermediate/alpi_run_metadata.json

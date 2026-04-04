@@ -25,3 +25,11 @@
 
 - Cells are interpretive documentation of what each public source can support, not statistical estimates of adoption or harm.
 - The matrix is not a substitute for causal identification of AI effects.
+
+## Presentation layer (Figure 5 visual redesign)
+
+Source note: Figure 5 is a rule-based synthesis artifact constructed from the released public measurement objects used in the paper’s main empirical architecture. It is derived from the frozen capability-matrix CSV `figures/figure5_capability_matrix.csv`.
+
+Interpretation note: “Direct” means the released public source observes the empirical object itself. “Partial” means the object is informed only indirectly, through aggregation, proxying, or important conceptual caveats. “Not observed” means the released public source does not observe the relationship at all.
+
+Presentation note: The grouped headers (worker-side, firm-side, context, structure and mechanism, integrated linkage) are editorial presentation only. They do not alter the underlying coded matrix.

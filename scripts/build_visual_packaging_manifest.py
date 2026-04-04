@@ -2,10 +2,12 @@ from __future__ import annotations
 
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
 PNG_DIR = ROOT / "visuals" / "png"
 PDF_DIR = ROOT / "visuals" / "vector"
+VA_VISUAL_ROOT = ROOT / "docs" / "states" / "virginia" / "visuals"
+VA_PNG_DIR = VA_VISUAL_ROOT / "png"
+VA_PDF_DIR = VA_VISUAL_ROOT / "vector"
 OUT_MD = ROOT / "docs" / "figures" / "visual_packaging_manifest.md"
 
 
@@ -18,11 +20,15 @@ GROUPS: list[tuple[str, list[str]]] = [
             "hours_timeseries",
             "transition_counts_heatmap_latest",
             "transition_summary_metrics",
+            "figure2_redesigned_composite",
             "btos_ai_trends",
             "btos_workforce_effects_barh",
+            "figure3_redesigned_composite",
             "jolts_openings_rate",
             "ces_payroll_index",
+            "figure4_redesigned_composite",
             "capability_matrix_heatmap",
+            "policy_roadmap",
         ],
     ),
     (
@@ -78,12 +84,29 @@ GROUPS: list[tuple[str, list[str]]] = [
 ]
 
 
-def _row(stem: str) -> str:
-    png = PNG_DIR / f"{stem}.png"
-    pdf = PDF_DIR / f"{stem}.pdf"
-    png_cell = f"`visuals/png/{png.name}`" if png.is_file() else "`MISSING`"
-    pdf_cell = f"`visuals/vector/{pdf.name}`" if pdf.is_file() else "`MISSING`"
+def _row(
+    stem: str,
+    *,
+    png_dir: Path = PNG_DIR,
+    pdf_dir: Path = PDF_DIR,
+    png_rel: str = "visuals/png",
+    pdf_rel: str = "visuals/vector",
+) -> str:
+    png = png_dir / f"{stem}.png"
+    pdf = pdf_dir / f"{stem}.pdf"
+    png_cell = f"`{png_rel}/{png.name}`" if png.is_file() else "`MISSING`"
+    pdf_cell = f"`{pdf_rel}/{pdf.name}`" if pdf.is_file() else "`MISSING`"
     return f"| `{stem}` | {png_cell} | {pdf_cell} |"
+
+
+def _row_virginia(stem: str) -> str:
+    return _row(
+        stem,
+        png_dir=VA_PNG_DIR,
+        pdf_dir=VA_PDF_DIR,
+        png_rel="docs/states/virginia/visuals/png",
+        pdf_rel="docs/states/virginia/visuals/vector",
+    )
 
 
 def main() -> None:
@@ -97,7 +120,10 @@ def main() -> None:
         lines.append("| Stem | PNG | PDF |")
         lines.append("|---|---|---|")
         for stem in stems:
-            lines.append(_row(stem))
+            if name == "Virginia Pack":
+                lines.append(_row_virginia(stem))
+            else:
+                lines.append(_row(stem))
         lines.append("")
 
     OUT_MD.parent.mkdir(parents=True, exist_ok=True)

@@ -32,3 +32,19 @@ The public system is strongest when sources are used for what they measure direc
 ## Possible reviewer objections
 
 - **Subjectivity of “partial”:** Cells follow locked symbols from `docs/lineage/t010_paper_notes_matrix.md`; changes require updating the rule text and rebuilding, not ad hoc edits to the CSV.
+
+## Visual redesign (presentation layer)
+
+Figure 5 is the paper’s signature conceptual artifact.
+
+Design objective:
+
+- Make the modular-vs-integrated distinction legible in under five seconds.
+- Emphasize that direct observation is distributed across sources.
+- Make the `worker_firm_ai_linkage` column read as the hard public-data frontier.
+
+Implementation constraints:
+
+- Preserve the frozen Figure 5 CSV contract.
+- Do not change row order, column set, or direct/partial/none coding in the first redesign pass.
+- Treat grouped headers and frontier emphasis as presentation-layer changes only.

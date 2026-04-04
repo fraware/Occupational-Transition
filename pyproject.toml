@@ -11,6 +11,7 @@ requires-python = ">=3.10"
 license = { text = "MIT" }
 dependencies = [
     "openpyxl>=3.1.0",
+    "pillow>=10.0.0",
     "pandas>=2.0.0",
     "pypdf>=4.0.0",
     "scipy>=1.9.0",
@@ -49,6 +50,8 @@ include = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+# Quiet pytest-asyncio when the plugin is installed globally (no async tests in-tree).
+asyncio_default_fixture_loop_scope = "function"
 
 [tool.ruff]
 line-length = 88
@@ -56,3 +59,10 @@ src = ["src", "tests", "scripts"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "W"]
+
+# Ticket QA modules carry long, explicit error strings; wrapping hurts grepability.
+# Pipeline modules mirror upstream URLs and layout-heavy logic from legacy scripts.
+[tool.ruff.lint.per-file-ignores]
+"src/occupational_transition/qa/**" = ["E501"]
+"src/occupational_transition/pipelines/**" = ["E501"]
+"src/occupational_transition/reliability/**" = ["E501"]

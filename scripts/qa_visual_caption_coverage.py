@@ -19,6 +19,7 @@ EXPECTED = [
     ("fig03_caption.md", "fig03_sources.md"),
     ("fig04_caption.md", "fig04_sources.md"),
     ("fig05_caption.md", "fig05_sources.md"),
+    ("fig06_caption.md", "fig06_sources.md"),
 ]
 
 
@@ -41,7 +42,7 @@ def main() -> int:
         for e in errors:
             print(f"FAIL: {e}", file=sys.stderr)
         return 1
-    print("PASS: caption and source note coverage for Figures 1–5.")
+    print("PASS: caption and source note coverage for Figures 1-6.")
     return 0
 
 

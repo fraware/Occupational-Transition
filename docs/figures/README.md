@@ -4,7 +4,7 @@
 
 ## How the pieces fit
 
-- **[figure_catalog.md](figure_catalog.md)** — authoritative map from paper or memo stems to CSV paths, caption files, and source notes. Other docs and QA scripts treat it as the contract.
+- **[figure_catalog.md](figure_catalog.md)** — authoritative map from paper or memo stems to CSV paths, caption files, and source notes. Other docs and QA scripts treat it as the contract. Main-text entries currently include **Figures 1–6** (Figure 6 is the Section 8 policy roadmap synthesis).
 - **[captions/](captions/)** — one file per figure stem with final caption text.
 - **[source_notes/](source_notes/)** — provenance and limitation notes per stem.
 - **[memos/](memos/)** — build or design notes for visuals where needed.

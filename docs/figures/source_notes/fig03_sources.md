@@ -28,3 +28,7 @@
 - Business-side measures do not link to individual workers in public files.
 - Supplement detail and questionnaire availability can change across waves; methodology docs describe the retained windows and definitions.
 - Task-effect rows in Panel B can require documented proxy mappings when questionnaire item-25 option rows are absent in the public `AI_Supplement_Table.xlsx`.
+
+## Presentation note
+
+The redesigned Figure 3 preserves the frozen BTOS figure CSVs and the existing evidence-directness contract. In Panel B, rows coded `direct_published` are rendered separately from rows coded `proxy_mapping` to prevent visual equivalence between direct released evidence and proxy-interpreted indicators.

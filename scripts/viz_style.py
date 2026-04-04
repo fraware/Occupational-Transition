@@ -69,10 +69,33 @@ def ensure_visual_dirs() -> None:
     VECTOR_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def save_dual(fig: plt.Figure, stem: str) -> tuple[Path, Path]:
-    ensure_visual_dirs()
-    png = PNG_DIR / f"{stem}.png"
-    pdf = VECTOR_DIR / f"{stem}.pdf"
+def save_dual(
+    fig: plt.Figure,
+    stem: str,
+    *,
+    visual_root: Path | None = None,
+    tight_layout: bool = True,
+) -> tuple[Path, Path]:
+    """Write PNG + PDF.
+
+    Default: ``visuals/png`` and ``visuals/vector`` under repo root.
+    Pass ``visual_root`` (e.g. ``docs/states/virginia/visuals``) to write under
+    ``<visual_root>/png`` and ``<visual_root>/vector`` instead.
+
+    Set ``tight_layout=False`` when the figure uses fixed axes positions (for example
+    ``Figure.add_axes``) and should not be auto-adjusted before save.
+    """
+    if visual_root is not None:
+        pdir = visual_root / "png"
+        vdir = visual_root / "vector"
+        pdir.mkdir(parents=True, exist_ok=True)
+        vdir.mkdir(parents=True, exist_ok=True)
+    else:
+        ensure_visual_dirs()
+        pdir = PNG_DIR
+        vdir = VECTOR_DIR
+    png = pdir / f"{stem}.png"
+    pdf = vdir / f"{stem}.pdf"
     # Keep exported file metadata aligned with the displayed figure title.
     title = ""
     if getattr(fig, "_suptitle", None) is not None:
@@ -85,7 +108,8 @@ def save_dual(fig: plt.Figure, stem: str) -> tuple[Path, Path]:
                 break
     if not title:
         title = stem.replace("_", " ")
-    fig.tight_layout()
+    if tight_layout:
+        fig.tight_layout()
     fig.savefig(png, bbox_inches="tight", metadata={"Title": title})
     fig.savefig(pdf, bbox_inches="tight", metadata={"Title": title})
     plt.close(fig)

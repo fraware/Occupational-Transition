@@ -34,3 +34,20 @@ Labor-demand and payroll dynamics vary materially by sector group. This provides
 
 - **Model-based state/sector detail:** JOLTS subnational estimates rely on BLS models; the figure uses published series as selected in the build.
 - **Sector mapping:** Robustness checks validate labels against `sector6_crosswalk.csv`.
+
+## Redesign objective
+
+Figure 4 should remain clearly subordinate to Figures 1, 3, and 5.
+
+The visual priority is to make two things legible:
+
+1. sector labor-demand conditions differ materially across the six-sector comparison set;
+2. CES payroll trajectories are heterogeneous relative to the August 2023 benchmark.
+
+Implementation rule:
+
+- Preserve the frozen Figure 4 CSVs.
+- Restore the full JOLTS flow-rate layer documented in the caption and memo.
+- Use endpoint labels instead of a heavy legend where possible.
+- Keep the figure readable and contextual, not visually dominant.
+- Run `python scripts/visualize_figure4.py` before visual QA; `scripts/qa_visuals.py` expects PNG+PDF for `jolts_openings_rate`, `ces_payroll_index`, and manuscript stem `figure4_redesigned_composite` (see `docs/figures/figure_catalog.md`).

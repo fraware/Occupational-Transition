@@ -29,3 +29,7 @@
 
 - JOLTS sector flows are not occupation-resolved in the public core instrument.
 - Sector series are model-assisted for some geographies; this figure uses published series as selected in the build scripts.
+
+## Presentation note
+
+The redesigned Figure 4 preserves the frozen Figure 4 CSV inputs. Panel A now renders the full set of JOLTS flow rates documented in the figure caption and memo—openings, hires, quits, and layoffs/discharges—using the same six-sector comparison set as the frozen build inputs. Panel B preserves the CES payroll-employment index structure and the August 2023 = 100 benchmark.

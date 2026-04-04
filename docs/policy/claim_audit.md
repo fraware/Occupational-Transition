@@ -44,6 +44,8 @@ Fill before public freeze; remove underscores when complete.
 
 ## Senator brief claim ledger (Virginia package)
 
+**Tracked vs local-only:** Evidence columns below point to reproducible artifacts (`figures/…`, `intermediate/…`, and tracked docs such as `docs/paper/methods_data.md`). **Narrative** memo, Q&A, and handout paths under `docs/policy/briefing/` may be absent in a public clone (see `.gitignore`); the SB-VA rows still define the claim-to-evidence contract when those files exist locally. Tracked methodology for the Virginia **measurement** slice: `docs/states/virginia/`.
+
 This ledger enforces the policy-facing claim discipline for the Virginia
 senator brief artifacts.
 

@@ -31,3 +31,7 @@
 
 - Transitions are inferred from matched adjacent months at broad occupation and labor-force states; they are not administrative job-to-job records.
 - Results are national; subnational cells are not claimed in the main specification.
+
+## Presentation note
+
+The redesigned Figure 2 preserves the frozen Figure 2 CSV inputs. Panel B’s summary metrics are aggregated from the frozen transition-probabilities layer using the paper’s fixed low-, middle-, and high-AI-relevance occupation grouping; the separate support heatmap presents the latest coarse-state transition matrix after grouping detailed occupation origins and destinations into low, middle, high, unemployed, and NILF categories.

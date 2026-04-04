@@ -8,6 +8,8 @@ run metadata contract expected by `scripts/qa_figure1_panelB.py`.
 from __future__ import annotations
 
 import hashlib
+import json
+import os
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
@@ -48,6 +50,9 @@ FROZEN_ELEMENTS: tuple[str, ...] = (
 )
 
 DIGITAL_INFO_ELEMENTS: tuple[str, ...] = FROZEN_ELEMENTS[:4]
+
+_NOT_REPORTED = "Not reported by source"
+_NOT_OBSERVED = "Not observed at build snapshot"
 
 Z_OUT_RENAME: dict[str, str] = {
     "Analyzing Data or Information": "onet_analyzing_data_z",
@@ -356,7 +361,7 @@ def build_figure1_panelB_t002(
             "download_url": ONET_DB_PAGE,
             "file_name": "",
             "file_format": "html",
-            "release_date_reported": "",
+            "release_date_reported": _NOT_REPORTED,
             "source_last_modified_observed": (
                 "February 24 2026 per O*NET Resource Center page"
             ),
@@ -364,6 +369,9 @@ def build_figure1_panelB_t002(
             "notes_on_version": (
                 f"O*NET database downloads; production release {onet_version}"
             ),
+            "extractor": "",
+            "update_cadence": "reference",
+            "notes_for_users": "Choose versioned zip rows for downloads.",
         },
         {
             "dataset_id": "onet_database_releases_archive",
@@ -372,10 +380,13 @@ def build_figure1_panelB_t002(
             "download_url": ONET_RELEASES_ARCHIVE,
             "file_name": "",
             "file_format": "html",
-            "release_date_reported": "",
-            "source_last_modified_observed": "",
+            "release_date_reported": _NOT_REPORTED,
+            "source_last_modified_observed": _NOT_OBSERVED,
             "snapshot_download_date": snapshot_date,
             "notes_on_version": "Historical O*NET database release versions",
+            "extractor": "",
+            "update_cadence": "reference",
+            "notes_for_users": "Version history page.",
         },
         {
             "dataset_id": f"onet_{onet_version.replace('.', '_')}_text_database_zip",
@@ -384,10 +395,13 @@ def build_figure1_panelB_t002(
             "download_url": onet_zip_url,
             "file_name": f"db_{onet_version_to_zip_token(onet_version)}_text.zip",
             "file_format": "zip",
-            "release_date_reported": "",
-            "source_last_modified_observed": "",
+            "release_date_reported": _NOT_REPORTED,
+            "source_last_modified_observed": _NOT_OBSERVED,
             "snapshot_download_date": snapshot_date,
             "notes_on_version": "O*NET core database tab-delimited text files",
+            "extractor": "http_download",
+            "update_cadence": "static",
+            "notes_for_users": "Large O*NET text bundle for T-002.",
         },
         {
             "dataset_id": (
@@ -398,10 +412,13 @@ def build_figure1_panelB_t002(
             "download_url": f"https://www.onetcenter.org/dictionary/{onet_version}/excel/work_activities.html",
             "file_name": "",
             "file_format": "html",
-            "release_date_reported": "",
-            "source_last_modified_observed": "",
+            "release_date_reported": _NOT_REPORTED,
+            "source_last_modified_observed": _NOT_OBSERVED,
             "snapshot_download_date": snapshot_date,
             "notes_on_version": "Work Activities file schema; IM/LV scales",
+            "extractor": "",
+            "update_cadence": "reference",
+            "notes_for_users": "Schema documentation.",
         },
         {
             "dataset_id": (
@@ -412,10 +429,13 @@ def build_figure1_panelB_t002(
             "download_url": f"https://www.onetcenter.org/dictionary/{onet_version}/excel/scales_reference.html",
             "file_name": "",
             "file_format": "html",
-            "release_date_reported": "",
-            "source_last_modified_observed": "",
+            "release_date_reported": _NOT_REPORTED,
+            "source_last_modified_observed": _NOT_OBSERVED,
             "snapshot_download_date": snapshot_date,
             "notes_on_version": "Scale IDs IM Importance LV Level",
+            "extractor": "",
+            "update_cadence": "reference",
+            "notes_for_users": "Schema documentation.",
         },
         {
             "dataset_id": "onet_soc2019_to_soc2018_crosswalk",
@@ -424,10 +444,13 @@ def build_figure1_panelB_t002(
             "download_url": ONET_SOC_XWALK_URL,
             "file_name": "2019_to_SOC_Crosswalk.csv",
             "file_format": "csv",
-            "release_date_reported": "",
-            "source_last_modified_observed": "",
+            "release_date_reported": _NOT_REPORTED,
+            "source_last_modified_observed": _NOT_OBSERVED,
             "snapshot_download_date": snapshot_date,
             "notes_on_version": "O*NET-SOC 2019 to 2018 SOC crosswalk",
+            "extractor": "http_download",
+            "update_cadence": "static",
+            "notes_for_users": "Crosswalk CSV used with O*NET extracts.",
         },
     ]
 
@@ -439,4 +462,59 @@ def build_figure1_panelB_t002(
         run_metadata=run_metadata,
         registry_rows=registry_rows,
     )
+
+
+def run(root: Path) -> None:
+    """
+    T-002 build entrypoint for ``run_step``.
+
+    Optional O*NET version: set env ``OT_ONET_VERSION`` (default ``30.2``).
+    """
+    onet_v = (os.environ.get("OT_ONET_VERSION") or "30.2").strip() or "30.2"
+    raw = root / "raw"
+    fig = root / "figures"
+    inter = root / "intermediate"
+    cross = root / "crosswalks" / "occ22_crosswalk.csv"
+    docs = root / "docs" / "data_registry.csv"
+
+    fig.mkdir(parents=True, exist_ok=True)
+    inter.mkdir(parents=True, exist_ok=True)
+
+    result = build_figure1_panelB_t002(
+        onet_version=onet_v,
+        repo_root=root,
+        raw_dir=raw,
+        figures_dir=fig,
+        intermediate_dir=inter,
+        crosswalk_csv=cross,
+    )
+
+    heatmap_path = fig / "figure1_panelB_task_heatmap.csv"
+    tercile_path = inter / "ai_relevance_terciles.csv"
+    exposure_path = inter / "occ22_exposure_components.csv"
+    meta_path = inter / "figure1_panelB_meta.csv"
+    meta_json_path = inter / "figure1_panelB_run_metadata.json"
+
+    result.heatmap_out.to_csv(heatmap_path, index=False)
+    result.exposure_df.to_csv(exposure_path, index=False)
+    result.terc_out.to_csv(tercile_path, index=False)
+    result.meta_df.to_csv(meta_path, index=False)
+    meta_json_path.write_text(
+        json.dumps(result.run_metadata, indent=2),
+        encoding="utf-8",
+    )
+
+    existing = pd.read_csv(docs)
+    have = set(existing["dataset_id"].astype(str))
+    for r in result.registry_rows:
+        if r["dataset_id"] in have:
+            continue
+        existing = pd.concat([existing, pd.DataFrame([r])], ignore_index=True)
+    existing.to_csv(docs, index=False)
+
+    print(f"Wrote {heatmap_path} ({len(result.heatmap_out)} rows)")
+    print(f"Wrote {exposure_path} ({len(result.exposure_df)} rows)")
+    print(f"Wrote {tercile_path} ({len(result.terc_out)} rows)")
+    print(f"Meta: {meta_path}")
+    print(f"Run metadata: {meta_json_path}")
 

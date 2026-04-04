@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
-from reliability import load_thresholds
+from occupational_transition.reliability import load_thresholds
 
 ROOT = Path(__file__).resolve().parents[1]
 FIG = ROOT / "figures"

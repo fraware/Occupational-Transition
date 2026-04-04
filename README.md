@@ -53,11 +53,19 @@ If you work in labor economics, applied macro, AI-and-work measurement, or polic
 4. **Open data pipeline for AI and labor economics**  
    Import the package for new work, rerun single build steps, or replicate the full stack. The main entry points are **[docs/README.md](docs/README.md)** and [docs/library/README.md](docs/library/README.md).
 
+5. **State-level case studies (optional)**  
+   The default story is **national / federal** measurement. Optional state slices (for example Virginia, FIPS 51) are compartmentalized under **[docs/states/README.md](docs/states/README.md)** so you can drill down without mixing them into the core paper path.
+
 Broad, search-friendly scope: reproducible analytics from **public** official sources, delivered as both a **Python library** (`occupational_transition`) and a **step-by-step pipeline** that rebuilds tables, figures, and lineage metadata.
 
 ---
 
 ## Choose your path
+
+### Browse the catalog, then fetch
+
+- Canonical dataset list: [docs/data_registry.csv](docs/data_registry.csv) (`dataset_id`, URLs, `extractor`, `update_cadence`).
+- CLI: `ot catalog`, `ot fetch --dataset-id …`, `ot refresh --cadence rolling` (scheduled local runs: [docs/operations/local_scheduling.md](docs/operations/local_scheduling.md)).
 
 ### A — Use the package in your own project
 
@@ -74,7 +82,8 @@ Start with:
 
 Optional CLI:
 
-- `ot list-analyses`
+- `ot catalog` / `ot fetch` / `ot refresh`
+- `ot list-analyses` (add `--verbose` to regenerate `docs/meta/analysis_bundles.yaml` and print outputs)
 - `ot list-sources`
 - `ot run --bundle quick-start`
 - `ot run --profile config/profiles/quick-start.toml`
@@ -91,7 +100,7 @@ Start with:
 - [docs/replication/acceptance_matrix.md](docs/replication/acceptance_matrix.md) for outputs and checks.
 - [docs/methodology/tickets/](docs/methodology/tickets/) for methodology support files.
 
-You can also find your step in the research pipeline table below and run the listed `scripts/build_*.py` and `scripts/qa_*.py` files directly.
+You can also find your step in the research pipeline table below. Builds and QA run through `python -m occupational_transition.run_step build|qa <TICKET>` (thin `scripts/build_*.py` wrappers remain for ad hoc use).
 
 ---
 
@@ -113,6 +122,12 @@ Full instructions, expected runtime, recovery guidance, committed-vs-generated o
 - [docs/source_selection.md](docs/source_selection.md)
 
 Expect large downloads, large disk usage, and long runtimes.
+
+---
+
+### D — State-level case study (optional)
+
+For a **Virginia** descriptive QCEW deep dive and related outputs (not part of the main paper figure list), start at **[docs/states/README.md](docs/states/README.md)** and **[docs/states/virginia/README.md](docs/states/virginia/README.md)**.
 
 ---
 
@@ -261,7 +276,7 @@ Method-specific caveats and exceptions are documented in the detailed methodolog
 
 ## Figures and visuals
 
-Render charts from committed `figures/*.csv`:
+Render charts from committed `figures/*.csv` (main text **Figures 1–6**, appendix **A1–A10**, and monitoring stems as configured in `scripts/run_visuals_all.py`):
 
 ```bash
 python scripts/run_visuals_all.py
@@ -274,10 +289,12 @@ Outputs:
 - `visuals/vector/`
 - `intermediate/visuals_run_manifest.json`
 
+Authoritative map of paper figures to CSV paths, visual stems, captions, and source notes: [docs/figures/figure_catalog.md](docs/figures/figure_catalog.md). Main-text redesigns include composite manuscript artifacts (for example `figure2_redesigned_composite`, `figure3_redesigned_composite`, `figure4_redesigned_composite`) and **Figure 6** (`figures/figure6_policy_roadmap.csv` → stem `policy_roadmap`).
+
 Additional references:
 
 - Style guide: [docs/quality/README.md#visual-style-guide](docs/quality/README.md#visual-style-guide)
-- Caption coverage: `python scripts/qa_visual_caption_coverage.py`
+- Caption and source-note coverage (Figures 1–6): `python scripts/qa_visual_caption_coverage.py`
 - One-shot acceptance: `python scripts/run_visuals_acceptance.py`
 
 ---

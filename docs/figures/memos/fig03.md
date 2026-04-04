@@ -34,3 +34,20 @@ Public business-side data support time series of stated AI adoption and suppleme
 
 - **Questionnaire changes:** BTOS is experimental; robustness scripts check period and definition consistency where encoded in outputs.
 - **Supplement mapping:** `README.md` Known Deviations documents any deviation from the literal six-category template when public tables require proxies.
+
+## Redesign objective
+
+Figure 3 should be the paper’s evidentiary-discipline figure.
+
+The visual priority is not simply to show BTOS levels. It is to make two things legible immediately:
+
+1. business-reported AI adoption is now clearly visible in direct published public data;
+2. workforce-effect evidence does not all carry the same evidentiary weight.
+
+Implementation rule:
+
+- Preserve the frozen Figure 3 CSVs.
+- Treat the November 2025 wording change as a comparability event in Panel A.
+- In Panel B, visually separate direct published rows from proxy-interpreted indicators.
+- Make the “Employment did not change” direct row the visual anchor of the panel.
+- Run `python scripts/visualize_figure3.py` before visual QA; `scripts/qa_visuals.py` expects PNG+PDF for `btos_ai_trends`, `btos_workforce_effects_barh`, and the stacked manuscript stem `figure3_redesigned_composite` (listed in `docs/figures/figure_catalog.md` and `docs/figures/visual_packaging_manifest.md`).

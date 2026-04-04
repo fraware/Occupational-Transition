@@ -132,7 +132,7 @@ Figure-to-stem mapping and caption paths: `docs/figures/figure_catalog.md`.
   - `python scripts/run_visuals_all.py`
 - Visual QA (paper `t001`–`t020`):
   - `python scripts/qa_visuals.py`
-- Caption and source-note file coverage (main text):
+- Caption and source-note file coverage (main text **Figures 1–6**):
   - `python scripts/qa_visual_caption_coverage.py`
 - QA verifies:
   - expected files exist

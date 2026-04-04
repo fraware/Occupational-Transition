@@ -118,7 +118,8 @@ def main() -> int:
         if rc != 0:
             return rc
 
-    # Optional Virginia / policy briefing visuals (local-only; paths are gitignored).
+    # Optional Virginia / policy briefing visuals (local-only; Virginia PNG/PDF under
+    # docs/states/virginia/visuals/ are gitignored when present).
     memo_orchestrator = ROOT / "scripts" / "run_memo_visuals_build.py"
     if memo_orchestrator.is_file():
         rc, _ = run_shell(ROOT, "python scripts/run_memo_visuals_build.py", env_overrides=run_env)

@@ -17,6 +17,8 @@ class PipelineStep:
     build_cmd: str
     qa_cmd: str
     outputs: tuple[str, ...]
+    build_module: str | None = None
+    qa_module: str | None = None
 
 
 @dataclass(frozen=True)

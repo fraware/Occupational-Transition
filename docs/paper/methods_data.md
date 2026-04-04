@@ -61,6 +61,13 @@ Composite **descriptive** occupation-time indices for monitoring and prioritizat
 - Non-estimated categorical matrix from `docs/lineage/t010_paper_notes_matrix.md` / `docs/lineage/t010_issues.md` rules; five datasets by seven empirical objects (including `worker_firm_ai_linkage`); `scripts/build_figure5_capability_matrix.py`.
 - **Output:** `figures/figure5_capability_matrix.csv`.
 
+## Figure 6 — Policy roadmap (synthesis; visualization-only)
+
+- **Input:** `figures/figure6_policy_roadmap.csv` encodes box layout and narrative blocks (current public observables, identification frontier, near-term survey agenda, long-run horizon). It is a **design and synthesis** artifact aligned with the manuscript survey-design discussion (Section 8), not a statistical estimate from raw microdata.
+- **Render:** `python scripts/visualize_figure6_policy_roadmap.py` writes stem `policy_roadmap` under `visuals/png` and `visuals/vector`.
+
+**Limits:** The roadmap does not add new empirical series; it formalizes policy logic consistent with Figures 1–5 and the public-data identification frontier.
+
 ## Appendix figures (T-011–T-020) and extension metrics (T-021–T-026)
 
 | Ticket | Short description | Primary output CSV |
@@ -84,11 +91,11 @@ Composite **descriptive** occupation-time indices for monitoring and prioritizat
 
 Each appendix ticket has a matching `docs/methodology/tickets/tNNN_*_methodology.md` file where applicable; T-021–T-026 are documented in this section and in `intermediate/*_run_metadata.json`.
 
-## Virginia senator brief module (additive; not a paper figure ticket)
+## Virginia case study (additive; not a paper figure ticket)
 
-State-level **structural** benchmarks for Virginia (FIPS 51) are derived from **T-017** (`figures/figureA7_qcew_state_benchmark.csv`) via `scripts/build_state_qcew_deep_dive.py`, which writes `figures/state_deep_dive_qcew_51_profile.csv`, `figures/state_deep_dive_qcew_51_ranks.csv`, and `figures/state_deep_dive_qcew_51_peers.csv` with metadata in `intermediate/state_deep_dive_qcew_51_run_metadata.json`. Methodology for the underlying QCEW aggregation: `docs/methodology/tickets/t017_figureA7_qcew_state_benchmark_methodology.md`.
+State-level **structural** benchmarks for Virginia (FIPS 51) are derived from **T-017** (`figures/figureA7_qcew_state_benchmark.csv`) via `scripts/build_state_qcew_deep_dive.py`, which writes `figures/state_deep_dive_qcew_51_profile.csv`, `figures/state_deep_dive_qcew_51_ranks.csv`, and `figures/state_deep_dive_qcew_51_peers.csv` with metadata in `intermediate/state_deep_dive_qcew_51_run_metadata.json`. Methodology for the underlying QCEW aggregation: `docs/methodology/tickets/t017_figureA7_qcew_state_benchmark_methodology.md`. Tracked operational summary: `docs/states/virginia/virginia_deep_dive.md` and `docs/states/virginia/README.md`.
 
-Briefing KPIs and static Virginia visuals (`va01`–`va08`) are produced by `scripts/build_virginia_memo_kpis.py` and `scripts/visualize_virginia_memo.py` (see `intermediate/virginia_memo_kpis_run_metadata.json`). These outputs are **descriptive** (composition, peer comparison, ranks, optional BTOS state context when published). They do **not** identify causal AI effects or worker–firm linked impacts. Narrative and claim discipline: `docs/policy/briefing/senate_briefing_memo.md`, `docs/policy/claim_audit.md` (Senator brief claim ledger), `docs/policy/briefing/senate_briefing_evidence_baseline_va.md`. Operational summary: `docs/policy/briefing/virginia_deep_dive.md`.
+Optional briefing KPIs and static Virginia visuals (`va01`–`va08`) use scripts such as `build_virginia_memo_kpis.py` and `visualize_virginia_memo.py` when present (see `intermediate/virginia_memo_kpis_run_metadata.json`). These outputs are **descriptive** (composition, peer comparison, ranks, optional BTOS state context when published). They do **not** identify causal AI effects or worker–firm linked impacts. Legislative narrative files under `docs/policy/briefing/` may be **local-only** in some clones; cross-cutting claim discipline remains `docs/policy/claim_audit.md` (including SB-VA rows).
 
 ## Provenance artifacts
 
@@ -106,7 +113,7 @@ Policy-facing KPI tables (memo and briefing outputs) include:
 - publishability fields: `publish_flag`, `suppression_reason`, `pooling_applied`,
 - evidence directness: `evidence_directness` in `{direct_published, derived_transform, proxy_mapping}`.
 
-Thresholds are centralized in `config/reliability_thresholds.json` and enforced in build/QA scripts via shared helpers under `scripts/reliability/`.
+Thresholds are centralized in `config/reliability_thresholds.json` and enforced in build/QA code via `occupational_transition.reliability`.
 
 ## Replication command
 

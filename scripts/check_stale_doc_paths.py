@@ -42,6 +42,7 @@ STALE_SUBSTRINGS = [
     "docs/policy/senator_packet_order_va.md",
     "docs/policy/senator_cps_condensed_brief.md",
     "docs/policy/virginia_deep_dive.md",
+    "docs/policy/briefing/virginia_deep_dive.md",
 ]
 
 # Ticket markdown at docs root (should live under methodology/tickets).

@@ -61,7 +61,8 @@ def evaluate_publishability(
     out["suppression_reason"] = reasons
     out["reliability_tier"] = tiers
     out["pooling_applied"] = out.get("pooling_applied", 1)
-    out["pooling_applied"] = pd.to_numeric(out["pooling_applied"], errors="coerce").fillna(1).astype(int)
+    pa = pd.to_numeric(out["pooling_applied"], errors="coerce").fillna(1).astype(int)
+    out["pooling_applied"] = pa
 
     directness = out.get("evidence_directness")
     if directness is None:

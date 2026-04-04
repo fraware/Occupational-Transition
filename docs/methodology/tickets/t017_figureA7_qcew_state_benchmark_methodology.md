@@ -119,5 +119,5 @@ Style and chart standards are documented in `docs/quality/README.md#visual-style
 
 ## Related additive outputs (not T-017 QA)
 
-Virginia-specific tables and visuals derived from `figures/figureA7_qcew_state_benchmark.csv` are documented in `docs/policy/briefing/virginia_deep_dive.md` and built via `scripts/build_state_qcew_deep_dive.py` (separate from this ticket’s QA script).
+Virginia-specific tables and visuals derived from `figures/figureA7_qcew_state_benchmark.csv` are documented in `docs/states/virginia/virginia_deep_dive.md` and built via `scripts/build_state_qcew_deep_dive.py` (separate from this ticket’s QA script).
 

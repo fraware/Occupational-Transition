@@ -12,6 +12,7 @@ CMDS = [
     "python scripts/visualize_figure3.py",
     "python scripts/visualize_figure4.py",
     "python scripts/visualize_figure5.py",
+    "python scripts/visualize_figure6_policy_roadmap.py",
     "python scripts/visualize_figureA.py",
 ]
 

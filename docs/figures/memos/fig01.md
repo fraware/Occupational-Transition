@@ -35,3 +35,20 @@ The paper's occupation groups vary widely in size and wage level. Task-intensity
 
 - **Index construction:** The AI Task Index uses a fixed subset of O*NET elements; robustness checks compare alternative weightings and rank stability (`scripts/robustness/`).
 - **OEWS vintage:** National file year follows the build’s pinned or “most recent available” rule; cite run metadata for the exact file.
+
+## Redesign objective
+
+Figure 1 should read as one designed structural argument rather than as two separate technical panels.
+
+The visual priority is to make three things legible immediately:
+
+1. employment is concentrated in a small set of broad occupation groups;
+2. wage dispersion across those groups is already large;
+3. the frozen AI-relevance grouping is derived from visible task-content structure rather than imposed arbitrarily.
+
+Implementation rule:
+
+- Preserve the frozen Figure 1 CSVs.
+- Keep Panel A and Panel B visually coordinated.
+- Make the low / middle / high AI-relevance grouping explicit inside the heatmap.
+- Use Panel A to show concentration and wage dispersion, not just shares alone.

@@ -34,3 +34,21 @@ The figure documents worker-side descriptive patterns at national scale: hours l
 
 - **Match rates:** Review build logs and methodology for months with missing CPS files or sparse matches.
 - **Transition definitions:** States are coarse (22 groups plus unemployment/NILF); fine occupation moves within a group appear as retention.
+
+## Redesign objective
+
+Figure 2 should be the paper’s worker-side signal figure.
+
+The visual priority is to make two things legible immediately:
+
+1. the hours gradient across frozen AI-relevance terciles is persistent and economically meaningful;
+2. broad worker-side movement differs across the same grouping, but only at a coarse descriptive level.
+
+Implementation rule:
+
+- Preserve the frozen Figure 2 CSVs.
+- Keep Panel A visually simple and directly labeled.
+- Replace an over-dense movement presentation with a compact transition-summary view.
+- Maintain a separate support heatmap output for the latest coarse-state transition structure.
+- Run `python scripts/visualize_figure2.py` before visual QA; `scripts/qa_visuals.py` expects PNG+PDF for `hours_timeseries`, `transition_counts_heatmap_latest`, `transition_summary_metrics`, and manuscript stem `figure2_redesigned_composite` (see `docs/figures/figure_catalog.md`).
+- For Panel B aggregation and the coarse heatmap, `scripts/visualize_figure2.py` maps `occ22_*` origins to terciles using `intermediate/ai_relevance_terciles.csv` when that file exists locally; if not, it uses the same frozen occ22-to-tercile assignment as Technical Note 1 (embedded fallback in the script).

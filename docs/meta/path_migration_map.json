@@ -25,7 +25,8 @@
     "docs/senator_handout_1page_va.md": "docs/policy/briefing/senator_handout_1page_va.md",
     "docs/senator_packet_order_va.md": "docs/policy/briefing/senator_packet_order_va.md",
     "docs/senator_cps_condensed_brief.md": "docs/policy/briefing/senator_cps_condensed_brief.md",
-    "docs/virginia_deep_dive.md": "docs/policy/briefing/virginia_deep_dive.md",
+    "docs/virginia_deep_dive.md": "docs/states/virginia/virginia_deep_dive.md",
+    "docs/policy/briefing/virginia_deep_dive.md": "docs/states/virginia/virginia_deep_dive.md",
     "docs/reliability_framework.md": "docs/quality/README.md#reliability-framework-policy-facing-metrics",
     "docs/memo_visual_precision.md": "docs/quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules",
     "docs/visual_style_guide.md": "docs/quality/README.md#visual-style-guide"
@@ -36,6 +37,6 @@
     "docs/figure_memos": "docs/figures/memos"
   },
   "ticket_glob": "docs/t*_*.md -> docs/methodology/tickets/",
-  "briefing_isolation": "Senate/senator/Virginia briefing markdown lives under docs/policy/briefing/ (claim_audit stays in docs/policy/).",
+  "briefing_isolation": "Tracked Virginia case-study methodology lives under docs/states/virginia/; senate/senator narrative under docs/policy/briefing/ is often local-only (see .gitignore). claim_audit stays in docs/policy/.",
   "unchanged": ["docs/data_registry.csv", "docs/archive/", "docs/lineage/", "docs/references/"]
 }

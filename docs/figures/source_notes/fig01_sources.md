@@ -31,3 +31,7 @@
 - OEWS and O*NET describe occupational structure and tasks; they do not by themselves identify realized AI labor-market impacts.
 - AI-relevance terciles are a rank partition on a constructed index from selected O*NET elements; alternative weighting or element choices can change borders between groups (see robustness scripts under `scripts/robustness/`).
 - National panels do not display geographic distribution; for PUMA-level composition use appendix T-019 (`figures/figureA9_acs_local_composition.csv`) when Claim 1 wording references geography.
+
+## Presentation note
+
+The redesigned Figure 1 preserves the frozen occupational baseline CSV and task heatmap CSV. The displayed low-, middle-, and high-AI-relevance bands are reconstructed from the frozen task-heatmap values using the paper’s fixed AI Task Index ordering rule; this is a presentation-layer reconstruction of the same underlying grouping logic, not a new empirical object.

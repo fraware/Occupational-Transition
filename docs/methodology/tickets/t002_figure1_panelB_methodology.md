@@ -63,7 +63,7 @@ Primary files:
 
 ## QA checks
 
-Implemented in `scripts/qa_figure1_panelB.py`:
+Implemented in `occupational_transition.qa.figure1_panelB` (also runnable via `scripts/qa_figure1_panelB.py`):
 
 - exactly 22 rows in each output
 - all 22 occupation groups present once
@@ -75,15 +75,19 @@ Implemented in `scripts/qa_figure1_panelB.py`:
 
 ```bash
 pip install -r requirements.txt
+pip install -e .
 python scripts/build_figure1_panelB.py
 python scripts/qa_figure1_panelB.py
 ```
 
-Optional explicit pin:
+Equivalent ticket entrypoint:
 
 ```bash
-python scripts/build_figure1_panelB.py --onet-version 30.2
+python -m occupational_transition.run_step build T-002
+python -m occupational_transition.run_step qa T-002
 ```
+
+Optional explicit pin: `python scripts/build_figure1_panelB.py --onet-version 30.2`, or set env `OT_ONET_VERSION` before `run_step` / `ot run`.
 
 ## Interpretation and license
 

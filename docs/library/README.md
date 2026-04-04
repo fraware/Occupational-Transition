@@ -58,7 +58,7 @@ This repository is built for **transparent measurement** from **public** US labo
 
 - **Empirical labor and macro (public micro):** CPS, OEWS, JOLTS, CES, QCEW, and related series with explicit universes and weights where applicable.
 - **AI and jobs (measurement):** O*NET task scales, BTOS adoption series, and paper-defined composites (e.g. AI-relevance terciles)—always **descriptive** unless you supply your own identification strategy outside this repo.
-- **Policy and briefings:** optional memo and Virginia-facing artifacts are **additive**; see [policy/briefing/](../policy/briefing/README.md) and keep them separate from core manuscript claims.
+- **Policy and state case studies:** optional memo and Virginia-facing artifacts are **additive**; start with [states/virginia/](../states/virginia/README.md). Legislative packs may live under [policy/briefing/](../policy/briefing/README.md) when present locally. Keep them separate from core manuscript claims.
 
 ### Three reuse modes
 
@@ -94,7 +94,7 @@ No. It wraps reproducible downloads and parsing **for this project’s** figure 
 They are **ordinals** for grouping and visualization; see methodology step notes and [methods_data.md](../paper/methods_data.md) for definitions.
 
 **Can I use only Virginia memo visuals?**  
-Yes, but they are **descriptive** and **additive** to the paper stack; see [policy/briefing/README.md](../policy/briefing/README.md).
+Yes, but they are **descriptive** and **additive** to the paper stack; see [states/virginia/README.md](../states/virginia/README.md).
 
 **Causal inference?**  
 Not provided by default. Use your own design; this repo supplies **inputs** and **documented** descriptive series.

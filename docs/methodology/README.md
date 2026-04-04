@@ -47,4 +47,4 @@ Use the same checklist for every `tickets/tNNN_*.md` file (and PR-000):
 5. **Outputs** — canonical CSV paths and columns referenced by QA.
 6. **Known deviations** — differences from issue-template wording; cross-check [acceptance_matrix.md](../replication/acceptance_matrix.md) **PASS WITH NOTE** rows and the repository [README.md](../../README.md) Known Deviations if present.
 
-For memo and Virginia-only builders (stems `t101`–`t108`, `va01`–`va08`), see [quality README — Memo visuals](../quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules) and [policy/briefing/README.md](../policy/briefing/README.md).
+For memo and Virginia-only builders (stems `t101`–`t108`, `va01`–`va08`), see [quality README — Memo visuals](../quality/README.md#memo-visuals-t-101-to-t-108-precision-and-non-invention-rules), the [Virginia case study](../states/virginia/README.md), and (when present locally) [policy/briefing/README.md](../policy/briefing/README.md).

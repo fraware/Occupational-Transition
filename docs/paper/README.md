@@ -18,6 +18,10 @@
 | [appendix_draft.md](appendix_draft.md) | Appendix paragraphs and figure pointers |
 | [evidence_snapshot.md](evidence_snapshot.md) | Frozen headline values and file references for a run |
 
+## Paper scope (machine-readable)
+
+Bundled tickets, committed figure paths, and replication profiles are listed in **[config/paper_scope.toml](../../config/paper_scope.toml)** (loaded by `occupational_transition.paper_scope.load_paper_scope`). Use this to separate **main-text** outputs (`core-paper`) from the **full appendix/metrics** path (`full-replication`).
+
 ## Related
 
 - [Figure catalog](../figures/figure_catalog.md) and [figures README](../figures/README.md)

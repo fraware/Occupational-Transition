@@ -27,6 +27,7 @@ intermediate/
 docs/sphinx/_build/
 
 # Virginia briefing package (docs, generated tables, scripts, and visuals)
+# Tracked state case-study methodology: docs/states/ (not matched by rules below).
 # Docs (current + legacy naming)
 docs/policy/briefing/senate_briefing_*.md
 docs/policy/briefing/senator_*.md
@@ -48,9 +49,15 @@ scripts/build_virginia_*.py
 scripts/qa_virginia_*.py
 scripts/visualize_virginia_*.py
 
-# Briefing visuals (current + legacy prefixes)
+# Briefing visuals (memo pack under repo-root visuals/)
 visuals/png/memo_*.png
 visuals/vector/memo_*.pdf
+# Virginia case-study visuals (under docs/states/virginia/visuals/)
+docs/states/virginia/visuals/png/virginia_*.png
+docs/states/virginia/visuals/vector/virginia_*.pdf
+docs/states/virginia/visuals/png/va*.png
+docs/states/virginia/visuals/vector/va*.pdf
+# Legacy Virginia outputs (relocate to docs/states/virginia/visuals/ if still present)
 visuals/png/virginia_*.png
 visuals/vector/virginia_*.pdf
 visuals/png/va*.png

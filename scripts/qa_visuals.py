@@ -10,18 +10,23 @@ import matplotlib.image as mpimg
 from viz_style import PNG_DIR, VECTOR_DIR
 from viz_utils import ROOT, sha256_file
 
-
 EXPECTED_STEMS = [
     "occupation_share_barh",
     "task_heatmap",
     "hours_timeseries",
     "transition_counts_heatmap_latest",
     "transition_summary_metrics",
+    # Manuscript-ready stack of Figure 2 Panel A + Panel B summary grid.
+    "figure2_redesigned_composite",
     "btos_ai_trends",
     "btos_workforce_effects_barh",
+    # Manuscript-ready stack of Figure 3 panels (PIL composite; same CSV contract).
+    "figure3_redesigned_composite",
     "jolts_openings_rate",
     "ces_payroll_index",
+    "figure4_redesigned_composite",
     "capability_matrix_heatmap",
+    "policy_roadmap",
     "asec_mean_income",
     "sipp_event_employment",
     "cps_supp_mobility_share",

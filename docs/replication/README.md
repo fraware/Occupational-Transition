@@ -2,13 +2,14 @@
 
 **Audience:** Anyone reproducing pipeline outputs from a clean clone through final figure CSVs under `figures/`, and optionally publication visuals under `visuals/`.
 
-**Related:** [acceptance_matrix.md](acceptance_matrix.md), [project_maintenance.md](project_maintenance.md), [library README](../library/README.md), [quality README](../quality/README.md).
+**Related:** [acceptance_matrix.md](acceptance_matrix.md), [project_maintenance.md](project_maintenance.md), [local scheduling / catalog refresh](../operations/local_scheduling.md), [library README](../library/README.md), [quality README](../quality/README.md).
 
 ## Contents
 
 - [Replication from a clean clone](#replication-from-a-clean-clone)
 - [Committed outputs vs build-generated](#committed-outputs-vs-build-generated)
 - [Independent replication checklist](#independent-replication-checklist)
+- [Local catalog refresh scheduling](../operations/local_scheduling.md) (optional `ot refresh` / Task Scheduler)
 
 ---
 
@@ -194,6 +195,7 @@ Confirm files exist and are non-empty:
 - [ ] `figures/figure4_panelA_jolts_sector_rates.csv`
 - [ ] `figures/figure4_panelB_ces_sector_index.csv`
 - [ ] `figures/figure5_capability_matrix.csv`
+- [ ] `figures/figure6_policy_roadmap.csv`
 
 ### Visuals (optional stage)
 

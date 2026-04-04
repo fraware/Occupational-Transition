@@ -115,6 +115,9 @@ def append_registry_rows(registry_path: Path, snapshot: str) -> None:
             "source_last_modified_observed": "July 23 2025 per BLS page",
             "snapshot_download_date": snapshot,
             "notes_on_version": "OEWS data tables index; national May 2024 XLSX zip",
+            "extractor": "",
+            "update_cadence": "reference",
+            "notes_for_users": "Landing page only; fetch specific zip rows for files.",
         },
         {
             "dataset_id": "bls_oews_may2024_national_zip",
@@ -127,6 +130,9 @@ def append_registry_rows(registry_path: Path, snapshot: str) -> None:
             "source_last_modified_observed": "",
             "snapshot_download_date": snapshot,
             "notes_on_version": "May 2024 national occupational employment and wage estimates",
+            "extractor": "http_download",
+            "update_cadence": "annual",
+            "notes_for_users": "Large zip; T-001/T-002 national weights.",
         },
     ]
     existing = pd.read_csv(registry_path)

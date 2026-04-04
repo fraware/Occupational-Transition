@@ -8,6 +8,7 @@
 - You need to **reproduce figures from raw** or validate CI acceptance → [Replication](#replicator).
 - You are **writing or reviewing the paper** → [Paper](#paper-author).
 - You work on **policy claims and scope wording** → [Policy](#policy).
+- You want a **state-level case study** (optional; national pipeline first) → [State case studies](#state-case-studies).
 
 This repository is both an installable package (`occupational_transition`) for US public-data extraction and a step-by-step figure pipeline for the empirical paper. The four phrases above are the default positioning for docs and discovery. The sections below give **numbered reading orders** by role; the **master table** lists every major document with a one-line purpose.
 
@@ -50,8 +51,17 @@ This repository is both an installable package (`occupational_transition`) for U
 
 ## Policy
 
-1. [policy/claim_audit.md](policy/claim_audit.md) — cross-cutting claim ledger.
+1. [policy/claim_audit.md](policy/claim_audit.md) — cross-cutting claim ledger (paper claims and referenced evidence, including SB-VA rows for the Virginia package).
 2. [quality/README.md](quality/README.md) — reliability standards and visual QA rules.
+
+Legislative narrative under `docs/policy/briefing/` may be **local-only** in some clones; see repository `.gitignore`.
+
+---
+
+## State case studies
+
+1. [states/README.md](states/README.md) — federal-first scope and index of state modules.
+2. [states/virginia/README.md](states/virginia/README.md) — Virginia (FIPS 51) reading order and rebuild notes.
 
 ---
 
@@ -75,6 +85,8 @@ This repository is both an installable package (`occupational_transition`) for U
 | [paper/README.md](paper/README.md) | Paper folder reading order | Orientation |
 | [quality/README.md](quality/README.md) | Reliability framework and visual style | QA and publication visuals |
 | [policy/claim_audit.md](policy/claim_audit.md) | Claim support ledger | Any external claim |
+| [states/README.md](states/README.md) | Optional state case studies (national pipeline first) | State-level briefings or extensions |
+| [states/virginia/README.md](states/virginia/README.md) | Virginia (FIPS 51) case study index | VA deep dive and optional memo visuals |
 | [data_registry.csv](data_registry.csv) | Dataset IDs and HTTPS URLs | Downloads and citations |
 | [archive/README.md](archive/README.md) | Role of full issue / paper-note archives | Traceability, not onboarding |
 | [references/README.md](references/README.md) | PDF reference packs | CPS/BLS documentation |
@@ -92,6 +104,7 @@ This repository is both an installable package (`occupational_transition`) for U
 | [figures/](figures/) | Catalog, [README](figures/README.md), captions, source notes |
 | [paper/](paper/) | Manuscript, methods, appendix, evidence snapshot |
 | [policy/](policy/) | Claim audit |
+| [states/](states/) | Optional state case studies ([README](states/README.md)) |
 | [quality/](quality/) | Reliability and visual style ([README](quality/README.md)) |
 | [archive/](archive/) | Long-form archives (`issues_full`, `paper_notes_full`) |
 | [references/](references/) | PDFs and index |
