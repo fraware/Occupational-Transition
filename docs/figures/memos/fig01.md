@@ -52,3 +52,4 @@ Implementation rule:
 - Keep Panel A and Panel B visually coordinated.
 - Make the low / middle / high AI-relevance grouping explicit inside the heatmap.
 - Use Panel A to show concentration and wage dispersion, not just shares alone.
+- After edits to `scripts/visualize_figure1.py`, run `python scripts/visualize_figure1.py` and commit the updated `occupation_share_barh` and `task_heatmap` outputs so committed PNG/PDF match the script on the same revision.

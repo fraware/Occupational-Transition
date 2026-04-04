@@ -14,8 +14,8 @@ from viz_utils import read_figure_csv
 
 def _box_size(kind: str) -> tuple[float, float]:
     if kind == "frontier":
-        return 1.25, 0.92
-    return 1.15, 0.72
+        return 1.35, 1.02
+    return 1.22, 0.82
 
 
 def _box_right_mid(row: pd.Series) -> tuple[float, float]:
@@ -56,9 +56,9 @@ def main() -> None:
     apply_matplotlib_style()
     df = read_figure_csv("figure6_policy_roadmap.csv").copy()
 
-    fig, ax = plt.subplots(figsize=(14.6, 8.2))
-    ax.set_xlim(-0.2, 6.3)
-    ax.set_ylim(0.0, 3.5)
+    fig, ax = plt.subplots(figsize=(15.8, 9.0))
+    ax.set_xlim(-0.2, 6.45)
+    ax.set_ylim(0.0, 3.68)
     ax.axis("off")
 
     headers = [
@@ -70,14 +70,14 @@ def main() -> None:
     for title, xpos in headers:
         ax.text(
             xpos,
-            3.18,
+            3.22,
             title,
-            fontsize=12.6,
+            fontsize=13.0,
             fontweight="bold",
             ha="center",
             va="center",
         )
-        ax.plot([xpos - 0.65, xpos + 0.65], [3.03, 3.03], linewidth=1.2)
+        ax.plot([xpos - 0.65, xpos + 0.65], [3.05, 3.05], linewidth=1.2)
 
     style = {
         "current": {"linestyle": "solid", "linewidth": 1.2},
@@ -101,19 +101,19 @@ def main() -> None:
         ax.add_patch(box)
         ax.text(
             float(r["x"]) + width / 2,
-            float(r["y"]) + height - 0.12,
+            float(r["y"]) + height - 0.11,
             str(r["title"]),
-            fontsize=10.7,
+            fontsize=11.2,
             fontweight="bold",
             ha="center",
             va="top",
         )
-        wrap_w = 30 if kind != "frontier" else 32
+        wrap_w = 34 if kind != "frontier" else 36
         ax.text(
-            float(r["x"]) + 0.06,
-            float(r["y"]) + height - 0.28,
+            float(r["x"]) + 0.07,
+            float(r["y"]) + height - 0.27,
             textwrap.fill(str(r["body"]), width=wrap_w),
-            fontsize=9.5,
+            fontsize=9.7,
             ha="left",
             va="top",
         )

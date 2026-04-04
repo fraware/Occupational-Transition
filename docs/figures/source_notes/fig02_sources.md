@@ -34,4 +34,4 @@
 
 ## Presentation note
 
-The redesigned Figure 2 preserves the frozen Figure 2 CSV inputs. Panel B’s summary metrics are aggregated from the frozen transition-probabilities layer using the paper’s fixed low-, middle-, and high-AI-relevance occupation grouping; the separate support heatmap presents the latest coarse-state transition matrix after grouping detailed occupation origins and destinations into low, middle, high, unemployed, and NILF categories.
+The redesigned Figure 2 preserves the frozen Figure 2 CSV inputs. Panel B’s summary metrics are aggregated from the frozen transition-probabilities layer using the paper’s fixed low-, middle-, and high-AI-relevance occupation grouping. The separate support visual stem **`transition_coarse_matrix_latest`** presents the **latest month** coarse-state transition matrix as **row-normalized probabilities** (from `figure2_panelB_transition_probs.csv`), after grouping occupation origins and destinations into low, middle, high, unemployed, and NILF—not a weighted-count heatmap.

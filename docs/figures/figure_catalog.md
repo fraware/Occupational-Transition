@@ -1,11 +1,11 @@
 # Figure catalog (main text)
 
-Stable slugs map paper figures to pipeline outputs and visual stems (`docs/quality/README.md#visual-style-guide`).
+Stable slugs map paper figures to pipeline outputs and visual stems (`docs/quality/README.md#visual-style-guide`). **Main text includes Figures 1–6** (Figure 6 is the Section 8 policy roadmap synthesis).
 
 | Paper figure | Panels / charts | Figure CSV(s) | Visual stem(s) (`visuals/png`) |
 |--------------|-----------------|---------------|--------------------------------|
 | Figure 1 | Occupational baseline (Panel A); O*NET task heatmap and AI terciles (Panel B) | `figures/figure1_panelA_occ_baseline.csv`, `figures/figure1_panelB_task_heatmap.csv`, `intermediate/ai_relevance_terciles.csv` | `occupation_share_barh`, `task_heatmap` |
-| Figure 2 | Hours by AI tercile (Panel A); transition counts heatmap and summary metrics (Panel B) | `figures/figure2_panelA_hours_by_ai_tercile.csv`, `figures/figure2_panelB_transition_counts.csv`, `figures/figure2_panelB_transition_probs.csv` | `hours_timeseries`, `transition_counts_heatmap_latest`, `transition_summary_metrics`, `figure2_redesigned_composite` (stacked manuscript composite) |
+| Figure 2 | Hours by AI tercile (Panel A); latest-month **coarse-state** transition matrix and summary metrics (Panel B) | `figures/figure2_panelA_hours_by_ai_tercile.csv`, `figures/figure2_panelB_transition_counts.csv`, `figures/figure2_panelB_transition_probs.csv` | `hours_timeseries`, `transition_coarse_matrix_latest` (row-normalized probs, low/middle/high/NILF/unemployed), `transition_summary_metrics`, `figure2_redesigned_composite` (stacked manuscript composite) |
 | Figure 3 | BTOS AI-use trends (Panel A); supplement workforce effects (Panel B) | `figures/figure3_panelA_btos_ai_trends.csv`, `figures/figure3_panelB_btos_workforce_effects.csv` | `btos_ai_trends`, `btos_workforce_effects_barh`, `figure3_redesigned_composite` (stacked manuscript composite from the same panels) |
 | Figure 4 | JOLTS sector rates (Panel A); CES payroll index (Panel B) | `figures/figure4_panelA_jolts_sector_rates.csv`, `figures/figure4_panelB_ces_sector_index.csv` | `jolts_openings_rate` (2×2 JOLTS flow-rate grid), `ces_payroll_index`, `figure4_redesigned_composite` (stacked manuscript composite) |
 | Figure 5 | Capability matrix | `figures/figure5_capability_matrix.csv` | `capability_matrix_heatmap` |
@@ -31,6 +31,7 @@ Stable slugs map paper figures to pipeline outputs and visual stems (`docs/quali
 
 - Full visual validation covers all expected stems in `scripts/qa_visuals.py`: main-text figures (including **Figure 6** `policy_roadmap` and manuscript composites such as `figure2_redesigned_composite`, `figure3_redesigned_composite`, `figure4_redesigned_composite`), plus appendix stems through **`t020`**.
 - Caption and source-note coverage for **Figures 1–6** is enforced by `scripts/qa_visual_caption_coverage.py`.
+- **Renderer parity:** When a `scripts/visualize_figure*.py` changes on a commit, regenerate the affected stems with that script and commit the matching `visuals/png` and `visuals/vector` outputs so the tree matches the renderer (sign-off gate).
 - Bounded drift-validation may cover main stems (`t001` to `t010`) first; when used, scope must be explicitly documented in the run evidence.
 
 ## Monitoring metric visuals (AWES/ALPI)

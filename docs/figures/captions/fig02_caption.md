@@ -1,6 +1,6 @@
 # Figure 2 — Worker-side hours and broad movement by frozen AI-relevance group
 
-**What is plotted.** **Panel A** reports weighted mean usual weekly hours on the main job among employed civilian noninstitutional persons age 16 and older, by the paper’s frozen low-, middle-, and high-AI-relevance terciles. **Panel B** summarizes adjacent-month CPS movement for employed origin occupations using four coarse worker-side metrics: retention, occupation switching, entry to unemployment, and entry to not in the labor force (NILF).
+**What is plotted.** **Panel A** reports weighted mean usual weekly hours on the main job among employed civilian noninstitutional persons age 16 and older, by the paper’s frozen low-, middle-, and high-AI-relevance terciles. **Panel B** summarizes adjacent-month CPS movement for employed origin occupations using four coarse worker-side metrics: retention, occupation switching, entry to unemployment, and entry to not in the labor force (NILF). A **support chart** (stem `transition_coarse_matrix_latest`) shows the **latest month** coarse labor-market-state transition matrix as **row-normalized probabilities** (aggregated from the transition-probabilities layer), not raw weighted counts.
 
 **How to read it.** In Panel A, read the persistent ordering and the latest high-minus-low gap as descriptive evidence that the frozen grouping separates workers along a meaningful observed labor-market margin. In Panel B, read the four summary metrics as broad public-use movement constructs rather than as linked employer-worker histories.
 

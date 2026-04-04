@@ -51,3 +51,4 @@ Implementation rule:
 - Use endpoint labels instead of a heavy legend where possible.
 - Keep the figure readable and contextual, not visually dominant.
 - Run `python scripts/visualize_figure4.py` before visual QA; `scripts/qa_visuals.py` expects PNG+PDF for `jolts_openings_rate`, `ces_payroll_index`, and manuscript stem `figure4_redesigned_composite` (see `docs/figures/figure_catalog.md`).
+- Panel A subplots use a **below-chart sector legend** (shared palette) instead of right-edge annotations to avoid publication collisions across the four JOLTS rate panels.

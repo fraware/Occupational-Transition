@@ -14,6 +14,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 from viz_style import (
     PNG_DIR,
+    STYLE,
     VECTOR_DIR,
     apply_matplotlib_style,
     ensure_visual_dirs,
@@ -62,25 +63,23 @@ def build_jolts_rate_chart(
     title: str,
     outfile: Path,
 ) -> None:
-    fig, ax = plt.subplots(figsize=(6.8, 3.9))
-    for sector in SECTOR_ORDER:
+    fig, ax = plt.subplots(figsize=(7.2, 4.15))
+    lines: list = []
+    palette = STYLE.palette_sector
+    for i, sector in enumerate(SECTOR_ORDER):
         g = sub[
             (sub["sector6_label"] == sector) & (sub["rate_name"] == rate_name)
         ].sort_values("month_dt")
-        ax.plot(g["month_dt"], g["rate_value"], linewidth=1.9)
-        if not g.empty:
-            x = g["month_dt"].iloc[-1]
-            y = float(g["rate_value"].iloc[-1])
-            ax.annotate(
-                f"{sector}\n{y:.1f}",
-                xy=(x, y),
-                xytext=(6, 0),
-                textcoords="offset points",
-                fontsize=8.1,
-                ha="left",
-                va="center",
-            )
-    ax.set_title(title, fontsize=11.8, pad=8)
+        color = palette[i % len(palette)]
+        (ln,) = ax.plot(
+            g["month_dt"],
+            g["rate_value"],
+            linewidth=1.9,
+            color=color,
+            label=sector,
+        )
+        lines.append(ln)
+    ax.set_title(title, fontsize=11.8, pad=10)
     ax.set_xlabel("")
     ax.set_ylabel("Rate (%)", fontsize=9.8)
     ax.grid(True, axis="y", linewidth=0.45)
@@ -88,7 +87,18 @@ def build_jolts_rate_chart(
     ax.spines["right"].set_visible(False)
     ax.xaxis.set_major_locator(mdates.YearLocator())
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
-    fig.tight_layout()
+    ax.legend(
+        handles=lines,
+        labels=SECTOR_ORDER,
+        fontsize=6.4,
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.2),
+        ncol=3,
+        frameon=False,
+        columnspacing=0.9,
+        handlelength=1.8,
+    )
+    fig.subplots_adjust(bottom=0.34)
     fig.savefig(outfile, bbox_inches="tight")
     plt.close(fig)
 

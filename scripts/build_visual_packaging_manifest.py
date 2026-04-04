@@ -18,7 +18,7 @@ GROUPS: list[tuple[str, list[str]]] = [
             "occupation_share_barh",
             "task_heatmap",
             "hours_timeseries",
-            "transition_counts_heatmap_latest",
+            "transition_coarse_matrix_latest",
             "transition_summary_metrics",
             "figure2_redesigned_composite",
             "btos_ai_trends",

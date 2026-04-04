@@ -397,7 +397,7 @@ def main() -> None:
     hours_png, _ = save_dual(fig_hours, "hours_timeseries")
 
     fig_heat = build_support_heatmap(probs, occ_to_tercile)
-    save_dual(fig_heat, "transition_counts_heatmap_latest")
+    save_dual(fig_heat, "transition_coarse_matrix_latest")
 
     summary_png, _ = build_summary_metric_panels(probs, occ_to_tercile)
     c_png, c_pdf = build_composite(Path(hours_png), summary_png)
@@ -405,7 +405,7 @@ def main() -> None:
     print(
         "Wrote figure2 visuals:",
         "hours_timeseries",
-        "transition_counts_heatmap_latest",
+        "transition_coarse_matrix_latest",
         "transition_summary_metrics",
         c_png.name,
         c_pdf.name,

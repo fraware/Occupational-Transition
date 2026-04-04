@@ -50,5 +50,5 @@ Implementation rule:
 - Keep Panel A visually simple and directly labeled.
 - Replace an over-dense movement presentation with a compact transition-summary view.
 - Maintain a separate support heatmap output for the latest coarse-state transition structure.
-- Run `python scripts/visualize_figure2.py` before visual QA; `scripts/qa_visuals.py` expects PNG+PDF for `hours_timeseries`, `transition_counts_heatmap_latest`, `transition_summary_metrics`, and manuscript stem `figure2_redesigned_composite` (see `docs/figures/figure_catalog.md`).
+- Run `python scripts/visualize_figure2.py` before visual QA; `scripts/qa_visuals.py` expects PNG+PDF for `hours_timeseries`, `transition_coarse_matrix_latest`, `transition_summary_metrics`, and manuscript stem `figure2_redesigned_composite` (see `docs/figures/figure_catalog.md`).
 - For Panel B aggregation and the coarse heatmap, `scripts/visualize_figure2.py` maps `occ22_*` origins to terciles using `intermediate/ai_relevance_terciles.csv` when that file exists locally; if not, it uses the same frozen occ22-to-tercile assignment as Technical Note 1 (embedded fallback in the script).

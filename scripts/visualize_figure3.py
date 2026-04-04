@@ -27,38 +27,39 @@ COMPOSITE_STEM = "figure3_redesigned_composite"
 def _pil_dejavu_fonts() -> tuple[ImageFont.ImageFont, ImageFont.ImageFont]:
     try:
         path = Path(font_manager.findfont("DejaVu Sans"))
-        return ImageFont.truetype(str(path), 30), ImageFont.truetype(str(path), 18)
+        return ImageFont.truetype(str(path), 32), ImageFont.truetype(str(path), 19)
     except OSError:
         return ImageFont.load_default(), ImageFont.load_default()
 
 
 def build_panel_a(dfa: pd.DataFrame) -> plt.Figure:
-    fig, ax = plt.subplots(figsize=(10.8, 4.8))
+    fig, ax = plt.subplots(figsize=(11.2, 5.25))
 
     ax.plot(
         dfa["dt"],
         dfa["ai_use_current_rate"] * 100,
-        linewidth=2.3,
+        linewidth=2.35,
         label="Current AI use",
     )
     ax.plot(
         dfa["dt"],
         dfa["ai_use_expected_6m_rate"] * 100,
-        linewidth=2.3,
+        linewidth=2.35,
         linestyle="--",
         label="Expected AI use (6m)",
     )
 
     wording_change = pd.Timestamp("2025-11-17")
-    ax.axvline(wording_change, linewidth=1.2)
+    ax.axvline(wording_change, linewidth=1.15, color="#333333", zorder=0)
     ax.annotate(
         "Question wording change\nnew BTOS series",
         xy=(wording_change, 24.2),
-        xytext=(pd.Timestamp("2025-07-01"), 35.5),
-        arrowprops={"arrowstyle": "->", "lw": 1.0},
-        fontsize=10.2,
+        xytext=(pd.Timestamp("2025-07-01"), 36.0),
+        arrowprops={"arrowstyle": "->", "lw": 1.05, "color": "#333333"},
+        fontsize=10.5,
         ha="left",
         va="center",
+        color="#222222",
     )
 
     x_last = dfa["dt"].iloc[-1]
@@ -68,52 +69,69 @@ def build_panel_a(dfa: pd.DataFrame) -> plt.Figure:
     ax.annotate(
         f"Current AI use\n{y_current:.1f}%",
         xy=(x_last, y_current),
-        xytext=(8, -2),
+        xytext=(10, -3),
         textcoords="offset points",
-        fontsize=10.2,
+        fontsize=10.5,
         ha="left",
         va="center",
     )
     ax.annotate(
         f"Expected AI use (6m)\n{y_expected:.1f}%",
         xy=(x_last, y_expected),
-        xytext=(8, 2),
+        xytext=(10, 4),
         textcoords="offset points",
-        fontsize=10.2,
+        fontsize=10.5,
         ha="left",
         va="center",
     )
 
-    ax.set_title("Figure 3 Panel A: BTOS AI use trends", fontsize=13.5, pad=10)
-    ax.set_ylabel("Firm-weighted share (%)", fontsize=11)
+    ax.set_title(
+        "Figure 3 Panel A: BTOS AI use trends",
+        fontsize=14.0,
+        pad=18,
+        fontweight="normal",
+    )
+    ax.set_ylabel("Firm-weighted share (%)", fontsize=11.2, labelpad=8)
     ax.set_xlabel("")
     ax.set_ylim(0, 42)
-    ax.grid(True, axis="y", linewidth=0.5)
+    ax.margins(x=0.03)
+    ax.grid(True, axis="y", linewidth=0.48, alpha=0.9)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
+    ax.tick_params(axis="both", labelsize=10.0)
     ax.xaxis.set_major_locator(mdates.MonthLocator(interval=4))
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%b\n%Y"))
+
+    ax.legend(
+        frameon=False,
+        loc="upper left",
+        fontsize=10.2,
+        borderaxespad=0.8,
+        handlelength=2.2,
+    )
 
     fig.tight_layout()
     return fig
 
 
 def build_panel_b(direct: pd.DataFrame, proxy: pd.DataFrame) -> plt.Figure:
-    fig, ax = plt.subplots(figsize=(10.8, 5.8))
+    fig, ax = plt.subplots(figsize=(11.2, 6.45))
 
-    direct_y = [5.8, 4.8, 3.8]
-    proxy_y = [1.8, 0.8, -0.2]
+    bar_h = 0.66
+    direct_y = [6.05, 4.78, 3.52]
+    proxy_y = [2.08, 0.82, -0.44]
+    group_divider_y = (direct_y[-1] + proxy_y[0]) / 2
 
     ax.barh(
         direct_y,
         (direct["weighted_share"] * 100).tolist(),
-        height=0.72,
+        height=bar_h,
         label="Direct published",
     )
     bars_proxy = ax.barh(
         proxy_y,
         (proxy["weighted_share"] * 100).tolist(),
-        height=0.72,
+        height=bar_h,
         label="Proxy-interpreted",
     )
     for bar in bars_proxy:
@@ -123,64 +141,76 @@ def build_panel_b(direct: pd.DataFrame, proxy: pd.DataFrame) -> plt.Figure:
     ax.set_yticks(direct_y + proxy_y)
     ax.set_yticklabels(
         direct["category_label"].tolist() + proxy["category_label"].tolist(),
-        fontsize=10.4,
+        fontsize=10.6,
     )
 
-    ax.axhline(2.75, linewidth=1.1)
+    ax.axhline(group_divider_y, linewidth=1.05, color="#555555")
     ax.text(
         0,
-        6.45,
+        6.62,
         "Direct published BTOS rows",
-        fontsize=10.8,
+        fontsize=11.0,
         fontweight="bold",
         ha="left",
         va="center",
     )
     ax.text(
         0,
-        2.25,
+        1.35,
         "Proxy-interpreted indicators",
-        fontsize=10.8,
+        fontsize=11.0,
         fontweight="bold",
         ha="left",
         va="center",
     )
 
+    pct_pad = 1.15
     for y, v in zip(direct_y, (direct["weighted_share"] * 100).tolist(), strict=True):
-        ax.text(v + 1.0, y, f"{v:.1f}%", fontsize=10.2, va="center")
+        ax.text(v + pct_pad, y, f"{v:.1f}%", fontsize=10.4, va="center")
     for y, v in zip(proxy_y, (proxy["weighted_share"] * 100).tolist(), strict=True):
-        ax.text(v + 1.0, y, f"{v:.1f}%", fontsize=10.2, va="center")
+        ax.text(v + pct_pad, y, f"{v:.1f}%", fontsize=10.4, va="center")
 
     top_direct_pct = float(direct["weighted_share"].iloc[0] * 100)
     ax.annotate(
         "Modal direct public finding",
-        xy=(top_direct_pct, 5.8),
-        xytext=(62, 6.55),
-        arrowprops={"arrowstyle": "->", "lw": 1.0},
-        fontsize=10.2,
+        xy=(top_direct_pct, direct_y[0]),
+        xytext=(62, 6.72),
+        arrowprops={"arrowstyle": "->", "lw": 1.05, "color": "#333333"},
+        fontsize=10.5,
         ha="left",
         va="center",
+        color="#222222",
     )
 
     ax.set_xlim(0, 102)
     ax.set_xlabel(
         "Share among AI-using firms in pooled supplement window (%)",
-        fontsize=11,
+        fontsize=11.2,
+        labelpad=10,
     )
     ax.set_title(
         "Figure 3 Panel B: Workforce-effect evidence classes",
-        fontsize=13.5,
-        pad=10,
+        fontsize=14.0,
+        pad=18,
     )
-    ax.grid(True, axis="x", linewidth=0.5)
+    ax.grid(True, axis="x", linewidth=0.48, alpha=0.9)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
+    ax.tick_params(axis="x", labelsize=10.0)
+    ax.margins(y=0.12)
 
     legend_handles = [
         Patch(label="Direct published"),
         Patch(label="Proxy-interpreted", hatch="///"),
     ]
-    ax.legend(handles=legend_handles, frameon=False, loc="lower right", fontsize=10.4)
+    ax.legend(
+        handles=legend_handles,
+        frameon=False,
+        loc="lower right",
+        fontsize=10.5,
+        borderaxespad=0.9,
+        handlelength=1.6,
+    )
 
     fig.tight_layout()
     return fig
@@ -190,7 +220,7 @@ def build_composite(panel_a_png: Path, panel_b_png: Path) -> tuple[Path, Path]:
     im_a = Image.open(panel_a_png).convert("RGB")
     im_b = Image.open(panel_b_png).convert("RGB")
 
-    margin = 56
+    margin = 76
     width = max(im_a.width, im_b.width) + 2 * margin
 
     font_title, font_body = _pil_dejavu_fonts()
@@ -203,20 +233,25 @@ def build_composite(panel_a_png: Path, panel_b_png: Path) -> tuple[Path, Path]:
         "November 2025 wording change explicitly. Panel B separates direct published "
         "employment-effect rows from proxy-interpreted task indicators."
     )
-    sub_lines = textwrap.wrap(subtitle, width=72)
+    sub_lines = textwrap.wrap(subtitle, width=70)
 
-    y_cursor = 28
-    header_height = y_cursor + 44 + len(sub_lines) * 22 + 24
+    y_cursor = 32
+    title_line_gap = 50
+    sub_line_leading = 24
+    header_after_sub = 28
+    header_height = (
+        y_cursor + title_line_gap + len(sub_lines) * sub_line_leading + header_after_sub
+    )
 
     height = header_height + im_a.height + margin + im_b.height + margin
     canvas = Image.new("RGB", (width, height), "white")
     draw = ImageDraw.Draw(canvas)
 
-    draw.text((margin, y_cursor), title, font=font_title, fill="black")
-    y_cursor += 44
+    draw.text((margin, y_cursor), title, font=font_title, fill="#111111")
+    y_cursor += title_line_gap
     for line in sub_lines:
-        draw.text((margin, y_cursor), line, font=font_body, fill="black")
-        y_cursor += 22
+        draw.text((margin, y_cursor), line, font=font_body, fill="#222222")
+        y_cursor += sub_line_leading
 
     canvas.paste(im_a, (margin, header_height))
     canvas.paste(im_b, (margin, header_height + im_a.height + margin))
@@ -263,7 +298,7 @@ def main() -> None:
         ordered=True,
     )
 
-    # Top bar (y=5.8) must be the modal direct row ("Employment did not change").
+    # Top bar must be the modal direct row ("Employment did not change").
     direct = direct.sort_values("category_label", ascending=True)
     proxy = proxy.sort_values("category_label", ascending=True)
 
