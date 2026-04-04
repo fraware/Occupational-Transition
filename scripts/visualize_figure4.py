@@ -154,21 +154,45 @@ def build_jolts_composite(jolts: pd.DataFrame) -> tuple[Path, Path]:
 
 def build_ces_panel(ces: pd.DataFrame) -> tuple[Path, Path]:
     fig, ax = plt.subplots(figsize=(11.2, 4.8))
+
+    endpoints: list[tuple[str, pd.Timestamp, float]] = []
     for sector in SECTOR_ORDER:
         g = ces[ces["sector6_label"] == sector].sort_values("month_dt")
-        ax.plot(g["month_dt"], g["index_aug2023_100"], linewidth=2.0)
-        if not g.empty:
-            x = g["month_dt"].iloc[-1]
-            y = float(g["index_aug2023_100"].iloc[-1])
-            ax.annotate(
-                f"{sector}\n{y:.1f}",
-                xy=(x, y),
-                xytext=(6, 0),
-                textcoords="offset points",
-                fontsize=8.6,
-                ha="left",
-                va="center",
+        if g.empty:
+            continue
+        endpoints.append(
+            (
+                sector,
+                g["month_dt"].iloc[-1],
+                float(g["index_aug2023_100"].iloc[-1]),
             )
+        )
+    # Right-edge labels cluster near 98–100; stagger vertically in points.
+    endpoints.sort(key=lambda t: t[2], reverse=True)
+    n_ep = len(endpoints)
+    span_pt = 12.5
+    stagger_pts = (
+        [(i - (n_ep - 1) / 2) * span_pt for i in range(n_ep)] if n_ep else []
+    )
+    dy_by_sector = dict(zip([t[0] for t in endpoints], stagger_pts, strict=True))
+
+    for sector in SECTOR_ORDER:
+        g = ces[ces["sector6_label"] == sector].sort_values("month_dt")
+        if g.empty:
+            continue
+        ax.plot(g["month_dt"], g["index_aug2023_100"], linewidth=2.0)
+        x = g["month_dt"].iloc[-1]
+        y = float(g["index_aug2023_100"].iloc[-1])
+        dy = dy_by_sector[sector]
+        ax.annotate(
+            f"{sector}\n{y:.1f}",
+            xy=(x, y),
+            xytext=(8, dy),
+            textcoords="offset points",
+            fontsize=8.6,
+            ha="left",
+            va="center",
+        )
 
     ax.axhline(100.0, linestyle="--", linewidth=1.0)
     ax.set_title(
