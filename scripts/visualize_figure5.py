@@ -77,7 +77,16 @@ def main() -> None:
     ax.add_patch(frontier_outline)
 
     ax.set_xlim(0, n_cols)
-    ax.set_ylim(0, n_rows + 1.05)
+    ax.set_ylim(0, n_rows + 1.14)
+    ax.text(
+        n_cols / 2,
+        n_rows + 1.02,
+        "Capability coverage (public sources)",
+        ha="center",
+        va="bottom",
+        fontsize=11.3,
+        fontweight="bold",
+    )
     ax.set_xticks([i + 0.5 for i in range(n_cols)])
     ax.set_xticklabels([col_labels[c] for c in cols], fontsize=10)
     ax.tick_params(
@@ -89,7 +98,7 @@ def main() -> None:
     for spine in ax.spines.values():
         spine.set_visible(False)
 
-    header_y = n_rows + 0.55
+    header_y = n_rows + 0.62
     for title, start, end in group_spans:
         mid = (start + end + 1) / 2
         ax.text(
@@ -131,15 +140,15 @@ def main() -> None:
     ]
     fig.legend(
         handles=legend_handles,
-        loc="lower left",
-        bbox_to_anchor=(0.10, 0.045),
+        loc="lower center",
+        bbox_to_anchor=(0.48, 0.05),
         ncol=3,
         frameon=False,
-        fontsize=10.2,
+        fontsize=10.0,
         title="Public support status",
-        columnspacing=1.35,
-        handletextpad=0.55,
-        borderaxespad=0.6,
+        columnspacing=1.5,
+        handletextpad=0.6,
+        borderaxespad=0.5,
     )
 
     fig.text(

@@ -38,13 +38,24 @@ RATE_META = [
     ("layoffs_discharges_rate", "Layoffs & discharges"),
 ]
 
+# Shorter legend text so six series do not overlap when placed below the subplot.
+SECTOR_LEGEND_LABELS = [
+    "Manufacturing",
+    "Information",
+    "Financial activities",
+    "Prof. & business services",
+    "Health care & social assistance",
+    "Retail trade",
+]
+
 
 def build_jolts_rate_chart(
     sub: pd.DataFrame,
     rate_name: str,
+    panel_title: str,
     outfile: Path,
 ) -> None:
-    fig, ax = plt.subplots(figsize=(7.2, 4.15))
+    fig, ax = plt.subplots(figsize=(7.35, 4.55))
     lines: list = []
     palette = STYLE.palette_sector
     for i, sector in enumerate(SECTOR_ORDER):
@@ -57,9 +68,10 @@ def build_jolts_rate_chart(
             g["rate_value"],
             linewidth=1.9,
             color=color,
-            label=sector,
+            label=SECTOR_LEGEND_LABELS[i],
         )
         lines.append(ln)
+    ax.set_title(panel_title, fontsize=10.8, pad=10)
     ax.set_xlabel("")
     ax.set_ylabel("Rate (%)", fontsize=9.8)
     ax.grid(True, axis="y", linewidth=0.45)
@@ -69,17 +81,19 @@ def build_jolts_rate_chart(
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
     ax.legend(
         handles=lines,
-        labels=SECTOR_ORDER,
-        fontsize=6.5,
+        labels=SECTOR_LEGEND_LABELS,
+        fontsize=6.9,
         loc="upper center",
-        bbox_to_anchor=(0.5, -0.16),
+        bbox_to_anchor=(0.5, -0.22),
         ncol=3,
         frameon=False,
-        columnspacing=1.0,
-        handlelength=1.8,
-        borderaxespad=0.35,
+        columnspacing=0.95,
+        labelspacing=0.35,
+        handlelength=1.65,
+        handletextpad=0.35,
+        borderaxespad=0.25,
     )
-    fig.subplots_adjust(bottom=0.36)
+    fig.subplots_adjust(bottom=0.42, top=0.90)
     fig.savefig(outfile, bbox_inches="tight")
     plt.close(fig)
 
@@ -93,9 +107,9 @@ def build_jolts_composite(jolts: pd.DataFrame) -> tuple[Path, Path]:
     with tempfile.TemporaryDirectory() as td:
         td_path = Path(td)
         temp_paths: list[Path] = []
-        for rate_name, _title in RATE_META:
+        for rate_name, panel_title in RATE_META:
             out = td_path / f"{rate_name}.png"
-            build_jolts_rate_chart(jolts, rate_name, out)
+            build_jolts_rate_chart(jolts, rate_name, panel_title, out)
             temp_paths.append(out)
 
         imgs = []
@@ -177,8 +191,8 @@ def build_ces_panel(ces: pd.DataFrame) -> tuple[Path, Path]:
     ax.spines["right"].set_visible(False)
     ax.xaxis.set_major_locator(mdates.YearLocator())
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
-    fig.tight_layout()
-    return save_dual(fig, "ces_payroll_index")
+    fig.subplots_adjust(top=0.90, bottom=0.12, left=0.09, right=0.98)
+    return save_dual(fig, "ces_payroll_index", tight_layout=False)
 
 
 def build_composite(panel_a_png: Path, panel_b_png: Path) -> tuple[Path, Path]:

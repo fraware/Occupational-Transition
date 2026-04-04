@@ -51,6 +51,11 @@ def build_panel_a(dfa: pd.DataFrame) -> plt.Figure:
     ax.barh(y, dfa["employment_share"] * 100, height=0.72)
     ax.set_yticks(y)
     ax.set_yticklabels(dfa["short_label"], fontsize=9.6)
+    ax.set_title(
+        "Occupational structure and median wages",
+        fontsize=12.5,
+        pad=12,
+    )
     ax.set_xlabel("Employment share (%)", fontsize=11)
     ax.grid(True, axis="x", linewidth=0.5)
     ax.spines["top"].set_visible(False)
@@ -116,6 +121,11 @@ def build_panel_b(dfb: pd.DataFrame) -> plt.Figure:
     ax.set_yticklabels(dfb["short_label"], fontsize=9.4)
     ax.set_xticks(np.arange(len(heat_cols)))
     ax.set_xticklabels([label_map[c] for c in heat_cols], fontsize=9.8)
+    ax.set_title(
+        "Task content and frozen AI-relevance grouping",
+        fontsize=12.5,
+        pad=12,
+    )
     band_specs = [("Low", 0, 7), ("Middle", 7, 14), ("High", 14, 22)]
     for label, start, end in band_specs:
         rect = Rectangle(

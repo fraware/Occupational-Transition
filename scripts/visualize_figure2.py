@@ -94,18 +94,38 @@ def build_hours_panel(hours: pd.DataFrame) -> plt.Figure:
     gap_latest = latest_hours["high"] - latest_hours["low"]
 
     fig, ax = plt.subplots(figsize=(11.6, 5.2))
+    ax.set_title(
+        "Mean usual weekly hours by AI-relevance tercile",
+        fontsize=12.5,
+        pad=12,
+    )
     for tercile in ORDER:
         d = hours[hours["ai_relevance_tercile"] == tercile].sort_values("month")
         ax.plot(d["month"], d["mean_usual_weekly_hours"], linewidth=2.2)
+
+    endpoints: list[tuple[str, pd.Timestamp, float]] = []
+    for tercile in ORDER:
+        d = hours[hours["ai_relevance_tercile"] == tercile].sort_values("month")
+        endpoints.append(
+            (tercile, d["month"].iloc[-1], float(d["mean_usual_weekly_hours"].iloc[-1]))
+        )
+    endpoints.sort(key=lambda t: t[2], reverse=True)
+    n_ep = len(endpoints)
+    span_pt = 13.0
+    stagger = (
+        [(i - (n_ep - 1) / 2) * span_pt for i in range(n_ep)] if n_ep else []
+    )
+    dy_by_tercile = dict(zip([t[0] for t in endpoints], stagger, strict=True))
 
     for tercile in ORDER:
         d = hours[hours["ai_relevance_tercile"] == tercile].sort_values("month")
         x = d["month"].iloc[-1]
         y = d["mean_usual_weekly_hours"].iloc[-1]
+        dy = dy_by_tercile[tercile]
         ax.annotate(
             f"{LABEL_MAP[tercile]}\n{y:.2f} h",
             xy=(x, y),
-            xytext=(8, 0),
+            xytext=(10, dy),
             textcoords="offset points",
             fontsize=10.0,
             ha="left",
@@ -179,6 +199,11 @@ def build_support_heatmap(
     )
 
     fig, ax = plt.subplots(figsize=(6.6, 5.8))
+    ax.set_title(
+        "Coarse-state transition matrix (latest month)",
+        fontsize=11.8,
+        pad=12,
+    )
     vmax = max(float(heat.values.max()), 0.01)
     im = ax.imshow(heat.values, aspect="auto", vmin=0, vmax=max(vmax, 0.95))
     ax.set_xticks(range(len(state_order)))
@@ -255,6 +280,13 @@ def build_summary_metric_panels(
     if agg.empty:
         raise RuntimeError("no summary metrics after aggregation")
 
+    metric_titles = {
+        "retention_rate": "Retention rate",
+        "occ_switch_rate": "Occupation switching",
+        "unemployment_entry_rate": "Entry to unemployment",
+        "nilf_entry_rate": "Entry to NILF",
+    }
+
     ensure_visual_dirs()
     out_png = PNG_DIR / "transition_summary_metrics.png"
     out_pdf = VECTOR_DIR / "transition_summary_metrics.pdf"
@@ -263,12 +295,32 @@ def build_summary_metric_panels(
         panel_paths: list[Path] = []
         for metric in metric_order:
             d = agg[agg["metric_name"] == metric].sort_values("month")
-            fig, ax = plt.subplots(figsize=(5.8, 3.4))
+            fig, ax = plt.subplots(figsize=(5.8, 3.45))
+            ax.set_title(metric_titles[metric], fontsize=10.8, pad=8)
             for tercile in ORDER:
                 dd = d[d["tercile"] == tercile]
                 if dd.empty:
                     continue
                 ax.plot(dd["month"], dd["metric_value"] * 100, linewidth=2.0)
+            endpoints_m: list[tuple[str, pd.Timestamp, float]] = []
+            for tercile in ORDER:
+                dd = d[d["tercile"] == tercile]
+                if dd.empty:
+                    continue
+                endpoints_m.append(
+                    (
+                        tercile,
+                        dd["month"].iloc[-1],
+                        float(dd["metric_value"].iloc[-1] * 100),
+                    )
+                )
+            endpoints_m.sort(key=lambda t: t[2], reverse=True)
+            n_m = len(endpoints_m)
+            span_m = 11.0
+            stagger_m = (
+                [(i - (n_m - 1) / 2) * span_m for i in range(n_m)] if n_m else []
+            )
+            dy_m = dict(zip([t[0] for t in endpoints_m], stagger_m, strict=True))
             for tercile in ORDER:
                 dd = d[d["tercile"] == tercile]
                 if dd.empty:
@@ -278,7 +330,7 @@ def build_summary_metric_panels(
                 ax.annotate(
                     f"{PRETTY[tercile]}\n{y:.1f}%",
                     xy=(x, y),
-                    xytext=(6, 0),
+                    xytext=(8, dy_m[tercile]),
                     textcoords="offset points",
                     fontsize=8.7,
                     ha="left",

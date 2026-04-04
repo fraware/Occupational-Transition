@@ -75,6 +75,7 @@ def build_panel_a(dfa: pd.DataFrame) -> plt.Figure:
         va="center",
     )
 
+    ax.set_title("BTOS AI use trends", fontsize=12.8, pad=12)
     ax.set_ylabel("Firm-weighted share (%)", fontsize=11.2, labelpad=8)
     ax.set_xlabel("")
     ax.set_ylim(0, 42)
@@ -88,15 +89,17 @@ def build_panel_a(dfa: pd.DataFrame) -> plt.Figure:
 
     ax.legend(
         frameon=False,
-        loc="upper left",
-        bbox_to_anchor=(0.02, 0.98),
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.16),
         bbox_transform=ax.transAxes,
-        fontsize=10.2,
+        ncol=2,
+        fontsize=10.0,
+        columnspacing=1.15,
+        handlelength=2.0,
+        handletextpad=0.45,
         borderaxespad=0,
-        handlelength=2.2,
     )
-
-    fig.tight_layout()
+    fig.subplots_adjust(bottom=0.22, left=0.08, right=0.98, top=0.92)
     return fig
 
 
@@ -168,6 +171,7 @@ def build_panel_b(direct: pd.DataFrame, proxy: pd.DataFrame) -> plt.Figure:
         color="#222222",
     )
 
+    ax.set_title("Workforce-effect evidence classes", fontsize=12.8, pad=12)
     ax.set_xlim(0, 102)
     ax.set_xlabel(
         "Share among AI-using firms in pooled supplement window (%)",
@@ -187,15 +191,17 @@ def build_panel_b(direct: pd.DataFrame, proxy: pd.DataFrame) -> plt.Figure:
     ax.legend(
         handles=legend_handles,
         frameon=False,
-        loc="lower right",
-        bbox_to_anchor=(0.98, 0.02),
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.12),
         bbox_transform=ax.transAxes,
-        fontsize=10.5,
+        ncol=2,
+        fontsize=10.0,
+        columnspacing=1.0,
+        handlelength=1.5,
+        handletextpad=0.4,
         borderaxespad=0,
-        handlelength=1.6,
     )
-
-    fig.tight_layout()
+    fig.subplots_adjust(bottom=0.20, left=0.12, right=0.98, top=0.90)
     return fig
 
 
@@ -259,10 +265,10 @@ def main() -> None:
     proxy = proxy.sort_values("category_label", ascending=True)
 
     fig_a = build_panel_a(dfa)
-    p1, _ = save_dual(fig_a, "btos_ai_trends")
+    p1, _ = save_dual(fig_a, "btos_ai_trends", tight_layout=False)
 
     fig_b = build_panel_b(direct, proxy)
-    p2, _ = save_dual(fig_b, "btos_workforce_effects_barh")
+    p2, _ = save_dual(fig_b, "btos_workforce_effects_barh", tight_layout=False)
 
     c_png, c_pdf = build_composite(Path(p1), Path(p2))
     print(
