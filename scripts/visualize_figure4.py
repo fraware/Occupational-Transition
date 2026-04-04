@@ -170,7 +170,7 @@ def build_ces_panel(ces: pd.DataFrame) -> tuple[Path, Path]:
     # Right-edge labels cluster near 98–100; stagger vertically in points.
     endpoints.sort(key=lambda t: t[2], reverse=True)
     n_ep = len(endpoints)
-    span_pt = 12.5
+    span_pt = 15.0
     stagger_pts = (
         [(i - (n_ep - 1) / 2) * span_pt for i in range(n_ep)] if n_ep else []
     )
@@ -187,7 +187,7 @@ def build_ces_panel(ces: pd.DataFrame) -> tuple[Path, Path]:
         ax.annotate(
             f"{sector}\n{y:.1f}",
             xy=(x, y),
-            xytext=(8, dy),
+            xytext=(12, dy),
             textcoords="offset points",
             fontsize=8.6,
             ha="left",
@@ -195,6 +195,8 @@ def build_ces_panel(ces: pd.DataFrame) -> tuple[Path, Path]:
         )
 
     ax.axhline(100.0, linestyle="--", linewidth=1.0)
+    xmin, xmax = ax.get_xlim()
+    ax.set_xlim(xmin, xmax + (xmax - xmin) * 0.045)
     ax.set_title(
         "Panel B. CES payroll employment index (Aug 2023 = 100)",
         fontsize=13.2,

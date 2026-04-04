@@ -78,6 +78,9 @@ def build_panel_a(dfa: pd.DataFrame) -> plt.Figure:
             va="center",
         )
 
+    wx0, wx1 = ax2.get_xlim()
+    ax2.set_xlim(wx0, wx1 + (wx1 - wx0) * 0.075)
+
     fig.tight_layout()
     return fig
 

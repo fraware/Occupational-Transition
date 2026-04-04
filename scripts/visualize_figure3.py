@@ -24,10 +24,11 @@ from viz_utils import read_figure_csv
 COMPOSITE_STEM = "figure3_redesigned_composite"
 
 
-def _pil_dejavu_fonts() -> tuple[ImageFont.ImageFont, ImageFont.ImageFont]:
+def _pil_composite_fonts() -> tuple[ImageFont.ImageFont, ImageFont.ImageFont]:
+    """Title and explanatory subtitle for the manuscript composite header."""
     try:
         path = Path(font_manager.findfont("DejaVu Sans"))
-        return ImageFont.truetype(str(path), 32), ImageFont.truetype(str(path), 19)
+        return ImageFont.truetype(str(path), 32), ImageFont.truetype(str(path), 21)
     except OSError:
         return ImageFont.load_default(), ImageFont.load_default()
 
@@ -223,7 +224,7 @@ def build_composite(panel_a_png: Path, panel_b_png: Path) -> tuple[Path, Path]:
     margin = 76
     width = max(im_a.width, im_b.width) + 2 * margin
 
-    font_title, font_body = _pil_dejavu_fonts()
+    font_title, font_body = _pil_composite_fonts()
     title = (
         "Figure 3. Business-reported AI adoption is visible, but evidentiary strength "
         "differs across BTOS measures"
@@ -237,7 +238,7 @@ def build_composite(panel_a_png: Path, panel_b_png: Path) -> tuple[Path, Path]:
 
     y_cursor = 32
     title_line_gap = 50
-    sub_line_leading = 24
+    sub_line_leading = 26
     header_after_sub = 28
     header_height = (
         y_cursor + title_line_gap + len(sub_lines) * sub_line_leading + header_after_sub
