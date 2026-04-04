@@ -13,6 +13,7 @@ from PIL import Image
 
 from viz_style import (
     PNG_DIR,
+    STYLE,
     VECTOR_DIR,
     apply_matplotlib_style,
     ensure_visual_dirs,
@@ -61,6 +62,12 @@ PRETTY = {
     "high": "High",
     "unemployed": "Unemployed",
     "nilf": "NILF",
+}
+
+TERCILE_LINE_COLORS = {
+    "low": STYLE.low_color,
+    "middle": STYLE.middle_color,
+    "high": STYLE.high_color,
 }
 
 
@@ -295,46 +302,18 @@ def build_summary_metric_panels(
         panel_paths: list[Path] = []
         for metric in metric_order:
             d = agg[agg["metric_name"] == metric].sort_values("month")
-            fig, ax = plt.subplots(figsize=(5.8, 3.45))
+            fig, ax = plt.subplots(figsize=(5.95, 3.85))
             ax.set_title(metric_titles[metric], fontsize=10.8, pad=8)
             for tercile in ORDER:
                 dd = d[d["tercile"] == tercile]
                 if dd.empty:
                     continue
-                ax.plot(dd["month"], dd["metric_value"] * 100, linewidth=2.0)
-            endpoints_m: list[tuple[str, pd.Timestamp, float]] = []
-            for tercile in ORDER:
-                dd = d[d["tercile"] == tercile]
-                if dd.empty:
-                    continue
-                endpoints_m.append(
-                    (
-                        tercile,
-                        dd["month"].iloc[-1],
-                        float(dd["metric_value"].iloc[-1] * 100),
-                    )
-                )
-            endpoints_m.sort(key=lambda t: t[2], reverse=True)
-            n_m = len(endpoints_m)
-            span_m = 11.0
-            stagger_m = (
-                [(i - (n_m - 1) / 2) * span_m for i in range(n_m)] if n_m else []
-            )
-            dy_m = dict(zip([t[0] for t in endpoints_m], stagger_m, strict=True))
-            for tercile in ORDER:
-                dd = d[d["tercile"] == tercile]
-                if dd.empty:
-                    continue
-                x = dd["month"].iloc[-1]
-                y = dd["metric_value"].iloc[-1] * 100
-                ax.annotate(
-                    f"{PRETTY[tercile]}\n{y:.1f}%",
-                    xy=(x, y),
-                    xytext=(8, dy_m[tercile]),
-                    textcoords="offset points",
-                    fontsize=8.7,
-                    ha="left",
-                    va="center",
+                ax.plot(
+                    dd["month"],
+                    dd["metric_value"] * 100,
+                    linewidth=2.0,
+                    color=TERCILE_LINE_COLORS[tercile],
+                    label=PRETTY[tercile],
                 )
 
             ax.grid(True, axis="y", linewidth=0.45)
@@ -347,7 +326,19 @@ def build_summary_metric_panels(
                 ax.set_ylabel("Probability (%)", fontsize=9.8)
             else:
                 ax.set_ylabel("")
-            fig.tight_layout()
+            ax.legend(
+                frameon=False,
+                loc="upper center",
+                bbox_to_anchor=(0.5, -0.2),
+                bbox_transform=ax.transAxes,
+                ncol=3,
+                fontsize=8.8,
+                columnspacing=1.05,
+                handlelength=1.9,
+                handletextpad=0.35,
+                borderaxespad=0,
+            )
+            fig.subplots_adjust(bottom=0.26, left=0.12, right=0.98, top=0.90)
             path_png = td_path / f"{metric}.png"
             fig.savefig(path_png, bbox_inches="tight")
             plt.close(fig)

@@ -140,50 +140,27 @@ def build_jolts_composite(jolts: pd.DataFrame) -> tuple[Path, Path]:
 
 
 def build_ces_panel(ces: pd.DataFrame) -> tuple[Path, Path]:
-    fig, ax = plt.subplots(figsize=(11.2, 4.8))
+    fig, ax = plt.subplots(figsize=(11.2, 5.15))
+    palette = STYLE.palette_sector
 
-    endpoints: list[tuple[str, pd.Timestamp, float]] = []
-    for sector in SECTOR_ORDER:
+    line_handles: list = []
+    line_labels: list[str] = []
+    for i, sector in enumerate(SECTOR_ORDER):
         g = ces[ces["sector6_label"] == sector].sort_values("month_dt")
         if g.empty:
             continue
-        endpoints.append(
-            (
-                sector,
-                g["month_dt"].iloc[-1],
-                float(g["index_aug2023_100"].iloc[-1]),
-            )
+        color = palette[i % len(palette)]
+        (ln,) = ax.plot(
+            g["month_dt"],
+            g["index_aug2023_100"],
+            linewidth=2.0,
+            color=color,
         )
-    # Right-edge labels cluster near 98–100; stagger vertically in points.
-    endpoints.sort(key=lambda t: t[2], reverse=True)
-    n_ep = len(endpoints)
-    span_pt = 15.0
-    stagger_pts = (
-        [(i - (n_ep - 1) / 2) * span_pt for i in range(n_ep)] if n_ep else []
-    )
-    dy_by_sector = dict(zip([t[0] for t in endpoints], stagger_pts, strict=True))
+        line_handles.append(ln)
+        line_labels.append(SECTOR_LEGEND_LABELS[i])
 
-    for sector in SECTOR_ORDER:
-        g = ces[ces["sector6_label"] == sector].sort_values("month_dt")
-        if g.empty:
-            continue
-        ax.plot(g["month_dt"], g["index_aug2023_100"], linewidth=2.0)
-        x = g["month_dt"].iloc[-1]
-        y = float(g["index_aug2023_100"].iloc[-1])
-        dy = dy_by_sector[sector]
-        ax.annotate(
-            f"{sector}\n{y:.1f}",
-            xy=(x, y),
-            xytext=(12, dy),
-            textcoords="offset points",
-            fontsize=8.6,
-            ha="left",
-            va="center",
-        )
-
-    ax.axhline(100.0, linestyle="--", linewidth=1.0)
-    xmin, xmax = ax.get_xlim()
-    ax.set_xlim(xmin, xmax + (xmax - xmin) * 0.045)
+    ax.axhline(100.0, linestyle="--", linewidth=1.0, color="#666666")
+    ax.set_title("CES payroll employment index", fontsize=12.4, pad=12)
     ax.set_ylabel("Index (Aug 2023 = 100)", fontsize=10.5)
     ax.set_xlabel("")
     ax.grid(True, axis="y", linewidth=0.45)
@@ -191,7 +168,23 @@ def build_ces_panel(ces: pd.DataFrame) -> tuple[Path, Path]:
     ax.spines["right"].set_visible(False)
     ax.xaxis.set_major_locator(mdates.YearLocator())
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
-    fig.subplots_adjust(top=0.90, bottom=0.12, left=0.09, right=0.98)
+    ax.margins(x=0.02)
+    ax.legend(
+        handles=line_handles,
+        labels=line_labels,
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.18),
+        bbox_transform=ax.transAxes,
+        ncol=3,
+        frameon=False,
+        fontsize=8.5,
+        columnspacing=1.05,
+        labelspacing=0.35,
+        handlelength=1.85,
+        handletextpad=0.35,
+        borderaxespad=0,
+    )
+    fig.subplots_adjust(bottom=0.24, top=0.90, left=0.09, right=0.98)
     return save_dual(fig, "ces_payroll_index", tight_layout=False)
 
 
