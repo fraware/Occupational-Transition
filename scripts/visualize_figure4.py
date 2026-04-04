@@ -3,14 +3,12 @@
 from __future__ import annotations
 
 import tempfile
-import textwrap
 from pathlib import Path
 
 import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 import pandas as pd
-from matplotlib import font_manager
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
 
 from viz_style import (
     PNG_DIR,
@@ -41,26 +39,9 @@ RATE_META = [
 ]
 
 
-def _pil_dejavu_fonts() -> tuple[ImageFont.ImageFont, ImageFont.ImageFont]:
-    try:
-        path = Path(font_manager.findfont("DejaVu Sans"))
-        return ImageFont.truetype(str(path), 30), ImageFont.truetype(str(path), 18)
-    except OSError:
-        return ImageFont.load_default(), ImageFont.load_default()
-
-
-def _pil_panel_a_header_font() -> ImageFont.ImageFont:
-    try:
-        path = Path(font_manager.findfont("DejaVu Sans"))
-        return ImageFont.truetype(str(path), 20)
-    except OSError:
-        return ImageFont.load_default()
-
-
 def build_jolts_rate_chart(
     sub: pd.DataFrame,
     rate_name: str,
-    title: str,
     outfile: Path,
 ) -> None:
     fig, ax = plt.subplots(figsize=(7.2, 4.15))
@@ -79,7 +60,6 @@ def build_jolts_rate_chart(
             label=sector,
         )
         lines.append(ln)
-    ax.set_title(title, fontsize=11.8, pad=10)
     ax.set_xlabel("")
     ax.set_ylabel("Rate (%)", fontsize=9.8)
     ax.grid(True, axis="y", linewidth=0.45)
@@ -90,15 +70,16 @@ def build_jolts_rate_chart(
     ax.legend(
         handles=lines,
         labels=SECTOR_ORDER,
-        fontsize=6.4,
+        fontsize=6.5,
         loc="upper center",
-        bbox_to_anchor=(0.5, -0.2),
+        bbox_to_anchor=(0.5, -0.16),
         ncol=3,
         frameon=False,
-        columnspacing=0.9,
+        columnspacing=1.0,
         handlelength=1.8,
+        borderaxespad=0.35,
     )
-    fig.subplots_adjust(bottom=0.34)
+    fig.subplots_adjust(bottom=0.36)
     fig.savefig(outfile, bbox_inches="tight")
     plt.close(fig)
 
@@ -107,15 +88,14 @@ def build_jolts_composite(jolts: pd.DataFrame) -> tuple[Path, Path]:
     ensure_visual_dirs()
     out_png = PNG_DIR / "jolts_openings_rate.png"
     out_pdf = VECTOR_DIR / "jolts_openings_rate.pdf"
-    header_h = 52
     m = 12
 
     with tempfile.TemporaryDirectory() as td:
         td_path = Path(td)
         temp_paths: list[Path] = []
-        for rate_name, title in RATE_META:
+        for rate_name, _title in RATE_META:
             out = td_path / f"{rate_name}.png"
-            build_jolts_rate_chart(jolts, rate_name, title, out)
+            build_jolts_rate_chart(jolts, rate_name, out)
             temp_paths.append(out)
 
         imgs = []
@@ -127,21 +107,14 @@ def build_jolts_composite(jolts: pd.DataFrame) -> tuple[Path, Path]:
         h = max(im.height for im in imgs)
         gap = 24
         canvas_w = 2 * w + gap + 2 * m
-        canvas_h = header_h + 2 * h + gap + m
+        canvas_h = m + 2 * h + gap + m
         canvas = Image.new("RGB", (canvas_w, canvas_h), "white")
-        draw = ImageDraw.Draw(canvas)
-        draw.text(
-            (m, 8),
-            "Panel A. JOLTS sector rates",
-            font=_pil_panel_a_header_font(),
-            fill="black",
-        )
 
         positions = [
-            (m, header_h),
-            (m + w + gap, header_h),
-            (m, header_h + h + gap),
-            (m + w + gap, header_h + h + gap),
+            (m, m),
+            (m + w + gap, m),
+            (m, m + h + gap),
+            (m + w + gap, m + h + gap),
         ]
         for im, pos in zip(imgs, positions, strict=True):
             canvas.paste(im, pos)
@@ -197,12 +170,7 @@ def build_ces_panel(ces: pd.DataFrame) -> tuple[Path, Path]:
     ax.axhline(100.0, linestyle="--", linewidth=1.0)
     xmin, xmax = ax.get_xlim()
     ax.set_xlim(xmin, xmax + (xmax - xmin) * 0.045)
-    ax.set_title(
-        "Panel B. CES payroll employment index (Aug 2023 = 100)",
-        fontsize=13.2,
-        pad=10,
-    )
-    ax.set_ylabel("Index", fontsize=10.5)
+    ax.set_ylabel("Index (Aug 2023 = 100)", fontsize=10.5)
     ax.set_xlabel("")
     ax.grid(True, axis="y", linewidth=0.45)
     ax.spines["top"].set_visible(False)
@@ -217,36 +185,14 @@ def build_composite(panel_a_png: Path, panel_b_png: Path) -> tuple[Path, Path]:
     im_a = Image.open(panel_a_png).convert("RGB")
     im_b = Image.open(panel_b_png).convert("RGB")
 
-    margin = 56
-    font_title, font_body = _pil_dejavu_fonts()
-    title = (
-        "Figure 4. Sector labor-demand and payroll context, kept clearly "
-        "subordinate to the paper's core claims"
-    )
-    subtitle = (
-        "Panel A restores the full JOLTS flow-rate layer across the six-sector "
-        "comparison set: openings, hires, quits, and layoffs/discharges. "
-        "Panel B tracks CES payroll employment for the same sectors indexed to "
-        "August 2023 = 100."
-    )
-    sub_lines = textwrap.wrap(subtitle, width=72)
-
-    y_cursor = 28
-    header_height = y_cursor + 44 + len(sub_lines) * 22 + 24
-
+    margin = 48
+    top_pad = 20
     canvas_w = max(im_a.width, im_b.width) + 2 * margin
-    canvas_h = header_height + im_a.height + margin + im_b.height + margin + 40
+    canvas_h = top_pad + im_a.height + margin + im_b.height + margin
     canvas = Image.new("RGB", (canvas_w, canvas_h), "white")
-    draw = ImageDraw.Draw(canvas)
 
-    draw.text((margin, y_cursor), title, font=font_title, fill="black")
-    y_cursor += 44
-    for line in sub_lines:
-        draw.text((margin, y_cursor), line, font=font_body, fill="black")
-        y_cursor += 22
-
-    canvas.paste(im_a, (margin, header_height))
-    canvas.paste(im_b, (margin, header_height + im_a.height + margin))
+    canvas.paste(im_a, (margin, top_pad))
+    canvas.paste(im_b, (margin, top_pad + im_a.height + margin))
 
     ensure_visual_dirs()
     out_png = PNG_DIR / f"{COMPOSITE_STEM}.png"

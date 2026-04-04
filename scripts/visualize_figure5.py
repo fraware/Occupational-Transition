@@ -50,7 +50,7 @@ def main() -> None:
     n_cols = len(cols)
 
     fig = plt.figure(figsize=(13.8, 6.7))
-    ax = fig.add_axes([0.10, 0.17, 0.72, 0.63])
+    ax = fig.add_axes([0.10, 0.15, 0.66, 0.70])
     ax.grid(False)
 
     for i, _ in enumerate(rows):
@@ -104,41 +104,24 @@ def main() -> None:
         ax.plot([start, end + 1], [n_rows + 0.38, n_rows + 0.38], linewidth=1.2)
 
     fig.text(
-        0.10,
-        0.93,
-        "Figure 5. The public measurement stack is modular, not integrated",
-        fontsize=16,
-        fontweight="bold",
-        ha="left",
-    )
-    fig.text(
-        0.10,
-        0.885,
-        (
-            "Direct observation is distributed across sources; "
-            "worker-firm AI linkage is absent across the full public stack."
-        ),
-        fontsize=11.5,
-        ha="left",
-    )
-    fig.text(
-        0.84,
-        0.60,
+        0.785,
+        0.72,
         "Hard public-data frontier",
-        fontsize=11.5,
+        fontsize=11.2,
         fontweight="bold",
         ha="left",
+        va="top",
     )
     fig.text(
-        0.84,
-        0.50,
+        0.785,
+        0.64,
         (
             "No core public source jointly observes worker occupation, "
             "employer AI adoption, and subsequent worker outcomes."
         ),
-        fontsize=10.5,
+        fontsize=10.2,
         ha="left",
-        wrap=True,
+        va="top",
     )
 
     legend_handles = [
@@ -149,22 +132,26 @@ def main() -> None:
     fig.legend(
         handles=legend_handles,
         loc="lower left",
-        bbox_to_anchor=(0.10, 0.04),
+        bbox_to_anchor=(0.10, 0.045),
         ncol=3,
         frameon=False,
-        fontsize=10.5,
+        fontsize=10.2,
         title="Public support status",
+        columnspacing=1.35,
+        handletextpad=0.55,
+        borderaxespad=0.6,
     )
 
     fig.text(
         0.10,
-        0.005,
+        0.012,
         (
             "Rule-based synthesis figure from the frozen capability-matrix CSV. "
             "Grouped headers are editorial presentation only."
         ),
-        fontsize=9.5,
+        fontsize=9.3,
         ha="left",
+        va="bottom",
     )
 
     p1, _ = save_dual(fig, "capability_matrix_heatmap", tight_layout=False)

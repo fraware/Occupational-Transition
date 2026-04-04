@@ -3,15 +3,13 @@
 from __future__ import annotations
 
 import tempfile
-import textwrap
 from pathlib import Path
 
 import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from matplotlib import font_manager
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
 
 from viz_style import (
     PNG_DIR,
@@ -80,14 +78,6 @@ def load_occ_to_tercile(root: Path) -> dict[str, str]:
     return out
 
 
-def _pil_dejavu_fonts() -> tuple[ImageFont.ImageFont, ImageFont.ImageFont]:
-    try:
-        path = Path(font_manager.findfont("DejaVu Sans"))
-        return ImageFont.truetype(str(path), 30), ImageFont.truetype(str(path), 18)
-    except OSError:
-        return ImageFont.load_default(), ImageFont.load_default()
-
-
 def build_hours_panel(hours: pd.DataFrame) -> plt.Figure:
     hours = hours.copy()
     hours["month"] = parse_month_col(hours, "month")
@@ -132,11 +122,6 @@ def build_hours_panel(hours: pd.DataFrame) -> plt.Figure:
         va="center",
     )
 
-    ax.set_title(
-        "Figure 2 Panel A: Worker-side hours by frozen AI-relevance group",
-        fontsize=13.4,
-        pad=10,
-    )
     ax.set_ylabel("Mean usual weekly hours", fontsize=11)
     ax.set_xlabel("")
     ax.grid(True, axis="y", linewidth=0.5)
@@ -200,7 +185,6 @@ def build_support_heatmap(
     ax.set_yticks(range(len(state_order)))
     ax.set_xticklabels([PRETTY[s] for s in state_order], fontsize=10)
     ax.set_yticklabels([PRETTY[s] for s in state_order], fontsize=10)
-    ax.set_title("Latest coarse-state transition matrix", fontsize=12.4, pad=10)
     ax.set_xlabel("Destination state", fontsize=10.2)
     ax.set_ylabel("Origin state", fontsize=10.2)
 
@@ -260,12 +244,6 @@ def build_summary_metric_panels(
     summ["weighted_n"] = pd.to_numeric(summ["weighted_n"], errors="coerce")
     summ = summ[summ["metric_value"].notna() & summ["weighted_n"].gt(0)]
 
-    metric_titles = {
-        "retention_rate": "Retention",
-        "occ_switch_rate": "Occupation switching",
-        "unemployment_entry_rate": "Entry to unemployment",
-        "nilf_entry_rate": "Entry to NILF",
-    }
     metric_order = [
         "retention_rate",
         "occ_switch_rate",
@@ -307,7 +285,6 @@ def build_summary_metric_panels(
                     va="center",
                 )
 
-            ax.set_title(metric_titles[metric], fontsize=11.8, pad=8)
             ax.grid(True, axis="y", linewidth=0.45)
             ax.spines["top"].set_visible(False)
             ax.spines["right"].set_visible(False)
@@ -347,36 +324,14 @@ def build_composite(hours_png: Path, summary_png: Path) -> tuple[Path, Path]:
     im_a = Image.open(hours_png).convert("RGB")
     im_b = Image.open(summary_png).convert("RGB")
 
-    margin = 56
-    font_title, font_body = _pil_dejavu_fonts()
-    title = (
-        "Figure 2. Frozen AI-relevance groups carry real worker-side behavioral "
-        "content in public CPS data"
-    )
-    subtitle = (
-        "Panel A shows a persistent hours gradient across the low-, middle-, and "
-        "high-AI-relevance terciles. Panel B summarizes broad worker-side movement "
-        "using retention, occupation switching, unemployment entry, and NILF entry "
-        "aggregated from the frozen coarse-state transition layer."
-    )
-    sub_lines = textwrap.wrap(subtitle, width=72)
-
-    y_cursor = 28
-    header_height = y_cursor + 44 + len(sub_lines) * 22 + 24
-
+    margin = 48
+    top_pad = 20
     canvas_w = max(im_a.width, im_b.width) + 2 * margin
-    canvas_h = header_height + im_a.height + margin + im_b.height + margin + 40
+    canvas_h = top_pad + im_a.height + margin + im_b.height + margin
     canvas = Image.new("RGB", (canvas_w, canvas_h), "white")
-    draw = ImageDraw.Draw(canvas)
 
-    draw.text((margin, y_cursor), title, font=font_title, fill="black")
-    y_cursor += 44
-    for line in sub_lines:
-        draw.text((margin, y_cursor), line, font=font_body, fill="black")
-        y_cursor += 22
-
-    canvas.paste(im_a, (margin, header_height))
-    canvas.paste(im_b, (margin, header_height + im_a.height + margin))
+    canvas.paste(im_a, (margin, top_pad))
+    canvas.paste(im_b, (margin, top_pad + im_a.height + margin))
 
     ensure_visual_dirs()
     out_png = PNG_DIR / f"{COMPOSITE_STEM}.png"

@@ -2,15 +2,13 @@
 
 from __future__ import annotations
 
-import textwrap
 from pathlib import Path
 
 import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 import pandas as pd
-from matplotlib import font_manager
 from matplotlib.patches import Patch
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
 
 from viz_style import (
     PNG_DIR,
@@ -22,15 +20,6 @@ from viz_style import (
 from viz_utils import read_figure_csv
 
 COMPOSITE_STEM = "figure3_redesigned_composite"
-
-
-def _pil_composite_fonts() -> tuple[ImageFont.ImageFont, ImageFont.ImageFont]:
-    """Title and explanatory subtitle for the manuscript composite header."""
-    try:
-        path = Path(font_manager.findfont("DejaVu Sans"))
-        return ImageFont.truetype(str(path), 32), ImageFont.truetype(str(path), 21)
-    except OSError:
-        return ImageFont.load_default(), ImageFont.load_default()
 
 
 def build_panel_a(dfa: pd.DataFrame) -> plt.Figure:
@@ -86,12 +75,6 @@ def build_panel_a(dfa: pd.DataFrame) -> plt.Figure:
         va="center",
     )
 
-    ax.set_title(
-        "Figure 3 Panel A: BTOS AI use trends",
-        fontsize=14.0,
-        pad=18,
-        fontweight="normal",
-    )
     ax.set_ylabel("Firm-weighted share (%)", fontsize=11.2, labelpad=8)
     ax.set_xlabel("")
     ax.set_ylim(0, 42)
@@ -106,8 +89,10 @@ def build_panel_a(dfa: pd.DataFrame) -> plt.Figure:
     ax.legend(
         frameon=False,
         loc="upper left",
+        bbox_to_anchor=(0.02, 0.98),
+        bbox_transform=ax.transAxes,
         fontsize=10.2,
-        borderaxespad=0.8,
+        borderaxespad=0,
         handlelength=2.2,
     )
 
@@ -189,11 +174,6 @@ def build_panel_b(direct: pd.DataFrame, proxy: pd.DataFrame) -> plt.Figure:
         fontsize=11.2,
         labelpad=10,
     )
-    ax.set_title(
-        "Figure 3 Panel B: Workforce-effect evidence classes",
-        fontsize=14.0,
-        pad=18,
-    )
     ax.grid(True, axis="x", linewidth=0.48, alpha=0.9)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
@@ -208,8 +188,10 @@ def build_panel_b(direct: pd.DataFrame, proxy: pd.DataFrame) -> plt.Figure:
         handles=legend_handles,
         frameon=False,
         loc="lower right",
+        bbox_to_anchor=(0.98, 0.02),
+        bbox_transform=ax.transAxes,
         fontsize=10.5,
-        borderaxespad=0.9,
+        borderaxespad=0,
         handlelength=1.6,
     )
 
@@ -221,41 +203,14 @@ def build_composite(panel_a_png: Path, panel_b_png: Path) -> tuple[Path, Path]:
     im_a = Image.open(panel_a_png).convert("RGB")
     im_b = Image.open(panel_b_png).convert("RGB")
 
-    margin = 76
+    margin = 48
+    top_pad = 20
     width = max(im_a.width, im_b.width) + 2 * margin
-
-    font_title, font_body = _pil_composite_fonts()
-    title = (
-        "Figure 3. Business-reported AI adoption is visible, but evidentiary strength "
-        "differs across BTOS measures"
-    )
-    subtitle = (
-        "Panel A uses direct published national BTOS AI-use series and marks the "
-        "November 2025 wording change explicitly. Panel B separates direct published "
-        "employment-effect rows from proxy-interpreted task indicators."
-    )
-    sub_lines = textwrap.wrap(subtitle, width=70)
-
-    y_cursor = 32
-    title_line_gap = 50
-    sub_line_leading = 26
-    header_after_sub = 28
-    header_height = (
-        y_cursor + title_line_gap + len(sub_lines) * sub_line_leading + header_after_sub
-    )
-
-    height = header_height + im_a.height + margin + im_b.height + margin
+    height = top_pad + im_a.height + margin + im_b.height + margin
     canvas = Image.new("RGB", (width, height), "white")
-    draw = ImageDraw.Draw(canvas)
 
-    draw.text((margin, y_cursor), title, font=font_title, fill="#111111")
-    y_cursor += title_line_gap
-    for line in sub_lines:
-        draw.text((margin, y_cursor), line, font=font_body, fill="#222222")
-        y_cursor += sub_line_leading
-
-    canvas.paste(im_a, (margin, header_height))
-    canvas.paste(im_b, (margin, header_height + im_a.height + margin))
+    canvas.paste(im_a, (margin, top_pad))
+    canvas.paste(im_b, (margin, top_pad + im_a.height + margin))
 
     ensure_visual_dirs()
     out_png = PNG_DIR / f"{COMPOSITE_STEM}.png"
