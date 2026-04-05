@@ -4,8 +4,12 @@ from occupational_transition.orchestration import env_for_source_mode, parse_pro
 
 
 def test_env_for_source_mode() -> None:
-    assert env_for_source_mode("latest_mode") == {"SOURCE_SELECTION_MODE": "latest_mode"}
-    assert env_for_source_mode("freeze_mode") == {"SOURCE_SELECTION_MODE": "freeze_mode"}
+    assert env_for_source_mode("latest_mode") == {
+        "SOURCE_SELECTION_MODE": "latest_mode",
+    }
+    assert env_for_source_mode("freeze_mode") == {
+        "SOURCE_SELECTION_MODE": "freeze_mode",
+    }
 
 
 def test_parse_profile_toml(tmp_path: Path) -> None:

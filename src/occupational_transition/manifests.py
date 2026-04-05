@@ -4,13 +4,16 @@ from pathlib import Path
 
 from occupational_transition.orchestration import AnalysisBundle, GateStep, PipelineStep
 
-
 FULL_REBUILD_STEPS: list[PipelineStep] = [
     PipelineStep(
         "PR-000",
         "python -m occupational_transition.run_step build PR-000",
         "python -m occupational_transition.run_step qa PR-000",
-        ("crosswalks/occ22_crosswalk.csv", "crosswalks/sector6_crosswalk.csv", "docs/data_registry.csv"),
+        (
+            "crosswalks/occ22_crosswalk.csv",
+            "crosswalks/sector6_crosswalk.csv",
+            "docs/data_registry.csv",
+        ),
         build_module="occupational_transition.pipelines.pr000_crosswalks:run",
         qa_module="occupational_transition.qa.crosswalks:main",
     ),
@@ -340,7 +343,10 @@ ANALYSIS_BUNDLES: list[AnalysisBundle] = [
 ]
 
 
-def selectable_steps(bundle: str | None, selected_tickets: list[str] | None) -> list[PipelineStep]:
+def selectable_steps(
+    bundle: str | None,
+    selected_tickets: list[str] | None,
+) -> list[PipelineStep]:
     if selected_tickets:
         wanted = set(selected_tickets)
         return [s for s in FULL_REBUILD_STEPS if s.ticket in wanted]
@@ -368,13 +374,27 @@ def list_sources() -> list[dict[str, str]]:
     return [
         {
             "source": "catalog",
-            "mode_hint": "Run `ot catalog` on docs/data_registry.csv rows (program, cadence, extractor).",
+            "mode_hint": (
+                "Run `ot catalog` on docs/data_registry.csv rows "
+                "(program, cadence, extractor)."
+            ),
         },
         {"source": "BLS_OEWS", "mode_hint": "Pinned in T-001 (May 2024 national)."},
         {"source": "O*NET", "mode_hint": "Crosswalk/task metadata used in T-002."},
-        {"source": "CPS", "mode_hint": "Rolling public-use microdata for worker-side analyses."},
-        {"source": "BTOS", "mode_hint": "Census business-side AI adoption and supplement effects."},
+        {
+            "source": "CPS",
+            "mode_hint": "Rolling public-use microdata for worker-side analyses.",
+        },
+        {
+            "source": "BTOS",
+            "mode_hint": (
+                "Census business-side AI adoption and supplement effects."
+            ),
+        },
         {"source": "JOLTS", "mode_hint": "LABSTAT rates by selected sectors."},
         {"source": "CES", "mode_hint": "Sector payroll context for Figure 4 panel B."},
-        {"source": "ABS/ASEC/SIPP/LEHD/NLS", "mode_hint": "Appendix and robustness ticket families."},
+        {
+            "source": "ABS/ASEC/SIPP/LEHD/NLS",
+            "mode_hint": "Appendix and robustness ticket families.",
+        },
     ]

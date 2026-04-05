@@ -117,7 +117,8 @@ def run_acceptance_steps(
         if "SettingWithCopyWarning" in out_b:
             rc_b = 1
             out_b += (
-                "\n[STRICT WARNING POLICY] SettingWithCopyWarning escalated to failure.\n"
+                "\n[STRICT WARNING POLICY] "
+                "SettingWithCopyWarning escalated to failure.\n"
             )
         lines.append(f"- Build command: `{step.build_cmd}`")
         lines.append(f"- Build exit code: `{rc_b}`")
@@ -128,7 +129,8 @@ def run_acceptance_steps(
         lines.append("```")
 
         missing = [p for p in step.outputs if not (root / p).exists()]
-        lines.append(f"- Output existence check: `{missing if missing else 'all present'}`")
+        check = missing if missing else "all present"
+        lines.append(f"- Output existence check: `{check}`")
 
         rc_q, out_q = run_shell(
             root,

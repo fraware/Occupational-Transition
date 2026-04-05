@@ -12,8 +12,9 @@ def test_paper_scope_loads() -> None:
     data = load_paper_scope()
     assert data["primary_bundle"] == "core-paper"
     assert "T-010" in data["core_paper_tickets"]
-    assert "figures/figure1_panelA_occ_baseline.csv" in data["committed_core_paper_figures"]
-    assert "figures/figure6_policy_roadmap.csv" in data["committed_core_paper_figures"]
+    figs = data["committed_core_paper_figures"]
+    assert "figures/figure1_panelA_occ_baseline.csv" in figs
+    assert "figures/figure6_policy_roadmap.csv" in figs
 
 
 def test_data_registry_has_catalog_columns() -> None:

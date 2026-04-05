@@ -1,4 +1,8 @@
-from occupational_transition.manifests import ANALYSIS_BUNDLES, FULL_REBUILD_STEPS, selectable_steps
+from occupational_transition.manifests import (
+    ANALYSIS_BUNDLES,
+    FULL_REBUILD_STEPS,
+    selectable_steps,
+)
 
 
 def test_analysis_bundles_exist() -> None:

@@ -131,7 +131,10 @@ def main() -> None:
     p_list_analyses.add_argument(
         "--verbose",
         action="store_true",
-        help="Include output paths per ticket; refresh docs/meta/analysis_bundles.yaml.",
+        help=(
+            "Include output paths per ticket; refresh "
+            "docs/meta/analysis_bundles.yaml."
+        ),
     )
     p_list_analyses.set_defaults(func=_cmd_list_analyses)
 
@@ -184,7 +187,10 @@ def main() -> None:
 
     p_refresh = sub.add_parser(
         "refresh",
-        help="Batch-fetch catalog rows (for local scheduling); respects freeze_mode unless overridden.",
+        help=(
+            "Batch-fetch catalog rows (for local scheduling); "
+            "respects freeze_mode unless overridden."
+        ),
     )
     p_refresh.add_argument(
         "--cadence",
@@ -224,7 +230,10 @@ def main() -> None:
         "--log",
         type=str,
         default="",
-        help="Append JSON lines log path under repo (default intermediate/refresh_<UTC>.jsonl).",
+        help=(
+            "Append JSON lines log path under repo "
+            "(default intermediate/refresh_<UTC>.jsonl)."
+        ),
     )
     p_refresh.set_defaults(func=_cmd_refresh)
 
@@ -248,7 +257,10 @@ def main() -> None:
         "--bundle",
         type=str,
         default="",
-        help="Analysis bundle name (quick-start, core-paper, full-replication, release-signoff).",
+        help=(
+            "Analysis bundle: quick-start, core-paper, "
+            "full-replication, or release-signoff."
+        ),
     )
     p_run.add_argument(
         "--tickets",
@@ -262,10 +274,26 @@ def main() -> None:
         default="latest_mode",
         help="latest_mode for monitoring; freeze_mode for comparability/release.",
     )
-    p_run.add_argument("--skip-install", action="store_true", help="Skip pip install -r requirements.txt.")
-    p_run.add_argument("--with-visuals", action="store_true", help="Run visuals build and QA.")
-    p_run.add_argument("--with-audit-summary", action="store_true", help="Build acceptance audit summary.")
-    p_run.add_argument("--require-signoff", action="store_true", help="Run release signoff QA gate.")
+    p_run.add_argument(
+        "--skip-install",
+        action="store_true",
+        help="Skip pip install -r requirements.txt.",
+    )
+    p_run.add_argument(
+        "--with-visuals",
+        action="store_true",
+        help="Run visuals build and QA.",
+    )
+    p_run.add_argument(
+        "--with-audit-summary",
+        action="store_true",
+        help="Build acceptance audit summary.",
+    )
+    p_run.add_argument(
+        "--require-signoff",
+        action="store_true",
+        help="Run release signoff QA gate.",
+    )
     p_run.set_defaults(func=_cmd_run)
 
     args = parser.parse_args()
@@ -478,10 +506,16 @@ def _cmd_run(
     if profile:
         profile_data = parse_profile(Path(profile))
 
-    run_cfg = profile_data.get("run", {}) if isinstance(profile_data.get("run"), dict) else {}
+    run_section = profile_data.get("run", {})
+    run_cfg = run_section if isinstance(run_section, dict) else {}
     selected_bundle = bundle or str(run_cfg.get("bundle", "")).strip()
-    selected_tickets = parse_csv_list(tickets) if tickets else parse_csv_list(str(run_cfg.get("tickets", "")))
-    source_mode = source_selection_mode or str(run_cfg.get("source_selection_mode", "latest_mode"))
+    tickets_csv = str(run_cfg.get("tickets", ""))
+    selected_tickets = (
+        parse_csv_list(tickets) if tickets else parse_csv_list(tickets_csv)
+    )
+    source_mode = source_selection_mode or str(
+        run_cfg.get("source_selection_mode", "latest_mode")
+    )
     if source_mode not in {"latest_mode", "freeze_mode"}:
         raise ValueError("source_selection_mode must be latest_mode or freeze_mode")
 
@@ -492,7 +526,9 @@ def _cmd_run(
     env = env_for_source_mode(source_mode)
     install_skip_effective = skip_install or bool(run_cfg.get("skip_install", False))
     visuals_effective = with_visuals or bool(run_cfg.get("with_visuals", False))
-    audit_effective = with_audit_summary or bool(run_cfg.get("with_audit_summary", False))
+    audit_effective = with_audit_summary or bool(
+        run_cfg.get("with_audit_summary", False)
+    )
     signoff_effective = require_signoff or bool(run_cfg.get("require_signoff", False))
 
     if not install_skip_effective:
@@ -510,7 +546,10 @@ def _cmd_run(
         raise SystemExit(rc)
 
     if visuals_effective:
-        for cmd in ("python scripts/run_visuals_all.py", "python scripts/qa_visuals.py"):
+        for cmd in (
+            "python scripts/run_visuals_all.py",
+            "python scripts/qa_visuals.py",
+        ):
             rc, _ = run_shell(root, cmd, env_overrides=env)
             if rc != 0:
                 raise SystemExit(rc)
@@ -528,7 +567,11 @@ def _cmd_run(
                 raise SystemExit(rc)
 
     if signoff_effective:
-        rc, _ = run_shell(root, "python scripts/qa_release_signoff.py", env_overrides=env)
+        rc, _ = run_shell(
+            root,
+            "python scripts/qa_release_signoff.py",
+            env_overrides=env,
+        )
         if rc != 0:
             raise SystemExit(rc)
 
