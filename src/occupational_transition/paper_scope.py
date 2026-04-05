@@ -2,10 +2,14 @@
 
 from __future__ import annotations
 
+import sys
 from pathlib import Path
 from typing import Any
 
-import tomllib
+if sys.version_info >= (3, 11):
+    import tomllib
+else:
+    import tomli as tomllib
 
 from occupational_transition.paths import repo_root
 
