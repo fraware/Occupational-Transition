@@ -1,62 +1,109 @@
+<div align="center">
+
+<img src="docs/assets/logo.png" alt="Occupational Transition" width="280" />
+
 # Occupational Transition
 
-<p align="center">
-  <img src="docs/assets/logo.png" alt="Occupational Transition logo" width="320" />
-</p>
+**Public Federal data, AI, and US labor markets** — one reproducible research stack.
 
-**Public data, AI, and US labor markets** in one reproducible research stack.
+[![Repository](https://img.shields.io/badge/GitHub-Occupational--Transition-24292f?style=flat-square&logo=github)](https://github.com/fraware/Occupational-Transition)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 
-This repository combines a reusable Python package, a step-by-step empirical pipeline, and auditable research outputs for work on AI and the US labor market.
+</div>
 
-Repository: [github.com/fraware/Occupational-Transition](https://github.com/fraware/Occupational-Transition)
-
----
-
-## What this repository gives you
-
-- A Python package (`occupational_transition`) for pulling and transforming public labor-market data.
-- A reproducible build workflow that regenerates published indicators and figures from source data.
-- Auditable outputs and metadata so you can trace results to code, inputs, and run settings.
-
-This is designed to be **copied, cited, and extended**, not treated as a one-off script dump.
+A Python package, a stepwise empirical pipeline, and auditable outputs for measurement work on AI and the US labor market. The goal is a stack you can **copy, cite, and extend** — not a one-off script dump.
 
 ---
 
-## Why this repo is worth reusing
+## Contents
 
-Most labor/AI projects force you to choose between:
-
-- Fast, one-off analysis scripts that are hard to trust later, or
-- Heavy pipelines that are difficult to adapt for new research questions.
-
-This repository is built to give you both:
-
-- **Fast entry** for researchers who want to run targeted analyses now.
-- **Strong reproducibility** for papers, public releases, and peer review.
-- **Clear boundaries** between descriptive measurement and causal interpretation.
-
-If you work in labor economics, applied macro, AI-and-work measurement, or policy analysis with public data, this stack is designed for your workflow.
+- [What you get](#what-you-get)
+- [Data sources](#data-sources)
+- [Why reuse this repo](#why-reuse-this-repo)
+- [Scope](#scope)
+- [Choose your path](#choose-your-path)
+- [Install](#install)
+- [Build outputs](#build-outputs)
+- [Highlights](#highlights)
+- [Documentation map](#documentation-map)
+- [Research pipeline](#research-pipeline)
+- [Full replication](#full-replication)
+- [Figures and visuals](#figures-and-visuals)
+- [Robustness and freeze](#robustness-and-freeze)
+- [Quality bar](#quality-bar)
+- [Data, licensing, and scope](#data-licensing-and-scope)
+- [How to cite](#how-to-cite)
+- [Contributing](#contributing)
+- [Project and license](#project-and-license)
 
 ---
 
-## Scope and positioning
+## What you get
 
-1. **Public data, AI, and US labor markets**  
-   Official and public-use series (e.g. CPS, BTOS, JOLTS, OEWS, O*NET), not proprietary panels; written so economists, ML researchers, and search engines can find the topic quickly.
+| | |
+|:---|:---|
+| **Package** | [`occupational_transition`](docs/library/README.md) — pull and transform public labor-market data. |
+| **Pipeline** | Reproducible builds that regenerate indicators and figures from source data. |
+| **Lineage** | Outputs tied to code, inputs, and run settings for audit and replication. |
 
-2. **US labor market measurement from public data**  
-   The emphasis is on **measurement**: documented universes, weights, crosswalks, and QA, not hype about “AI effects.” Causal claims remain your responsibility outside this stack.
+---
 
-3. **Reproducible US labor & AI indicators**  
-   Step-based `build_*` / `qa_*` pairs, schema-checked outputs, and `intermediate/*_run_metadata.json` so indicators trace to inputs and a git commit or tag.
+## Data sources
 
-4. **Open data pipeline for AI and labor economics**  
-   Import the package for new work, rerun single build steps, or replicate the full stack. The main entry points are **[docs/README.md](docs/README.md)** and [docs/library/README.md](docs/library/README.md).
+The stack is built from **public** official releases only: published downloads, documented APIs, and public-use microdata where tickets require them. There is **no proprietary or restricted-use** data requirement for the default pipeline.
 
-5. **State-level case studies (optional)**  
-   The default story is **national / federal** measurement. Optional state slices (for example Virginia, FIPS 51) are compartmentalized under **[docs/states/README.md](docs/states/README.md)** so you can drill down without mixing them into the core paper path.
+**Authoritative detail**
 
-Broad, search-friendly scope: reproducible analytics from **public** official sources, delivered as both a **Python library** (`occupational_transition`) and a **step-by-step pipeline** that rebuilds tables, figures, and lineage metadata.
+| Artifact | What it contains |
+|:---|:---|
+| [docs/data_registry.csv](docs/data_registry.csv) | One row per registered asset: `dataset_id`, HTTPS URLs, `extractor`, `update_cadence`, and notes. Use with `ot catalog` / `ot fetch`. |
+| [docs/paper/methods_data.md](docs/paper/methods_data.md) | Consolidated universes, weights, limits, and ticket-to-source mapping (Figures 1–6, appendix T-011–T-026, AWES/ALPI). |
+| `ot list-sources` | Short program list and mode hints from the installed package. |
+
+**Programs and surveys this repository accesses**
+
+| Source | Role in this repo |
+|:---|:---|
+| **BLS — OEWS** (Occupational Employment and Wage Statistics) | National (and industry-by-occupation where used) employment and wage files; employment weights for occupation groups and AWES sector weights. |
+| **BLS — JOLTS** (Job Openings and Labor Turnover Survey) | LABSTAT time-series files: openings, hires, quits, layoffs/discharges (and reference tables); sector-mapped rates and stress metrics. |
+| **BLS — CES** (Current Employment Statistics) | Payroll employment and hours series (LABSTAT); sector payroll index and hours context (main text and appendix). |
+| **BLS — BED** (Business Employment Dynamics) | Establishment churn and gross job gains/losses (LABSTAT); appendix benchmarks. |
+| **BLS — QCEW** (Quarterly Census of Employment and Wages) | Industry title reference files; quarterly single-file ZIP extracts for state/industry benchmarks; optional Virginia deep-dive outputs. |
+| **BLS — SOC** (Standard Occupational Classification) | Official SOC structure / coding reference (PDF) aligned with occupation handling in the crosswalks. |
+| **BLS — NLS** (National Longitudinal Surveys) | **NLSY97** public-use microdata bundle (BLS-hosted release ZIP) for long-run outcome appendix figures. |
+| **Census Bureau — CPS** (Current Population Survey) | **Basic monthly** public-use microdata for hours, mobility, and exit-risk series; **January supplement** published CSV where used for validation; methodology and occupation-code documentation (e.g. PDFs on www2.census.gov). |
+| **Census Bureau — CPS ASEC** (Annual Social and Economic Supplement) | March **ASEC** public-use files for welfare and related appendix indicators by AI-relevance group. |
+| **Census Bureau — BTOS** (Business Trends and Outlook Survey) | **BTOS API** (national and sector strata) for AI-use trends; **published supplement tables** (e.g. workforce-effect shares) from Census downloads. |
+| **Census Bureau — ABS** (Annual Business Survey) | **Census API** (`abstcb` and related) plus published ABS automation/technology tables for structural adoption appendix work. |
+| **Census Bureau — SIPP** (Survey of Income and Program Participation) | **Public-use person-month** datasets from www2.census.gov for event-study appendix panels. |
+| **Census Bureau — ACS** (American Community Survey) | **PUMS** microdata for local PUMA-level composition appendix figures; **TP78** industry–occupation time-series tables for crosswalk inputs (PR-000). |
+| **Census Bureau — LEHD** (Longitudinal Employer-Household Dynamics) | **Job-to-Job (J2J)** public release files (e.g. `lehd.ces.census.gov` J2J extracts) for public benchmark appendix series. |
+| **O\*NET Resource Center** (USDOL-sponsored) | Versioned **O\*NET database** text releases; **Work Activities** and scale documentation; **O\*NET-SOC ↔ SOC** crosswalk files for task content and exposure measures. |
+
+Crosswalks and internal sector groupings (e.g. `occ22`, `sector6`) combine these inputs with committed CSVs under `crosswalks/`; methodology: [docs/methodology/pr000_crosswalk_methodology.md](docs/methodology/pr000_crosswalk_methodology.md).
+
+---
+
+## Why reuse this repo
+
+Many labor-and-AI projects force a tradeoff: quick scripts that are hard to trust later, or heavy pipelines that resist new questions. This repository aims for both:
+
+- **Fast entry** — run targeted analyses without adopting the entire stack.
+- **Strong reproducibility** — suitable for papers, public releases, and peer review.
+- **Clear boundaries** — descriptive measurement is first-class; causal interpretation stays in your hands.
+
+If you work in labor economics, applied macro, AI-and-work measurement, or policy analysis on public data, the layout should map cleanly to that workflow.
+
+---
+
+## Scope
+
+1. **Public data, AI, and US labor markets** — Official and public-use series (CPS, BTOS, JOLTS, OEWS, O\*NET, and related sources), documented for economists, ML researchers, and discovery.
+2. **Measurement-first** — Documented universes, weights, crosswalks, and QA; not hype about “AI effects.” Causal claims remain your responsibility outside this stack.
+3. **Reproducible indicators** — `build_*` / `qa_*` pairs, schema-checked outputs, and `intermediate/*_run_metadata.json` tracing indicators to inputs and a git commit or tag.
+4. **Open pipeline** — Import the package, rerun single steps, or replicate the full stack. Main entry points: **[docs/README.md](docs/README.md)** and [docs/library/README.md](docs/library/README.md).
+5. **Optional state studies** — National / federal measurement is the default. State slices (e.g. Virginia, FIPS 51) live under **[docs/states/README.md](docs/states/README.md)** so they stay separate from the core paper path.
 
 ---
 
@@ -64,45 +111,34 @@ Broad, search-friendly scope: reproducible analytics from **public** official so
 
 ### Browse the catalog, then fetch
 
-- Canonical dataset list: [docs/data_registry.csv](docs/data_registry.csv) (`dataset_id`, URLs, `extractor`, `update_cadence`).
-- CLI: `ot catalog`, `ot fetch --dataset-id …`, `ot refresh --cadence rolling` (scheduled local runs: [docs/operations/local_scheduling.md](docs/operations/local_scheduling.md)).
+| Resource | Link / command |
+|:---|:---|
+| Dataset registry | [docs/data_registry.csv](docs/data_registry.csv) — `dataset_id`, URLs, `extractor`, `update_cadence` |
+| CLI | `ot catalog`, `ot fetch --dataset-id …`, `ot refresh --cadence rolling` |
+| Scheduled local runs | [docs/operations/local_scheduling.md](docs/operations/local_scheduling.md) |
 
 ### A — Use the package in your own project
-
-Install and start importing immediately:
 
 ```bash
 pip install -e .
 ```
 
-Start with:
+| Next step | Where |
+|:---|:---|
+| Stable APIs and examples | [docs/library/README.md](docs/library/README.md) |
+| Practical scripts | [examples/README.md](examples/README.md) |
 
-- [docs/library/README.md](docs/library/README.md) for stable entry points and examples.
-- [examples/README.md](examples/README.md) for practical scripts.
+**CLI (optional):** `ot catalog` / `ot fetch` / `ot refresh` · `ot list-analyses` (add `--verbose` to regenerate `docs/meta/analysis_bundles.yaml`) · `ot list-sources` · `ot run --bundle quick-start` · `ot run --profile config/profiles/quick-start.toml`
 
-Optional CLI:
+### B — Rebuild only what you need
 
-- `ot catalog` / `ot fetch` / `ot refresh`
-- `ot list-analyses` (add `--verbose` to regenerate `docs/meta/analysis_bundles.yaml` and print outputs)
-- `ot list-sources`
-- `ot run --bundle quick-start`
-- `ot run --profile config/profiles/quick-start.toml`
+| Next step | Where |
+|:---|:---|
+| Step-by-step mapping | [docs/methodology/README.md](docs/methodology/README.md) |
+| Outputs and checks | [docs/replication/acceptance_matrix.md](docs/replication/acceptance_matrix.md) |
+| Methodology support files | [docs/methodology/tickets/](docs/methodology/tickets/) |
 
----
-
-### B — Rebuild specific outputs you care about
-
-Run only the build and QA scripts relevant to your analysis, without running the full stack.
-
-Start with:
-
-- [docs/methodology/README.md](docs/methodology/README.md) for step-by-step mapping.
-- [docs/replication/acceptance_matrix.md](docs/replication/acceptance_matrix.md) for outputs and checks.
-- [docs/methodology/tickets/](docs/methodology/tickets/) for methodology support files.
-
-You can also find your step in the research pipeline table below. Builds and QA run through `python -m occupational_transition.run_step build|qa <TICKET>` (thin `scripts/build_*.py` wrappers remain for ad hoc use).
-
----
+Builds and QA run through `python -m occupational_transition.run_step build|qa <TICKET>` (thin `scripts/build_*.py` wrappers remain for ad hoc use). See the [research pipeline](#research-pipeline) table in the docs for step names.
 
 ### C — Fully replicate the published stack
 
@@ -114,34 +150,32 @@ pip install -e .
 python scripts/run_full_pipeline_from_raw.py
 ```
 
-Full instructions, expected runtime, recovery guidance, committed-vs-generated outputs, and replication conventions are in:
+| Topic | Where |
+|:---|:---|
+| Runtime, recovery, conventions | [docs/replication/README.md](docs/replication/README.md) |
+| Orientation | [docs/start_here.md](docs/start_here.md) |
+| Analysis catalog | [docs/analysis_catalog.md](docs/analysis_catalog.md) |
+| Source selection | [docs/source_selection.md](docs/source_selection.md) |
 
-- [docs/replication/README.md](docs/replication/README.md)
-- [docs/start_here.md](docs/start_here.md)
-- [docs/analysis_catalog.md](docs/analysis_catalog.md)
-- [docs/source_selection.md](docs/source_selection.md)
-
-Expect large downloads, large disk usage, and long runtimes.
-
----
+Expect large downloads, disk usage, and long runtimes.
 
 ### D — State-level case study (optional)
 
-For a **Virginia** descriptive QCEW deep dive and related outputs (not part of the main paper figure list), start at **[docs/states/README.md](docs/states/README.md)** and **[docs/states/virginia/README.md](docs/states/virginia/README.md)**.
+Virginia QCEW and related outputs (outside the main paper figure list): **[docs/states/README.md](docs/states/README.md)** · **[docs/states/virginia/README.md](docs/states/virginia/README.md)**
 
 ---
 
 ## Install
 
-Python **3.10+** is supported. Python **3.11+** is recommended.
+Python **3.10+** is supported; **3.11+** is recommended.
 
-Basic install:
+**Application / library**
 
 ```bash
 pip install -e .
 ```
 
-Developer install (tests + linter):
+**Developer** (tests and linter)
 
 ```bash
 pip install -e ".[dev]"
@@ -150,152 +184,114 @@ pytest
 
 `requirements.txt` mirrors the editable install so `pip install -r requirements.txt` stays aligned with `pyproject.toml`.
 
-Versioning:
-
-- Package version: `occupational_transition.__version__`
-- Library API changes follow semantic versioning
-- For frozen paper builds, pin a git tag
+| Versioning | Notes |
+|:---|:---|
+| Package | `occupational_transition.__version__` |
+| API | Semantic versioning for the library surface |
+| Papers | Pin a git tag for frozen builds |
 
 ---
 
-## What you can build with this
+## Build outputs
 
-- Descriptive indicators of AI relevance, labor outcomes, transitions, and sector trends.
+- Descriptive indicators for AI relevance, labor outcomes, transitions, and sector trends.
 - Reproducible figure tables under `figures/`.
 - Run metadata under `intermediate/` for auditability.
-- Optional static visual exports under `visuals/`.
+- Optional static exports under `visuals/`.
 
-This stack is **measurement-first**. It gives you clean, documented empirical inputs; causal identification remains a separate design decision.
+This stack is **measurement-first**: clean, documented empirical inputs; identification design stays separate.
 
 ---
 
 ## Highlights
 
-| | |
-|--|--|
-| **Library** | `occupational_transition` — HTTP helpers, source clients (e.g. BTOS, JOLTS, O*NET), crosswalk loaders. Install with `pip install -e .`. |
-| **Pipeline** | Ordered build and QA scripts with `intermediate/*_run_metadata.json` run history. Step-by-step details live in [docs/replication/README.md](docs/replication/README.md) and [docs/methodology/README.md](docs/methodology/README.md). |
-| **Documentation** | Single hub: **[docs/README.md](docs/README.md)** (library, replication, methodology, figures, paper, policy, quality). |
-| **Governance** | Schema-checked outputs, registry URLs in [docs/data_registry.csv](docs/data_registry.csv), acceptance matrix and replication runbooks under [docs/replication/](docs/replication/). |
+| Pillar | What it is |
+|:---|:---|
+| **Library** | `occupational_transition` — HTTP helpers, source clients (BTOS, JOLTS, O\*NET, etc.), crosswalk loaders. |
+| **Pipeline** | Ordered build and QA with `intermediate/*_run_metadata.json` history. Details: [docs/replication/README.md](docs/replication/README.md), [docs/methodology/README.md](docs/methodology/README.md). |
+| **Documentation** | Hub: **[docs/README.md](docs/README.md)** — library, replication, methodology, figures, paper, policy, quality. |
+| **Governance** | Schema-checked outputs, registry in [docs/data_registry.csv](docs/data_registry.csv), acceptance matrix and runbooks under [docs/replication/](docs/replication/). |
 
 ---
 
 ## Documentation map
 
-Use the docs hub to navigate by role:
+| Audience | Start here |
+|:---|:---|
+| Everyone | **[docs/README.md](docs/README.md)** |
+| Library usage | [docs/library/README.md](docs/library/README.md) |
+| Replication | [docs/replication/README.md](docs/replication/README.md) |
+| Methodology | [docs/methodology/README.md](docs/methodology/README.md) |
+| Paper artifacts | [docs/paper/README.md](docs/paper/README.md) |
+| Figure structure | [docs/figures/README.md](docs/figures/README.md) |
+| Claim discipline | [docs/policy/claim_audit.md](docs/policy/claim_audit.md) |
 
-- **Docs hub:** [docs/README.md](docs/README.md)
-- **Library usage:** [docs/library/README.md](docs/library/README.md)
-- **Replication guide:** [docs/replication/README.md](docs/replication/README.md)
-- **Methodology mapping:** [docs/methodology/README.md](docs/methodology/README.md)
-- **Paper artifacts:** [docs/paper/README.md](docs/paper/README.md)
-- **Figure structure:** [docs/figures/README.md](docs/figures/README.md)
-- **Policy and claim discipline:** [docs/policy/claim_audit.md](docs/policy/claim_audit.md)
-
-Additional quick links:
-
-- [crosswalk methodology](docs/methodology/pr000_crosswalk_methodology.md)
-- [data registry](docs/data_registry.csv)
-- [committed vs generated outputs](docs/replication/README.md#committed-outputs-vs-build-generated)
-
-All Markdown is organized by audience in **[docs/README.md](docs/README.md)**. Start there for crosswalk notes, figure catalogs, claim audit, and manuscript drafts.
+**Quick links:** [crosswalk methodology](docs/methodology/pr000_crosswalk_methodology.md) · [data registry](docs/data_registry.csv) · [committed vs generated](docs/replication/README.md#committed-outputs-vs-build-generated)
 
 ---
 
 ## Research pipeline
 
-The full step list, script mapping, and detailed output contracts are documented in:
+The full step list, script mapping, and output contracts are documented in:
 
 - [docs/replication/README.md](docs/replication/README.md)
 - [docs/replication/acceptance_matrix.md](docs/replication/acceptance_matrix.md)
 - [docs/methodology/README.md](docs/methodology/README.md)
 
-Targeted work is fully supported: run only the specific `build_*.py` and matching `qa_*.py` scripts you need.
+Targeted work is supported: run only the `build_*.py` and matching `qa_*.py` steps you need.
 
 ---
 
 ## Full replication
 
-End-to-end rebuild from the repository root requires network access and may require **large disk space** and **long runtime**. See [docs/replication/README.md](docs/replication/README.md) for full operational details.
+End-to-end rebuild from the repository root needs network access and may require **large disk space** and **long runtime**. Operational detail: [docs/replication/README.md](docs/replication/README.md).
 
 ```bash
 pip install -r requirements.txt
 python scripts/run_full_pipeline_from_raw.py
 ```
 
-This writes:
+Writes `intermediate/full_clean_rebuild_acceptance_<UTC>.md`. The run fails fast on the first failed build or QA step.
 
-- `intermediate/full_clean_rebuild_acceptance_<UTC>.md`
+**Common flags**
 
-The run fails fast on the first failed build or QA step.
+| Flag | Effect |
+|:---|:---|
+| `--with-audit-summary` | Audit markdown from the log |
+| `--with-visuals` | Runs `run_visuals_all.py` and `qa_visuals.py` |
+| `--skip-install` | Skip install step |
+| `--source-selection-mode freeze_mode` | Freeze-mode source selection |
+| `--require-signoff` | Require signoff gates |
 
-### Common flags
-
-- `--with-audit-summary` — generates audit markdown from the log
-- `--with-visuals` — runs `run_visuals_all.py` and `qa_visuals.py`
-- `--skip-install`
-- `--source-selection-mode freeze_mode`
-- `--require-signoff`
-
-### Typical iterative run
-
-Strict step order, audit summary, and policy gates:
+**Typical iterative run** (strict step order, audit summary, policy gates as configured):
 
 ```bash
 pip install -r requirements.txt
 python scripts/run_full_pipeline_from_raw.py --with-audit-summary
 ```
 
-This also runs robustness checks, drift dashboard steps, and freeze-manifest steps as configured.
-
-### Targeted work
-
-For partial rebuilds, run only the `build_*.py` and matching `qa_*.py` scripts you need. Detailed per-step mappings are in [docs/methodology/README.md](docs/methodology/README.md).
-
----
-
-## Quality bar
-
-- JSON lineage under `intermediate/*run_metadata.json` for retained outputs.
-- QA scripts enforce schemas, domains, and SHA-256 checks against cached inputs where applicable.
-- Policy-facing KPI tables carry uncertainty fields and `evidence_directness` per project rules.
-- Registry rows in [docs/data_registry.csv](docs/data_registry.csv) use canonical HTTPS URLs and explicit provenance fields.
-
-Details:
-
-- [docs/README.md](docs/README.md)
-- [docs/replication/acceptance_matrix.md](docs/replication/acceptance_matrix.md)
-
----
-
-## Known deviations and data notes
-
-Method-specific caveats and exceptions are documented in the detailed methodology files under [docs/methodology/](docs/methodology/), with summary gates in [docs/replication/acceptance_matrix.md](docs/replication/acceptance_matrix.md).
+**Partial rebuilds** — Run only the `build_*.py` and matching `qa_*.py` scripts you need; per-step mapping: [docs/methodology/README.md](docs/methodology/README.md).
 
 ---
 
 ## Figures and visuals
 
-Render charts from committed `figures/*.csv` (main text **Figures 1–6**, appendix **A1–A10**, and monitoring stems as configured in `scripts/run_visuals_all.py`):
+From committed `figures/*.csv` (main text Figures 1–6, appendix A1–A10, and monitoring stems per `scripts/run_visuals_all.py`):
 
 ```bash
 python scripts/run_visuals_all.py
 python scripts/qa_visuals.py
 ```
 
-Outputs:
+**Outputs:** `visuals/png/` · `visuals/vector/` · `intermediate/visuals_run_manifest.json`
 
-- `visuals/png/`
-- `visuals/vector/`
-- `intermediate/visuals_run_manifest.json`
+Authoritative map (CSV paths, stems, captions, sources): [docs/figures/figure_catalog.md](docs/figures/figure_catalog.md). Main-text redesigns include composite artifacts (e.g. `figure2_redesigned_composite`, `figure3_redesigned_composite`, `figure4_redesigned_composite`) and **Figure 6** (`figures/figure6_policy_roadmap.csv` → stem `policy_roadmap`).
 
-Authoritative map of paper figures to CSV paths, visual stems, captions, and source notes: [docs/figures/figure_catalog.md](docs/figures/figure_catalog.md). Main-text redesigns include composite manuscript artifacts (for example `figure2_redesigned_composite`, `figure3_redesigned_composite`, `figure4_redesigned_composite`) and **Figure 6** (`figures/figure6_policy_roadmap.csv` → stem `policy_roadmap`).
-
-Additional references:
-
-- Style guide: [docs/quality/README.md#visual-style-guide](docs/quality/README.md#visual-style-guide)
-- Caption and source-note coverage (Figures 1–6): `python scripts/qa_visual_caption_coverage.py`
-- One-shot acceptance: `python scripts/run_visuals_acceptance.py`
+| Topic | Where |
+|:---|:---|
+| Style guide | [docs/quality/README.md#visual-style-guide](docs/quality/README.md#visual-style-guide) |
+| Caption coverage (Figures 1–6) | `python scripts/qa_visual_caption_coverage.py` |
+| One-shot acceptance | `python scripts/run_visuals_acceptance.py` |
 
 ---
 
@@ -306,35 +302,44 @@ python scripts/run_robustness_all.py
 python scripts/build_freeze_manifest.py
 ```
 
-Outputs:
+Robustness reports: `intermediate/robustness/`. The freeze manifest hashes figures, run metadata, and the visuals manifest when present.
 
-- Robustness reports under `intermediate/robustness/`
+---
 
-The freeze manifest hashes figures, run metadata, and the visuals manifest when present.
+## Quality bar
+
+- JSON lineage under `intermediate/*run_metadata.json` for retained outputs.
+- QA enforces schemas, domains, and SHA-256 checks against cached inputs where applicable.
+- Policy-facing KPI tables include uncertainty fields and `evidence_directness` per project rules.
+- Registry rows in [docs/data_registry.csv](docs/data_registry.csv) use canonical HTTPS URLs and explicit provenance.
+
+More: [docs/README.md](docs/README.md) · [docs/replication/acceptance_matrix.md](docs/replication/acceptance_matrix.md)
+
+---
+
+## Known deviations and data notes
+
+Method-specific caveats live under [docs/methodology/](docs/methodology/), with summary gates in [docs/replication/acceptance_matrix.md](docs/replication/acceptance_matrix.md).
 
 ---
 
 ## Data, licensing, and scope
 
-- Built around public and public-use sources (Census, BLS, O*NET, and related documentation).
-- License: [MIT](LICENSE)
-- Third-party materials and notices: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)
-- Security reporting guidance: [SECURITY.md](SECURITY.md)
-
-This repository is built around **public** official sources, not proprietary panels.
+- Built around **public** and public-use sources; the full program-by-program list is in **[Data sources](#data-sources)** above.
+- **License:** [MIT](LICENSE)
+- **Third-party materials:** [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)
+- **Security:** [SECURITY.md](SECURITY.md)
 
 ---
 
 ## How to cite
 
-Cite both the repository and the **version** you used.
+Cite the repository and the **version** you used.
 
 - Package version: `occupational_transition.__version__`
-- For papers, also record the **commit hash or results tag** next to any table reproduced from this pipeline
-- Machine-readable metadata is in [CITATION.cff](CITATION.cff)
-- Results freeze and tagging guidance: [docs/replication/project_maintenance.md#results-freeze-and-tagging](docs/replication/project_maintenance.md#results-freeze-and-tagging)
-
-### BibTeX
+- For papers, record the **commit hash or results tag** next to any table reproduced from this pipeline.
+- Machine-readable metadata: [CITATION.cff](CITATION.cff)
+- Freeze and tagging: [docs/replication/project_maintenance.md#results-freeze-and-tagging](docs/replication/project_maintenance.md#results-freeze-and-tagging)
 
 ```bibtex
 @software{occupational_transition,
@@ -353,28 +358,23 @@ The `url` field matches [CITATION.cff](CITATION.cff).
 
 ## Contributing
 
-See:
-
 - [CONTRIBUTING.md](CONTRIBUTING.md)
 - [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 
-If you want to extend data coverage, add new indicators, or harden reproducibility checks, contributions are welcome.
+Extensions to data coverage, indicators, and reproducibility checks are welcome.
 
 ---
 
 ## Project and license
 
 | | |
-|--|--|
+|:---|:---|
 | **License** | [MIT](LICENSE) |
 | **Cite** | [CITATION.cff](CITATION.cff) |
 | **Code of Conduct** | [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) |
 | **Third-party assets** | [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) |
 | **Contributing** | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | **Security** | [SECURITY.md](SECURITY.md) |
-| **Git size** | [docs/replication/project_maintenance.md#git-history-size-and-hygiene](docs/replication/project_maintenance.md#git-history-size-and-hygiene) |
+| **Git size / hygiene** | [docs/replication/project_maintenance.md#git-history-size-and-hygiene](docs/replication/project_maintenance.md#git-history-size-and-hygiene) |
 
-Full replication can require **many gigabytes** and **hours** of download and compute.
-Committed `figures/` snapshots and
-[docs/replication/README.md#committed-outputs-vs-build-generated](docs/replication/README.md#committed-outputs-vs-build-generated)
-document what ships in git versus what builds locally.
+Full replication can require **many gigabytes** and **hours** of download and compute. Committed `figures/` snapshots and [committed vs build-generated outputs](docs/replication/README.md#committed-outputs-vs-build-generated) document what ships in git versus what builds locally.
