@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="docs/assets/logo.png" alt="Occupational Transition" width="280" />
-
 # Occupational Transition
 
 **Public Federal data, AI, and US labor markets** — one reproducible research stack.
@@ -10,32 +8,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
 
+<img src="docs/assets/logo.png" alt="Occupational Transition" width="200" />
+
 </div>
 
-A Python package, a stepwise empirical pipeline, and auditable outputs for measurement work on AI and the US labor market. The goal is a stack you can **copy, cite, and extend** — not a one-off script dump.
-
----
-
-## Contents
-
-- [What you get](#what-you-get)
-- [Data sources](#data-sources)
-- [Why reuse this repo](#why-reuse-this-repo)
-- [Scope](#scope)
-- [Choose your path](#choose-your-path)
-- [Install](#install)
-- [Build outputs](#build-outputs)
-- [Highlights](#highlights)
-- [Documentation map](#documentation-map)
-- [Research pipeline](#research-pipeline)
-- [Full replication](#full-replication)
-- [Figures and visuals](#figures-and-visuals)
-- [Robustness and freeze](#robustness-and-freeze)
-- [Quality bar](#quality-bar)
-- [Data, licensing, and scope](#data-licensing-and-scope)
-- [How to cite](#how-to-cite)
-- [Contributing](#contributing)
-- [Project and license](#project-and-license)
+A Python package, a stepwise empirical pipeline, and auditable outputs for measurement work on AI and the US labor market. The goal is a stack you can **copy, cite, and extend**.
 
 ---
 
